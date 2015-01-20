@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_NANO_PWM
-Tue Jan 20 15:38:41 2015
+Tue Jan 20 20:46:00 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -13,11 +13,28 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |DE0_NANO_PWM
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |DE0_NANO_PWM
+ 12. Parameter Settings for User Entity Instance: integrador:u5
+ 13. Parameter Settings for User Entity Instance: theta_abc:u6
+ 14. Parameter Settings for User Entity Instance: portadora_tringular:uc1
+ 15. Parameter Settings for User Entity Instance: portadora_tringular:uc2
+ 16. Parameter Settings for User Entity Instance: portadora_tringular:uc3
+ 17. Parameter Settings for User Entity Instance: tabela_sin:usin
+ 18. Parameter Settings for User Entity Instance: comparador:ucomp
+ 19. Port Connectivity Checks: "clk_div:uled"
+ 20. Port Connectivity Checks: "comparador:ucomp"
+ 21. Port Connectivity Checks: "portadora_tringular:uc3"
+ 22. Port Connectivity Checks: "portadora_tringular:uc2"
+ 23. Port Connectivity Checks: "portadora_tringular:uc1"
+ 24. Port Connectivity Checks: "theta_abc:u6"
+ 25. Port Connectivity Checks: "integrador:u5"
+ 26. Port Connectivity Checks: "clk_div:u1"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
 
 
 
@@ -44,15 +61,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jan 20 15:38:41 2015      ;
+; Analysis & Synthesis Status        ; Successful - Tue Jan 20 20:46:00 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; DE0_NANO_PWM                               ;
 ; Top-level Entity Name              ; DE0_NANO_PWM                               ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 46                                         ;
-;     Total combinational functions  ; 46                                         ;
-;     Dedicated logic registers      ; 26                                         ;
-; Total registers                    ; 26                                         ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
 ; Total pins                         ; 69                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -165,45 +182,53 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
-; DE0_NANO_PWM.vhd                 ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/DE0_NANO_PWM.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
+; my_types_pkg.vhd                 ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/my_types_pkg.vhd         ;         ;
+; fixed_pkg_c.vhdl                 ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_pkg_c.vhdl         ;         ;
+; fixed_float_types_c.vhdl         ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_float_types_c.vhdl ;         ;
+; DE0_NANO_PWM.vhd                 ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/DE0_NANO_PWM.vhd         ;         ;
+; tabela_sin.vhd                   ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/tabela_sin.vhd           ;         ;
+; theta_abc.vhd                    ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/theta_abc.vhd            ;         ;
+; portadora_tringular.vhd          ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/portadora_tringular.vhd  ;         ;
+; comparador.vhd                   ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/comparador.vhd           ;         ;
+; clk_div.vhd                      ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/clk_div.vhd              ;         ;
+; integrador.vhd                   ; yes             ; User VHDL File  ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/integrador.vhd           ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 46             ;
-;                                             ;                ;
-; Total combinational functions               ; 46             ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 8              ;
-;     -- 3 input functions                    ; 0              ;
-;     -- <=2 input functions                  ; 38             ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 22             ;
-;     -- arithmetic mode                      ; 24             ;
-;                                             ;                ;
-; Total registers                             ; 26             ;
-;     -- Dedicated logic registers            ; 26             ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 69             ;
-;                                             ;                ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 26             ;
-; Total fan-out                               ; 236            ;
-; Average fan-out                             ; 1.12           ;
-+---------------------------------------------+----------------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+;                                             ;          ;
+; Total combinational functions               ; 0        ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 0        ;
+;     -- 3 input functions                    ; 0        ;
+;     -- <=2 input functions                  ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 0        ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 0        ;
+;     -- Dedicated logic registers            ; 0        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 69       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 1        ;
+; Total fan-out                               ; 69       ;
+; Average fan-out                             ; 0.50     ;
++---------------------------------------------+----------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,9 +236,49 @@ agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |DE0_NANO_PWM              ; 46 (46)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 69   ; 0            ; |DE0_NANO_PWM       ; work         ;
+; |DE0_NANO_PWM              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 69   ; 0            ; |DE0_NANO_PWM       ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; integrador:u5|out_int[0..3]            ; Merged with integrador:u5|out_int[4]   ;
+; integrador:u5|out_int[4]               ; Stuck at GND due to stuck port data_in ;
+; clk_div:u1|clk_out_bi                  ; Stuck at GND due to stuck port clock   ;
+; clk_div:u1|count[0..15]                ; Stuck at GND due to stuck port clock   ;
+; integrador:u5|out_int[5..29]           ; Stuck at GND due to stuck port clock   ;
+; integrador:u5|sinc_int                 ; Stuck at GND due to stuck port clock   ;
+; clk_div:uled|clk_out_bi                ; Stuck at GND due to stuck port clock   ;
+; clk_div:uled|count[0..15]              ; Stuck at GND due to stuck port clock   ;
+; Total Number of Removed Registers = 65 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                             ;
++--------------------------+---------------------------+----------------------------------------------------------------------------------+
+; Register name            ; Reason for Removal        ; Registers Removed due to This Register                                           ;
++--------------------------+---------------------------+----------------------------------------------------------------------------------+
+; integrador:u5|out_int[4] ; Stuck at GND              ; integrador:u5|out_int[29], integrador:u5|out_int[28], integrador:u5|out_int[27], ;
+;                          ; due to stuck port data_in ; integrador:u5|out_int[26], integrador:u5|out_int[25], integrador:u5|out_int[24], ;
+;                          ;                           ; integrador:u5|out_int[23], integrador:u5|out_int[22], integrador:u5|out_int[21], ;
+;                          ;                           ; integrador:u5|out_int[20], integrador:u5|out_int[19], integrador:u5|out_int[18], ;
+;                          ;                           ; integrador:u5|out_int[17], integrador:u5|out_int[16], integrador:u5|out_int[15], ;
+;                          ;                           ; integrador:u5|out_int[14], integrador:u5|out_int[13], integrador:u5|out_int[12], ;
+;                          ;                           ; integrador:u5|out_int[11], integrador:u5|out_int[10], integrador:u5|out_int[9],  ;
+;                          ;                           ; integrador:u5|out_int[8], integrador:u5|out_int[7], integrador:u5|out_int[6],    ;
+;                          ;                           ; integrador:u5|out_int[5], integrador:u5|sinc_int, clk_div:uled|clk_out_bi,       ;
+;                          ;                           ; clk_div:uled|count[15], clk_div:uled|count[14], clk_div:uled|count[13],          ;
+;                          ;                           ; clk_div:uled|count[12], clk_div:uled|count[11], clk_div:uled|count[10],          ;
+;                          ;                           ; clk_div:uled|count[9], clk_div:uled|count[8], clk_div:uled|count[7],             ;
+;                          ;                           ; clk_div:uled|count[6], clk_div:uled|count[5], clk_div:uled|count[4],             ;
+;                          ;                           ; clk_div:uled|count[3], clk_div:uled|count[2], clk_div:uled|count[1],             ;
+;                          ;                           ; clk_div:uled|count[0]                                                            ;
++--------------------------+---------------------------+----------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -221,7 +286,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 26    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -249,25 +314,207 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: integrador:u5 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; Nin            ; 13    ; Signed Integer                    ;
+; Nout           ; 30    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: theta_abc:u6 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; Nin            ; 30    ; Signed Integer                   ;
+; Nout           ; 16    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: portadora_tringular:uc1 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 16    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: portadora_tringular:uc2 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 16    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: portadora_tringular:uc3 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 16    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tabela_sin:usin ;
++----------------+-----------+---------------------------------+
+; Parameter Name ; Value     ; Type                            ;
++----------------+-----------+---------------------------------+
+; THETA_MAX      ; 380808000 ; Signed Integer                  ;
+; n_bits_phase   ; 16        ; Signed Integer                  ;
+; n_bits_c       ; 16        ; Signed Integer                  ;
++----------------+-----------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: comparador:ucomp ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; n_bits_c       ; 16    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "clk_div:uled"     ;
++------------+-------+----------+--------------+
+; Port       ; Type  ; Severity ; Details      ;
++------------+-------+----------+--------------+
+; en         ; Input ; Info     ; Stuck at VCC ;
+; div[2..1]  ; Input ; Info     ; Stuck at VCC ;
+; div[15..3] ; Input ; Info     ; Stuck at GND ;
+; div[0]     ; Input ; Info     ; Stuck at GND ;
++------------+-------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "comparador:ucomp"                                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; en       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; comp_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "portadora_tringular:uc3"                                                                         ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; en                ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; reset             ; Input  ; Info     ; Stuck at GND                                                                        ;
+; count_ini[15..11] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; count_ini[9..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; count_ini[10]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dir_ini           ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[10..0]        ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[15..11]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dir               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; c                 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "portadora_tringular:uc2"                                                                         ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; en                ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; reset             ; Input  ; Info     ; Stuck at GND                                                                        ;
+; count_ini[15..11] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; count_ini[9..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; count_ini[10]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dir_ini           ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max[10..0]        ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[15..11]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dir               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; c                 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "portadora_tringular:uc1"                                                                   ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; en          ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; reset       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; count_ini   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dir_ini     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max[10..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[15..11] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dir         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "theta_abc:u6"                                                                          ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; en      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; reset   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; theta_b ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; theta_c ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "integrador:u5"          ;
++------------------+-------+----------+--------------+
+; Port             ; Type  ; Severity ; Details      ;
++------------------+-------+----------+--------------+
+; en               ; Input ; Info     ; Stuck at VCC ;
+; reset            ; Input ; Info     ; Stuck at GND ;
+; max[28..0]       ; Input ; Info     ; Stuck at VCC ;
+; max[29]          ; Input ; Info     ; Stuck at GND ;
+; int_data[7..5]   ; Input ; Info     ; Stuck at VCC ;
+; int_data[11..10] ; Input ; Info     ; Stuck at GND ;
+; int_data[4..0]   ; Input ; Info     ; Stuck at GND ;
+; int_data[12]     ; Input ; Info     ; Stuck at VCC ;
+; int_data[9]      ; Input ; Info     ; Stuck at VCC ;
+; int_data[8]      ; Input ; Info     ; Stuck at GND ;
++------------------+-------+----------+--------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "clk_div:u1"       ;
++------------+-------+----------+--------------+
+; Port       ; Type  ; Severity ; Details      ;
++------------+-------+----------+--------------+
+; en         ; Input ; Info     ; Stuck at VCC ;
+; div[15..3] ; Input ; Info     ; Stuck at GND ;
+; div[1..0]  ; Input ; Info     ; Stuck at GND ;
+; div[2]     ; Input ; Info     ; Stuck at VCC ;
++------------+-------+----------+--------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 69                          ;
-; cycloneiii_ff         ; 26                          ;
-;     plain             ; 26                          ;
-; cycloneiii_lcell_comb ; 50                          ;
-;     arith             ; 24                          ;
-;         2 data inputs ; 24                          ;
-;     normal            ; 26                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 13                          ;
-;         4 data inputs ; 8                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.40                        ;
-; Average LUT depth     ; 3.34                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -276,7 +523,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -286,7 +533,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Tue Jan 20 15:38:22 2015
+    Info: Processing started: Tue Jan 20 20:45:40 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_NANO_PWM -c DE0_NANO_PWM
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 0 entities, in source file my_types_pkg.vhd
@@ -323,23 +570,69 @@ Info (12021): Found 2 design units, including 1 entities, in source file compara
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
     Info (12022): Found design unit 1: clk_div-div
     Info (12023): Found entity 1: clk_div
+Info (12021): Found 2 design units, including 1 entities, in source file leds.vhd
+    Info (12022): Found design unit 1: LEDs-LEDs
+    Info (12023): Found entity 1: LEDs
+Info (12021): Found 2 design units, including 1 entities, in source file integrador.vhd
+    Info (12022): Found design unit 1: integrador-integrador
+    Info (12023): Found entity 1: integrador
 Info (12127): Elaborating entity "DE0_NANO_PWM" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(30): used implicit default value for signal "RESET_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(31): used implicit default value for signal "PWM1L_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(32): used implicit default value for signal "PWM1H_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(33): used implicit default value for signal "PWM2L_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(34): used implicit default value for signal "PWM2H_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(38): used implicit default value for signal "RESET_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(39): used implicit default value for signal "PWM1L_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(40): used implicit default value for signal "PWM1H_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(41): used implicit default value for signal "PWM2L_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(42): used implicit default value for signal "PWM2H_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(47): used implicit default value for signal "RESET_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(48): used implicit default value for signal "PWM1L_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(49): used implicit default value for signal "PWM1H_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(50): used implicit default value for signal "PWM2L_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(51): used implicit default value for signal "PWM2H_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1470): subtype or type has null range
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1471): subtype or type has null range
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1472): subtype or type has null range
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(39): used implicit default value for signal "RESET_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(40): used implicit default value for signal "PWM1L_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(41): used implicit default value for signal "PWM1H_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(42): used implicit default value for signal "PWM2L_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(43): used implicit default value for signal "PWM2H_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(47): used implicit default value for signal "RESET_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(48): used implicit default value for signal "PWM1L_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(49): used implicit default value for signal "PWM1H_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(50): used implicit default value for signal "PWM2L_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(51): used implicit default value for signal "PWM2H_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(56): used implicit default value for signal "RESET_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(57): used implicit default value for signal "PWM1L_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(58): used implicit default value for signal "PWM1H_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(59): used implicit default value for signal "PWM2L_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(60): used implicit default value for signal "PWM2H_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(195): used implicit default value for signal "clk_pll" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(200): object "th_b" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(200): object "th_c" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(228): object "dirPWM1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(228): object "dirPWM2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(228): object "dirPWM3" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(229): object "cPWM2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(229): object "cPWM3" assigned a value but never read
+Warning (10873): Using initial value X (don't care) for net "LED[7..1]" at DE0_NANO_PWM.vhd(31)
+Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:u1"
+Info (12128): Elaborating entity "integrador" for hierarchy "integrador:u5"
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1470): subtype or type has null range
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1471): subtype or type has null range
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1472): subtype or type has null range
+Warning (10492): VHDL Process Statement warning at integrador.vhd(33): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at integrador.vhd(34): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "theta_abc" for hierarchy "theta_abc:u6"
+Warning (10492): VHDL Process Statement warning at theta_abc.vhd(35): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at theta_abc.vhd(36): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "portadora_tringular" for hierarchy "portadora_tringular:uc1"
+Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(33): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(34): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(35): signal "count_ini" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(36): signal "dir_ini" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(51): signal "count_ini" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(52): signal "dir_ini" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "tabela_sin" for hierarchy "tabela_sin:usin"
+Info (12128): Elaborating entity "comparador" for hierarchy "comparador:ucomp"
+Warning (10492): VHDL Process Statement warning at comparador.vhd(34): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED[0]" is stuck at GND
+    Warning (13410): Pin "LED[1]" is stuck at GND
+    Warning (13410): Pin "LED[2]" is stuck at GND
+    Warning (13410): Pin "LED[3]" is stuck at GND
+    Warning (13410): Pin "LED[4]" is stuck at GND
+    Warning (13410): Pin "LED[5]" is stuck at GND
+    Warning (13410): Pin "LED[6]" is stuck at GND
+    Warning (13410): Pin "LED[7]" is stuck at GND
     Warning (13410): Pin "RESET_FA[0]" is stuck at GND
     Warning (13410): Pin "RESET_FA[1]" is stuck at GND
     Warning (13410): Pin "RESET_FA[2]" is stuck at GND
@@ -385,10 +678,16 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "PWM2H_FC[0]" is stuck at GND
     Warning (13410): Pin "PWM2H_FC[1]" is stuck at GND
     Warning (13410): Pin "PWM2H_FC[2]" is stuck at GND
-Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 9 input pin(s) that do not drive logic
+Warning (21074): Design contains 16 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50"
+    Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "INT0_FA[0]"
     Warning (15610): No output dependent on input pin "INT0_FA[1]"
     Warning (15610): No output dependent on input pin "INT0_FA[2]"
@@ -398,14 +697,13 @@ Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "INT0_FC[0]"
     Warning (15610): No output dependent on input pin "INT0_FC[1]"
     Warning (15610): No output dependent on input pin "INT0_FC[2]"
-Info (21057): Implemented 115 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 53 output pins
-    Info (21061): Implemented 46 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 71 warnings
-    Info: Peak virtual memory: 669 megabytes
-    Info: Processing ended: Tue Jan 20 15:38:41 2015
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:41
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 112 warnings
+    Info: Peak virtual memory: 668 megabytes
+    Info: Processing ended: Tue Jan 20 20:46:00 2015
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:46
 
 
