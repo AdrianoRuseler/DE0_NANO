@@ -229,24 +229,19 @@ signal dirPWM1,dirPWM2,dirPWM3 : std_logic;
 signal cPWM1,cPWM2,cPWM3 : std_logic_vector(15 downto 0);
         
       
-	signal omega_pll : std_logic_vector(Nin-1 downto 0);
-	signal theta_pll : std_logic_vector(Nout-1 downto 0);  
+signal omega_pll : std_logic_vector(Nin-1 downto 0);
+signal theta_pll : std_logic_vector(Nout-1 downto 0);  
 
-
-	
-	
 
 begin
-
-
-					
+				
 							
 	--	PLL -> pll_lock = 53.333_ MHz	 
-  -- upll: pll port map (areset => '0',
-	--						inclk0 => CLOCK_50,
-	--						c0 => clk_pll,
-	--						locked => pll_lock 
-	--						);
+   upll: pll port map (areset => '0',
+							inclk0 => CLOCK_50,
+							c0 => clk_pll,
+							locked => pll_lock 
+							);
 							
 							
 	--	clk_int = 6.666_ MHz					
