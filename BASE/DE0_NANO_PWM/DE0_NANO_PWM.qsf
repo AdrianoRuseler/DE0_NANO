@@ -69,10 +69,10 @@ set_location_assignment PIN_M15 -to SW[3]
 
 # set_location_assignment PIN_A8 -to GPIO_0_IN[0]
 # set_location_assignment PIN_B8 -to GPIO_0_IN[1]
-# set_location_assignment PIN_D3 -to GPIO_0[0]
-# set_location_assignment PIN_C3 -to GPIO_0[1]
-# set_location_assignment PIN_A2 -to GPIO_0[2]
-# set_location_assignment PIN_A3 -to GPIO_0[3]
+set_location_assignment PIN_D3 -to GPIO_0[0]
+set_location_assignment PIN_C3 -to GPIO_0[1]
+set_location_assignment PIN_A2 -to GPIO_0[2]
+set_location_assignment PIN_A3 -to GPIO_0[3]
 
 #  set_location_assignment PIN_T9 -to GPIO_1_IN[0]
 # set_location_assignment PIN_R9 -to GPIO_1_IN[1]
@@ -181,4 +181,5 @@ set_global_assignment -name VHDL_FILE comparadores.vhd
 set_global_assignment -name VHDL_FILE clk_div.vhd
 set_global_assignment -name VHDL_FILE LEDs.vhd
 set_global_assignment -name VHDL_FILE integrador.vhd
+set_global_assignment -name CDF_FILE output_files/Chain3.cdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

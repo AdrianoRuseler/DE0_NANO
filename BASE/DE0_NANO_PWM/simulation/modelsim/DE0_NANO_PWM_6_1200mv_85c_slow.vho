@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 14.1.0 Build 186 12/03/2014 SJ Web Edition"
 
--- DATE "01/21/2015 21:17:44"
+-- DATE "01/22/2015 17:33:56"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -57,7 +57,8 @@ ENTITY 	DE0_NANO_PWM IS
 	PWM1H_FC : OUT std_logic_vector(2 DOWNTO 0);
 	PWM2L_FC : OUT std_logic_vector(2 DOWNTO 0);
 	PWM2H_FC : OUT std_logic_vector(2 DOWNTO 0);
-	INT0_FC : IN std_logic_vector(2 DOWNTO 0)
+	INT0_FC : IN std_logic_vector(2 DOWNTO 0);
+	GPIO_0 : OUT std_logic_vector(3 DOWNTO 0)
 	);
 END DE0_NANO_PWM;
 
@@ -71,8 +72,6 @@ END DE0_NANO_PWM;
 -- LED[6]	=>  Location: PIN_B1,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- LED[7]	=>  Location: PIN_L3,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- SW[0]	=>  Location: PIN_M1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- SW[1]	=>  Location: PIN_T8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- SW[2]	=>  Location: PIN_B9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- SW[3]	=>  Location: PIN_M15,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- KEY[0]	=>  Location: PIN_J15,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- KEY[1]	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -130,6 +129,12 @@ END DE0_NANO_PWM;
 -- INT0_FC[0]	=>  Location: PIN_P15,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- INT0_FC[1]	=>  Location: PIN_T10,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- INT0_FC[2]	=>  Location: PIN_N9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- GPIO_0[0]	=>  Location: PIN_D3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- GPIO_0[1]	=>  Location: PIN_C3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- GPIO_0[2]	=>  Location: PIN_A2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- GPIO_0[3]	=>  Location: PIN_A3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- SW[1]	=>  Location: PIN_T8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- SW[2]	=>  Location: PIN_B9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- CLOCK_50	=>  Location: PIN_R8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
@@ -165,14 +170,13 @@ SIGNAL ww_PWM1H_FC : std_logic_vector(2 DOWNTO 0);
 SIGNAL ww_PWM2L_FC : std_logic_vector(2 DOWNTO 0);
 SIGNAL ww_PWM2H_FC : std_logic_vector(2 DOWNTO 0);
 SIGNAL ww_INT0_FC : std_logic_vector(2 DOWNTO 0);
+SIGNAL ww_GPIO_0 : std_logic_vector(3 DOWNTO 0);
 SIGNAL \upll|altpll_component|auto_generated|pll1_INCLK_bus\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \upll|altpll_component|auto_generated|pll1_CLK_bus\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \u5|sinc_int~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \u1|clk_out_bi~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \SW[0]~input_o\ : std_logic;
-SIGNAL \SW[1]~input_o\ : std_logic;
-SIGNAL \SW[2]~input_o\ : std_logic;
 SIGNAL \SW[3]~input_o\ : std_logic;
 SIGNAL \KEY[0]~input_o\ : std_logic;
 SIGNAL \KEY[1]~input_o\ : std_logic;
@@ -195,6 +199,7 @@ SIGNAL \u1|count[1]~19\ : std_logic;
 SIGNAL \u1|count[2]~20_combout\ : std_logic;
 SIGNAL \u1|count[2]~21\ : std_logic;
 SIGNAL \u1|count[3]~22_combout\ : std_logic;
+SIGNAL \u1|LessThan0~0_combout\ : std_logic;
 SIGNAL \u1|count[3]~23\ : std_logic;
 SIGNAL \u1|count[4]~24_combout\ : std_logic;
 SIGNAL \u1|count[4]~25\ : std_logic;
@@ -222,7 +227,6 @@ SIGNAL \u1|count[14]~44_combout\ : std_logic;
 SIGNAL \u1|count[14]~45\ : std_logic;
 SIGNAL \u1|count[15]~46_combout\ : std_logic;
 SIGNAL \u1|LessThan0~3_combout\ : std_logic;
-SIGNAL \u1|LessThan0~0_combout\ : std_logic;
 SIGNAL \u1|LessThan0~4_combout\ : std_logic;
 SIGNAL \u1|clk_out_bi~0_combout\ : std_logic;
 SIGNAL \u1|clk_out_bi~q\ : std_logic;
@@ -303,8 +307,6 @@ SIGNAL \uled|count[10]~36_combout\ : std_logic;
 SIGNAL \uled|count[10]~37\ : std_logic;
 SIGNAL \uled|count[11]~38_combout\ : std_logic;
 SIGNAL \uled|LessThan0~2_combout\ : std_logic;
-SIGNAL \uled|LessThan0~0_combout\ : std_logic;
-SIGNAL \uled|LessThan0~1_combout\ : std_logic;
 SIGNAL \uled|count[11]~39\ : std_logic;
 SIGNAL \uled|count[12]~40_combout\ : std_logic;
 SIGNAL \uled|count[12]~41\ : std_logic;
@@ -314,13 +316,65 @@ SIGNAL \uled|count[14]~44_combout\ : std_logic;
 SIGNAL \uled|count[14]~45\ : std_logic;
 SIGNAL \uled|count[15]~46_combout\ : std_logic;
 SIGNAL \uled|LessThan0~3_combout\ : std_logic;
+SIGNAL \uled|LessThan0~0_combout\ : std_logic;
+SIGNAL \uled|LessThan0~1_combout\ : std_logic;
 SIGNAL \uled|LessThan0~4_combout\ : std_logic;
 SIGNAL \uled|clk_out_bi~0_combout\ : std_logic;
 SIGNAL \uled|clk_out_bi~q\ : std_logic;
+SIGNAL \uc1|c_int[0]~18_combout\ : std_logic;
+SIGNAL \uc1|c_int[0]~19\ : std_logic;
+SIGNAL \uc1|c_int[1]~20_combout\ : std_logic;
+SIGNAL \uc1|c_int[1]~21\ : std_logic;
+SIGNAL \uc1|c_int[2]~22_combout\ : std_logic;
+SIGNAL \uc1|c_int[2]~23\ : std_logic;
+SIGNAL \uc1|c_int[3]~24_combout\ : std_logic;
+SIGNAL \uc1|c_int[3]~25\ : std_logic;
+SIGNAL \uc1|c_int[4]~26_combout\ : std_logic;
+SIGNAL \uc1|c_int[4]~27\ : std_logic;
+SIGNAL \uc1|c_int[5]~28_combout\ : std_logic;
+SIGNAL \uc1|c_int[5]~29\ : std_logic;
+SIGNAL \uc1|c_int[6]~30_combout\ : std_logic;
+SIGNAL \uc1|c_int[6]~31\ : std_logic;
+SIGNAL \uc1|c_int[7]~32_combout\ : std_logic;
+SIGNAL \uc1|c_int[7]~33\ : std_logic;
+SIGNAL \uc1|c_int[8]~34_combout\ : std_logic;
+SIGNAL \uc1|c_int[8]~35\ : std_logic;
+SIGNAL \uc1|c_int[9]~36_combout\ : std_logic;
+SIGNAL \uc1|LessThan1~0_combout\ : std_logic;
+SIGNAL \uc1|LessThan1~1_combout\ : std_logic;
+SIGNAL \uc1|dir_int~q\ : std_logic;
+SIGNAL \ucomp|LessThan0~1_combout\ : std_logic;
+SIGNAL \uc1|c_int[15]~16_combout\ : std_logic;
+SIGNAL \uc1|LessThan0~0_combout\ : std_logic;
+SIGNAL \uc1|LessThan0~2_combout\ : std_logic;
+SIGNAL \uc1|LessThan0~3_combout\ : std_logic;
+SIGNAL \uc1|LessThan0~4_combout\ : std_logic;
+SIGNAL \uc1|c_int[9]~37\ : std_logic;
+SIGNAL \uc1|c_int[10]~39\ : std_logic;
+SIGNAL \uc1|c_int[11]~40_combout\ : std_logic;
+SIGNAL \uc1|c_int[11]~41\ : std_logic;
+SIGNAL \uc1|c_int[12]~42_combout\ : std_logic;
+SIGNAL \uc1|c_int[12]~43\ : std_logic;
+SIGNAL \uc1|c_int[13]~44_combout\ : std_logic;
+SIGNAL \uc1|c_int[13]~45\ : std_logic;
+SIGNAL \uc1|c_int[14]~46_combout\ : std_logic;
+SIGNAL \uc1|c_int[14]~47\ : std_logic;
+SIGNAL \uc1|c_int[15]~48_combout\ : std_logic;
+SIGNAL \ucomp|LessThan0~0_combout\ : std_logic;
+SIGNAL \uc1|c_int[15]~17_combout\ : std_logic;
+SIGNAL \uc1|c_int[10]~38_combout\ : std_logic;
+SIGNAL \uc1|LessThan0~1_combout\ : std_logic;
+SIGNAL \ucomp|LessThan0~2_combout\ : std_logic;
+SIGNAL \ucomp|LessThan0~3_combout\ : std_logic;
+SIGNAL \ucomp|comp_out~q\ : std_logic;
+SIGNAL \SW[1]~input_o\ : std_logic;
+SIGNAL \SW[2]~input_o\ : std_logic;
 SIGNAL \uled|count\ : std_logic_vector(15 DOWNTO 0);
+SIGNAL \uc1|c_int\ : std_logic_vector(15 DOWNTO 0);
+SIGNAL \upll|altpll_component|auto_generated|wire_pll1_clk\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \u5|out_int\ : std_logic_vector(29 DOWNTO 0);
 SIGNAL \u1|count\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \upll|altpll_component|auto_generated|wire_pll1_clk\ : std_logic_vector(4 DOWNTO 0);
+SIGNAL \upll|altpll_component|auto_generated|ALT_INV_wire_pll1_clk[0]~clkctrl_outclk\ : std_logic;
 SIGNAL \u5|ALT_INV_out_int\ : std_logic_vector(29 DOWNTO 29);
 
 BEGIN
@@ -347,6 +401,7 @@ PWM1H_FC <= ww_PWM1H_FC;
 PWM2L_FC <= ww_PWM2L_FC;
 PWM2H_FC <= ww_PWM2H_FC;
 ww_INT0_FC <= INT0_FC;
+GPIO_0 <= ww_GPIO_0;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
@@ -364,6 +419,7 @@ ww_devpor <= devpor;
 \u1|clk_out_bi~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \u1|clk_out_bi~q\);
 
 \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \upll|altpll_component|auto_generated|wire_pll1_clk\(0));
+\upll|altpll_component|auto_generated|ALT_INV_wire_pll1_clk[0]~clkctrl_outclk\ <= NOT \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\;
 \u5|ALT_INV_out_int\(29) <= NOT \u5|out_int\(29);
 
 -- Location: IOOBUF_X38_Y34_N16
@@ -1002,6 +1058,54 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_PWM2H_FC(2));
 
+-- Location: IOOBUF_X1_Y34_N9
+\GPIO_0[0]~output\ : cycloneive_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \ucomp|comp_out~q\,
+	devoe => ww_devoe,
+	o => ww_GPIO_0(0));
+
+-- Location: IOOBUF_X1_Y34_N2
+\GPIO_0[1]~output\ : cycloneive_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \SW[1]~input_o\,
+	devoe => ww_devoe,
+	o => ww_GPIO_0(1));
+
+-- Location: IOOBUF_X7_Y34_N9
+\GPIO_0[2]~output\ : cycloneive_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \SW[2]~input_o\,
+	devoe => ww_devoe,
+	o => ww_GPIO_0(2));
+
+-- Location: IOOBUF_X7_Y34_N16
+\GPIO_0[3]~output\ : cycloneive_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => ww_GPIO_0(3));
+
 -- Location: IOIBUF_X27_Y0_N22
 \CLOCK_50~input\ : cycloneive_io_ibuf
 -- pragma translate_off
@@ -1119,7 +1223,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\);
 
--- Location: LCCOMB_X39_Y30_N0
+-- Location: LCCOMB_X3_Y16_N0
 \u1|count[0]~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[0]~16_combout\ = \u1|count\(0) $ (VCC)
@@ -1136,7 +1240,7 @@ PORT MAP (
 	combout => \u1|count[0]~16_combout\,
 	cout => \u1|count[0]~17\);
 
--- Location: FF_X39_Y30_N1
+-- Location: FF_X3_Y16_N1
 \u1|count[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1151,7 +1255,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(0));
 
--- Location: LCCOMB_X39_Y30_N2
+-- Location: LCCOMB_X3_Y16_N2
 \u1|count[1]~18\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[1]~18_combout\ = (\u1|count\(1) & (!\u1|count[0]~17\)) # (!\u1|count\(1) & ((\u1|count[0]~17\) # (GND)))
@@ -1169,7 +1273,7 @@ PORT MAP (
 	combout => \u1|count[1]~18_combout\,
 	cout => \u1|count[1]~19\);
 
--- Location: FF_X39_Y30_N3
+-- Location: FF_X3_Y16_N3
 \u1|count[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1184,7 +1288,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(1));
 
--- Location: LCCOMB_X39_Y30_N4
+-- Location: LCCOMB_X3_Y16_N4
 \u1|count[2]~20\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[2]~20_combout\ = (\u1|count\(2) & (\u1|count[1]~19\ $ (GND))) # (!\u1|count\(2) & (!\u1|count[1]~19\ & VCC))
@@ -1202,7 +1306,7 @@ PORT MAP (
 	combout => \u1|count[2]~20_combout\,
 	cout => \u1|count[2]~21\);
 
--- Location: FF_X39_Y30_N5
+-- Location: FF_X3_Y16_N5
 \u1|count[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1217,7 +1321,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(2));
 
--- Location: LCCOMB_X39_Y30_N6
+-- Location: LCCOMB_X3_Y16_N6
 \u1|count[3]~22\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[3]~22_combout\ = (\u1|count\(3) & (!\u1|count[2]~21\)) # (!\u1|count\(3) & ((\u1|count[2]~21\) # (GND)))
@@ -1235,7 +1339,7 @@ PORT MAP (
 	combout => \u1|count[3]~22_combout\,
 	cout => \u1|count[3]~23\);
 
--- Location: FF_X39_Y30_N7
+-- Location: FF_X3_Y16_N7
 \u1|count[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1250,7 +1354,24 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(3));
 
--- Location: LCCOMB_X39_Y30_N8
+-- Location: LCCOMB_X2_Y16_N12
+\u1|LessThan0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \u1|LessThan0~0_combout\ = (!\u1|count\(2) & (!\u1|count\(3) & ((!\u1|count\(1)) # (!\u1|count\(0)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000100010001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \u1|count\(2),
+	datab => \u1|count\(3),
+	datac => \u1|count\(0),
+	datad => \u1|count\(1),
+	combout => \u1|LessThan0~0_combout\);
+
+-- Location: LCCOMB_X3_Y16_N8
 \u1|count[4]~24\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[4]~24_combout\ = (\u1|count\(4) & (\u1|count[3]~23\ $ (GND))) # (!\u1|count\(4) & (!\u1|count[3]~23\ & VCC))
@@ -1268,7 +1389,7 @@ PORT MAP (
 	combout => \u1|count[4]~24_combout\,
 	cout => \u1|count[4]~25\);
 
--- Location: FF_X39_Y30_N9
+-- Location: FF_X3_Y16_N9
 \u1|count[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1283,7 +1404,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(4));
 
--- Location: LCCOMB_X39_Y30_N10
+-- Location: LCCOMB_X3_Y16_N10
 \u1|count[5]~26\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[5]~26_combout\ = (\u1|count\(5) & (!\u1|count[4]~25\)) # (!\u1|count\(5) & ((\u1|count[4]~25\) # (GND)))
@@ -1301,7 +1422,7 @@ PORT MAP (
 	combout => \u1|count[5]~26_combout\,
 	cout => \u1|count[5]~27\);
 
--- Location: FF_X39_Y30_N11
+-- Location: FF_X3_Y16_N11
 \u1|count[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1316,7 +1437,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(5));
 
--- Location: LCCOMB_X39_Y30_N12
+-- Location: LCCOMB_X3_Y16_N12
 \u1|count[6]~28\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[6]~28_combout\ = (\u1|count\(6) & (\u1|count[5]~27\ $ (GND))) # (!\u1|count\(6) & (!\u1|count[5]~27\ & VCC))
@@ -1334,7 +1455,7 @@ PORT MAP (
 	combout => \u1|count[6]~28_combout\,
 	cout => \u1|count[6]~29\);
 
--- Location: FF_X39_Y30_N13
+-- Location: FF_X3_Y16_N13
 \u1|count[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1349,7 +1470,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(6));
 
--- Location: LCCOMB_X39_Y30_N14
+-- Location: LCCOMB_X3_Y16_N14
 \u1|count[7]~30\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[7]~30_combout\ = (\u1|count\(7) & (!\u1|count[6]~29\)) # (!\u1|count\(7) & ((\u1|count[6]~29\) # (GND)))
@@ -1367,7 +1488,7 @@ PORT MAP (
 	combout => \u1|count[7]~30_combout\,
 	cout => \u1|count[7]~31\);
 
--- Location: FF_X39_Y30_N15
+-- Location: FF_X3_Y16_N15
 \u1|count[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1382,7 +1503,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(7));
 
--- Location: LCCOMB_X39_Y30_N16
+-- Location: LCCOMB_X3_Y16_N16
 \u1|count[8]~32\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[8]~32_combout\ = (\u1|count\(8) & (\u1|count[7]~31\ $ (GND))) # (!\u1|count\(8) & (!\u1|count[7]~31\ & VCC))
@@ -1400,7 +1521,7 @@ PORT MAP (
 	combout => \u1|count[8]~32_combout\,
 	cout => \u1|count[8]~33\);
 
--- Location: FF_X39_Y30_N17
+-- Location: FF_X3_Y16_N17
 \u1|count[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1415,7 +1536,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(8));
 
--- Location: LCCOMB_X39_Y30_N18
+-- Location: LCCOMB_X3_Y16_N18
 \u1|count[9]~34\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[9]~34_combout\ = (\u1|count\(9) & (!\u1|count[8]~33\)) # (!\u1|count\(9) & ((\u1|count[8]~33\) # (GND)))
@@ -1433,7 +1554,7 @@ PORT MAP (
 	combout => \u1|count[9]~34_combout\,
 	cout => \u1|count[9]~35\);
 
--- Location: FF_X39_Y30_N19
+-- Location: FF_X3_Y16_N19
 \u1|count[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1448,7 +1569,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(9));
 
--- Location: LCCOMB_X39_Y30_N20
+-- Location: LCCOMB_X3_Y16_N20
 \u1|count[10]~36\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[10]~36_combout\ = (\u1|count\(10) & (\u1|count[9]~35\ $ (GND))) # (!\u1|count\(10) & (!\u1|count[9]~35\ & VCC))
@@ -1466,7 +1587,7 @@ PORT MAP (
 	combout => \u1|count[10]~36_combout\,
 	cout => \u1|count[10]~37\);
 
--- Location: FF_X39_Y30_N21
+-- Location: FF_X3_Y16_N21
 \u1|count[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1481,7 +1602,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(10));
 
--- Location: LCCOMB_X39_Y30_N22
+-- Location: LCCOMB_X3_Y16_N22
 \u1|count[11]~38\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[11]~38_combout\ = (\u1|count\(11) & (!\u1|count[10]~37\)) # (!\u1|count\(11) & ((\u1|count[10]~37\) # (GND)))
@@ -1499,7 +1620,7 @@ PORT MAP (
 	combout => \u1|count[11]~38_combout\,
 	cout => \u1|count[11]~39\);
 
--- Location: FF_X39_Y30_N23
+-- Location: FF_X3_Y16_N23
 \u1|count[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1514,10 +1635,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(11));
 
--- Location: LCCOMB_X38_Y30_N12
+-- Location: LCCOMB_X2_Y16_N28
 \u1|LessThan0~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \u1|LessThan0~2_combout\ = (!\u1|count\(9) & (!\u1|count\(8) & (!\u1|count\(10) & !\u1|count\(11))))
+-- \u1|LessThan0~2_combout\ = (!\u1|count\(9) & (!\u1|count\(11) & (!\u1|count\(10) & !\u1|count\(8))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1526,15 +1647,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \u1|count\(9),
-	datab => \u1|count\(8),
+	datab => \u1|count\(11),
 	datac => \u1|count\(10),
-	datad => \u1|count\(11),
+	datad => \u1|count\(8),
 	combout => \u1|LessThan0~2_combout\);
 
--- Location: LCCOMB_X38_Y30_N18
+-- Location: LCCOMB_X2_Y16_N30
 \u1|LessThan0~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \u1|LessThan0~1_combout\ = (!\u1|count\(5) & (!\u1|count\(6) & (!\u1|count\(4) & !\u1|count\(7))))
+-- \u1|LessThan0~1_combout\ = (!\u1|count\(6) & (!\u1|count\(7) & (!\u1|count\(4) & !\u1|count\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1542,13 +1663,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \u1|count\(5),
-	datab => \u1|count\(6),
+	dataa => \u1|count\(6),
+	datab => \u1|count\(7),
 	datac => \u1|count\(4),
-	datad => \u1|count\(7),
+	datad => \u1|count\(5),
 	combout => \u1|LessThan0~1_combout\);
 
--- Location: LCCOMB_X39_Y30_N24
+-- Location: LCCOMB_X3_Y16_N24
 \u1|count[12]~40\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[12]~40_combout\ = (\u1|count\(12) & (\u1|count[11]~39\ $ (GND))) # (!\u1|count\(12) & (!\u1|count[11]~39\ & VCC))
@@ -1566,7 +1687,7 @@ PORT MAP (
 	combout => \u1|count[12]~40_combout\,
 	cout => \u1|count[12]~41\);
 
--- Location: FF_X39_Y30_N25
+-- Location: FF_X3_Y16_N25
 \u1|count[12]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1581,7 +1702,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(12));
 
--- Location: LCCOMB_X39_Y30_N26
+-- Location: LCCOMB_X3_Y16_N26
 \u1|count[13]~42\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[13]~42_combout\ = (\u1|count\(13) & (!\u1|count[12]~41\)) # (!\u1|count\(13) & ((\u1|count[12]~41\) # (GND)))
@@ -1599,7 +1720,7 @@ PORT MAP (
 	combout => \u1|count[13]~42_combout\,
 	cout => \u1|count[13]~43\);
 
--- Location: FF_X39_Y30_N27
+-- Location: FF_X3_Y16_N27
 \u1|count[13]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1614,7 +1735,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(13));
 
--- Location: LCCOMB_X39_Y30_N28
+-- Location: LCCOMB_X3_Y16_N28
 \u1|count[14]~44\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[14]~44_combout\ = (\u1|count\(14) & (\u1|count[13]~43\ $ (GND))) # (!\u1|count\(14) & (!\u1|count[13]~43\ & VCC))
@@ -1632,7 +1753,7 @@ PORT MAP (
 	combout => \u1|count[14]~44_combout\,
 	cout => \u1|count[14]~45\);
 
--- Location: FF_X39_Y30_N29
+-- Location: FF_X3_Y16_N29
 \u1|count[14]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1647,7 +1768,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(14));
 
--- Location: LCCOMB_X39_Y30_N30
+-- Location: LCCOMB_X3_Y16_N30
 \u1|count[15]~46\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|count[15]~46_combout\ = \u1|count\(15) $ (\u1|count[14]~45\)
@@ -1662,7 +1783,7 @@ PORT MAP (
 	cin => \u1|count[14]~45\,
 	combout => \u1|count[15]~46_combout\);
 
--- Location: FF_X39_Y30_N31
+-- Location: FF_X3_Y16_N31
 \u1|count[15]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1677,10 +1798,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|count\(15));
 
--- Location: LCCOMB_X38_Y30_N30
+-- Location: LCCOMB_X2_Y16_N18
 \u1|LessThan0~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \u1|LessThan0~3_combout\ = (!\u1|count\(13) & (!\u1|count\(14) & (!\u1|count\(15) & !\u1|count\(12))))
+-- \u1|LessThan0~3_combout\ = (!\u1|count\(12) & (!\u1|count\(14) & (!\u1|count\(15) & !\u1|count\(13))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1688,33 +1809,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \u1|count\(13),
+	dataa => \u1|count\(12),
 	datab => \u1|count\(14),
 	datac => \u1|count\(15),
-	datad => \u1|count\(12),
+	datad => \u1|count\(13),
 	combout => \u1|LessThan0~3_combout\);
 
--- Location: LCCOMB_X38_Y30_N28
-\u1|LessThan0~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \u1|LessThan0~0_combout\ = (!\u1|count\(2) & (!\u1|count\(3) & ((!\u1|count\(1)) # (!\u1|count\(0)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100010001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \u1|count\(2),
-	datab => \u1|count\(3),
-	datac => \u1|count\(0),
-	datad => \u1|count\(1),
-	combout => \u1|LessThan0~0_combout\);
-
--- Location: LCCOMB_X38_Y30_N0
+-- Location: LCCOMB_X2_Y16_N24
 \u1|LessThan0~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \u1|LessThan0~4_combout\ = (((!\u1|LessThan0~0_combout\) # (!\u1|LessThan0~3_combout\)) # (!\u1|LessThan0~1_combout\)) # (!\u1|LessThan0~2_combout\)
+-- \u1|LessThan0~4_combout\ = (((!\u1|LessThan0~3_combout\) # (!\u1|LessThan0~1_combout\)) # (!\u1|LessThan0~2_combout\)) # (!\u1|LessThan0~0_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1722,13 +1826,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \u1|LessThan0~2_combout\,
-	datab => \u1|LessThan0~1_combout\,
-	datac => \u1|LessThan0~3_combout\,
-	datad => \u1|LessThan0~0_combout\,
+	dataa => \u1|LessThan0~0_combout\,
+	datab => \u1|LessThan0~2_combout\,
+	datac => \u1|LessThan0~1_combout\,
+	datad => \u1|LessThan0~3_combout\,
 	combout => \u1|LessThan0~4_combout\);
 
--- Location: LCCOMB_X25_Y33_N0
+-- Location: LCCOMB_X1_Y16_N14
 \u1|clk_out_bi~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u1|clk_out_bi~0_combout\ = \u1|clk_out_bi~q\ $ (\u1|LessThan0~4_combout\)
@@ -1743,7 +1847,7 @@ PORT MAP (
 	datad => \u1|LessThan0~4_combout\,
 	combout => \u1|clk_out_bi~0_combout\);
 
--- Location: FF_X25_Y33_N1
+-- Location: FF_X1_Y16_N15
 \u1|clk_out_bi\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1757,7 +1861,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u1|clk_out_bi~q\);
 
--- Location: CLKCTRL_G12
+-- Location: CLKCTRL_G3
 \u1|clk_out_bi~clkctrl\ : cycloneive_clkctrl
 -- pragma translate_off
 GENERIC MAP (
@@ -2620,7 +2724,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u5|sinc_int~q\);
 
--- Location: CLKCTRL_G17
+-- Location: CLKCTRL_G19
 \u5|sinc_int~clkctrl\ : cycloneive_clkctrl
 -- pragma translate_off
 GENERIC MAP (
@@ -2633,7 +2737,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \u5|sinc_int~clkctrl_outclk\);
 
--- Location: LCCOMB_X44_Y33_N0
+-- Location: LCCOMB_X11_Y31_N0
 \uled|count[0]~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[0]~16_combout\ = \uled|count\(0) $ (VCC)
@@ -2650,7 +2754,7 @@ PORT MAP (
 	combout => \uled|count[0]~16_combout\,
 	cout => \uled|count[0]~17\);
 
--- Location: FF_X44_Y33_N1
+-- Location: FF_X11_Y31_N1
 \uled|count[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2665,7 +2769,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(0));
 
--- Location: LCCOMB_X44_Y33_N2
+-- Location: LCCOMB_X11_Y31_N2
 \uled|count[1]~18\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[1]~18_combout\ = (\uled|count\(1) & (!\uled|count[0]~17\)) # (!\uled|count\(1) & ((\uled|count[0]~17\) # (GND)))
@@ -2683,7 +2787,7 @@ PORT MAP (
 	combout => \uled|count[1]~18_combout\,
 	cout => \uled|count[1]~19\);
 
--- Location: FF_X44_Y33_N3
+-- Location: FF_X11_Y31_N3
 \uled|count[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2698,7 +2802,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(1));
 
--- Location: LCCOMB_X44_Y33_N4
+-- Location: LCCOMB_X11_Y31_N4
 \uled|count[2]~20\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[2]~20_combout\ = (\uled|count\(2) & (\uled|count[1]~19\ $ (GND))) # (!\uled|count\(2) & (!\uled|count[1]~19\ & VCC))
@@ -2716,7 +2820,7 @@ PORT MAP (
 	combout => \uled|count[2]~20_combout\,
 	cout => \uled|count[2]~21\);
 
--- Location: FF_X44_Y33_N5
+-- Location: FF_X11_Y31_N5
 \uled|count[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2731,7 +2835,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(2));
 
--- Location: LCCOMB_X44_Y33_N6
+-- Location: LCCOMB_X11_Y31_N6
 \uled|count[3]~22\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[3]~22_combout\ = (\uled|count\(3) & (!\uled|count[2]~21\)) # (!\uled|count\(3) & ((\uled|count[2]~21\) # (GND)))
@@ -2749,7 +2853,7 @@ PORT MAP (
 	combout => \uled|count[3]~22_combout\,
 	cout => \uled|count[3]~23\);
 
--- Location: FF_X44_Y33_N7
+-- Location: FF_X11_Y31_N7
 \uled|count[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2764,7 +2868,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(3));
 
--- Location: LCCOMB_X44_Y33_N8
+-- Location: LCCOMB_X11_Y31_N8
 \uled|count[4]~24\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[4]~24_combout\ = (\uled|count\(4) & (\uled|count[3]~23\ $ (GND))) # (!\uled|count\(4) & (!\uled|count[3]~23\ & VCC))
@@ -2782,7 +2886,7 @@ PORT MAP (
 	combout => \uled|count[4]~24_combout\,
 	cout => \uled|count[4]~25\);
 
--- Location: FF_X44_Y33_N9
+-- Location: FF_X11_Y31_N9
 \uled|count[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2797,7 +2901,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(4));
 
--- Location: LCCOMB_X44_Y33_N10
+-- Location: LCCOMB_X11_Y31_N10
 \uled|count[5]~26\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[5]~26_combout\ = (\uled|count\(5) & (!\uled|count[4]~25\)) # (!\uled|count\(5) & ((\uled|count[4]~25\) # (GND)))
@@ -2815,7 +2919,7 @@ PORT MAP (
 	combout => \uled|count[5]~26_combout\,
 	cout => \uled|count[5]~27\);
 
--- Location: FF_X44_Y33_N11
+-- Location: FF_X11_Y31_N11
 \uled|count[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2830,7 +2934,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(5));
 
--- Location: LCCOMB_X44_Y33_N12
+-- Location: LCCOMB_X11_Y31_N12
 \uled|count[6]~28\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[6]~28_combout\ = (\uled|count\(6) & (\uled|count[5]~27\ $ (GND))) # (!\uled|count\(6) & (!\uled|count[5]~27\ & VCC))
@@ -2848,7 +2952,7 @@ PORT MAP (
 	combout => \uled|count[6]~28_combout\,
 	cout => \uled|count[6]~29\);
 
--- Location: FF_X44_Y33_N13
+-- Location: FF_X11_Y31_N13
 \uled|count[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2863,7 +2967,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(6));
 
--- Location: LCCOMB_X44_Y33_N14
+-- Location: LCCOMB_X11_Y31_N14
 \uled|count[7]~30\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[7]~30_combout\ = (\uled|count\(7) & (!\uled|count[6]~29\)) # (!\uled|count\(7) & ((\uled|count[6]~29\) # (GND)))
@@ -2881,7 +2985,7 @@ PORT MAP (
 	combout => \uled|count[7]~30_combout\,
 	cout => \uled|count[7]~31\);
 
--- Location: FF_X44_Y33_N15
+-- Location: FF_X11_Y31_N15
 \uled|count[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2896,7 +3000,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(7));
 
--- Location: LCCOMB_X44_Y33_N16
+-- Location: LCCOMB_X11_Y31_N16
 \uled|count[8]~32\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[8]~32_combout\ = (\uled|count\(8) & (\uled|count[7]~31\ $ (GND))) # (!\uled|count\(8) & (!\uled|count[7]~31\ & VCC))
@@ -2914,7 +3018,7 @@ PORT MAP (
 	combout => \uled|count[8]~32_combout\,
 	cout => \uled|count[8]~33\);
 
--- Location: FF_X44_Y33_N17
+-- Location: FF_X11_Y31_N17
 \uled|count[8]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2929,7 +3033,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(8));
 
--- Location: LCCOMB_X44_Y33_N18
+-- Location: LCCOMB_X11_Y31_N18
 \uled|count[9]~34\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[9]~34_combout\ = (\uled|count\(9) & (!\uled|count[8]~33\)) # (!\uled|count\(9) & ((\uled|count[8]~33\) # (GND)))
@@ -2947,7 +3051,7 @@ PORT MAP (
 	combout => \uled|count[9]~34_combout\,
 	cout => \uled|count[9]~35\);
 
--- Location: FF_X44_Y33_N19
+-- Location: FF_X11_Y31_N19
 \uled|count[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2962,7 +3066,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(9));
 
--- Location: LCCOMB_X44_Y33_N20
+-- Location: LCCOMB_X11_Y31_N20
 \uled|count[10]~36\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[10]~36_combout\ = (\uled|count\(10) & (\uled|count[9]~35\ $ (GND))) # (!\uled|count\(10) & (!\uled|count[9]~35\ & VCC))
@@ -2980,7 +3084,7 @@ PORT MAP (
 	combout => \uled|count[10]~36_combout\,
 	cout => \uled|count[10]~37\);
 
--- Location: FF_X44_Y33_N21
+-- Location: FF_X11_Y31_N21
 \uled|count[10]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2995,7 +3099,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(10));
 
--- Location: LCCOMB_X44_Y33_N22
+-- Location: LCCOMB_X11_Y31_N22
 \uled|count[11]~38\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[11]~38_combout\ = (\uled|count\(11) & (!\uled|count[10]~37\)) # (!\uled|count\(11) & ((\uled|count[10]~37\) # (GND)))
@@ -3013,7 +3117,7 @@ PORT MAP (
 	combout => \uled|count[11]~38_combout\,
 	cout => \uled|count[11]~39\);
 
--- Location: FF_X44_Y33_N23
+-- Location: FF_X11_Y31_N23
 \uled|count[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3028,10 +3132,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(11));
 
--- Location: LCCOMB_X43_Y33_N30
+-- Location: LCCOMB_X12_Y31_N30
 \uled|LessThan0~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \uled|LessThan0~2_combout\ = (!\uled|count\(10) & (!\uled|count\(9) & (!\uled|count\(8) & !\uled|count\(11))))
+-- \uled|LessThan0~2_combout\ = (!\uled|count\(8) & (!\uled|count\(9) & (!\uled|count\(10) & !\uled|count\(11))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3039,47 +3143,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \uled|count\(10),
+	dataa => \uled|count\(8),
 	datab => \uled|count\(9),
-	datac => \uled|count\(8),
+	datac => \uled|count\(10),
 	datad => \uled|count\(11),
 	combout => \uled|LessThan0~2_combout\);
 
--- Location: LCCOMB_X43_Y33_N18
-\uled|LessThan0~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \uled|LessThan0~0_combout\ = (!\uled|count\(3) & (((!\uled|count\(0) & !\uled|count\(1))) # (!\uled|count\(2))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000001010111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \uled|count\(2),
-	datab => \uled|count\(0),
-	datac => \uled|count\(1),
-	datad => \uled|count\(3),
-	combout => \uled|LessThan0~0_combout\);
-
--- Location: LCCOMB_X43_Y33_N8
-\uled|LessThan0~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \uled|LessThan0~1_combout\ = (!\uled|count\(6) & (!\uled|count\(5) & (!\uled|count\(4) & !\uled|count\(7))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \uled|count\(6),
-	datab => \uled|count\(5),
-	datac => \uled|count\(4),
-	datad => \uled|count\(7),
-	combout => \uled|LessThan0~1_combout\);
-
--- Location: LCCOMB_X44_Y33_N24
+-- Location: LCCOMB_X11_Y31_N24
 \uled|count[12]~40\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[12]~40_combout\ = (\uled|count\(12) & (\uled|count[11]~39\ $ (GND))) # (!\uled|count\(12) & (!\uled|count[11]~39\ & VCC))
@@ -3097,7 +3167,7 @@ PORT MAP (
 	combout => \uled|count[12]~40_combout\,
 	cout => \uled|count[12]~41\);
 
--- Location: FF_X44_Y33_N25
+-- Location: FF_X11_Y31_N25
 \uled|count[12]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3112,7 +3182,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(12));
 
--- Location: LCCOMB_X44_Y33_N26
+-- Location: LCCOMB_X11_Y31_N26
 \uled|count[13]~42\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[13]~42_combout\ = (\uled|count\(13) & (!\uled|count[12]~41\)) # (!\uled|count\(13) & ((\uled|count[12]~41\) # (GND)))
@@ -3130,7 +3200,7 @@ PORT MAP (
 	combout => \uled|count[13]~42_combout\,
 	cout => \uled|count[13]~43\);
 
--- Location: FF_X44_Y33_N27
+-- Location: FF_X11_Y31_N27
 \uled|count[13]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3145,7 +3215,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(13));
 
--- Location: LCCOMB_X44_Y33_N28
+-- Location: LCCOMB_X11_Y31_N28
 \uled|count[14]~44\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|count[14]~44_combout\ = (\uled|count\(14) & (\uled|count[13]~43\ $ (GND))) # (!\uled|count\(14) & (!\uled|count[13]~43\ & VCC))
@@ -3163,7 +3233,7 @@ PORT MAP (
 	combout => \uled|count[14]~44_combout\,
 	cout => \uled|count[14]~45\);
 
--- Location: FF_X44_Y33_N29
+-- Location: FF_X11_Y31_N29
 \uled|count[14]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3178,22 +3248,22 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(14));
 
--- Location: LCCOMB_X44_Y33_N30
+-- Location: LCCOMB_X11_Y31_N30
 \uled|count[15]~46\ : cycloneive_lcell_comb
 -- Equation(s):
--- \uled|count[15]~46_combout\ = \uled|count[14]~45\ $ (\uled|count\(15))
+-- \uled|count[15]~46_combout\ = \uled|count\(15) $ (\uled|count[14]~45\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000111111110000",
+	lut_mask => "0101101001011010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datad => \uled|count\(15),
+	dataa => \uled|count\(15),
 	cin => \uled|count[14]~45\,
 	combout => \uled|count[15]~46_combout\);
 
--- Location: FF_X44_Y33_N31
+-- Location: FF_X11_Y31_N31
 \uled|count[15]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3208,10 +3278,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|count\(15));
 
--- Location: LCCOMB_X43_Y33_N12
+-- Location: LCCOMB_X12_Y31_N24
 \uled|LessThan0~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \uled|LessThan0~3_combout\ = (!\uled|count\(15) & (!\uled|count\(13) & (!\uled|count\(12) & !\uled|count\(14))))
+-- \uled|LessThan0~3_combout\ = (!\uled|count\(13) & (!\uled|count\(12) & (!\uled|count\(14) & !\uled|count\(15))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3219,16 +3289,50 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \uled|count\(15),
-	datab => \uled|count\(13),
-	datac => \uled|count\(12),
-	datad => \uled|count\(14),
+	dataa => \uled|count\(13),
+	datab => \uled|count\(12),
+	datac => \uled|count\(14),
+	datad => \uled|count\(15),
 	combout => \uled|LessThan0~3_combout\);
 
--- Location: LCCOMB_X43_Y33_N6
+-- Location: LCCOMB_X12_Y31_N22
+\uled|LessThan0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uled|LessThan0~0_combout\ = (!\uled|count\(3) & (((!\uled|count\(0) & !\uled|count\(1))) # (!\uled|count\(2))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000011111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uled|count\(0),
+	datab => \uled|count\(1),
+	datac => \uled|count\(2),
+	datad => \uled|count\(3),
+	combout => \uled|LessThan0~0_combout\);
+
+-- Location: LCCOMB_X12_Y31_N16
+\uled|LessThan0~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uled|LessThan0~1_combout\ = (!\uled|count\(7) & (!\uled|count\(5) & (!\uled|count\(4) & !\uled|count\(6))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uled|count\(7),
+	datab => \uled|count\(5),
+	datac => \uled|count\(4),
+	datad => \uled|count\(6),
+	combout => \uled|LessThan0~1_combout\);
+
+-- Location: LCCOMB_X12_Y31_N26
 \uled|LessThan0~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \uled|LessThan0~4_combout\ = (((!\uled|LessThan0~3_combout\) # (!\uled|LessThan0~1_combout\)) # (!\uled|LessThan0~0_combout\)) # (!\uled|LessThan0~2_combout\)
+-- \uled|LessThan0~4_combout\ = (((!\uled|LessThan0~1_combout\) # (!\uled|LessThan0~0_combout\)) # (!\uled|LessThan0~3_combout\)) # (!\uled|LessThan0~2_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3237,12 +3341,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \uled|LessThan0~2_combout\,
-	datab => \uled|LessThan0~0_combout\,
-	datac => \uled|LessThan0~1_combout\,
-	datad => \uled|LessThan0~3_combout\,
+	datab => \uled|LessThan0~3_combout\,
+	datac => \uled|LessThan0~0_combout\,
+	datad => \uled|LessThan0~1_combout\,
 	combout => \uled|LessThan0~4_combout\);
 
--- Location: LCCOMB_X43_Y33_N24
+-- Location: LCCOMB_X12_Y31_N28
 \uled|clk_out_bi~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \uled|clk_out_bi~0_combout\ = \uled|clk_out_bi~q\ $ (\uled|LessThan0~4_combout\)
@@ -3257,7 +3361,7 @@ PORT MAP (
 	datad => \uled|LessThan0~4_combout\,
 	combout => \uled|clk_out_bi~0_combout\);
 
--- Location: FF_X43_Y33_N25
+-- Location: FF_X12_Y31_N29
 \uled|clk_out_bi\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -3271,16 +3375,779 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \uled|clk_out_bi~q\);
 
--- Location: IOIBUF_X0_Y16_N22
-\SW[0]~input\ : cycloneive_io_ibuf
+-- Location: LCCOMB_X3_Y33_N0
+\uc1|c_int[0]~18\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[0]~18_combout\ = \uc1|c_int\(0) $ (VCC)
+-- \uc1|c_int[0]~19\ = CARRY(\uc1|c_int\(0))
+
 -- pragma translate_off
 GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
+	lut_mask => "0011001111001100",
+	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	i => ww_SW(0),
-	o => \SW[0]~input_o\);
+	datab => \uc1|c_int\(0),
+	datad => VCC,
+	combout => \uc1|c_int[0]~18_combout\,
+	cout => \uc1|c_int[0]~19\);
+
+-- Location: FF_X3_Y33_N1
+\uc1|c_int[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[0]~18_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(0));
+
+-- Location: LCCOMB_X3_Y33_N2
+\uc1|c_int[1]~20\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[1]~20_combout\ = (\uc1|c_int\(1) & ((\uc1|c_int[15]~17_combout\ & (\uc1|c_int[0]~19\ & VCC)) # (!\uc1|c_int[15]~17_combout\ & (!\uc1|c_int[0]~19\)))) # (!\uc1|c_int\(1) & ((\uc1|c_int[15]~17_combout\ & (!\uc1|c_int[0]~19\)) # 
+-- (!\uc1|c_int[15]~17_combout\ & ((\uc1|c_int[0]~19\) # (GND)))))
+-- \uc1|c_int[1]~21\ = CARRY((\uc1|c_int\(1) & (!\uc1|c_int[15]~17_combout\ & !\uc1|c_int[0]~19\)) # (!\uc1|c_int\(1) & ((!\uc1|c_int[0]~19\) # (!\uc1|c_int[15]~17_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000010111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int\(1),
+	datab => \uc1|c_int[15]~17_combout\,
+	datad => VCC,
+	cin => \uc1|c_int[0]~19\,
+	combout => \uc1|c_int[1]~20_combout\,
+	cout => \uc1|c_int[1]~21\);
+
+-- Location: FF_X3_Y33_N3
+\uc1|c_int[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[1]~20_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(1));
+
+-- Location: LCCOMB_X3_Y33_N4
+\uc1|c_int[2]~22\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[2]~22_combout\ = ((\uc1|c_int\(2) $ (\uc1|c_int[15]~17_combout\ $ (!\uc1|c_int[1]~21\)))) # (GND)
+-- \uc1|c_int[2]~23\ = CARRY((\uc1|c_int\(2) & ((\uc1|c_int[15]~17_combout\) # (!\uc1|c_int[1]~21\))) # (!\uc1|c_int\(2) & (\uc1|c_int[15]~17_combout\ & !\uc1|c_int[1]~21\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int\(2),
+	datab => \uc1|c_int[15]~17_combout\,
+	datad => VCC,
+	cin => \uc1|c_int[1]~21\,
+	combout => \uc1|c_int[2]~22_combout\,
+	cout => \uc1|c_int[2]~23\);
+
+-- Location: FF_X3_Y33_N5
+\uc1|c_int[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[2]~22_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(2));
+
+-- Location: LCCOMB_X3_Y33_N6
+\uc1|c_int[3]~24\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[3]~24_combout\ = (\uc1|c_int\(3) & ((\uc1|c_int[15]~17_combout\ & (\uc1|c_int[2]~23\ & VCC)) # (!\uc1|c_int[15]~17_combout\ & (!\uc1|c_int[2]~23\)))) # (!\uc1|c_int\(3) & ((\uc1|c_int[15]~17_combout\ & (!\uc1|c_int[2]~23\)) # 
+-- (!\uc1|c_int[15]~17_combout\ & ((\uc1|c_int[2]~23\) # (GND)))))
+-- \uc1|c_int[3]~25\ = CARRY((\uc1|c_int\(3) & (!\uc1|c_int[15]~17_combout\ & !\uc1|c_int[2]~23\)) # (!\uc1|c_int\(3) & ((!\uc1|c_int[2]~23\) # (!\uc1|c_int[15]~17_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000010111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int\(3),
+	datab => \uc1|c_int[15]~17_combout\,
+	datad => VCC,
+	cin => \uc1|c_int[2]~23\,
+	combout => \uc1|c_int[3]~24_combout\,
+	cout => \uc1|c_int[3]~25\);
+
+-- Location: FF_X3_Y33_N7
+\uc1|c_int[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[3]~24_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(3));
+
+-- Location: LCCOMB_X3_Y33_N8
+\uc1|c_int[4]~26\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[4]~26_combout\ = ((\uc1|c_int\(4) $ (\uc1|c_int[15]~17_combout\ $ (!\uc1|c_int[3]~25\)))) # (GND)
+-- \uc1|c_int[4]~27\ = CARRY((\uc1|c_int\(4) & ((\uc1|c_int[15]~17_combout\) # (!\uc1|c_int[3]~25\))) # (!\uc1|c_int\(4) & (\uc1|c_int[15]~17_combout\ & !\uc1|c_int[3]~25\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int\(4),
+	datab => \uc1|c_int[15]~17_combout\,
+	datad => VCC,
+	cin => \uc1|c_int[3]~25\,
+	combout => \uc1|c_int[4]~26_combout\,
+	cout => \uc1|c_int[4]~27\);
+
+-- Location: FF_X3_Y33_N9
+\uc1|c_int[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[4]~26_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(4));
+
+-- Location: LCCOMB_X3_Y33_N10
+\uc1|c_int[5]~28\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[5]~28_combout\ = (\uc1|c_int\(5) & ((\uc1|c_int[15]~17_combout\ & (\uc1|c_int[4]~27\ & VCC)) # (!\uc1|c_int[15]~17_combout\ & (!\uc1|c_int[4]~27\)))) # (!\uc1|c_int\(5) & ((\uc1|c_int[15]~17_combout\ & (!\uc1|c_int[4]~27\)) # 
+-- (!\uc1|c_int[15]~17_combout\ & ((\uc1|c_int[4]~27\) # (GND)))))
+-- \uc1|c_int[5]~29\ = CARRY((\uc1|c_int\(5) & (!\uc1|c_int[15]~17_combout\ & !\uc1|c_int[4]~27\)) # (!\uc1|c_int\(5) & ((!\uc1|c_int[4]~27\) # (!\uc1|c_int[15]~17_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000010111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int\(5),
+	datab => \uc1|c_int[15]~17_combout\,
+	datad => VCC,
+	cin => \uc1|c_int[4]~27\,
+	combout => \uc1|c_int[5]~28_combout\,
+	cout => \uc1|c_int[5]~29\);
+
+-- Location: FF_X3_Y33_N11
+\uc1|c_int[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[5]~28_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(5));
+
+-- Location: LCCOMB_X3_Y33_N12
+\uc1|c_int[6]~30\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[6]~30_combout\ = ((\uc1|c_int\(6) $ (\uc1|c_int[15]~17_combout\ $ (!\uc1|c_int[5]~29\)))) # (GND)
+-- \uc1|c_int[6]~31\ = CARRY((\uc1|c_int\(6) & ((\uc1|c_int[15]~17_combout\) # (!\uc1|c_int[5]~29\))) # (!\uc1|c_int\(6) & (\uc1|c_int[15]~17_combout\ & !\uc1|c_int[5]~29\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int\(6),
+	datab => \uc1|c_int[15]~17_combout\,
+	datad => VCC,
+	cin => \uc1|c_int[5]~29\,
+	combout => \uc1|c_int[6]~30_combout\,
+	cout => \uc1|c_int[6]~31\);
+
+-- Location: FF_X3_Y33_N13
+\uc1|c_int[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[6]~30_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(6));
+
+-- Location: LCCOMB_X3_Y33_N14
+\uc1|c_int[7]~32\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[7]~32_combout\ = (\uc1|c_int\(7) & ((\uc1|c_int[15]~17_combout\ & (\uc1|c_int[6]~31\ & VCC)) # (!\uc1|c_int[15]~17_combout\ & (!\uc1|c_int[6]~31\)))) # (!\uc1|c_int\(7) & ((\uc1|c_int[15]~17_combout\ & (!\uc1|c_int[6]~31\)) # 
+-- (!\uc1|c_int[15]~17_combout\ & ((\uc1|c_int[6]~31\) # (GND)))))
+-- \uc1|c_int[7]~33\ = CARRY((\uc1|c_int\(7) & (!\uc1|c_int[15]~17_combout\ & !\uc1|c_int[6]~31\)) # (!\uc1|c_int\(7) & ((!\uc1|c_int[6]~31\) # (!\uc1|c_int[15]~17_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000010111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int\(7),
+	datab => \uc1|c_int[15]~17_combout\,
+	datad => VCC,
+	cin => \uc1|c_int[6]~31\,
+	combout => \uc1|c_int[7]~32_combout\,
+	cout => \uc1|c_int[7]~33\);
+
+-- Location: FF_X3_Y33_N15
+\uc1|c_int[7]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[7]~32_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(7));
+
+-- Location: LCCOMB_X3_Y33_N16
+\uc1|c_int[8]~34\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[8]~34_combout\ = ((\uc1|c_int[15]~17_combout\ $ (\uc1|c_int\(8) $ (!\uc1|c_int[7]~33\)))) # (GND)
+-- \uc1|c_int[8]~35\ = CARRY((\uc1|c_int[15]~17_combout\ & ((\uc1|c_int\(8)) # (!\uc1|c_int[7]~33\))) # (!\uc1|c_int[15]~17_combout\ & (\uc1|c_int\(8) & !\uc1|c_int[7]~33\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int[15]~17_combout\,
+	datab => \uc1|c_int\(8),
+	datad => VCC,
+	cin => \uc1|c_int[7]~33\,
+	combout => \uc1|c_int[8]~34_combout\,
+	cout => \uc1|c_int[8]~35\);
+
+-- Location: FF_X3_Y33_N17
+\uc1|c_int[8]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[8]~34_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(8));
+
+-- Location: LCCOMB_X3_Y33_N18
+\uc1|c_int[9]~36\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[9]~36_combout\ = (\uc1|c_int[15]~17_combout\ & ((\uc1|c_int\(9) & (\uc1|c_int[8]~35\ & VCC)) # (!\uc1|c_int\(9) & (!\uc1|c_int[8]~35\)))) # (!\uc1|c_int[15]~17_combout\ & ((\uc1|c_int\(9) & (!\uc1|c_int[8]~35\)) # (!\uc1|c_int\(9) & 
+-- ((\uc1|c_int[8]~35\) # (GND)))))
+-- \uc1|c_int[9]~37\ = CARRY((\uc1|c_int[15]~17_combout\ & (!\uc1|c_int\(9) & !\uc1|c_int[8]~35\)) # (!\uc1|c_int[15]~17_combout\ & ((!\uc1|c_int[8]~35\) # (!\uc1|c_int\(9)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000010111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int[15]~17_combout\,
+	datab => \uc1|c_int\(9),
+	datad => VCC,
+	cin => \uc1|c_int[8]~35\,
+	combout => \uc1|c_int[9]~36_combout\,
+	cout => \uc1|c_int[9]~37\);
+
+-- Location: FF_X3_Y33_N19
+\uc1|c_int[9]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[9]~36_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(9));
+
+-- Location: LCCOMB_X2_Y33_N10
+\uc1|LessThan1~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|LessThan1~0_combout\ = (\uc1|c_int\(9)) # ((\uc1|c_int\(6)) # ((\uc1|c_int\(7)) # (\uc1|c_int\(8))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int\(9),
+	datab => \uc1|c_int\(6),
+	datac => \uc1|c_int\(7),
+	datad => \uc1|c_int\(8),
+	combout => \uc1|LessThan1~0_combout\);
+
+-- Location: LCCOMB_X2_Y33_N8
+\uc1|LessThan1~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|LessThan1~1_combout\ = (\uc1|c_int\(0)) # ((\uc1|c_int\(10)) # (\uc1|LessThan1~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \uc1|c_int\(0),
+	datac => \uc1|c_int\(10),
+	datad => \uc1|LessThan1~0_combout\,
+	combout => \uc1|LessThan1~1_combout\);
+
+-- Location: FF_X2_Y33_N21
+\uc1|dir_int\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[15]~17_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|dir_int~q\);
+
+-- Location: LCCOMB_X2_Y33_N28
+\ucomp|LessThan0~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \ucomp|LessThan0~1_combout\ = (!\uc1|c_int\(2) & (!\uc1|c_int\(3) & (!\uc1|c_int\(4) & !\uc1|c_int\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int\(2),
+	datab => \uc1|c_int\(3),
+	datac => \uc1|c_int\(4),
+	datad => \uc1|c_int\(1),
+	combout => \ucomp|LessThan0~1_combout\);
+
+-- Location: LCCOMB_X2_Y33_N26
+\uc1|c_int[15]~16\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[15]~16_combout\ = (\uc1|dir_int~q\ & ((\uc1|LessThan1~1_combout\) # ((\uc1|c_int\(5)) # (!\ucomp|LessThan0~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100100011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|LessThan1~1_combout\,
+	datab => \uc1|dir_int~q\,
+	datac => \uc1|c_int\(5),
+	datad => \ucomp|LessThan0~1_combout\,
+	combout => \uc1|c_int[15]~16_combout\);
+
+-- Location: LCCOMB_X2_Y33_N30
+\uc1|LessThan0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|LessThan0~0_combout\ = (\uc1|c_int\(6) & \uc1|c_int\(7))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100000011000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \uc1|c_int\(6),
+	datac => \uc1|c_int\(7),
+	combout => \uc1|LessThan0~0_combout\);
+
+-- Location: LCCOMB_X2_Y33_N12
+\uc1|LessThan0~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|LessThan0~2_combout\ = (\uc1|c_int\(2) & (\uc1|c_int\(3) & (\uc1|c_int\(4) & \uc1|c_int\(1))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int\(2),
+	datab => \uc1|c_int\(3),
+	datac => \uc1|c_int\(4),
+	datad => \uc1|c_int\(1),
+	combout => \uc1|LessThan0~2_combout\);
+
+-- Location: LCCOMB_X2_Y33_N18
+\uc1|LessThan0~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|LessThan0~3_combout\ = (\uc1|LessThan0~2_combout\ & (\uc1|c_int\(0) & (\uc1|c_int\(5) & \uc1|c_int\(8))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|LessThan0~2_combout\,
+	datab => \uc1|c_int\(0),
+	datac => \uc1|c_int\(5),
+	datad => \uc1|c_int\(8),
+	combout => \uc1|LessThan0~3_combout\);
+
+-- Location: LCCOMB_X2_Y33_N24
+\uc1|LessThan0~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|LessThan0~4_combout\ = (\uc1|LessThan0~0_combout\ & (\uc1|LessThan0~3_combout\ & (\uc1|c_int\(10) & \uc1|c_int\(9))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|LessThan0~0_combout\,
+	datab => \uc1|LessThan0~3_combout\,
+	datac => \uc1|c_int\(10),
+	datad => \uc1|c_int\(9),
+	combout => \uc1|LessThan0~4_combout\);
+
+-- Location: LCCOMB_X3_Y33_N20
+\uc1|c_int[10]~38\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[10]~38_combout\ = ((\uc1|c_int[15]~17_combout\ $ (\uc1|c_int\(10) $ (!\uc1|c_int[9]~37\)))) # (GND)
+-- \uc1|c_int[10]~39\ = CARRY((\uc1|c_int[15]~17_combout\ & ((\uc1|c_int\(10)) # (!\uc1|c_int[9]~37\))) # (!\uc1|c_int[15]~17_combout\ & (\uc1|c_int\(10) & !\uc1|c_int[9]~37\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int[15]~17_combout\,
+	datab => \uc1|c_int\(10),
+	datad => VCC,
+	cin => \uc1|c_int[9]~37\,
+	combout => \uc1|c_int[10]~38_combout\,
+	cout => \uc1|c_int[10]~39\);
+
+-- Location: LCCOMB_X3_Y33_N22
+\uc1|c_int[11]~40\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[11]~40_combout\ = (\uc1|c_int[15]~17_combout\ & ((\uc1|c_int\(11) & (\uc1|c_int[10]~39\ & VCC)) # (!\uc1|c_int\(11) & (!\uc1|c_int[10]~39\)))) # (!\uc1|c_int[15]~17_combout\ & ((\uc1|c_int\(11) & (!\uc1|c_int[10]~39\)) # (!\uc1|c_int\(11) & 
+-- ((\uc1|c_int[10]~39\) # (GND)))))
+-- \uc1|c_int[11]~41\ = CARRY((\uc1|c_int[15]~17_combout\ & (!\uc1|c_int\(11) & !\uc1|c_int[10]~39\)) # (!\uc1|c_int[15]~17_combout\ & ((!\uc1|c_int[10]~39\) # (!\uc1|c_int\(11)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000010111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int[15]~17_combout\,
+	datab => \uc1|c_int\(11),
+	datad => VCC,
+	cin => \uc1|c_int[10]~39\,
+	combout => \uc1|c_int[11]~40_combout\,
+	cout => \uc1|c_int[11]~41\);
+
+-- Location: FF_X3_Y33_N23
+\uc1|c_int[11]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[11]~40_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(11));
+
+-- Location: LCCOMB_X3_Y33_N24
+\uc1|c_int[12]~42\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[12]~42_combout\ = ((\uc1|c_int[15]~17_combout\ $ (\uc1|c_int\(12) $ (!\uc1|c_int[11]~41\)))) # (GND)
+-- \uc1|c_int[12]~43\ = CARRY((\uc1|c_int[15]~17_combout\ & ((\uc1|c_int\(12)) # (!\uc1|c_int[11]~41\))) # (!\uc1|c_int[15]~17_combout\ & (\uc1|c_int\(12) & !\uc1|c_int[11]~41\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int[15]~17_combout\,
+	datab => \uc1|c_int\(12),
+	datad => VCC,
+	cin => \uc1|c_int[11]~41\,
+	combout => \uc1|c_int[12]~42_combout\,
+	cout => \uc1|c_int[12]~43\);
+
+-- Location: FF_X3_Y33_N25
+\uc1|c_int[12]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[12]~42_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(12));
+
+-- Location: LCCOMB_X3_Y33_N26
+\uc1|c_int[13]~44\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[13]~44_combout\ = (\uc1|c_int[15]~17_combout\ & ((\uc1|c_int\(13) & (\uc1|c_int[12]~43\ & VCC)) # (!\uc1|c_int\(13) & (!\uc1|c_int[12]~43\)))) # (!\uc1|c_int[15]~17_combout\ & ((\uc1|c_int\(13) & (!\uc1|c_int[12]~43\)) # (!\uc1|c_int\(13) & 
+-- ((\uc1|c_int[12]~43\) # (GND)))))
+-- \uc1|c_int[13]~45\ = CARRY((\uc1|c_int[15]~17_combout\ & (!\uc1|c_int\(13) & !\uc1|c_int[12]~43\)) # (!\uc1|c_int[15]~17_combout\ & ((!\uc1|c_int[12]~43\) # (!\uc1|c_int\(13)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000010111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int[15]~17_combout\,
+	datab => \uc1|c_int\(13),
+	datad => VCC,
+	cin => \uc1|c_int[12]~43\,
+	combout => \uc1|c_int[13]~44_combout\,
+	cout => \uc1|c_int[13]~45\);
+
+-- Location: FF_X3_Y33_N27
+\uc1|c_int[13]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[13]~44_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(13));
+
+-- Location: LCCOMB_X3_Y33_N28
+\uc1|c_int[14]~46\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[14]~46_combout\ = ((\uc1|c_int[15]~17_combout\ $ (\uc1|c_int\(14) $ (!\uc1|c_int[13]~45\)))) # (GND)
+-- \uc1|c_int[14]~47\ = CARRY((\uc1|c_int[15]~17_combout\ & ((\uc1|c_int\(14)) # (!\uc1|c_int[13]~45\))) # (!\uc1|c_int[15]~17_combout\ & (\uc1|c_int\(14) & !\uc1|c_int[13]~45\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100110001110",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int[15]~17_combout\,
+	datab => \uc1|c_int\(14),
+	datad => VCC,
+	cin => \uc1|c_int[13]~45\,
+	combout => \uc1|c_int[14]~46_combout\,
+	cout => \uc1|c_int[14]~47\);
+
+-- Location: FF_X3_Y33_N29
+\uc1|c_int[14]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[14]~46_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(14));
+
+-- Location: LCCOMB_X3_Y33_N30
+\uc1|c_int[15]~48\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[15]~48_combout\ = \uc1|c_int[15]~17_combout\ $ (\uc1|c_int[14]~47\ $ (\uc1|c_int\(15)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100111100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \uc1|c_int[15]~17_combout\,
+	datad => \uc1|c_int\(15),
+	cin => \uc1|c_int[14]~47\,
+	combout => \uc1|c_int[15]~48_combout\);
+
+-- Location: FF_X3_Y33_N31
+\uc1|c_int[15]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[15]~48_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(15));
+
+-- Location: LCCOMB_X2_Y33_N2
+\ucomp|LessThan0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \ucomp|LessThan0~0_combout\ = (!\uc1|c_int\(12) & (!\uc1|c_int\(14) & (!\uc1|c_int\(13) & !\uc1|c_int\(11))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int\(12),
+	datab => \uc1|c_int\(14),
+	datac => \uc1|c_int\(13),
+	datad => \uc1|c_int\(11),
+	combout => \ucomp|LessThan0~0_combout\);
+
+-- Location: LCCOMB_X2_Y33_N20
+\uc1|c_int[15]~17\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|c_int[15]~17_combout\ = (\uc1|c_int[15]~16_combout\) # ((\uc1|LessThan0~4_combout\) # ((\uc1|c_int\(15)) # (!\ucomp|LessThan0~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|c_int[15]~16_combout\,
+	datab => \uc1|LessThan0~4_combout\,
+	datac => \uc1|c_int\(15),
+	datad => \ucomp|LessThan0~0_combout\,
+	combout => \uc1|c_int[15]~17_combout\);
+
+-- Location: FF_X3_Y33_N21
+\uc1|c_int[10]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \uc1|c_int[10]~38_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \uc1|c_int\(10));
+
+-- Location: LCCOMB_X2_Y33_N22
+\uc1|LessThan0~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \uc1|LessThan0~1_combout\ = (\uc1|c_int\(10) & \uc1|c_int\(9))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \uc1|c_int\(10),
+	datad => \uc1|c_int\(9),
+	combout => \uc1|LessThan0~1_combout\);
+
+-- Location: LCCOMB_X2_Y33_N16
+\ucomp|LessThan0~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \ucomp|LessThan0~2_combout\ = (!\uc1|c_int\(8) & (((\ucomp|LessThan0~1_combout\ & !\uc1|c_int\(5))) # (!\uc1|LessThan0~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000001011101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|LessThan0~0_combout\,
+	datab => \ucomp|LessThan0~1_combout\,
+	datac => \uc1|c_int\(5),
+	datad => \uc1|c_int\(8),
+	combout => \ucomp|LessThan0~2_combout\);
+
+-- Location: LCCOMB_X2_Y33_N4
+\ucomp|LessThan0~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \ucomp|LessThan0~3_combout\ = (\uc1|c_int\(15)) # (((\uc1|LessThan0~1_combout\ & !\ucomp|LessThan0~2_combout\)) # (!\ucomp|LessThan0~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111001011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \uc1|LessThan0~1_combout\,
+	datab => \ucomp|LessThan0~2_combout\,
+	datac => \uc1|c_int\(15),
+	datad => \ucomp|LessThan0~0_combout\,
+	combout => \ucomp|LessThan0~3_combout\);
+
+-- Location: FF_X2_Y33_N5
+\ucomp|comp_out\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|ALT_INV_wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \ucomp|LessThan0~3_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \ucomp|comp_out~q\);
 
 -- Location: IOIBUF_X27_Y0_N15
 \SW[1]~input\ : cycloneive_io_ibuf
@@ -3303,6 +4170,17 @@ GENERIC MAP (
 PORT MAP (
 	i => ww_SW(2),
 	o => \SW[2]~input_o\);
+
+-- Location: IOIBUF_X0_Y16_N22
+\SW[0]~input\ : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_SW(0),
+	o => \SW[0]~input_o\);
 
 -- Location: IOIBUF_X53_Y17_N15
 \SW[3]~input\ : cycloneive_io_ibuf

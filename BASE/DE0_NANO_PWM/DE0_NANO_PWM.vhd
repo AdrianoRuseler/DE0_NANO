@@ -58,10 +58,10 @@ ENTITY DE0_NANO_PWM IS -- Base entity
 	PWM1H_FC : out std_logic_vector(N-1 DOWNTO 0);
 	PWM2L_FC : out std_logic_vector(N-1 DOWNTO 0);
 	PWM2H_FC : out std_logic_vector(N-1 DOWNTO 0);
-	INT0_FC : in std_logic_vector(N-1 DOWNTO 0)
+	INT0_FC : in std_logic_vector(N-1 DOWNTO 0);
 	
 	
---   GPIO_0 : out std_logic_vector(3 DOWNTO 0);
+   GPIO_0 : out std_logic_vector(3 DOWNTO 0)
 
 -- GPIO_1
 -- GPIO_1_IN : in std_logic_vector(1 DOWNTO 0);
@@ -247,7 +247,7 @@ begin
 	--	clk_int = 6.666_ MHz					
 	u1: clk_div port map (clk_in => clk_pll,
 								en => '1',
-								div => std_logic_vector(to_unsigned(4, 16)),
+								div => std_logic_vector(to_unsigned(4, 16)), -- function TO_UNSIGNED (ARG, SIZE: NATURAL) return UNSIGNED;
                         clk_out => clk_int
                         );		
 					
@@ -319,26 +319,26 @@ begin
 	ucomp: comparador port map(
 			clk => clk_pll, -- clock
 			en => '1', -- habilta modulo
-			comp => sin_a, -- moduladora     
+			comp => std_logic_vector(to_unsigned(1730, 16)), -- moduladora     
 			c => cPWM1, -- portadora
-			amost => clk_pll -- amostra moduladora na borda de amost
-		  -- comp_out => FIBRA_TX(19)
+			amost => clk_pll, -- amostra moduladora na borda de amost
+		   comp_out => GPIO_0(0)
 			);
 		
 									
 					
-	--	led indica frequencia dundamental				
+	--	led indica frequencia da fundamental				
 	uled: clk_div port map (clk_in => sinc_int,
 								en => '1',
 								div => std_logic_vector(to_unsigned(6, 16)),
                         clk_out => LED(0)
+								--clk_out => GPIO_0(2)
                         );	
 								
 
-
-
-
-
+-- clk_int 
+GPIO_0(1)<=SW(1);
+GPIO_0(2)<=SW(2);
 
 
 
