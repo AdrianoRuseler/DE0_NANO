@@ -1,5 +1,5 @@
 Fitter report for DE0_NANO_PWM
-Fri Jan 23 14:02:28 2015
+Fri Jan 23 16:58:33 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -69,7 +69,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Fri Jan 23 14:02:28 2015      ;
+; Fitter Status                      ; Successful - Fri Jan 23 16:58:33 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; DE0_NANO_PWM                               ;
 ; Top-level Entity Name              ; DE0_NANO_PWM                               ;
@@ -156,12 +156,12 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.38        ;
+; Average used               ; 1.67        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  12.5%      ;
+;     Processors 2-4         ;  22.2%      ;
 ;     Processors 5-8         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -866,12 +866,11 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Compilation Hierarchy Node           ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                      ; Library Name ;
 +--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------+--------------+
 ; |DE0_NANO_PWM                        ; 68 (0)      ; 34 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 73   ; 0            ; 34 (0)       ; 0 (0)             ; 34 (0)           ; |DE0_NANO_PWM                                                            ; work         ;
-;    |comparador:ucomp|                ; 6 (6)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 1 (1)            ; |DE0_NANO_PWM|comparador:ucomp                                           ; work         ;
-;    |deadtime:deadcomp|               ; 38 (38)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 16 (16)          ; |DE0_NANO_PWM|deadtime:deadcomp                                          ; work         ;
+;    |fbpspwmdt:teste01|               ; 44 (44)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 0 (0)             ; 17 (17)          ; |DE0_NANO_PWM|fbpspwmdt:teste01                                          ; work         ;
 ;    |pll:upll|                        ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |DE0_NANO_PWM|pll:upll                                                   ; work         ;
 ;       |altpll:altpll_component|      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |DE0_NANO_PWM|pll:upll|altpll:altpll_component                           ; work         ;
 ;          |pll_altpll:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |DE0_NANO_PWM|pll:upll|altpll:altpll_component|pll_altpll:auto_generated ; work         ;
-;    |portadora_tringular:uc1|         ; 24 (24)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 17 (17)          ; |DE0_NANO_PWM|portadora_tringular:uc1                                    ; work         ;
+;    |portadora_tringular:ucr1|        ; 24 (24)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 17 (17)          ; |DE0_NANO_PWM|portadora_tringular:ucr1                                   ; work         ;
 +--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1005,137 +1004,137 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+---------+
 ; Name                                                                       ; Fan-Out ;
 +----------------------------------------------------------------------------+---------+
-; comparador:ucomp|comp_out                                                  ; 18      ;
-; portadora_tringular:uc1|c_int[12]~23                                       ; 16      ;
-; portadora_tringular:uc1|c_int[10]                                          ; 4       ;
-; portadora_tringular:uc1|c_int[8]                                           ; 4       ;
-; portadora_tringular:uc1|c_int[5]                                           ; 4       ;
-; portadora_tringular:uc1|c_int[4]                                           ; 4       ;
-; portadora_tringular:uc1|c_int[3]                                           ; 4       ;
-; portadora_tringular:uc1|c_int[2]                                           ; 4       ;
-; portadora_tringular:uc1|c_int[1]                                           ; 4       ;
-; portadora_tringular:uc1|c_int[0]                                           ; 4       ;
-; portadora_tringular:uc1|c_int[9]                                           ; 3       ;
-; portadora_tringular:uc1|c_int[7]                                           ; 3       ;
-; portadora_tringular:uc1|c_int[6]                                           ; 3       ;
-; portadora_tringular:uc1|c_int[12]~16                                       ; 2       ;
-; portadora_tringular:uc1|dir_int                                            ; 2       ;
-; comparador:ucomp|LessThan0~1                                               ; 2       ;
-; deadtime:deadcomp|Add1~17                                                  ; 2       ;
-; deadtime:deadcomp|Add1~16                                                  ; 2       ;
-; deadtime:deadcomp|Add1~15                                                  ; 2       ;
-; deadtime:deadcomp|Add1~8                                                   ; 2       ;
-; deadtime:deadcomp|var_Dead_Count2[6]                                       ; 2       ;
-; deadtime:deadcomp|var_Dead_Count2[5]                                       ; 2       ;
-; deadtime:deadcomp|var_Dead_Count2[4]                                       ; 2       ;
-; deadtime:deadcomp|var_Dead_Count2[3]                                       ; 2       ;
-; deadtime:deadcomp|var_Dead_Count2[2]                                       ; 2       ;
-; deadtime:deadcomp|var_Dead_Count2[1]                                       ; 2       ;
-; deadtime:deadcomp|var_Dead_Count2[0]                                       ; 2       ;
-; deadtime:deadcomp|Add0~17                                                  ; 2       ;
-; deadtime:deadcomp|Add0~16                                                  ; 2       ;
-; deadtime:deadcomp|Add0~15                                                  ; 2       ;
-; deadtime:deadcomp|Add0~8                                                   ; 2       ;
-; deadtime:deadcomp|var_Dead_Count1[6]                                       ; 2       ;
-; deadtime:deadcomp|var_Dead_Count1[5]                                       ; 2       ;
-; deadtime:deadcomp|var_Dead_Count1[4]                                       ; 2       ;
-; deadtime:deadcomp|var_Dead_Count1[3]                                       ; 2       ;
-; deadtime:deadcomp|var_Dead_Count1[2]                                       ; 2       ;
-; deadtime:deadcomp|var_Dead_Count1[1]                                       ; 2       ;
-; deadtime:deadcomp|var_Dead_Count1[0]                                       ; 2       ;
-; deadtime:deadcomp|p_Pwm2_Out                                               ; 2       ;
-; deadtime:deadcomp|p_Pwm1_Out                                               ; 2       ;
-; portadora_tringular:uc1|c_int[15]                                          ; 2       ;
-; portadora_tringular:uc1|c_int[14]                                          ; 2       ;
-; portadora_tringular:uc1|c_int[13]                                          ; 2       ;
-; portadora_tringular:uc1|c_int[12]                                          ; 2       ;
-; portadora_tringular:uc1|c_int[11]                                          ; 2       ;
-; deadtime:deadcomp|Add1~4                                                   ; 2       ;
-; deadtime:deadcomp|Add1~2                                                   ; 2       ;
-; deadtime:deadcomp|Add1~0                                                   ; 2       ;
-; deadtime:deadcomp|Add0~4                                                   ; 2       ;
-; deadtime:deadcomp|Add0~2                                                   ; 2       ;
-; deadtime:deadcomp|Add0~0                                                   ; 2       ;
+; fbpspwmdt:teste01|comp_out                                                 ; 18      ;
+; portadora_tringular:ucr1|c_int[12]~23                                      ; 16      ;
+; portadora_tringular:ucr1|c_int[10]                                         ; 4       ;
+; portadora_tringular:ucr1|c_int[8]                                          ; 4       ;
+; portadora_tringular:ucr1|c_int[5]                                          ; 4       ;
+; portadora_tringular:ucr1|c_int[4]                                          ; 4       ;
+; portadora_tringular:ucr1|c_int[3]                                          ; 4       ;
+; portadora_tringular:ucr1|c_int[2]                                          ; 4       ;
+; portadora_tringular:ucr1|c_int[1]                                          ; 4       ;
+; portadora_tringular:ucr1|c_int[0]                                          ; 4       ;
+; portadora_tringular:ucr1|c_int[9]                                          ; 3       ;
+; portadora_tringular:ucr1|c_int[7]                                          ; 3       ;
+; portadora_tringular:ucr1|c_int[6]                                          ; 3       ;
+; portadora_tringular:ucr1|c_int[12]~16                                      ; 2       ;
+; portadora_tringular:ucr1|dir_int                                           ; 2       ;
+; fbpspwmdt:teste01|LessThan0~1                                              ; 2       ;
+; fbpspwmdt:teste01|Add1~17                                                  ; 2       ;
+; fbpspwmdt:teste01|Add1~16                                                  ; 2       ;
+; fbpspwmdt:teste01|Add1~15                                                  ; 2       ;
+; fbpspwmdt:teste01|Add1~8                                                   ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count2[6]                                       ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count2[5]                                       ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count2[4]                                       ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count2[3]                                       ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count2[2]                                       ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count2[1]                                       ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count2[0]                                       ; 2       ;
+; fbpspwmdt:teste01|Add0~17                                                  ; 2       ;
+; fbpspwmdt:teste01|Add0~16                                                  ; 2       ;
+; fbpspwmdt:teste01|Add0~15                                                  ; 2       ;
+; fbpspwmdt:teste01|Add0~8                                                   ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count1[6]                                       ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count1[5]                                       ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count1[4]                                       ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count1[3]                                       ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count1[2]                                       ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count1[1]                                       ; 2       ;
+; fbpspwmdt:teste01|var_Dead_Count1[0]                                       ; 2       ;
+; fbpspwmdt:teste01|port_PWMH                                                ; 2       ;
+; fbpspwmdt:teste01|port_PWML                                                ; 2       ;
+; portadora_tringular:ucr1|c_int[15]                                         ; 2       ;
+; portadora_tringular:ucr1|c_int[14]                                         ; 2       ;
+; portadora_tringular:ucr1|c_int[13]                                         ; 2       ;
+; portadora_tringular:ucr1|c_int[12]                                         ; 2       ;
+; portadora_tringular:ucr1|c_int[11]                                         ; 2       ;
+; fbpspwmdt:teste01|Add1~4                                                   ; 2       ;
+; fbpspwmdt:teste01|Add1~2                                                   ; 2       ;
+; fbpspwmdt:teste01|Add1~0                                                   ; 2       ;
+; fbpspwmdt:teste01|Add0~4                                                   ; 2       ;
+; fbpspwmdt:teste01|Add0~2                                                   ; 2       ;
+; fbpspwmdt:teste01|Add0~0                                                   ; 2       ;
 ; CLOCK_50~input                                                             ; 1       ;
-; portadora_tringular:uc1|c_int[12]~22                                       ; 1       ;
-; portadora_tringular:uc1|c_int[12]~21                                       ; 1       ;
-; portadora_tringular:uc1|c_int[12]~20                                       ; 1       ;
-; portadora_tringular:uc1|c_int[12]~19                                       ; 1       ;
-; portadora_tringular:uc1|c_int[12]~18                                       ; 1       ;
-; portadora_tringular:uc1|c_int[12]~17                                       ; 1       ;
-; deadtime:deadcomp|Add1~20                                                  ; 1       ;
-; deadtime:deadcomp|Add1~19                                                  ; 1       ;
-; deadtime:deadcomp|Add1~18                                                  ; 1       ;
-; deadtime:deadcomp|Add0~20                                                  ; 1       ;
-; deadtime:deadcomp|Add0~19                                                  ; 1       ;
-; deadtime:deadcomp|Add0~18                                                  ; 1       ;
-; comparador:ucomp|LessThan0~5                                               ; 1       ;
-; comparador:ucomp|LessThan0~4                                               ; 1       ;
-; comparador:ucomp|LessThan0~3                                               ; 1       ;
-; comparador:ucomp|LessThan0~2                                               ; 1       ;
-; comparador:ucomp|LessThan0~0                                               ; 1       ;
-; deadtime:deadcomp|p_Pwm2_Out~0                                             ; 1       ;
-; deadtime:deadcomp|Equal1~1                                                 ; 1       ;
-; deadtime:deadcomp|Equal1~0                                                 ; 1       ;
-; deadtime:deadcomp|LessThan1~1                                              ; 1       ;
-; deadtime:deadcomp|LessThan1~0                                              ; 1       ;
-; deadtime:deadcomp|p_Pwm1_Out~0                                             ; 1       ;
-; deadtime:deadcomp|Equal0~1                                                 ; 1       ;
-; deadtime:deadcomp|Equal0~0                                                 ; 1       ;
-; deadtime:deadcomp|LessThan0~1                                              ; 1       ;
-; deadtime:deadcomp|LessThan0~0                                              ; 1       ;
-; portadora_tringular:uc1|c_int[15]~54                                       ; 1       ;
-; portadora_tringular:uc1|c_int[14]~53                                       ; 1       ;
-; portadora_tringular:uc1|c_int[14]~52                                       ; 1       ;
-; portadora_tringular:uc1|c_int[13]~51                                       ; 1       ;
-; portadora_tringular:uc1|c_int[13]~50                                       ; 1       ;
-; portadora_tringular:uc1|c_int[12]~49                                       ; 1       ;
-; portadora_tringular:uc1|c_int[12]~48                                       ; 1       ;
-; portadora_tringular:uc1|c_int[11]~47                                       ; 1       ;
-; portadora_tringular:uc1|c_int[11]~46                                       ; 1       ;
-; portadora_tringular:uc1|c_int[10]~45                                       ; 1       ;
-; portadora_tringular:uc1|c_int[10]~44                                       ; 1       ;
-; portadora_tringular:uc1|c_int[9]~43                                        ; 1       ;
-; portadora_tringular:uc1|c_int[9]~42                                        ; 1       ;
-; portadora_tringular:uc1|c_int[8]~41                                        ; 1       ;
-; portadora_tringular:uc1|c_int[8]~40                                        ; 1       ;
-; portadora_tringular:uc1|c_int[7]~39                                        ; 1       ;
-; portadora_tringular:uc1|c_int[7]~38                                        ; 1       ;
-; portadora_tringular:uc1|c_int[6]~37                                        ; 1       ;
-; portadora_tringular:uc1|c_int[6]~36                                        ; 1       ;
-; portadora_tringular:uc1|c_int[5]~35                                        ; 1       ;
-; portadora_tringular:uc1|c_int[5]~34                                        ; 1       ;
-; portadora_tringular:uc1|c_int[4]~33                                        ; 1       ;
-; portadora_tringular:uc1|c_int[4]~32                                        ; 1       ;
-; portadora_tringular:uc1|c_int[3]~31                                        ; 1       ;
-; portadora_tringular:uc1|c_int[3]~30                                        ; 1       ;
-; portadora_tringular:uc1|c_int[2]~29                                        ; 1       ;
-; portadora_tringular:uc1|c_int[2]~28                                        ; 1       ;
-; portadora_tringular:uc1|c_int[1]~27                                        ; 1       ;
-; portadora_tringular:uc1|c_int[1]~26                                        ; 1       ;
-; portadora_tringular:uc1|c_int[0]~25                                        ; 1       ;
-; portadora_tringular:uc1|c_int[0]~24                                        ; 1       ;
-; deadtime:deadcomp|Add1~13                                                  ; 1       ;
-; deadtime:deadcomp|Add1~12                                                  ; 1       ;
-; deadtime:deadcomp|Add1~11                                                  ; 1       ;
-; deadtime:deadcomp|Add1~10                                                  ; 1       ;
-; deadtime:deadcomp|Add1~9                                                   ; 1       ;
-; deadtime:deadcomp|Add1~7                                                   ; 1       ;
-; deadtime:deadcomp|Add1~6                                                   ; 1       ;
-; deadtime:deadcomp|Add1~5                                                   ; 1       ;
-; deadtime:deadcomp|Add1~3                                                   ; 1       ;
-; deadtime:deadcomp|Add1~1                                                   ; 1       ;
+; portadora_tringular:ucr1|c_int[12]~22                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[12]~21                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[12]~20                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[12]~19                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[12]~18                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[12]~17                                      ; 1       ;
+; fbpspwmdt:teste01|Add1~20                                                  ; 1       ;
+; fbpspwmdt:teste01|Add1~19                                                  ; 1       ;
+; fbpspwmdt:teste01|Add1~18                                                  ; 1       ;
+; fbpspwmdt:teste01|Add0~20                                                  ; 1       ;
+; fbpspwmdt:teste01|Add0~19                                                  ; 1       ;
+; fbpspwmdt:teste01|Add0~18                                                  ; 1       ;
+; fbpspwmdt:teste01|LessThan0~5                                              ; 1       ;
+; fbpspwmdt:teste01|LessThan0~4                                              ; 1       ;
+; fbpspwmdt:teste01|LessThan0~3                                              ; 1       ;
+; fbpspwmdt:teste01|LessThan0~2                                              ; 1       ;
+; fbpspwmdt:teste01|LessThan0~0                                              ; 1       ;
+; fbpspwmdt:teste01|port_PWMH~0                                              ; 1       ;
+; fbpspwmdt:teste01|Equal1~1                                                 ; 1       ;
+; fbpspwmdt:teste01|Equal1~0                                                 ; 1       ;
+; fbpspwmdt:teste01|LessThan2~1                                              ; 1       ;
+; fbpspwmdt:teste01|LessThan2~0                                              ; 1       ;
+; fbpspwmdt:teste01|port_PWML~0                                              ; 1       ;
+; fbpspwmdt:teste01|Equal0~1                                                 ; 1       ;
+; fbpspwmdt:teste01|Equal0~0                                                 ; 1       ;
+; fbpspwmdt:teste01|LessThan1~1                                              ; 1       ;
+; fbpspwmdt:teste01|LessThan1~0                                              ; 1       ;
+; portadora_tringular:ucr1|c_int[15]~54                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[14]~53                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[14]~52                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[13]~51                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[13]~50                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[12]~49                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[12]~48                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[11]~47                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[11]~46                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[10]~45                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[10]~44                                      ; 1       ;
+; portadora_tringular:ucr1|c_int[9]~43                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[9]~42                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[8]~41                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[8]~40                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[7]~39                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[7]~38                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[6]~37                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[6]~36                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[5]~35                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[5]~34                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[4]~33                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[4]~32                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[3]~31                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[3]~30                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[2]~29                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[2]~28                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[1]~27                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[1]~26                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[0]~25                                       ; 1       ;
+; portadora_tringular:ucr1|c_int[0]~24                                       ; 1       ;
+; fbpspwmdt:teste01|Add1~13                                                  ; 1       ;
+; fbpspwmdt:teste01|Add1~12                                                  ; 1       ;
+; fbpspwmdt:teste01|Add1~11                                                  ; 1       ;
+; fbpspwmdt:teste01|Add1~10                                                  ; 1       ;
+; fbpspwmdt:teste01|Add1~9                                                   ; 1       ;
+; fbpspwmdt:teste01|Add1~7                                                   ; 1       ;
+; fbpspwmdt:teste01|Add1~6                                                   ; 1       ;
+; fbpspwmdt:teste01|Add1~5                                                   ; 1       ;
+; fbpspwmdt:teste01|Add1~3                                                   ; 1       ;
+; fbpspwmdt:teste01|Add1~1                                                   ; 1       ;
 ; pll:upll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_fbout ; 1       ;
-; deadtime:deadcomp|Add0~13                                                  ; 1       ;
-; deadtime:deadcomp|Add0~12                                                  ; 1       ;
-; deadtime:deadcomp|Add0~11                                                  ; 1       ;
-; deadtime:deadcomp|Add0~10                                                  ; 1       ;
-; deadtime:deadcomp|Add0~9                                                   ; 1       ;
-; deadtime:deadcomp|Add0~7                                                   ; 1       ;
-; deadtime:deadcomp|Add0~6                                                   ; 1       ;
-; deadtime:deadcomp|Add0~5                                                   ; 1       ;
-; deadtime:deadcomp|Add0~3                                                   ; 1       ;
-; deadtime:deadcomp|Add0~1                                                   ; 1       ;
+; fbpspwmdt:teste01|Add0~13                                                  ; 1       ;
+; fbpspwmdt:teste01|Add0~12                                                  ; 1       ;
+; fbpspwmdt:teste01|Add0~11                                                  ; 1       ;
+; fbpspwmdt:teste01|Add0~10                                                  ; 1       ;
+; fbpspwmdt:teste01|Add0~9                                                   ; 1       ;
+; fbpspwmdt:teste01|Add0~7                                                   ; 1       ;
+; fbpspwmdt:teste01|Add0~6                                                   ; 1       ;
+; fbpspwmdt:teste01|Add0~5                                                   ; 1       ;
+; fbpspwmdt:teste01|Add0~3                                                   ; 1       ;
+; fbpspwmdt:teste01|Add0~1                                                   ; 1       ;
 +----------------------------------------------------------------------------+---------+
 
 
@@ -1504,7 +1503,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.17 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1512,9 +1511,9 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/output_files/DE0_NANO_PWM.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 1343 megabytes
-    Info: Processing ended: Fri Jan 23 14:02:28 2015
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 1361 megabytes
+    Info: Processing ended: Fri Jan 23 16:58:33 2015
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:12
 
 

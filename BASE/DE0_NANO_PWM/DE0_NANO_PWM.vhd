@@ -20,7 +20,7 @@ ENTITY DE0_NANO_PWM IS -- Base entity
 	         constant Nin : integer := 13;  --numero de bits da parte inteira excluindo sinal de entrada
 				constant Nout : integer := 30;  --numero de bits da parte inteira excluindo sinal de sada
 				constant n_bits_phase : integer := 30;  --numero de bits que representa a fase da rede
-			   constant n_bits_c: integer := 22;  --numero de bits da portadora
+			   constant n_bits_c: integer := 16;  --numero de bits da portadora
 				constant TAM_MEM : integer := 32; -- tamanho da memoria (numero de palavras de 16 bits)
 				constant NBITS_MEM_ADDRESS : integer := 6; --numero de bits de dendereco do banco de memoria (read do dsp)
 				constant ID_MEM_DAC : integer := 28; --inicio do endereco de memoria destinado ao DAC conectado ao FPGA
@@ -178,29 +178,18 @@ component portadora_tringular
 	);
 end component;
 
---
-component comparador
-	port(
-		clk : in std_logic; -- clock
-		en : in std_logic; -- habilta modulo
-		comp : in std_logic_vector(15 downto 0); -- moduladora     
-		c : in std_logic_vector(15 downto 0); -- portadora
-		amost :  in std_logic; -- amostra moduladora na borda de amost
-		comp_out : out std_logic;
-		comp_out180 : out std_logic
-	);
+
+component fbpspwmdt
+	port( 
+		 clk : in std_logic; -- clock
+		 en : in std_logic; -- habilta modulo
+		 comp : in std_logic_vector(n_bits_c-1 downto 0); -- moduladora     
+		 c : in std_logic_vector(n_bits_c-1 downto 0); -- portadora
+		 amost :  in std_logic; -- amostra moduladora na borda de amost ????? 
+		 port_PWML : out std_logic;
+		 port_PWMH : out std_logic		 
+		 );	 
 end component;
-
-
-component deadtime 
-port( 
-    p_Pwm_In: in std_logic ;
-    CLK: in std_logic ;
-    p_Pwm1_Out: out std_logic ;
-    p_Pwm2_Out: out std_logic);
-end component;
-
-
 
 
 -- SIGNALS --- 
@@ -239,6 +228,10 @@ signal bidir : std_logic;
 --PWM para indice de modulacao baixo
 signal dirPWM1,dirPWM2,dirPWM3 : std_logic;
 signal cPWM1,cPWM2,cPWM3 : std_logic_vector(15 downto 0);
+
+
+signal dirTRI1,dirTRI2,dirTRI3,dirTRI4,dirTRI5,dirTRI6 : std_logic;
+signal cTRI1,cTRI2,cTRI3,cTRI4,cTRI5,cTRI6 : std_logic_vector(15 downto 0);
         
       
 signal omega_pll : std_logic_vector(Nin-1 downto 0);
@@ -256,102 +249,90 @@ begin
 							);
 							
 							
-	--	clk_int = 6.666_ MHz					
-	u1: clk_div port map (clk_in => clk_pll,
-								en => '1',
-								div => std_logic_vector(to_unsigned(4, 16)), -- function TO_UNSIGNED (ARG, SIZE: NATURAL) return UNSIGNED;
-                        clk_out => clk_int
-                        );		
-					
-			
-							
-		
-	 -- int_data = 3428 => 60 Hz	
-	 u5: integrador port map(
-										clk => clk_int,
-										en => '1',
-										reset => '0',
-										MAX => std_logic_vector(to_unsigned(536870911, 30)),
-										sinc => sinc_int,
-										out_data => theta_pll,
-										int_data => std_logic_vector(to_unsigned(4832, 13))
-										--int_data => omega_pll
-									);
-									
-	-- defasa theta para sistema trifasico								
-	u6: theta_abc port map(
-										clk => clk_int,
-										en => '1',
-										reset => '0',
-										theta_a => th_a,
-										theta_b => th_b,
-										theta_c => th_c,
-										theta_in => theta_pll
-									);
-									
 
-    uc1: portadora_tringular port map(
+    ucr1: portadora_tringular port map(
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
 			reset => '0', --
 			count_ini => std_logic_vector(to_unsigned( 0, 16)), -- valor inicial da contagem
 			dir_ini => '0', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
-			dir =>  dirPWM1, -- direcao atual 0: cresente ou 1: decrescente 
-			c => cPWM1 -- data out 
+			dir =>  dirTRI1, -- direcao atual 0: cresente ou 1: decrescente 
+			c => cTRI1 -- data out 
 			);
 			
-	uc2: portadora_tringular port map(
+	ucr2: portadora_tringular port map(
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
 			reset => '0', --
 			count_ini => std_logic_vector(to_unsigned( 667, 16)), -- valor inicial da contagem
 			dir_ini => '0', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
-			dir =>  dirPWM2, -- direcao atual 0: cresente ou 1: decrescente 
-			c => cPWM2 -- data out 
+			dir =>  dirTRI2, -- direcao atual 0: cresente ou 1: decrescente 
+			c => cTRI2 -- data out 
 			);
 			
-	uc3: portadora_tringular port map(
+	ucr3: portadora_tringular port map(
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
 			reset => '0', --
 			count_ini => std_logic_vector(to_unsigned( 1024, 16)), -- valor inicial da contagem
 			dir_ini => '1', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
-			dir =>  dirPWM3, -- direcao atual 0: cresente ou 1: decrescente 
-			c => cPWM3 -- data out 
+			dir =>  dirTRI3, -- direcao atual 0: cresente ou 1: decrescente 
+			c => cTRI3 -- data out 
 			);
 			
-	usin: tabela_sin port map (clk => clk_pll,
-					theta => th_a,
-					va => sin_a
-					);	
-
-	ucomp: comparador port map(
+	ucr4: portadora_tringular port map(
 			clk => clk_pll, -- clock
-			en => '1', -- habilta modulo
-			comp => std_logic_vector(to_unsigned(267, 16)), -- moduladora     
-			c => cPWM1, -- portadora
-			amost => clk_pll, -- amostra moduladora na borda de amost
-		   comp_out => sigPWM01
+			en => '1', -- habilita modulo
+			reset => '0', --
+			count_ini => std_logic_vector(to_unsigned( 1024, 16)), -- valor inicial da contagem
+			dir_ini => '1', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
+			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
+			dir =>  dirTRI4, -- direcao atual 0: cresente ou 1: decrescente 
+			c => cTRI4 -- data out 
 			);
 			
-			
+	ucr5: portadora_tringular port map(
+			clk => clk_pll, -- clock
+			en => '1', -- habilita modulo
+			reset => '0', --
+			count_ini => std_logic_vector(to_unsigned( 1024, 16)), -- valor inicial da contagem
+			dir_ini => '1', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
+			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
+			dir =>  dirTRI5, -- direcao atual 0: cresente ou 1: decrescente 
+			c => cTRI5 -- data out 
+			);		
 	
-deadcomp : deadtime port map( 
-    p_Pwm_In  => sigPWM01,
-    CLK => clk_pll, -- clock
-    p_Pwm1_Out => GPIO_0(0),
-    p_Pwm2_Out => GPIO_0(1)
-     );		
-			
-			
+   ucr6: portadora_tringular port map(
+			clk => clk_pll, -- clock
+			en => '1', -- habilita modulo
+			reset => '0', --
+			count_ini => std_logic_vector(to_unsigned( 1024, 16)), -- valor inicial da contagem
+			dir_ini => '1', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
+			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
+			dir =>  dirTRI6, -- direcao atual 0: cresente ou 1: decrescente 
+			c => cTRI6 -- data out 
+			);
 		
+		
+					
+	
+			
 
--- clk_int 
---GPIO_0(1)<=SW(1);
---GPIO_0(2)<=SW(2);
+teste01 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => std_logic_vector(to_unsigned(267, 16)), -- moduladora     
+		 c => cTRI1, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWML  => GPIO_0(0),
+		 port_PWMH => GPIO_0(1)	 
+		 );	 
+		
+		
 
 
 
