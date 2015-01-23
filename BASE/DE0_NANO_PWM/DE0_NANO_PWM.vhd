@@ -186,8 +186,8 @@ component fbpspwmdt
 		 comp : in std_logic_vector(n_bits_c-1 downto 0); -- moduladora     
 		 c : in std_logic_vector(n_bits_c-1 downto 0); -- portadora
 		 amost :  in std_logic; -- amostra moduladora na borda de amost ????? 
-		 port_PWML : out std_logic;
-		 port_PWMH : out std_logic		 
+		 port_PWM01 : out std_logic;
+		 port_PWM02 : out std_logic		 
 		 );	 
 end component;
 
@@ -221,7 +221,7 @@ signal pwm1 :std_logic;
 
 signal mest_a, mest_b, mest_c : std_logic;
 signal sin_a, sin_b, sin_c : std_logic_vector(15 downto 0);
--- signal m : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(65535, 16));
+signal m : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(267, 16));
 
 signal bidir : std_logic;
 
@@ -265,7 +265,7 @@ begin
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
 			reset => '0', --
-			count_ini => std_logic_vector(to_unsigned( 667, 16)), -- valor inicial da contagem
+			count_ini => std_logic_vector(to_unsigned( 1335, 16)), -- valor inicial da contagem
 			dir_ini => '0', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
 			dir =>  dirTRI2, -- direcao atual 0: cresente ou 1: decrescente 
@@ -319,21 +319,39 @@ begin
 		
 					
 	
-			
+	
 
-teste01 : fbpspwmdt -- One leg of the Full Bridge
+PWM1_FA01 : fbpspwmdt -- One leg of the Full Bridge
 	port map( 
 		 clk => clk_pll, -- clock
 		 en => '1', -- habilta modulo
-		 comp  => std_logic_vector(to_unsigned(267, 16)), -- moduladora     
+		 comp  => m, -- moduladora     
 		 c => cTRI1, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWML  => GPIO_0(0),
-		 port_PWMH => GPIO_0(1)	 
+		 port_PWM01  => PWM1L_FA(1) , -- PWM1_LOW
+		 port_PWM02 => PWM1H_FA(1)	 --PWM1_HIGH
 		 );	 
 		
-		
+PWM2_FA01 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => m, -- moduladora     
+		 c => cTRI2, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM2H_FA(1), -- PWM2_HIGH
+		 port_PWM02 => PWM2L_FA(1)	 -- PWM2_LOW
+		 );			
 
 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
 
 end MAIN;

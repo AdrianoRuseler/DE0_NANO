@@ -19,8 +19,8 @@ entity fbpspwmdt is
 		 comp : in std_logic_vector(n_bits_c-1 downto 0); -- moduladora     
 		 c : in std_logic_vector(n_bits_c-1 downto 0); -- portadora
 		 amost :  in std_logic; -- amostra moduladora na borda de amost ?????	   
-		 port_PWML : out std_logic;
-		 port_PWMH : out std_logic		 
+		 port_PWM01 : out std_logic;
+		 port_PWM02 : out std_logic		 
 		 );	 
 end entity fbpspwmdt;
 
@@ -74,11 +74,11 @@ architecture fbpspwmdt_arch of fbpspwmdt is
                 end if;
             else 
                 var_Dead_Count1 := 0;
-                port_PWML <= p_Pwm_In;
+                port_PWM01 <= p_Pwm_In;
             end if;
             
             if (var_Dead_Count1 = c_Dead_t) then
-                port_PWML <= p_Pwm_In;
+                port_PWM01 <= p_Pwm_In;
             else null;
             end if;
 -----------------------------------
@@ -89,11 +89,11 @@ architecture fbpspwmdt_arch of fbpspwmdt is
                 end if;
             else 
                 var_Dead_Count2 := 0;
-                port_PWMH <= sig_Not_Pwm_In;
+                port_PWM02 <= sig_Not_Pwm_In;
             end if;
             
             if (var_Dead_Count2 = c_Dead_t) then
-                port_PWMH <= sig_Not_Pwm_In;
+                port_PWM02 <= sig_Not_Pwm_In;
             else null;
             end if;
         end if;
