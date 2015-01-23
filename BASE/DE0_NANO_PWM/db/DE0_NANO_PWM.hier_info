@@ -9,8 +9,8 @@ LED[5] <= <GND>
 LED[6] <= <GND>
 LED[7] <= <GND>
 SW[0] => ~NO_FANOUT~
-SW[1] => GPIO_0[1].DATAIN
-SW[2] => GPIO_0[2].DATAIN
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
 SW[3] => ~NO_FANOUT~
 KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
@@ -69,8 +69,8 @@ INT0_FC[0] => ~NO_FANOUT~
 INT0_FC[1] => ~NO_FANOUT~
 INT0_FC[2] => ~NO_FANOUT~
 GPIO_0[0] <= comparador:ucomp.comp_out
-GPIO_0[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
-GPIO_0[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
+GPIO_0[1] <= comparador:u2comp.comp_out
+GPIO_0[2] <= <GND>
 GPIO_0[3] <= <GND>
 
 
@@ -1047,6 +1047,60 @@ va[15] <= va[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |DE0_NANO_PWM|comparador:ucomp
+clk => comp_out~reg0.CLK
+en => comp_out~reg0.ACLR
+comp[0] => comp_int[0].DATAIN
+comp[1] => comp_int[1].DATAIN
+comp[2] => comp_int[2].DATAIN
+comp[3] => comp_int[3].DATAIN
+comp[4] => comp_int[4].DATAIN
+comp[5] => comp_int[5].DATAIN
+comp[6] => comp_int[6].DATAIN
+comp[7] => comp_int[7].DATAIN
+comp[8] => comp_int[8].DATAIN
+comp[9] => comp_int[9].DATAIN
+comp[10] => comp_int[10].DATAIN
+comp[11] => comp_int[11].DATAIN
+comp[12] => comp_int[12].DATAIN
+comp[13] => comp_int[13].DATAIN
+comp[14] => comp_int[14].DATAIN
+comp[15] => comp_int[15].DATAIN
+c[0] => LessThan0.IN16
+c[1] => LessThan0.IN15
+c[2] => LessThan0.IN14
+c[3] => LessThan0.IN13
+c[4] => LessThan0.IN12
+c[5] => LessThan0.IN11
+c[6] => LessThan0.IN10
+c[7] => LessThan0.IN9
+c[8] => LessThan0.IN8
+c[9] => LessThan0.IN7
+c[10] => LessThan0.IN6
+c[11] => LessThan0.IN5
+c[12] => LessThan0.IN4
+c[13] => LessThan0.IN3
+c[14] => LessThan0.IN2
+c[15] => LessThan0.IN1
+amost => comp_int[0].CLK
+amost => comp_int[1].CLK
+amost => comp_int[2].CLK
+amost => comp_int[3].CLK
+amost => comp_int[4].CLK
+amost => comp_int[5].CLK
+amost => comp_int[6].CLK
+amost => comp_int[7].CLK
+amost => comp_int[8].CLK
+amost => comp_int[9].CLK
+amost => comp_int[10].CLK
+amost => comp_int[11].CLK
+amost => comp_int[12].CLK
+amost => comp_int[13].CLK
+amost => comp_int[14].CLK
+amost => comp_int[15].CLK
+comp_out <= comp_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE0_NANO_PWM|comparador:u2comp
 clk => comp_out~reg0.CLK
 en => comp_out~reg0.ACLR
 comp[0] => comp_int[0].DATAIN

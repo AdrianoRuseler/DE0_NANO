@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_NANO_PWM
-Thu Jan 22 17:33:25 2015
+Fri Jan 23 09:41:28 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -16,30 +16,33 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
   8. Analysis & Synthesis IP Cores Summary
   9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |DE0_NANO_PWM
- 13. Parameter Settings for User Entity Instance: pll:upll|altpll:altpll_component
- 14. Parameter Settings for User Entity Instance: integrador:u5
- 15. Parameter Settings for User Entity Instance: theta_abc:u6
- 16. Parameter Settings for User Entity Instance: portadora_tringular:uc1
- 17. Parameter Settings for User Entity Instance: portadora_tringular:uc2
- 18. Parameter Settings for User Entity Instance: portadora_tringular:uc3
- 19. Parameter Settings for User Entity Instance: tabela_sin:usin
- 20. Parameter Settings for User Entity Instance: comparador:ucomp
- 21. altpll Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "clk_div:uled"
- 23. Port Connectivity Checks: "comparador:ucomp"
- 24. Port Connectivity Checks: "tabela_sin:usin"
- 25. Port Connectivity Checks: "portadora_tringular:uc3"
- 26. Port Connectivity Checks: "portadora_tringular:uc2"
- 27. Port Connectivity Checks: "portadora_tringular:uc1"
- 28. Port Connectivity Checks: "theta_abc:u6"
- 29. Port Connectivity Checks: "integrador:u5"
- 30. Port Connectivity Checks: "clk_div:u1"
- 31. Port Connectivity Checks: "pll:upll"
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: Top-level Entity: |DE0_NANO_PWM
+ 14. Parameter Settings for User Entity Instance: pll:upll|altpll:altpll_component
+ 15. Parameter Settings for User Entity Instance: integrador:u5
+ 16. Parameter Settings for User Entity Instance: theta_abc:u6
+ 17. Parameter Settings for User Entity Instance: portadora_tringular:uc1
+ 18. Parameter Settings for User Entity Instance: portadora_tringular:uc2
+ 19. Parameter Settings for User Entity Instance: portadora_tringular:uc3
+ 20. Parameter Settings for User Entity Instance: tabela_sin:usin
+ 21. Parameter Settings for User Entity Instance: comparador:ucomp
+ 22. Parameter Settings for User Entity Instance: comparador:u2comp
+ 23. altpll Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "clk_div:uled"
+ 25. Port Connectivity Checks: "comparador:u2comp"
+ 26. Port Connectivity Checks: "comparador:ucomp"
+ 27. Port Connectivity Checks: "tabela_sin:usin"
+ 28. Port Connectivity Checks: "portadora_tringular:uc3"
+ 29. Port Connectivity Checks: "portadora_tringular:uc2"
+ 30. Port Connectivity Checks: "portadora_tringular:uc1"
+ 31. Port Connectivity Checks: "theta_abc:u6"
+ 32. Port Connectivity Checks: "integrador:u5"
+ 33. Port Connectivity Checks: "clk_div:u1"
+ 34. Port Connectivity Checks: "pll:upll"
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
 
 
 
@@ -66,15 +69,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 22 17:33:25 2015      ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 23 09:41:28 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; DE0_NANO_PWM                               ;
 ; Top-level Entity Name              ; DE0_NANO_PWM                               ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 99                                         ;
-;     Total combinational functions  ; 98                                         ;
-;     Dedicated logic registers      ; 78                                         ;
-; Total registers                    ; 78                                         ;
+; Total logic elements               ; 150                                        ;
+;     Total combinational functions  ; 149                                        ;
+;     Dedicated logic registers      ; 95                                         ;
+; Total registers                    ; 95                                         ;
 ; Total pins                         ; 73                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -217,20 +220,20 @@ agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                       ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 99                                                                          ;
+; Estimated Total logic elements              ; 150                                                                         ;
 ;                                             ;                                                                             ;
-; Total combinational functions               ; 98                                                                          ;
+; Total combinational functions               ; 149                                                                         ;
 ; Logic element usage by number of LUT inputs ;                                                                             ;
-;     -- 4 input functions                    ; 20                                                                          ;
-;     -- 3 input functions                    ; 15                                                                          ;
-;     -- <=2 input functions                  ; 63                                                                          ;
+;     -- 4 input functions                    ; 31                                                                          ;
+;     -- 3 input functions                    ; 18                                                                          ;
+;     -- <=2 input functions                  ; 100                                                                         ;
 ;                                             ;                                                                             ;
 ; Logic elements by mode                      ;                                                                             ;
-;     -- normal mode                          ; 29                                                                          ;
-;     -- arithmetic mode                      ; 69                                                                          ;
+;     -- normal mode                          ; 51                                                                          ;
+;     -- arithmetic mode                      ; 98                                                                          ;
 ;                                             ;                                                                             ;
-; Total registers                             ; 78                                                                          ;
-;     -- Dedicated logic registers            ; 78                                                                          ;
+; Total registers                             ; 95                                                                          ;
+;     -- Dedicated logic registers            ; 95                                                                          ;
 ;     -- I/O registers                        ; 0                                                                           ;
 ;                                             ;                                                                             ;
 ; I/O pins                                    ; 73                                                                          ;
@@ -241,9 +244,9 @@ agreement for further details.
 ;     -- PLLs                                 ; 1                                                                           ;
 ;                                             ;                                                                             ;
 ; Maximum fan-out node                        ; pll:upll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 36                                                                          ;
-; Total fan-out                               ; 541                                                                         ;
-; Average fan-out                             ; 1.67                                                                        ;
+; Maximum fan-out                             ; 53                                                                          ;
+; Total fan-out                               ; 723                                                                         ;
+; Average fan-out                             ; 1.85                                                                        ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
 
 
@@ -252,15 +255,17 @@ agreement for further details.
 +--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Library Name ;
 +--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
-; |DE0_NANO_PWM                        ; 98 (0)            ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 73   ; 0            ; |DE0_NANO_PWM                                                            ; work         ;
+; |DE0_NANO_PWM                        ; 149 (0)           ; 95 (0)       ; 0           ; 0            ; 0       ; 0         ; 73   ; 0            ; |DE0_NANO_PWM                                                            ; work         ;
 ;    |clk_div:u1|                      ; 22 (22)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|clk_div:u1                                                 ; work         ;
 ;    |clk_div:uled|                    ; 22 (22)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|clk_div:uled                                               ; work         ;
-;    |comparador:ucomp|                ; 4 (4)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|comparador:ucomp                                           ; work         ;
+;    |comparador:u2comp|               ; 6 (6)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|comparador:u2comp                                          ; work         ;
+;    |comparador:ucomp|                ; 6 (6)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|comparador:ucomp                                           ; work         ;
 ;    |integrador:u5|                   ; 25 (25)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|integrador:u5                                              ; work         ;
 ;    |pll:upll|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|pll:upll                                                   ; work         ;
 ;       |altpll:altpll_component|      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|pll:upll|altpll:altpll_component                           ; work         ;
 ;          |pll_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|pll:upll|altpll:altpll_component|pll_altpll:auto_generated ; work         ;
-;    |portadora_tringular:uc1|         ; 25 (25)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:uc1                                    ; work         ;
+;    |portadora_tringular:uc1|         ; 38 (38)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:uc1                                    ; work         ;
+;    |portadora_tringular:uc2|         ; 30 (30)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:uc2                                    ; work         ;
 +--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -274,22 +279,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------+-----------------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; comparador:ucomp|comp_int[0]           ; Stuck at GND due to stuck port data_in ;
-; comparador:ucomp|comp_int[1]           ; Stuck at VCC due to stuck port data_in ;
-; comparador:ucomp|comp_int[2..5]        ; Stuck at GND due to stuck port data_in ;
-; comparador:ucomp|comp_int[6,7]         ; Stuck at VCC due to stuck port data_in ;
-; comparador:ucomp|comp_int[8]           ; Stuck at GND due to stuck port data_in ;
-; comparador:ucomp|comp_int[9,10]        ; Stuck at VCC due to stuck port data_in ;
-; comparador:ucomp|comp_int[11..15]      ; Stuck at GND due to stuck port data_in ;
-; integrador:u5|out_int[0..3]            ; Merged with integrador:u5|out_int[4]   ;
-; integrador:u5|out_int[4]               ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 21 ;                                        ;
-+----------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++----------------------------------------+----------------------------------------------+
+; Register name                          ; Reason for Removal                           ;
++----------------------------------------+----------------------------------------------+
+; comparador:u2comp|comp_int[0,1]        ; Stuck at VCC due to stuck port data_in       ;
+; comparador:u2comp|comp_int[2]          ; Stuck at GND due to stuck port data_in       ;
+; comparador:u2comp|comp_int[3]          ; Stuck at VCC due to stuck port data_in       ;
+; comparador:u2comp|comp_int[4..7]       ; Stuck at GND due to stuck port data_in       ;
+; comparador:u2comp|comp_int[8]          ; Stuck at VCC due to stuck port data_in       ;
+; comparador:u2comp|comp_int[9..15]      ; Stuck at GND due to stuck port data_in       ;
+; comparador:ucomp|comp_int[0,1]         ; Stuck at VCC due to stuck port data_in       ;
+; comparador:ucomp|comp_int[2]           ; Stuck at GND due to stuck port data_in       ;
+; comparador:ucomp|comp_int[3]           ; Stuck at VCC due to stuck port data_in       ;
+; comparador:ucomp|comp_int[4..7]        ; Stuck at GND due to stuck port data_in       ;
+; comparador:ucomp|comp_int[8]           ; Stuck at VCC due to stuck port data_in       ;
+; comparador:ucomp|comp_int[9..15]       ; Stuck at GND due to stuck port data_in       ;
+; integrador:u5|out_int[0..3]            ; Merged with integrador:u5|out_int[4]         ;
+; integrador:u5|out_int[4]               ; Stuck at GND due to stuck port data_in       ;
+; portadora_tringular:uc1|c_int[0]       ; Merged with portadora_tringular:uc2|c_int[0] ;
+; Total Number of Removed Registers = 38 ;                                              ;
++----------------------------------------+----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -297,9 +308,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 78    ;
+; Total registers                              ; 95    ;
 ; Number of registers using Synchronous Clear  ; 57    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 15    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1     ;
@@ -307,12 +318,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; portadora_tringular:uc2|c_int[0]       ; 9       ;
+; portadora_tringular:uc2|c_int[3]       ; 4       ;
+; portadora_tringular:uc2|c_int[1]       ; 4       ;
+; portadora_tringular:uc2|c_int[4]       ; 4       ;
+; portadora_tringular:uc2|c_int[7]       ; 3       ;
+; portadora_tringular:uc2|c_int[9]       ; 3       ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DE0_NANO_PWM|portadora_tringular:uc1|c_int[15] ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE0_NANO_PWM|portadora_tringular:uc1|c_int[15] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DE0_NANO_PWM|portadora_tringular:uc2|c_int[12] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
@@ -782,6 +809,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: comparador:u2comp ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; n_bits_c       ; 16    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                     ;
 +-------------------------------+----------------------------------+
@@ -811,20 +848,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+--------------+
 
 
-+------------------------------------------------+
-; Port Connectivity Checks: "comparador:ucomp"   ;
-+--------------+-------+----------+--------------+
-; Port         ; Type  ; Severity ; Details      ;
-+--------------+-------+----------+--------------+
-; en           ; Input ; Info     ; Stuck at VCC ;
-; comp[10..9]  ; Input ; Info     ; Stuck at VCC ;
-; comp[7..6]   ; Input ; Info     ; Stuck at VCC ;
-; comp[15..11] ; Input ; Info     ; Stuck at GND ;
-; comp[5..2]   ; Input ; Info     ; Stuck at GND ;
-; comp[8]      ; Input ; Info     ; Stuck at GND ;
-; comp[1]      ; Input ; Info     ; Stuck at VCC ;
-; comp[0]      ; Input ; Info     ; Stuck at GND ;
-+--------------+-------+----------+--------------+
++-----------------------------------------------+
+; Port Connectivity Checks: "comparador:u2comp" ;
++-------------+-------+----------+--------------+
+; Port        ; Type  ; Severity ; Details      ;
++-------------+-------+----------+--------------+
+; en          ; Input ; Info     ; Stuck at VCC ;
+; comp[1..0]  ; Input ; Info     ; Stuck at VCC ;
+; comp[15..9] ; Input ; Info     ; Stuck at GND ;
+; comp[7..4]  ; Input ; Info     ; Stuck at GND ;
+; comp[8]     ; Input ; Info     ; Stuck at VCC ;
+; comp[3]     ; Input ; Info     ; Stuck at VCC ;
+; comp[2]     ; Input ; Info     ; Stuck at GND ;
++-------------+-------+----------+--------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "comparador:ucomp"  ;
++-------------+-------+----------+--------------+
+; Port        ; Type  ; Severity ; Details      ;
++-------------+-------+----------+--------------+
+; en          ; Input ; Info     ; Stuck at VCC ;
+; comp[1..0]  ; Input ; Info     ; Stuck at VCC ;
+; comp[15..9] ; Input ; Info     ; Stuck at GND ;
+; comp[7..4]  ; Input ; Info     ; Stuck at GND ;
+; comp[8]     ; Input ; Info     ; Stuck at VCC ;
+; comp[3]     ; Input ; Info     ; Stuck at VCC ;
+; comp[2]     ; Input ; Info     ; Stuck at GND ;
++-------------+-------+----------+--------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -847,8 +898,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; count_ini[9..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; count_ini[10]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; dir_ini           ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; max[10..0]        ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[5..4]         ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[2..0]         ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; max[15..11]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max[7..6]         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max[10]           ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[9]            ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max[8]            ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[3]            ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; dir               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; c                 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -861,14 +918,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; en                ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; reset             ; Input  ; Info     ; Stuck at GND                                                                        ;
-; count_ini[15..11] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; count_ini[9..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; count_ini[10]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; count_ini[4..3]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; count_ini[1..0]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; count_ini[15..10] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; count_ini[6..5]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; count_ini[9]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; count_ini[8]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; count_ini[7]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; count_ini[2]      ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; dir_ini           ; Input  ; Info     ; Stuck at GND                                                                        ;
-; max[10..0]        ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[5..4]         ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[2..0]         ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; max[15..11]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max[7..6]         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max[10]           ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[9]            ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max[8]            ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[3]            ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; dir               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; c                 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -881,8 +948,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; reset       ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; count_ini   ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; dir_ini     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; max[10..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[5..4]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[2..0]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; max[15..11] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max[7..6]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max[10]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[9]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; max[8]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; max[3]      ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; dir         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -945,24 +1018,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 73                          ;
-; cycloneiii_ff         ; 78                          ;
+; cycloneiii_ff         ; 95                          ;
 ;     ENA               ; 1                           ;
 ;     SCLR              ; 57                          ;
-;     plain             ; 20                          ;
-; cycloneiii_lcell_comb ; 99                          ;
-;     arith             ; 69                          ;
-;         2 data inputs ; 55                          ;
-;         3 data inputs ; 14                          ;
-;     normal            ; 30                          ;
+;     SLD               ; 15                          ;
+;     plain             ; 22                          ;
+; cycloneiii_lcell_comb ; 150                         ;
+;     arith             ; 98                          ;
+;         2 data inputs ; 83                          ;
+;         3 data inputs ; 15                          ;
+;     normal            ; 52                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 20                          ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 31                          ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.40                        ;
-; Average LUT depth     ; 3.17                        ;
+; Max LUT depth         ; 6.80                        ;
+; Average LUT depth     ; 3.09                        ;
 +-----------------------+-----------------------------+
 
 
@@ -981,7 +1055,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Thu Jan 22 17:33:10 2015
+    Info: Processing started: Fri Jan 23 09:41:09 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_NANO_PWM -c DE0_NANO_PWM
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
@@ -1053,10 +1127,9 @@ Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(222): object "s
 Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(228): object "dirPWM1" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(228): object "dirPWM2" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(228): object "dirPWM3" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(229): object "cPWM2" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(229): object "cPWM3" assigned a value but never read
 Warning (10873): Using initial value X (don't care) for net "LED[7..1]" at DE0_NANO_PWM.vhd(31)
-Warning (10873): Using initial value X (don't care) for net "GPIO_0[3]" at DE0_NANO_PWM.vhd(64)
+Warning (10873): Using initial value X (don't care) for net "GPIO_0[3..2]" at DE0_NANO_PWM.vhd(64)
 Info (12128): Elaborating entity "pll" for hierarchy "pll:upll"
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:upll|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "pll:upll|altpll:altpll_component"
@@ -1192,12 +1265,15 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "PWM2H_FC[0]" is stuck at GND
     Warning (13410): Pin "PWM2H_FC[1]" is stuck at GND
     Warning (13410): Pin "PWM2H_FC[2]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[2]" is stuck at GND
     Warning (13410): Pin "GPIO_0[3]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
+Warning (21074): Design contains 15 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
     Warning (15610): No output dependent on input pin "SW[3]"
     Warning (15610): No output dependent on input pin "KEY[0]"
     Warning (15610): No output dependent on input pin "KEY[1]"
@@ -1210,15 +1286,15 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "INT0_FC[0]"
     Warning (15610): No output dependent on input pin "INT0_FC[1]"
     Warning (15610): No output dependent on input pin "INT0_FC[2]"
-Info (21057): Implemented 174 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 226 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 100 logic cells
+    Info (21061): Implemented 152 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 111 warnings
-    Info: Peak virtual memory: 678 megabytes
-    Info: Processing ended: Thu Jan 22 17:33:26 2015
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 113 warnings
+    Info: Peak virtual memory: 681 megabytes
+    Info: Processing ended: Fri Jan 23 09:41:28 2015
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:40
 
 

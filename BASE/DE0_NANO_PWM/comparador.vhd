@@ -7,7 +7,7 @@ use ieee.numeric_std.all;
 
 entity comparador is
 generic  (
-			 constant n_bits_c: integer := 16  --n�mero de bits da portadora
+			 constant n_bits_c: integer := 16  --numero de bits da portadora
          );
 	port(
 			clk : in std_logic; -- clock

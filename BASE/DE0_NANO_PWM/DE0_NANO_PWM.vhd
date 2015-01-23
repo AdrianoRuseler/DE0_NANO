@@ -284,7 +284,7 @@ begin
 			reset => '0', --
 			count_ini => std_logic_vector(to_unsigned( 0, 16)), -- valor inicial da contagem
 			dir_ini => '0', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
-			MAX => std_logic_vector(to_unsigned( 2047, 16)), -- valor de contagem maximo
+			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
 			dir =>  dirPWM1, -- direcao atual 0: cresente ou 1: decrescente 
 			c => cPWM1 -- data out 
 			);
@@ -293,9 +293,9 @@ begin
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
 			reset => '0', --
-			count_ini => std_logic_vector(to_unsigned( 1024, 16)), -- valor inicial da contagem
+			count_ini => std_logic_vector(to_unsigned( 667, 16)), -- valor inicial da contagem
 			dir_ini => '0', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
-			MAX => std_logic_vector(to_unsigned( 2047, 16)), -- valor de contagem maximo
+			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
 			dir =>  dirPWM2, -- direcao atual 0: cresente ou 1: decrescente 
 			c => cPWM2 -- data out 
 			);
@@ -306,7 +306,7 @@ begin
 			reset => '0', --
 			count_ini => std_logic_vector(to_unsigned( 1024, 16)), -- valor inicial da contagem
 			dir_ini => '1', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
-			MAX => std_logic_vector(to_unsigned( 2047, 16)), -- valor de contagem maximo
+			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
 			dir =>  dirPWM3, -- direcao atual 0: cresente ou 1: decrescente 
 			c => cPWM3 -- data out 
 			);
@@ -319,10 +319,20 @@ begin
 	ucomp: comparador port map(
 			clk => clk_pll, -- clock
 			en => '1', -- habilta modulo
-			comp => std_logic_vector(to_unsigned(1730, 16)), -- moduladora     
+			comp => std_logic_vector(to_unsigned(267, 16)), -- moduladora     
 			c => cPWM1, -- portadora
 			amost => clk_pll, -- amostra moduladora na borda de amost
 		   comp_out => GPIO_0(0)
+			);
+			
+			
+ u2comp: comparador port map(
+			clk => clk_pll, -- clock
+			en => '1', -- habilta modulo
+			comp => std_logic_vector(to_unsigned(267, 16)), -- moduladora     
+			c => cPWM2, -- portadora
+			amost => clk_pll, -- amostra moduladora na borda de amost
+		   comp_out => GPIO_0(1)
 			);
 		
 									
@@ -337,8 +347,8 @@ begin
 								
 
 -- clk_int 
-GPIO_0(1)<=SW(1);
-GPIO_0(2)<=SW(2);
+--GPIO_0(1)<=SW(1);
+--GPIO_0(2)<=SW(2);
 
 
 
