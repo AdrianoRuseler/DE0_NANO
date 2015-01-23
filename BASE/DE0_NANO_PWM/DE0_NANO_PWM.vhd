@@ -186,9 +186,21 @@ component comparador
 		comp : in std_logic_vector(15 downto 0); -- moduladora     
 		c : in std_logic_vector(15 downto 0); -- portadora
 		amost :  in std_logic; -- amostra moduladora na borda de amost
-		comp_out : out std_logic
+		comp_out : out std_logic;
+		comp_out180 : out std_logic
 	);
 end component;
+
+
+component deadtime 
+port( 
+    p_Pwm_In: in std_logic ;
+    CLK: in std_logic ;
+    p_Pwm1_Out: out std_logic ;
+    p_Pwm2_Out: out std_logic);
+end component;
+
+
 
 
 -- SIGNALS --- 
@@ -199,7 +211,7 @@ signal reset : std_logic;
 	
 signal th_a, th_b, th_c : std_logic_vector(15 downto 0); -- 
 	 
- 
+signal sigPWM01,sigPWM02 : std_logic;
  
 signal OSC_BUS1 : std_logic_vector(9 downto 0);
 signal sinc_int : std_logic;
@@ -322,29 +334,20 @@ begin
 			comp => std_logic_vector(to_unsigned(267, 16)), -- moduladora     
 			c => cPWM1, -- portadora
 			amost => clk_pll, -- amostra moduladora na borda de amost
-		   comp_out => GPIO_0(0)
+		   comp_out => sigPWM01
 			);
 			
 			
- u2comp: comparador port map(
-			clk => clk_pll, -- clock
-			en => '1', -- habilta modulo
-			comp => std_logic_vector(to_unsigned(267, 16)), -- moduladora     
-			c => cPWM2, -- portadora
-			amost => clk_pll, -- amostra moduladora na borda de amost
-		   comp_out => GPIO_0(1)
-			);
+	
+deadcomp : deadtime port map( 
+    p_Pwm_In  => sigPWM01,
+    CLK => clk_pll, -- clock
+    p_Pwm1_Out => GPIO_0(0),
+    p_Pwm2_Out => GPIO_0(1)
+     );		
+			
+			
 		
-									
-					
-	--	led indica frequencia da fundamental				
-	uled: clk_div port map (clk_in => sinc_int,
-								en => '1',
-								div => std_logic_vector(to_unsigned(6, 16)),
-                        clk_out => LED(0)
-								--clk_out => GPIO_0(2)
-                        );	
-								
 
 -- clk_int 
 --GPIO_0(1)<=SW(1);

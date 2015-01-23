@@ -36,7 +36,7 @@ architecture comparador of comparador is
 				elsif falling_edge(clk) then
 					if (comp_int > c) then
 						comp_out <= '0';
-					else
+   				else
 						comp_out <= '1';
 					end if;
 				end if;
@@ -48,6 +48,5 @@ architecture comparador of comparador is
 				comp_int <= comp;
 			end if;
 		end process;
-
 
 end architecture comparador;
