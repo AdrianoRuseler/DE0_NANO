@@ -221,13 +221,12 @@ signal pwm1 :std_logic;
 
 signal mest_a, mest_b, mest_c : std_logic;
 signal sin_a, sin_b, sin_c : std_logic_vector(15 downto 0);
-signal m : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(267, 16));
+signal ma : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(267, 16));
+signal mb : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(467, 16));
+signal mc : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(667, 16));
 
 signal bidir : std_logic;
 
---PWM para indice de modulacao baixo
-signal dirPWM1,dirPWM2,dirPWM3 : std_logic;
-signal cPWM1,cPWM2,cPWM3 : std_logic_vector(15 downto 0);
 
 
 signal dirTRI1,dirTRI2,dirTRI3,dirTRI4,dirTRI5,dirTRI6 : std_logic;
@@ -276,7 +275,7 @@ begin
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
 			reset => '0', --
-			count_ini => std_logic_vector(to_unsigned( 1024, 16)), -- valor inicial da contagem
+			count_ini => std_logic_vector(to_unsigned( 445, 16)), -- valor inicial da contagem
 			dir_ini => '1', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
 			dir =>  dirTRI3, -- direcao atual 0: cresente ou 1: decrescente 
@@ -287,8 +286,8 @@ begin
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
 			reset => '0', --
-			count_ini => std_logic_vector(to_unsigned( 1024, 16)), -- valor inicial da contagem
-			dir_ini => '1', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
+			count_ini => std_logic_vector(to_unsigned( 890, 16)), -- valor inicial da contagem
+			dir_ini => '0', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
 			dir =>  dirTRI4, -- direcao atual 0: cresente ou 1: decrescente 
 			c => cTRI4 -- data out 
@@ -298,7 +297,7 @@ begin
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
 			reset => '0', --
-			count_ini => std_logic_vector(to_unsigned( 1024, 16)), -- valor inicial da contagem
+			count_ini => std_logic_vector(to_unsigned( 890, 16)), -- valor inicial da contagem
 			dir_ini => '1', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
 			dir =>  dirTRI5, -- direcao atual 0: cresente ou 1: decrescente 
@@ -309,8 +308,8 @@ begin
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
 			reset => '0', --
-			count_ini => std_logic_vector(to_unsigned( 1024, 16)), -- valor inicial da contagem
-			dir_ini => '1', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
+			count_ini => std_logic_vector(to_unsigned( 445, 16)), -- valor inicial da contagem
+			dir_ini => '0', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
 			dir =>  dirTRI6, -- direcao atual 0: cresente ou 1: decrescente 
 			c => cTRI6 -- data out 
@@ -318,40 +317,230 @@ begin
 		
 		
 					
-	
+----------  PHASE A  -------------------	
 	
 
 PWM1_FA01 : fbpspwmdt -- One leg of the Full Bridge
 	port map( 
 		 clk => clk_pll, -- clock
 		 en => '1', -- habilta modulo
-		 comp  => m, -- moduladora     
+		 comp  => ma, -- moduladora     
 		 c => cTRI1, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM1L_FA(1) , -- PWM1_LOW
-		 port_PWM02 => PWM1H_FA(1)	 --PWM1_HIGH
+		 port_PWM01  => PWM1L_FA(0) , -- PWM1_LOW
+		 port_PWM02 => PWM1H_FA(0)	 --PWM1_HIGH
 		 );	 
 		
 PWM2_FA01 : fbpspwmdt -- One leg of the Full Bridge
 	port map( 
 		 clk => clk_pll, -- clock
 		 en => '1', -- habilta modulo
-		 comp  => m, -- moduladora     
+		 comp  => ma, -- moduladora     
 		 c => cTRI2, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM2H_FA(1), -- PWM2_HIGH
-		 port_PWM02 => PWM2L_FA(1)	 -- PWM2_LOW
+		 port_PWM01  => PWM2H_FA(0), -- PWM2_HIGH
+		 port_PWM02 => PWM2L_FA(0)	 -- PWM2_LOW
 		 );			
 
 
+PWM1_FA02 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => ma, -- moduladora     
+		 c => cTRI3, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM1L_FA(1) , -- PWM1_LOW
+		 port_PWM02 => PWM1H_FA(1)	 --PWM1_HIGH
+		 );	 
+		
+PWM2_FA02 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => ma, -- moduladora     
+		 c => cTRI4, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM2H_FA(1), -- PWM2_HIGH
+		 port_PWM02 => PWM2L_FA(1)	 -- PWM2_LOW
+		 );					 
+		 
+		 
+
+PWM1_FA03 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => ma, -- moduladora     
+		 c => cTRI5, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM1L_FA(2) , -- PWM1_LOW
+		 port_PWM02 => PWM1H_FA(2)	 --PWM1_HIGH
+		 );	 
+		
+PWM2_FA03 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => ma, -- moduladora     
+		 c => cTRI6, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM2H_FA(2), -- PWM2_HIGH
+		 port_PWM02 => PWM2L_FA(2)	 -- PWM2_LOW
+		 );							 
+		 
+----------  PHASE B -------------------	
+
+
+
+PWM1_FB01 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => mb, -- moduladora     
+		 c => cTRI1, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM1L_FB(0) , -- PWM1_LOW
+		 port_PWM02 => PWM1H_FB(0)	 --PWM1_HIGH
+		 );	 
+		
+PWM2_FB01 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => mb, -- moduladora     
+		 c => cTRI2, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM2H_FB(0), -- PWM2_HIGH
+		 port_PWM02 => PWM2L_FB(0)	 -- PWM2_LOW
+		 );			
+
+
+PWM1_FB02 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => mb, -- moduladora     
+		 c => cTRI3, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM1L_FB(1) , -- PWM1_LOW
+		 port_PWM02 => PWM1H_FB(1)	 --PWM1_HIGH
+		 );	 
+		
+PWM2_FB02 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => mb, -- moduladora     
+		 c => cTRI4, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM2H_FB(1), -- PWM2_HIGH
+		 port_PWM02 => PWM2L_FB(1)	 -- PWM2_LOW
+		 );					 
+		 
+		 
+
+PWM1_FB03 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => mb, -- moduladora     
+		 c => cTRI5, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM1L_FB(2) , -- PWM1_LOW
+		 port_PWM02 => PWM1H_FB(2)	 --PWM1_HIGH
+		 );	 
+		
+PWM2_FB03 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => mb, -- moduladora     
+		 c => cTRI6, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM2H_FB(2), -- PWM2_HIGH
+		 port_PWM02 => PWM2L_FB(2)	 -- PWM2_LOW
+		 );							 
 		 
 		 
 		 
 		 
+----------  PHASE C -------------------	
+
+
+
+PWM1_FC01 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => mc, -- moduladora     
+		 c => cTRI1, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM1L_FC(0) , -- PWM1_LOW
+		 port_PWM02 => PWM1H_FC(0)	 --PWM1_HIGH
+		 );	 
+		
+PWM2_FC01 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => mc, -- moduladora     
+		 c => cTRI2, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM2H_FC(0), -- PWM2_HIGH
+		 port_PWM02 => PWM2L_FC(0)	 -- PWM2_LOW
+		 );			
+
+
+PWM1_FC02 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => mc, -- moduladora     
+		 c => cTRI3, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM1L_FC(1) , -- PWM1_LOW
+		 port_PWM02 => PWM1H_FC(1)	 --PWM1_HIGH
+		 );	 
+		
+PWM2_FC02 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => mc, -- moduladora     
+		 c => cTRI4, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM2H_FC(1), -- PWM2_HIGH
+		 port_PWM02 => PWM2L_FC(1)	 -- PWM2_LOW
+		 );					 
 		 
 		 
+
+PWM1_FC03 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => mc, -- moduladora     
+		 c => cTRI5, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM1L_FC(2) , -- PWM1_LOW
+		 port_PWM02 => PWM1H_FC(2)	 --PWM1_HIGH
+		 );	 
+		
+PWM2_FC03 : fbpspwmdt -- One leg of the Full Bridge
+	port map( 
+		 clk => clk_pll, -- clock
+		 en => '1', -- habilta modulo
+		 comp  => mc, -- moduladora     
+		 c => cTRI6, -- portadora
+		 amost => clk_pll, -- amostra moduladora na borda de amost
+		 port_PWM01  => PWM2H_FC(2), -- PWM2_HIGH
+		 port_PWM02 => PWM2L_FC(2)	 -- PWM2_LOW
+		 );							 
+
+ 
 		 
-		 
-		 
+		 		 
+		 		 
 
 end MAIN;
