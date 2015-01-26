@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_NANO_PWM
-Sat Jan 24 15:25:22 2015
+Mon Jan 26 13:02:08 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -99,15 +99,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jan 24 15:25:22 2015      ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan 26 13:02:08 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; DE0_NANO_PWM                               ;
 ; Top-level Entity Name              ; DE0_NANO_PWM                               ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 977                                        ;
-;     Total combinational functions  ; 977                                        ;
-;     Dedicated logic registers      ; 403                                        ;
-; Total registers                    ; 403                                        ;
+; Total logic elements               ; 1,025                                      ;
+;     Total combinational functions  ; 1,024                                      ;
+;     Dedicated logic registers      ; 405                                        ;
+; Total registers                    ; 405                                        ;
 ; Total pins                         ; 73                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -221,25 +221,25 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
-; pll.vhd                          ; yes             ; User Wizard-Generated File   ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/pll.vhd                  ;         ;
-; my_types_pkg.vhd                 ; yes             ; User VHDL File               ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/my_types_pkg.vhd         ;         ;
-; fixed_pkg_c.vhdl                 ; yes             ; User VHDL File               ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_pkg_c.vhdl         ;         ;
-; fixed_float_types_c.vhdl         ; yes             ; User VHDL File               ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_float_types_c.vhdl ;         ;
-; DE0_NANO_PWM.vhd                 ; yes             ; User VHDL File               ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/DE0_NANO_PWM.vhd         ;         ;
-; portadora_tringular.vhd          ; yes             ; User VHDL File               ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/portadora_tringular.vhd  ;         ;
-; fbpspwmdt.vhd                    ; yes             ; User VHDL File               ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fbpspwmdt.vhd            ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                 ; c:/altera/14.1/quartus/libraries/megafunctions/altpll.tdf                                   ;         ;
-; aglobal141.inc                   ; yes             ; Megafunction                 ; c:/altera/14.1/quartus/libraries/megafunctions/aglobal141.inc                               ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/altera/14.1/quartus/libraries/megafunctions/stratix_pll.inc                              ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/14.1/quartus/libraries/megafunctions/stratixii_pll.inc                            ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/14.1/quartus/libraries/megafunctions/cycloneii_pll.inc                            ;         ;
-; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/db/pll_altpll.v          ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
+; pll.vhd                          ; yes             ; User Wizard-Generated File   ; E:/Users/Administrator/Desktop/DE0_NANO_PWM/pll.vhd                  ;         ;
+; my_types_pkg.vhd                 ; yes             ; User VHDL File               ; E:/Users/Administrator/Desktop/DE0_NANO_PWM/my_types_pkg.vhd         ;         ;
+; fixed_pkg_c.vhdl                 ; yes             ; User VHDL File               ; E:/Users/Administrator/Desktop/DE0_NANO_PWM/fixed_pkg_c.vhdl         ;         ;
+; fixed_float_types_c.vhdl         ; yes             ; User VHDL File               ; E:/Users/Administrator/Desktop/DE0_NANO_PWM/fixed_float_types_c.vhdl ;         ;
+; DE0_NANO_PWM.vhd                 ; yes             ; User VHDL File               ; E:/Users/Administrator/Desktop/DE0_NANO_PWM/DE0_NANO_PWM.vhd         ;         ;
+; portadora_tringular.vhd          ; yes             ; User VHDL File               ; E:/Users/Administrator/Desktop/DE0_NANO_PWM/portadora_tringular.vhd  ;         ;
+; fbpspwmdt.vhd                    ; yes             ; User VHDL File               ; E:/Users/Administrator/Desktop/DE0_NANO_PWM/fbpspwmdt.vhd            ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; c:/altera/14.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; aglobal141.inc                   ; yes             ; Megafunction                 ; c:/altera/14.1/quartus/libraries/megafunctions/aglobal141.inc        ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/altera/14.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/14.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/altera/14.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
+; db/pll_altpll.v                  ; yes             ; Auto-Generated Megafunction  ; E:/Users/Administrator/Desktop/DE0_NANO_PWM/db/pll_altpll.v          ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -247,20 +247,20 @@ agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                       ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 977                                                                         ;
+; Estimated Total logic elements              ; 1,025                                                                       ;
 ;                                             ;                                                                             ;
-; Total combinational functions               ; 977                                                                         ;
+; Total combinational functions               ; 1024                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                             ;
-;     -- 4 input functions                    ; 278                                                                         ;
-;     -- 3 input functions                    ; 71                                                                          ;
-;     -- <=2 input functions                  ; 628                                                                         ;
+;     -- 4 input functions                    ; 289                                                                         ;
+;     -- 3 input functions                    ; 121                                                                         ;
+;     -- <=2 input functions                  ; 614                                                                         ;
 ;                                             ;                                                                             ;
 ; Logic elements by mode                      ;                                                                             ;
-;     -- normal mode                          ; 601                                                                         ;
-;     -- arithmetic mode                      ; 376                                                                         ;
+;     -- normal mode                          ; 662                                                                         ;
+;     -- arithmetic mode                      ; 362                                                                         ;
 ;                                             ;                                                                             ;
-; Total registers                             ; 403                                                                         ;
-;     -- Dedicated logic registers            ; 403                                                                         ;
+; Total registers                             ; 405                                                                         ;
+;     -- Dedicated logic registers            ; 405                                                                         ;
 ;     -- I/O registers                        ; 0                                                                           ;
 ;                                             ;                                                                             ;
 ; I/O pins                                    ; 73                                                                          ;
@@ -271,9 +271,9 @@ agreement for further details.
 ;     -- PLLs                                 ; 1                                                                           ;
 ;                                             ;                                                                             ;
 ; Maximum fan-out node                        ; pll:upll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 404                                                                         ;
-; Total fan-out                               ; 3595                                                                        ;
-; Average fan-out                             ; 2.35                                                                        ;
+; Maximum fan-out                             ; 406                                                                         ;
+; Total fan-out                               ; 3736                                                                        ;
+; Average fan-out                             ; 2.37                                                                        ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
 
 
@@ -282,33 +282,33 @@ agreement for further details.
 +--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Library Name ;
 +--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
-; |DE0_NANO_PWM                        ; 977 (0)           ; 403 (0)      ; 0           ; 0            ; 0       ; 0         ; 73   ; 0            ; |DE0_NANO_PWM                                                            ; work         ;
+; |DE0_NANO_PWM                        ; 1024 (0)          ; 405 (1)      ; 0           ; 0            ; 0       ; 0         ; 73   ; 0            ; |DE0_NANO_PWM                                                            ; work         ;
 ;    |fbpspwmdt:PWM1_FA01|             ; 43 (43)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA01                                        ; work         ;
-;    |fbpspwmdt:PWM1_FA02|             ; 43 (43)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA02                                        ; work         ;
-;    |fbpspwmdt:PWM1_FA03|             ; 43 (43)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA03                                        ; work         ;
+;    |fbpspwmdt:PWM1_FA02|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA02                                        ; work         ;
+;    |fbpspwmdt:PWM1_FA03|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA03                                        ; work         ;
 ;    |fbpspwmdt:PWM1_FB01|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FB01                                        ; work         ;
-;    |fbpspwmdt:PWM1_FB02|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FB02                                        ; work         ;
-;    |fbpspwmdt:PWM1_FB03|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FB03                                        ; work         ;
-;    |fbpspwmdt:PWM1_FC01|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FC01                                        ; work         ;
-;    |fbpspwmdt:PWM1_FC02|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FC02                                        ; work         ;
-;    |fbpspwmdt:PWM1_FC03|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FC03                                        ; work         ;
-;    |fbpspwmdt:PWM2_FA01|             ; 43 (43)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FA01                                        ; work         ;
-;    |fbpspwmdt:PWM2_FA02|             ; 43 (43)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FA02                                        ; work         ;
-;    |fbpspwmdt:PWM2_FA03|             ; 44 (44)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FA03                                        ; work         ;
-;    |fbpspwmdt:PWM2_FB01|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FB01                                        ; work         ;
-;    |fbpspwmdt:PWM2_FB02|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FB02                                        ; work         ;
-;    |fbpspwmdt:PWM2_FB03|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FB03                                        ; work         ;
-;    |fbpspwmdt:PWM2_FC01|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FC01                                        ; work         ;
-;    |fbpspwmdt:PWM2_FC02|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FC02                                        ; work         ;
-;    |fbpspwmdt:PWM2_FC03|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FC03                                        ; work         ;
+;    |fbpspwmdt:PWM1_FB02|             ; 43 (43)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FB02                                        ; work         ;
+;    |fbpspwmdt:PWM1_FB03|             ; 45 (45)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FB03                                        ; work         ;
+;    |fbpspwmdt:PWM1_FC01|             ; 42 (42)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FC01                                        ; work         ;
+;    |fbpspwmdt:PWM1_FC02|             ; 42 (42)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FC02                                        ; work         ;
+;    |fbpspwmdt:PWM1_FC03|             ; 42 (42)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FC03                                        ; work         ;
+;    |fbpspwmdt:PWM2_FA01|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FA01                                        ; work         ;
+;    |fbpspwmdt:PWM2_FA02|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FA02                                        ; work         ;
+;    |fbpspwmdt:PWM2_FA03|             ; 41 (41)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FA03                                        ; work         ;
+;    |fbpspwmdt:PWM2_FB01|             ; 43 (43)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FB01                                        ; work         ;
+;    |fbpspwmdt:PWM2_FB02|             ; 43 (43)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FB02                                        ; work         ;
+;    |fbpspwmdt:PWM2_FB03|             ; 44 (44)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FB03                                        ; work         ;
+;    |fbpspwmdt:PWM2_FC01|             ; 42 (42)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FC01                                        ; work         ;
+;    |fbpspwmdt:PWM2_FC02|             ; 42 (42)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FC02                                        ; work         ;
+;    |fbpspwmdt:PWM2_FC03|             ; 42 (42)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM2_FC03                                        ; work         ;
 ;    |pll:upll|                        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|pll:upll                                                   ; work         ;
 ;       |altpll:altpll_component|      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|pll:upll|altpll:altpll_component                           ; work         ;
 ;          |pll_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|pll:upll|altpll:altpll_component|pll_altpll:auto_generated ; work         ;
 ;    |portadora_tringular:ucr1|        ; 39 (39)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:ucr1                                   ; work         ;
-;    |portadora_tringular:ucr2|        ; 39 (39)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:ucr2                                   ; work         ;
-;    |portadora_tringular:ucr3|        ; 39 (39)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:ucr3                                   ; work         ;
-;    |portadora_tringular:ucr4|        ; 39 (39)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:ucr4                                   ; work         ;
-;    |portadora_tringular:ucr5|        ; 39 (39)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:ucr5                                   ; work         ;
+;    |portadora_tringular:ucr2|        ; 54 (54)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:ucr2                                   ; work         ;
+;    |portadora_tringular:ucr3|        ; 54 (54)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:ucr3                                   ; work         ;
+;    |portadora_tringular:ucr4|        ; 54 (54)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:ucr4                                   ; work         ;
+;    |portadora_tringular:ucr5|        ; 33 (33)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:ucr5                                   ; work         ;
 ;    |portadora_tringular:ucr6|        ; 31 (31)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|portadora_tringular:ucr6                                   ; work         ;
 +--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -319,7 +319,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance        ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+------------------------+-----------------+
-; Altera ; ALTPLL       ; 10.1    ; N/A          ; N/A          ; |DE0_NANO_PWM|pll:upll ; pll.vhd         ;
+; Altera ; ALTPLL       ; 14.1    ; N/A          ; N/A          ; |DE0_NANO_PWM|pll:upll ; pll.vhd         ;
 +--------+--------------+---------+--------------+--------------+------------------------+-----------------+
 
 
@@ -328,51 +328,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+-----------------------------------------------+
 ; Register name                           ; Reason for Removal                            ;
 +-----------------------------------------+-----------------------------------------------+
-; fbpspwmdt:PWM2_FC03|comp_int[0,1]       ; Stuck at VCC due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC03|comp_int[2]         ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC03|comp_int[3,4]       ; Stuck at VCC due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC03|comp_int[5,6]       ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC03|comp_int[7]         ; Stuck at VCC due to stuck port data_in        ;
+; fbpspwmdt:PWM2_FC03|comp_int[0..7]      ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM2_FC03|comp_int[8]         ; Stuck at GND due to stuck port data_in        ;
 ; fbpspwmdt:PWM2_FC03|comp_int[9]         ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM2_FC03|comp_int[10..15]    ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC03|comp_int[0,1]       ; Stuck at VCC due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC03|comp_int[2]         ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC03|comp_int[3,4]       ; Stuck at VCC due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC03|comp_int[5,6]       ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC03|comp_int[7]         ; Stuck at VCC due to stuck port data_in        ;
+; fbpspwmdt:PWM1_FC03|comp_int[0..7]      ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM1_FC03|comp_int[8]         ; Stuck at GND due to stuck port data_in        ;
 ; fbpspwmdt:PWM1_FC03|comp_int[9]         ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM1_FC03|comp_int[10..15]    ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC02|comp_int[0,1]       ; Stuck at VCC due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC02|comp_int[2]         ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC02|comp_int[3,4]       ; Stuck at VCC due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC02|comp_int[5,6]       ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC02|comp_int[7]         ; Stuck at VCC due to stuck port data_in        ;
+; fbpspwmdt:PWM2_FC02|comp_int[0..7]      ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM2_FC02|comp_int[8]         ; Stuck at GND due to stuck port data_in        ;
 ; fbpspwmdt:PWM2_FC02|comp_int[9]         ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM2_FC02|comp_int[10..15]    ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC02|comp_int[0,1]       ; Stuck at VCC due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC02|comp_int[2]         ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC02|comp_int[3,4]       ; Stuck at VCC due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC02|comp_int[5,6]       ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC02|comp_int[7]         ; Stuck at VCC due to stuck port data_in        ;
+; fbpspwmdt:PWM1_FC02|comp_int[0..7]      ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM1_FC02|comp_int[8]         ; Stuck at GND due to stuck port data_in        ;
 ; fbpspwmdt:PWM1_FC02|comp_int[9]         ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM1_FC02|comp_int[10..15]    ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC01|comp_int[0,1]       ; Stuck at VCC due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC01|comp_int[2]         ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC01|comp_int[3,4]       ; Stuck at VCC due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC01|comp_int[5,6]       ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM2_FC01|comp_int[7]         ; Stuck at VCC due to stuck port data_in        ;
+; fbpspwmdt:PWM2_FC01|comp_int[0..7]      ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM2_FC01|comp_int[8]         ; Stuck at GND due to stuck port data_in        ;
 ; fbpspwmdt:PWM2_FC01|comp_int[9]         ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM2_FC01|comp_int[10..15]    ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC01|comp_int[0,1]       ; Stuck at VCC due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC01|comp_int[2]         ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC01|comp_int[3,4]       ; Stuck at VCC due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC01|comp_int[5,6]       ; Stuck at GND due to stuck port data_in        ;
-; fbpspwmdt:PWM1_FC01|comp_int[7]         ; Stuck at VCC due to stuck port data_in        ;
+; fbpspwmdt:PWM1_FC01|comp_int[0..7]      ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM1_FC01|comp_int[8]         ; Stuck at GND due to stuck port data_in        ;
 ; fbpspwmdt:PWM1_FC01|comp_int[9]         ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM1_FC01|comp_int[10..15]    ; Stuck at GND due to stuck port data_in        ;
@@ -448,12 +424,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; fbpspwmdt:PWM1_FA01|comp_int[4..7]      ; Stuck at GND due to stuck port data_in        ;
 ; fbpspwmdt:PWM1_FA01|comp_int[8]         ; Stuck at VCC due to stuck port data_in        ;
 ; fbpspwmdt:PWM1_FA01|comp_int[9..15]     ; Stuck at GND due to stuck port data_in        ;
-; portadora_tringular:ucr5|c_int[0]       ; Merged with portadora_tringular:ucr6|c_int[0] ;
 ; portadora_tringular:ucr2|c_int[0]       ; Merged with portadora_tringular:ucr6|c_int[0] ;
 ; portadora_tringular:ucr3|c_int[0]       ; Merged with portadora_tringular:ucr6|c_int[0] ;
-; portadora_tringular:ucr1|c_int[0]       ; Merged with portadora_tringular:ucr6|c_int[0] ;
-; portadora_tringular:ucr4|c_int[0]       ; Merged with portadora_tringular:ucr6|c_int[0] ;
-; Total Number of Removed Registers = 293 ;                                               ;
+; portadora_tringular:ucr4|c_int[0]       ; Merged with portadora_tringular:ucr5|c_int[0] ;
+; portadora_tringular:ucr1|c_int[0]       ; Merged with portadora_tringular:ucr5|c_int[0] ;
+; Total Number of Removed Registers = 292 ;                                               ;
 +-----------------------------------------+-----------------------------------------------+
 
 
@@ -462,32 +437,59 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 403   ;
+; Total registers                              ; 405   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 75    ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Synchronous Load   ; 15    ;
+; Number of registers using Asynchronous Clear ; 98    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; portadora_tringular:ucr6|c_int[0]      ; 35      ;
-; portadora_tringular:ucr6|c_int[8]      ; 7       ;
-; portadora_tringular:ucr6|c_int[4]      ; 6       ;
-; portadora_tringular:ucr6|c_int[5]      ; 6       ;
-; portadora_tringular:ucr6|c_int[7]      ; 5       ;
-; portadora_tringular:ucr6|c_int[2]      ; 5       ;
-; portadora_tringular:ucr6|c_int[3]      ; 5       ;
-; portadora_tringular:ucr3|dir_int       ; 1       ;
-; portadora_tringular:ucr5|dir_int       ; 1       ;
-; Total number of inverted registers = 9 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; portadora_tringular:ucr3|c_int[8]       ; 7       ;
+; portadora_tringular:ucr3|c_int[3]       ; 7       ;
+; portadora_tringular:ucr3|c_int[2]       ; 7       ;
+; portadora_tringular:ucr6|c_int[0]       ; 19      ;
+; portadora_tringular:ucr3|c_int[7]       ; 6       ;
+; portadora_tringular:ucr3|c_int[5]       ; 6       ;
+; portadora_tringular:ucr3|c_int[4]       ; 6       ;
+; portadora_tringular:ucr5|c_int[9]       ; 4       ;
+; portadora_tringular:ucr5|c_int[8]       ; 7       ;
+; portadora_tringular:ucr5|c_int[3]       ; 6       ;
+; portadora_tringular:ucr5|c_int[1]       ; 6       ;
+; portadora_tringular:ucr5|c_int[6]       ; 5       ;
+; portadora_tringular:ucr5|c_int[5]       ; 6       ;
+; portadora_tringular:ucr5|c_int[4]       ; 6       ;
+; portadora_tringular:ucr2|c_int[10]      ; 7       ;
+; portadora_tringular:ucr2|c_int[8]       ; 7       ;
+; portadora_tringular:ucr2|c_int[2]       ; 7       ;
+; portadora_tringular:ucr2|c_int[1]       ; 7       ;
+; portadora_tringular:ucr2|c_int[5]       ; 6       ;
+; portadora_tringular:ucr2|c_int[4]       ; 6       ;
+; portadora_tringular:ucr4|c_int[9]       ; 6       ;
+; portadora_tringular:ucr4|c_int[8]       ; 7       ;
+; portadora_tringular:ucr4|c_int[3]       ; 7       ;
+; portadora_tringular:ucr4|c_int[1]       ; 7       ;
+; portadora_tringular:ucr4|c_int[6]       ; 6       ;
+; portadora_tringular:ucr4|c_int[5]       ; 6       ;
+; portadora_tringular:ucr4|c_int[4]       ; 6       ;
+; portadora_tringular:ucr6|c_int[8]       ; 7       ;
+; portadora_tringular:ucr6|c_int[3]       ; 6       ;
+; portadora_tringular:ucr6|c_int[2]       ; 5       ;
+; portadora_tringular:ucr6|c_int[7]       ; 5       ;
+; portadora_tringular:ucr6|c_int[5]       ; 6       ;
+; portadora_tringular:ucr6|c_int[4]       ; 6       ;
+; rst                                     ; 98      ;
+; portadora_tringular:ucr3|dir_int        ; 1       ;
+; portadora_tringular:ucr5|dir_int        ; 2       ;
+; Total number of inverted registers = 36 ;         ;
++-----------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -495,12 +497,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr1|c_int[9]   ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr6|c_int[9]   ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr3|c_int[1]   ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr5|c_int[9]   ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr2|c_int[9]   ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr4|c_int[15]  ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr1|c_int[10]  ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr5|c_int[10]  ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr3|c_int[15]  ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr6|c_int[15]  ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr2|c_int[9]   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr4|c_int[2]   ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr5|c_int[4]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr3|c_int[7]   ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr6|c_int[0]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr2|c_int[10]  ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr4|c_int[9]   ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA01|var_Dead_Count1 ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA02|var_Dead_Count1 ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA03|var_Dead_Count1 ;
@@ -1213,14 +1220,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port         ; Type  ; Severity ; Details       ;
 +--------------+-------+----------+---------------+
 ; en           ; Input ; Info     ; Stuck at VCC  ;
-; comp[4..3]   ; Input ; Info     ; Stuck at VCC  ;
-; comp[1..0]   ; Input ; Info     ; Stuck at VCC  ;
+; comp[7..0]   ; Input ; Info     ; Stuck at VCC  ;
 ; comp[15..10] ; Input ; Info     ; Stuck at GND  ;
-; comp[6..5]   ; Input ; Info     ; Stuck at GND  ;
 ; comp[9]      ; Input ; Info     ; Stuck at VCC  ;
 ; comp[8]      ; Input ; Info     ; Stuck at GND  ;
-; comp[7]      ; Input ; Info     ; Stuck at VCC  ;
-; comp[2]      ; Input ; Info     ; Stuck at GND  ;
 +--------------+-------+----------+---------------+
 
 
@@ -1230,14 +1233,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port         ; Type  ; Severity ; Details       ;
 +--------------+-------+----------+---------------+
 ; en           ; Input ; Info     ; Stuck at VCC  ;
-; comp[4..3]   ; Input ; Info     ; Stuck at VCC  ;
-; comp[1..0]   ; Input ; Info     ; Stuck at VCC  ;
+; comp[7..0]   ; Input ; Info     ; Stuck at VCC  ;
 ; comp[15..10] ; Input ; Info     ; Stuck at GND  ;
-; comp[6..5]   ; Input ; Info     ; Stuck at GND  ;
 ; comp[9]      ; Input ; Info     ; Stuck at VCC  ;
 ; comp[8]      ; Input ; Info     ; Stuck at GND  ;
-; comp[7]      ; Input ; Info     ; Stuck at VCC  ;
-; comp[2]      ; Input ; Info     ; Stuck at GND  ;
 +--------------+-------+----------+---------------+
 
 
@@ -1247,14 +1246,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port         ; Type  ; Severity ; Details       ;
 +--------------+-------+----------+---------------+
 ; en           ; Input ; Info     ; Stuck at VCC  ;
-; comp[4..3]   ; Input ; Info     ; Stuck at VCC  ;
-; comp[1..0]   ; Input ; Info     ; Stuck at VCC  ;
+; comp[7..0]   ; Input ; Info     ; Stuck at VCC  ;
 ; comp[15..10] ; Input ; Info     ; Stuck at GND  ;
-; comp[6..5]   ; Input ; Info     ; Stuck at GND  ;
 ; comp[9]      ; Input ; Info     ; Stuck at VCC  ;
 ; comp[8]      ; Input ; Info     ; Stuck at GND  ;
-; comp[7]      ; Input ; Info     ; Stuck at VCC  ;
-; comp[2]      ; Input ; Info     ; Stuck at GND  ;
 +--------------+-------+----------+---------------+
 
 
@@ -1264,14 +1259,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port         ; Type  ; Severity ; Details       ;
 +--------------+-------+----------+---------------+
 ; en           ; Input ; Info     ; Stuck at VCC  ;
-; comp[4..3]   ; Input ; Info     ; Stuck at VCC  ;
-; comp[1..0]   ; Input ; Info     ; Stuck at VCC  ;
+; comp[7..0]   ; Input ; Info     ; Stuck at VCC  ;
 ; comp[15..10] ; Input ; Info     ; Stuck at GND  ;
-; comp[6..5]   ; Input ; Info     ; Stuck at GND  ;
 ; comp[9]      ; Input ; Info     ; Stuck at VCC  ;
 ; comp[8]      ; Input ; Info     ; Stuck at GND  ;
-; comp[7]      ; Input ; Info     ; Stuck at VCC  ;
-; comp[2]      ; Input ; Info     ; Stuck at GND  ;
 +--------------+-------+----------+---------------+
 
 
@@ -1281,14 +1272,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port         ; Type  ; Severity ; Details       ;
 +--------------+-------+----------+---------------+
 ; en           ; Input ; Info     ; Stuck at VCC  ;
-; comp[4..3]   ; Input ; Info     ; Stuck at VCC  ;
-; comp[1..0]   ; Input ; Info     ; Stuck at VCC  ;
+; comp[7..0]   ; Input ; Info     ; Stuck at VCC  ;
 ; comp[15..10] ; Input ; Info     ; Stuck at GND  ;
-; comp[6..5]   ; Input ; Info     ; Stuck at GND  ;
 ; comp[9]      ; Input ; Info     ; Stuck at VCC  ;
 ; comp[8]      ; Input ; Info     ; Stuck at GND  ;
-; comp[7]      ; Input ; Info     ; Stuck at VCC  ;
-; comp[2]      ; Input ; Info     ; Stuck at GND  ;
 +--------------+-------+----------+---------------+
 
 
@@ -1298,14 +1285,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port         ; Type  ; Severity ; Details       ;
 +--------------+-------+----------+---------------+
 ; en           ; Input ; Info     ; Stuck at VCC  ;
-; comp[4..3]   ; Input ; Info     ; Stuck at VCC  ;
-; comp[1..0]   ; Input ; Info     ; Stuck at VCC  ;
+; comp[7..0]   ; Input ; Info     ; Stuck at VCC  ;
 ; comp[15..10] ; Input ; Info     ; Stuck at GND  ;
-; comp[6..5]   ; Input ; Info     ; Stuck at GND  ;
 ; comp[9]      ; Input ; Info     ; Stuck at VCC  ;
 ; comp[8]      ; Input ; Info     ; Stuck at GND  ;
-; comp[7]      ; Input ; Info     ; Stuck at VCC  ;
-; comp[2]      ; Input ; Info     ; Stuck at GND  ;
 +--------------+-------+----------+---------------+
 
 
@@ -1495,7 +1478,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port             ; Type   ; Severity ; Details                                                                             ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; en               ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; reset            ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; count_ini[8..7]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; count_ini[5..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; count_ini[15..9] ; Input  ; Info     ; Stuck at GND                                                                        ;
@@ -1521,7 +1503,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port              ; Type   ; Severity ; Details                                                                             ;
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; en                ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; reset             ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; count_ini[9..8]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; count_ini[6..3]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; count_ini[15..10] ; Input  ; Info     ; Stuck at GND                                                                        ;
@@ -1548,7 +1529,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port              ; Type   ; Severity ; Details                                                                             ;
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; en                ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; reset             ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; count_ini[9..8]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; count_ini[6..3]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; count_ini[15..10] ; Input  ; Info     ; Stuck at GND                                                                        ;
@@ -1575,7 +1555,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port             ; Type   ; Severity ; Details                                                                             ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; en               ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; reset            ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; count_ini[8..7]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; count_ini[5..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; count_ini[15..9] ; Input  ; Info     ; Stuck at GND                                                                        ;
@@ -1601,7 +1580,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port              ; Type   ; Severity ; Details                                                                             ;
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; en                ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; reset             ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; count_ini[5..4]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; count_ini[2..0]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; count_ini[15..11] ; Input  ; Info     ; Stuck at GND                                                                        ;
@@ -1629,7 +1607,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; en          ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; reset       ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; count_ini   ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; dir_ini     ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; max[5..4]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
@@ -1660,23 +1637,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 73                          ;
-; cycloneiii_ff         ; 403                         ;
-;     SLD               ; 75                          ;
-;     plain             ; 328                         ;
-; cycloneiii_lcell_comb ; 978                         ;
-;     arith             ; 376                         ;
-;         2 data inputs ; 321                         ;
-;         3 data inputs ; 55                          ;
-;     normal            ; 602                         ;
+; cycloneiii_ff         ; 405                         ;
+;     CLR               ; 83                          ;
+;     CLR SLD           ; 15                          ;
+;     plain             ; 307                         ;
+; cycloneiii_lcell_comb ; 1025                        ;
+;     arith             ; 362                         ;
+;         2 data inputs ; 294                         ;
+;         3 data inputs ; 68                          ;
+;     normal            ; 663                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 53                          ;
-;         2 data inputs ; 254                         ;
-;         3 data inputs ; 16                          ;
-;         4 data inputs ; 278                         ;
+;         1 data inputs ; 59                          ;
+;         2 data inputs ; 261                         ;
+;         3 data inputs ; 53                          ;
+;         4 data inputs ; 289                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.70                        ;
-; Average LUT depth     ; 4.91                        ;
+; Max LUT depth         ; 6.80                        ;
+; Average LUT depth     ; 5.18                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1685,7 +1663,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1695,7 +1673,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Sat Jan 24 15:24:59 2015
+    Info: Processing started: Mon Jan 26 13:01:48 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_NANO_PWM -c DE0_NANO_PWM
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
@@ -1751,12 +1729,6 @@ Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(196): object "p
 Warning (10540): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(224): used explicit default value for signal "ma" because signal was never assigned a value
 Warning (10540): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(225): used explicit default value for signal "mb" because signal was never assigned a value
 Warning (10540): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(226): used explicit default value for signal "mc" because signal was never assigned a value
-Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(232): object "dirTRI1" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(232): object "dirTRI2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(232): object "dirTRI3" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(232): object "dirTRI4" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(232): object "dirTRI5" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(232): object "dirTRI6" assigned a value but never read
 Info (12128): Elaborating entity "pll" for hierarchy "pll:upll"
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:upll|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "pll:upll|altpll:altpll_component"
@@ -1828,6 +1800,8 @@ Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(51): 
 Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(52): signal "dir_ini" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "fbpspwmdt" for hierarchy "fbpspwmdt:PWM1_FA01"
 Warning (10492): VHDL Process Statement warning at fbpspwmdt.vhd(41): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[0]" is stuck at GND
     Warning (13410): Pin "LED[1]" is stuck at GND
@@ -1869,15 +1843,15 @@ Warning (21074): Design contains 15 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "INT0_FC[0]"
     Warning (15610): No output dependent on input pin "INT0_FC[1]"
     Warning (15610): No output dependent on input pin "INT0_FC[2]"
-Info (21057): Implemented 1181 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1235 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 1107 logic cells
+    Info (21061): Implemented 1161 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 686 megabytes
-    Info: Processing ended: Sat Jan 24 15:25:22 2015
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:49
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 57 warnings
+    Info: Peak virtual memory: 684 megabytes
+    Info: Processing ended: Mon Jan 26 13:02:08 2015
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:45
 
 

@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/output_files/") File("DE0_NANO_PWM.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("E:/Users/Administrator/Desktop/DE0_NANO_PWM/output_files/") File("DE0_NANO_PWM.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

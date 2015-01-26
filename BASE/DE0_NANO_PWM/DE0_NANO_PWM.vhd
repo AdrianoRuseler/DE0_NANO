@@ -208,7 +208,7 @@ signal pulso_key0, key0_ant : std_logic;
 signal pulso_key1, key1_ant : std_logic;
 signal toggle_key1, toggle_key0 : std_logic := '1';
 
-
+signal rst : std_logic := '1';
 
 -- comparadores
 signal moduladoras : COMP_ARRAY;
@@ -223,10 +223,14 @@ signal mest_a, mest_b, mest_c : std_logic;
 signal sin_a, sin_b, sin_c : std_logic_vector(15 downto 0);
 signal ma : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(267, 16));
 signal mb : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(467, 16));
-signal mc : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(667, 16));
+signal mc : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(767, 16));
+
 
 signal bidir : std_logic;
 
+--PWM para indice de modulacao baixo
+signal dirPWM1,dirPWM2,dirPWM3 : std_logic;
+signal cPWM1,cPWM2,cPWM3 : std_logic_vector(15 downto 0);
 
 
 signal dirTRI1,dirTRI2,dirTRI3,dirTRI4,dirTRI5,dirTRI6 : std_logic;
@@ -247,73 +251,73 @@ begin
 							locked => pll_lock 
 							);
 							
-							
-
+		
     ucr1: portadora_tringular port map(
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
-			reset => '0', --
+			reset => rst, --
 			count_ini => std_logic_vector(to_unsigned( 0, 16)), -- valor inicial da contagem
 			dir_ini => '0', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
-			dir =>  dirTRI1, -- direcao atual 0: cresente ou 1: decrescente 
+		--	dir =>  dirTRI1, -- direcao atual 0: cresente ou 1: decrescente 
 			c => cTRI1 -- data out 
 			);
 			
 	ucr2: portadora_tringular port map(
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
-			reset => '0', --
+			reset => rst, --
 			count_ini => std_logic_vector(to_unsigned( 1335, 16)), -- valor inicial da contagem
 			dir_ini => '0', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
-			dir =>  dirTRI2, -- direcao atual 0: cresente ou 1: decrescente 
+		--	dir =>  dirTRI2, -- direcao atual 0: cresente ou 1: decrescente 
 			c => cTRI2 -- data out 
 			);
 			
 	ucr3: portadora_tringular port map(
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
-			reset => '0', --
+			reset => rst, --
 			count_ini => std_logic_vector(to_unsigned( 445, 16)), -- valor inicial da contagem
 			dir_ini => '1', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
-			dir =>  dirTRI3, -- direcao atual 0: cresente ou 1: decrescente 
+		--	dir =>  dirTRI3, -- direcao atual 0: cresente ou 1: decrescente 
 			c => cTRI3 -- data out 
 			);
 			
 	ucr4: portadora_tringular port map(
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
-			reset => '0', --
+			reset => rst, --
 			count_ini => std_logic_vector(to_unsigned( 890, 16)), -- valor inicial da contagem
 			dir_ini => '0', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
-			dir =>  dirTRI4, -- direcao atual 0: cresente ou 1: decrescente 
+		--	dir =>  dirTRI4, -- direcao atual 0: cresente ou 1: decrescente 
 			c => cTRI4 -- data out 
 			);
 			
 	ucr5: portadora_tringular port map(
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
-			reset => '0', --
+			reset => rst, --
 			count_ini => std_logic_vector(to_unsigned( 890, 16)), -- valor inicial da contagem
 			dir_ini => '1', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
-			dir =>  dirTRI5, -- direcao atual 0: cresente ou 1: decrescente 
+		--	dir =>  dirTRI5, -- direcao atual 0: cresente ou 1: decrescente 
 			c => cTRI5 -- data out 
 			);		
 	
    ucr6: portadora_tringular port map(
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
-			reset => '0', --
+			reset => rst, --
 			count_ini => std_logic_vector(to_unsigned( 445, 16)), -- valor inicial da contagem
 			dir_ini => '0', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
 			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
-			dir =>  dirTRI6, -- direcao atual 0: cresente ou 1: decrescente 
+		--	dir =>  dirTRI6, -- direcao atual 0: cresente ou 1: decrescente 
 			c => cTRI6 -- data out 
 			);
+		
 		
 		
 					
@@ -540,7 +544,11 @@ PWM2_FC03 : fbpspwmdt -- One leg of the Full Bridge
 
  
 		 
-		 		 
-		 		 
+process(clk_pll)
+		 begin
+			 if falling_edge(clk_pll) then
+				rst<='0';		 
+			 end if;		 
+		 end process;
 
 end MAIN;
