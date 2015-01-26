@@ -13,7 +13,7 @@ generic  (constant Nin : integer := 13;  --numero de bits da parte inteira exclu
 			reset : in std_logic; -- 
 			sinc : out std_logic;
 			MAX :  in std_logic_vector(Nout-1 downto 0);
-			out_data : out std_logic_vector(Nout-1 downto 0); -- data out 
+			out_data : out std_logic_vector(Nout-1 downto 0); -- data out 30 bits
 			int_data : in std_logic_vector(Nin-1 downto 0) -- data in
 			);
 			
@@ -31,6 +31,7 @@ architecture integrador of integrador is
 	   process(clk)
 			begin
 				if en = '1' then
+				
 					if reset = '1' then
 						out_int <= (others => '0');
 						sinc_int <= '0';
@@ -48,6 +49,10 @@ architecture integrador of integrador is
 							--sinc_int <= '1';
 						end if;
 					end if;
+					
+					
+					
+					
 				else
 					out_int <= (others => '0');
 					--sinc_int <= (others => '0');

@@ -221,10 +221,10 @@ signal pwm1 :std_logic;
 
 signal mest_a, mest_b, mest_c : std_logic;
 signal sin_a, sin_b, sin_c : std_logic_vector(15 downto 0);
-signal ma : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(267, 16));
-signal mb : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(467, 16));
-signal mc : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(767, 16));
-
+signal da : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(767, 16));
+signal db : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(767, 16));
+signal dc : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(767, 16));
+signal ma, mb, mc : std_logic_vector(15 downto 0);
 
 signal bidir : std_logic;
 
@@ -251,7 +251,68 @@ begin
 							locked => pll_lock 
 							);
 							
+						
+	--	clk_int = 6.666_ MHz					
+	u1: clk_div port map (clk_in => clk_pll,
+								en => '1',
+								div => std_logic_vector(to_unsigned(4, 16)),
+                        clk_out => clk_int
+                        );		
+					
 		
+							
+		
+	 -- int_data = 3428 => 60 Hz	
+	 u5: integrador port map(
+										clk => clk_int, --	clk_int = 6.666_ MHz	
+										en => '1',
+										reset => rst,
+										MAX => std_logic_vector(to_unsigned(536870911, 30)),
+										sinc => sinc_int,
+										out_data => theta_pll,
+										int_data => std_logic_vector(to_unsigned(4832, 13))  -- daonde vem esse numero?
+										--int_data => omega_pll
+									);
+									
+									
+									  GPIO_0(0) <=sinc_int;  -- Medido 60 Hz
+									
+	-- defasa theta para sistema trifasico								
+	u6: theta_abc port map(
+										clk => clk_int,
+										en => '1',
+										reset => rst,
+										theta_a => th_a,
+										theta_b => th_b,
+										theta_c => th_c,  -- 16 bits
+										theta_in => theta_pll -- 30 bits
+									);
+																
+							
+							
+	usin_a: tabela_sin port map (clk => clk_pll,
+					theta => th_a,
+					va => sin_a
+					);						
+	
+	usin_b: tabela_sin port map (clk => clk_pll,
+					theta => th_b,
+					va => sin_b
+					);		
+	
+	
+	usin_c: tabela_sin port map (clk => clk_pll,
+					theta => th_c,
+					va => sin_c
+					);			
+	-- 				
+		ma	<= sin_a;
+		mb	<= sin_b;
+		mc	<= sin_c;
+		
+					
+							
+-----------------   Portadoras Triangulares -----------------------------
     ucr1: portadora_tringular port map(
 			clk => clk_pll, -- clock
 			en => '1', -- habilita modulo
