@@ -1,0 +1,277 @@
+# Reading C:/altera/14.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DE0_NANO_PWM_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3c Lib Mapping Utility 2014.09 Sep 20 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/14.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/db {C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/db/pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 13:46:40 on Jan 27,2015
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/db" C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/db/pll_altpll.v 
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# End time: 13:46:40 on Jan 27,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/pll.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 13:46:40 on Jan 27,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/pll.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pll
+# -- Compiling architecture SYN of pll
+# End time: 13:46:41 on Jan 27,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/my_types_pkg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 13:46:41 on Jan 27,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/my_types_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package my_types_pkg
+# End time: 13:46:41 on Jan 27,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_float_types_c.vhdl}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 13:46:41 on Jan 27,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_float_types_c.vhdl 
+# -- Loading package STANDARD
+# -- Compiling package fixed_float_types
+# End time: 13:46:41 on Jan 27,2015, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/tabela_sin.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 13:46:41 on Jan 27,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/tabela_sin.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tabela_sin
+# -- Compiling architecture tabela_sin of tabela_sin
+# End time: 13:46:42 on Jan 27,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/clk_div.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 13:46:42 on Jan 27,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/clk_div.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity clk_div
+# -- Compiling architecture div of clk_div
+# End time: 13:46:43 on Jan 27,2015, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_pkg_c.vhdl}
+# Model Technology ModelSim ALTERA vcom 10.3c Compiler 2014.09 Sep 20 2014
+# Start time: 13:46:43 on Jan 27,2015
+# vcom -reportprogress 300 -93 -work work C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_pkg_c.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_pkg_c.vhdl(22): Library ieee_proposed not found.
+# ** Error: C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_pkg_c.vhdl(23): (vcom-1136) Unknown identifier "IEEE_PROPOSED".
+# 
+# ** Error: C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_pkg_c.vhdl(25): VHDL Compiler exiting
+# End time: 13:46:43 on Jan 27,2015, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/altera/14.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./DE0_NANO_PWM_run_msim_rtl_vhdl.do line 14
+# C:/altera/14.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_pkg_c.vhdl}"
+vsim work.clk_div
+# vsim -gui "+altera" -l msim_transcript -do "DE0_NANO_PWM_run_msim_rtl_vhdl.do" 
+# Start time: 13:46:56 on Jan 27,2015
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clk_div(div)
+add wave -position end  sim:/clk_div/clk_in
+add wave -position end  sim:/clk_div/div
+add wave -position end  sim:/clk_div/clk_out
+force -freeze sim:/clk_div/clk_in 1 0, 0 {76666666 ps} -r 1/53333333
+# Invalid time value: 1/53333333
+# ** Error: (vish-4004) The -repeat option requires a time period argument.
+# Usage: force <object_name> {<value> [[@]<time_info>][, <value> [[@]<time_info>]...} [-freeze | -drive | -deposit] [-cancel [@]<time_info>] [-repeat [@]<time_info>]
+force -freeze sim:/clk_div/clk_in 1 0, 0 {26666666 ps} -r 53333333
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/clk_div/clk_in 1 0, 0 {0 ps} -r 1
+force -freeze sim:/clk_div/div 4 0
+# Value length (1) does not equal array index length (16).
+# 
+# ** Error: (vsim-4011) Invalid force value: 4 0.
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -continue
+# Break key hit
+vsim work.tabela_sin
+# vsim 
+# Start time: 13:53:17 on Jan 27,2015
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tabela_sin(tabela_sin)
+add wave -position end  sim:/tabela_sin/clk
+force -freeze sim:/tabela_sin/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+add wave -position end  sim:/tabela_sin/theta
+add wave -position end  sim:/tabela_sin/va
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/tabela_sin/theta 0000000010100001 0
+run
+run
+force -freeze sim:/tabela_sin/theta 0000000010100000 0
+run
+run
+run
+run
+force -freeze sim:/tabela_sin/theta 10100110110 0
+# Value length (11) does not equal array index length (16).
+# 
+# ** Error: (vsim-4011) Invalid force value: 10100110110 0.
+# 
+run
+run
+run
+run
+run
+force -freeze sim:/tabela_sin/theta 0000000000000000 0
+run
+run
+force -freeze sim:/tabela_sin/theta 0000000000000001 0
+run
+run
+run
+run
+force -freeze sim:/tabela_sin/theta 0000000000100001 0
+run
+run

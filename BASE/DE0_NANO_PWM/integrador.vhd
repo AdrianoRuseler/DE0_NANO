@@ -5,7 +5,7 @@ use ieee.fixed_pkg.all;         --arquivo deve ser adicionado ao projeto
 
 entity integrador is
 generic  (constant Nin : integer := 13;  --numero de bits da parte inteira excluindo sinal de entrada
-			 constant Nout : integer := 30  --numero de bits da parte inteira excluindo sinal de sada
+			 constant Nout : integer := 30  --numero de bits da parte inteira excluindo sinal de saida
          );
 	port(
 			clk : in std_logic; -- clock

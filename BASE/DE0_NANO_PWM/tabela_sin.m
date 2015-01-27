@@ -1,25 +1,64 @@
                                                                                        
-%%
-% Tabela sin para FPGA
+%% Integrador
+
+
+Nin = 13;  % numero de bits da parte inteira excluindo sinal de entrada
+Nout = 30;  % numero de bits da parte inteira excluindo sinal de saida
+
+N16= 16;
+
+
+MAX=536870911;
+int_data=4832;
+% int_data => std_logic_vector(to_unsigned(4832, 13))  -- daonde vem esse numero?
+
+theta_pll = fi(0:int_data:MAX,0,Nout,0);
+
+thasum=fi(-32767,1,17,0);
+thbsum=fi(-10922,1,17,0);
+thcsum=fi(10922,1,17,0);
+ 
+
+th17bits=fi(bitsrl(theta_pll,13),1,17,0);
+
+th_ai=th17bits+thasum;
+th_bi=th17bits+thbsum; 
+th_ci=th17bits+thcsum;
+
+
+
+theta_a = fi(th_ai,1,16,0);
+theta_b = fi(th_bi,1,16,0);
+theta_c = fi(th_ci,1,16,0);
+
+
+
+%% Tabela sin para FPGA
 fid = fopen('tabela_sin.txt', 'w');
 
 
-Nbits=11;
+Nbits=11; % log2(1335)
 max_phase = 2^16-1;
 
 duty=0.858794; % Duty cycle
-cmax = 1335; 
+cmax = 1335;
 med = cmax/2;
 amp = med*duty;
+
+
+
 
 fprintf(fid, 'with id select\n');
 fprintf(fid, '  sin <= ');
 
-for id=1:1:(cmax)
+for id=1:1:2^Nbits
     idd = fi(id-1,0,Nbits,0);
-    fprintf(fid, '		    std_logic_vector(to_unsigned(%i, n_bits_c)) when "%s", \n', round(amp*sin((id-1)/(cmax)*pi*2)+med), idd.bin);
+    plotar(id)=round(amp*sin((id-1)/(cmax)*pi*2)+med);
+    fprintf(fid, '		    std_logic_vector(to_unsigned(%u, n_bits_c)) when "%s", \n', round(amp*sin((id-1)/(cmax)*pi*2)+med), idd.bin);
 end
-    fprintf(fid, '		    std_logic_vector(to_unsigned(0, n_bits_c)) when others;');
+
+
+fprintf(fid, '		    std_logic_vector(to_unsigned(0, n_bits_c)) when others;');
 
 fclose(fid);
 

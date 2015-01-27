@@ -139,9 +139,7 @@ component integrador
 		int_data : in std_logic_vector(Nin-1 downto 0) -- data in
 		);
 end component;
-	
-	
-	
+		
 -- 	
 component theta_abc
 	port(
@@ -178,7 +176,7 @@ component portadora_tringular
 	);
 end component;
 
-
+--
 component fbpspwmdt
 	port( 
 		 clk : in std_logic; -- clock
@@ -193,7 +191,7 @@ end component;
 
 
 -- SIGNALS --- 
-signal clk_pll, pll_lock : std_logic;
+signal clk_pll, pll_lock, clk_wt : std_logic;
 signal clk_int, clk_led : std_logic;
 signal reset : std_logic;
 	
@@ -203,7 +201,7 @@ signal th_a, th_b, th_c : std_logic_vector(15 downto 0); --
 signal sigPWM01,sigPWM02 : std_logic;
  
 signal OSC_BUS1 : std_logic_vector(9 downto 0);
-signal sinc_int : std_logic;
+signal sinc_int, sinc_wt : std_logic;
 signal pulso_key0, key0_ant : std_logic;
 signal pulso_key1, key1_ant : std_logic;
 signal toggle_key1, toggle_key0 : std_logic := '1';
@@ -239,7 +237,7 @@ signal cTRI1,cTRI2,cTRI3,cTRI4,cTRI5,cTRI6 : std_logic_vector(15 downto 0);
       
 signal omega_pll : std_logic_vector(Nin-1 downto 0);
 signal theta_pll : std_logic_vector(Nout-1 downto 0);  
-
+signal theta_wt : std_logic_vector(15 downto 0);  
 
 begin
 				
@@ -259,11 +257,16 @@ begin
                         clk_out => clk_int
                         );		
 					
-		
+		--	clk_wt = 3.809524_ MHz					
+	u1wt: clk_div port map (clk_in => clk_pll,
+								en => '1',
+								div => std_logic_vector(to_unsigned(7, 16)),
+                        clk_out => clk_wt
+                        );			
 							
 		
 	 -- int_data = 3428 => 60 Hz	
-	 u5: integrador port map(
+ u5: integrador port map(
 										clk => clk_int, --	clk_int = 6.666_ MHz	
 										en => '1',
 										reset => rst,
@@ -275,41 +278,10 @@ begin
 									);
 									
 									
-									  GPIO_0(0) <=sinc_int;  -- Medido 60 Hz
-									
-	-- defasa theta para sistema trifasico								
-	u6: theta_abc port map(
-										clk => clk_int,
-										en => '1',
-										reset => rst,
-										theta_a => th_a,
-										theta_b => th_b,
-										theta_c => th_c,  -- 16 bits
-										theta_in => theta_pll -- 30 bits
-									);
-																
-							
-							
-	usin_a: tabela_sin port map (clk => clk_pll,
-					theta => th_a,
-					va => sin_a
-					);						
+									GPIO_0(0) <=sinc_int;  -- Medido 60 Hz									
+									GPIO_0(1) <= rst;  -- rst
 	
-	usin_b: tabela_sin port map (clk => clk_pll,
-					theta => th_b,
-					va => sin_b
-					);		
-	
-	
-	usin_c: tabela_sin port map (clk => clk_pll,
-					theta => th_c,
-					va => sin_c
-					);			
-	-- 				
-		ma	<= sin_a;
-		mb	<= sin_b;
-		mc	<= sin_c;
-		
+								
 					
 							
 -----------------   Portadoras Triangulares -----------------------------
@@ -379,7 +351,40 @@ begin
 			c => cTRI6 -- data out 
 			);
 		
-		
+
+
+-- defasa theta para sistema trifasico								
+	u6: theta_abc port map(
+										clk => clk_int,
+										en => '1',
+										reset => rst,
+										theta_a => th_a, -- signed
+										theta_b => th_b,
+										theta_c => th_c,  -- 16 bits
+										theta_in => theta_pll -- 30 bits
+									);
+																
+							
+							
+	usin_a: tabela_sin port map (clk => clk_pll,
+					theta => th_a,
+					va => sin_a
+					);						
+	
+	usin_b: tabela_sin port map (clk => clk_pll,
+					theta => th_b,
+					va => sin_b
+					);		
+	
+	
+	usin_c: tabela_sin port map (clk => clk_pll,
+					theta => th_c,
+					va => sin_c
+					);			
+	-- 				
+		ma	<= sin_a;
+		mb	<= sin_b;
+		mc	<= sin_c;		
 		
 					
 ----------  PHASE A  -------------------	

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_NANO_PWM
-Mon Jan 26 17:43:13 2015
+Tue Jan 27 20:13:55 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -27,16 +27,16 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
  19. Parameter Settings for User Entity Instance: Top-level Entity: |DE0_NANO_PWM
  20. Parameter Settings for User Entity Instance: pll:upll|altpll:altpll_component
  21. Parameter Settings for User Entity Instance: integrador:u5
- 22. Parameter Settings for User Entity Instance: theta_abc:u6
- 23. Parameter Settings for User Entity Instance: tabela_sin:usin_a
- 24. Parameter Settings for User Entity Instance: tabela_sin:usin_b
- 25. Parameter Settings for User Entity Instance: tabela_sin:usin_c
- 26. Parameter Settings for User Entity Instance: portadora_tringular:ucr1
- 27. Parameter Settings for User Entity Instance: portadora_tringular:ucr2
- 28. Parameter Settings for User Entity Instance: portadora_tringular:ucr3
- 29. Parameter Settings for User Entity Instance: portadora_tringular:ucr4
- 30. Parameter Settings for User Entity Instance: portadora_tringular:ucr5
- 31. Parameter Settings for User Entity Instance: portadora_tringular:ucr6
+ 22. Parameter Settings for User Entity Instance: portadora_tringular:ucr1
+ 23. Parameter Settings for User Entity Instance: portadora_tringular:ucr2
+ 24. Parameter Settings for User Entity Instance: portadora_tringular:ucr3
+ 25. Parameter Settings for User Entity Instance: portadora_tringular:ucr4
+ 26. Parameter Settings for User Entity Instance: portadora_tringular:ucr5
+ 27. Parameter Settings for User Entity Instance: portadora_tringular:ucr6
+ 28. Parameter Settings for User Entity Instance: theta_abc:u6
+ 29. Parameter Settings for User Entity Instance: tabela_sin:usin_a
+ 30. Parameter Settings for User Entity Instance: tabela_sin:usin_b
+ 31. Parameter Settings for User Entity Instance: tabela_sin:usin_c
  32. Parameter Settings for User Entity Instance: fbpspwmdt:PWM1_FA01
  33. Parameter Settings for User Entity Instance: fbpspwmdt:PWM2_FA01
  34. Parameter Settings for User Entity Instance: fbpspwmdt:PWM1_FA02
@@ -78,19 +78,20 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
  70. Port Connectivity Checks: "fbpspwmdt:PWM1_FA02"
  71. Port Connectivity Checks: "fbpspwmdt:PWM2_FA01"
  72. Port Connectivity Checks: "fbpspwmdt:PWM1_FA01"
- 73. Port Connectivity Checks: "portadora_tringular:ucr6"
- 74. Port Connectivity Checks: "portadora_tringular:ucr5"
- 75. Port Connectivity Checks: "portadora_tringular:ucr4"
- 76. Port Connectivity Checks: "portadora_tringular:ucr3"
- 77. Port Connectivity Checks: "portadora_tringular:ucr2"
- 78. Port Connectivity Checks: "portadora_tringular:ucr1"
- 79. Port Connectivity Checks: "theta_abc:u6"
+ 73. Port Connectivity Checks: "theta_abc:u6"
+ 74. Port Connectivity Checks: "portadora_tringular:ucr6"
+ 75. Port Connectivity Checks: "portadora_tringular:ucr5"
+ 76. Port Connectivity Checks: "portadora_tringular:ucr4"
+ 77. Port Connectivity Checks: "portadora_tringular:ucr3"
+ 78. Port Connectivity Checks: "portadora_tringular:ucr2"
+ 79. Port Connectivity Checks: "portadora_tringular:ucr1"
  80. Port Connectivity Checks: "integrador:u5"
- 81. Port Connectivity Checks: "clk_div:u1"
- 82. Port Connectivity Checks: "pll:upll"
- 83. Post-Synthesis Netlist Statistics for Top Partition
- 84. Elapsed Time Per Partition
- 85. Analysis & Synthesis Messages
+ 81. Port Connectivity Checks: "clk_div:u1wt"
+ 82. Port Connectivity Checks: "clk_div:u1"
+ 83. Port Connectivity Checks: "pll:upll"
+ 84. Post-Synthesis Netlist Statistics for Top Partition
+ 85. Elapsed Time Per Partition
+ 86. Analysis & Synthesis Messages
 
 
 
@@ -117,7 +118,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jan 26 17:43:13 2015      ;
+; Analysis & Synthesis Status        ; Successful - Tue Jan 27 20:13:55 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; DE0_NANO_PWM                               ;
 ; Top-level Entity Name              ; DE0_NANO_PWM                               ;
@@ -309,7 +310,7 @@ agreement for further details.
 ;                                             ;                                                                             ;
 ; Maximum fan-out node                        ; pll:upll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 489                                                                         ;
-; Total fan-out                               ; 5112                                                                        ;
+; Total fan-out                               ; 5113                                                                        ;
 ; Average fan-out                             ; 2.56                                                                        ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
 
@@ -657,7 +658,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; rst                                     ; 190     ;
+; rst                                     ; 191     ;
 ; portadora_tringular:ucr3|c_int[8]       ; 7       ;
 ; portadora_tringular:ucr3|c_int[7]       ; 7       ;
 ; portadora_tringular:ucr3|c_int[5]       ; 7       ;
@@ -1193,53 +1194,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: theta_abc:u6 ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; Nin            ; 30    ; Signed Integer                   ;
-; Nout           ; 16    ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: tabela_sin:usin_a ;
-+----------------+-----------+-----------------------------------+
-; Parameter Name ; Value     ; Type                              ;
-+----------------+-----------+-----------------------------------+
-; THETA_MAX      ; 380808000 ; Signed Integer                    ;
-; n_bits_phase   ; 16        ; Signed Integer                    ;
-; n_bits_c       ; 16        ; Signed Integer                    ;
-+----------------+-----------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: tabela_sin:usin_b ;
-+----------------+-----------+-----------------------------------+
-; Parameter Name ; Value     ; Type                              ;
-+----------------+-----------+-----------------------------------+
-; THETA_MAX      ; 380808000 ; Signed Integer                    ;
-; n_bits_phase   ; 16        ; Signed Integer                    ;
-; n_bits_c       ; 16        ; Signed Integer                    ;
-+----------------+-----------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: tabela_sin:usin_c ;
-+----------------+-----------+-----------------------------------+
-; Parameter Name ; Value     ; Type                              ;
-+----------------+-----------+-----------------------------------+
-; THETA_MAX      ; 380808000 ; Signed Integer                    ;
-; n_bits_phase   ; 16        ; Signed Integer                    ;
-; n_bits_c       ; 16        ; Signed Integer                    ;
-+----------------+-----------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: portadora_tringular:ucr1 ;
 +----------------+-------+----------------------------------------------+
@@ -1297,6 +1251,50 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------+
 ; N              ; 16    ; Signed Integer                               ;
 +----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: theta_abc:u6 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; Nin            ; 30    ; Signed Integer                   ;
+; Nout           ; 16    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tabela_sin:usin_a ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; n_bits_phase   ; 16    ; Signed Integer                        ;
+; n_bits_c       ; 16    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tabela_sin:usin_b ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; n_bits_phase   ; 16    ; Signed Integer                        ;
+; n_bits_c       ; 16    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tabela_sin:usin_c ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; n_bits_phase   ; 16    ; Signed Integer                        ;
+; n_bits_c       ; 16    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1902,6 +1900,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-----------------------+
 
 
++------------------------------------------+
+; Port Connectivity Checks: "theta_abc:u6" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; en   ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "portadora_tringular:ucr6"                                                                       ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -2051,15 +2058,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------+
-; Port Connectivity Checks: "theta_abc:u6" ;
-+------+-------+----------+----------------+
-; Port ; Type  ; Severity ; Details        ;
-+------+-------+----------+----------------+
-; en   ; Input ; Info     ; Stuck at VCC   ;
-+------+-------+----------+----------------+
-
-
 +----------------------------------------------------+
 ; Port Connectivity Checks: "integrador:u5"          ;
 +------------------+-------+----------+--------------+
@@ -2075,6 +2073,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; int_data[9]      ; Input ; Info     ; Stuck at VCC ;
 ; int_data[8]      ; Input ; Info     ; Stuck at GND ;
 +------------------+-------+----------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clk_div:u1wt"                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; en         ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; div[2..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; div[15..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; clk_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------+
@@ -2113,13 +2123,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR           ; 1                           ;
 ;     SCLR              ; 16                          ;
 ;     plain             ; 341                         ;
-; cycloneiii_lcell_comb ; 1268                        ;
+; cycloneiii_lcell_comb ; 1269                        ;
 ;     arith             ; 622                         ;
 ;         2 data inputs ; 372                         ;
 ;         3 data inputs ; 250                         ;
-;     normal            ; 646                         ;
+;     normal            ; 647                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 64                          ;
+;         1 data inputs ; 65                          ;
 ;         2 data inputs ; 288                         ;
 ;         3 data inputs ; 57                          ;
 ;         4 data inputs ; 236                         ;
@@ -2136,7 +2146,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -2146,7 +2156,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Mon Jan 26 17:42:46 2015
+    Info: Processing started: Tue Jan 27 20:13:32 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_NANO_PWM -c DE0_NANO_PWM
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
@@ -2189,6 +2199,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file integra
 Info (12021): Found 2 design units, including 1 entities, in source file fbpspwmdt.vhd
     Info (12022): Found design unit 1: fbpspwmdt-fbpspwmdt_arch
     Info (12023): Found entity 1: fbpspwmdt
+Info (12021): Found 2 design units, including 1 entities, in source file wt.vhd
+    Info (12022): Found design unit 1: wt-wt_arch
+    Info (12023): Found entity 1: wt
 Info (12127): Elaborating entity "DE0_NANO_PWM" for the top level hierarchy
 Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1470): subtype or type has null range
 Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1471): subtype or type has null range
@@ -2197,8 +2210,9 @@ Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(31): used i
 Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(39): used implicit default value for signal "RESET_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(47): used implicit default value for signal "RESET_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(56): used implicit default value for signal "RESET_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(196): object "pll_lock" assigned a value but never read
-Warning (10873): Using initial value X (don't care) for net "GPIO_0[3..1]" at DE0_NANO_PWM.vhd(64)
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(194): object "pll_lock" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(194): object "clk_wt" assigned a value but never read
+Warning (10873): Using initial value X (don't care) for net "GPIO_0[3..2]" at DE0_NANO_PWM.vhd(64)
 Info (12128): Elaborating entity "pll" for hierarchy "pll:upll"
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:upll|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "pll:upll|altpll:altpll_component"
@@ -2263,12 +2277,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/pll_
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:upll|altpll:altpll_component|pll_altpll:auto_generated"
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:u1"
 Info (12128): Elaborating entity "integrador" for hierarchy "integrador:u5"
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1470): subtype or type has null range
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1471): subtype or type has null range
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1472): subtype or type has null range
 Warning (10492): VHDL Process Statement warning at integrador.vhd(33): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at integrador.vhd(35): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "theta_abc" for hierarchy "theta_abc:u6"
-Warning (10492): VHDL Process Statement warning at theta_abc.vhd(35): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at theta_abc.vhd(36): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "tabela_sin" for hierarchy "tabela_sin:usin_a"
 Info (12128): Elaborating entity "portadora_tringular" for hierarchy "portadora_tringular:ucr1"
 Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(33): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(34): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -2276,6 +2289,13 @@ Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(35): 
 Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(36): signal "dir_ini" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(51): signal "count_ini" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at portadora_tringular.vhd(52): signal "dir_ini" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "theta_abc" for hierarchy "theta_abc:u6"
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1470): subtype or type has null range
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1471): subtype or type has null range
+Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1472): subtype or type has null range
+Warning (10492): VHDL Process Statement warning at theta_abc.vhd(35): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at theta_abc.vhd(36): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "tabela_sin" for hierarchy "tabela_sin:usin_a"
 Info (12128): Elaborating entity "fbpspwmdt" for hierarchy "fbpspwmdt:PWM1_FA01"
 Warning (10492): VHDL Process Statement warning at fbpspwmdt.vhd(41): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (19000): Inferred 3 megafunctions from design logic
@@ -2356,7 +2376,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "RESET_FC[0]" is stuck at GND
     Warning (13410): Pin "RESET_FC[1]" is stuck at GND
     Warning (13410): Pin "RESET_FC[2]" is stuck at GND
-    Warning (13410): Pin "GPIO_0[1]" is stuck at GND
     Warning (13410): Pin "GPIO_0[2]" is stuck at GND
     Warning (13410): Pin "GPIO_0[3]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
@@ -2384,10 +2403,10 @@ Info (21057): Implemented 1587 device resources after synthesis - the final reso
     Info (21061): Implemented 1480 logic cells
     Info (21064): Implemented 33 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 57 warnings
-    Info: Peak virtual memory: 700 megabytes
-    Info: Processing ended: Mon Jan 26 17:43:13 2015
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:54
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info: Peak virtual memory: 699 megabytes
+    Info: Processing ended: Tue Jan 27 20:13:55 2015
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:50
 
 

@@ -38,11 +38,11 @@ architecture theta_abc of theta_abc is
 						th_b <= (others => '0');
 						th_c <= (others => '0');
 					elsif rising_edge(clk) then
-						th_ai <= std_logic_vector(signed(signed(theta_in(Nin-1 downto Nin-Nout-1)) +to_signed(-32767,17)));
+						th_ai <= std_logic_vector(signed(signed(theta_in(Nin-1 downto Nin-Nout-1)) +to_signed(-32767,17))); -- 29 downto 13
 						th_bi <= std_logic_vector(signed(signed(theta_in(Nin-1 downto Nin-Nout-1)) +to_signed(-10922,17)));
 						th_ci <= std_logic_vector(signed(signed(theta_in(Nin-1 downto Nin-Nout-1)) +to_signed(10922,17)));
 						
-						th_a <= th_ai(Nout-1 downto 0);
+						th_a <= th_ai(Nout-1 downto 0); -- Retorna para 16 bits
 						th_b <= th_bi(Nout-1 downto 0);
 						th_c <= th_ci(Nout-1 downto 0);
 					end if;
