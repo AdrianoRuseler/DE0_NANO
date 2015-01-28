@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 14.1.0 Build 186 12/03/2014 SJ Web Edition"
 
--- DATE "01/27/2015 20:14:34"
+-- DATE "01/27/2015 21:50:06"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -173,24 +173,24 @@ SIGNAL ww_INT0_FC : std_logic_vector(2 DOWNTO 0);
 SIGNAL ww_GPIO_0 : std_logic_vector(3 DOWNTO 0);
 SIGNAL \upll|altpll_component|auto_generated|pll1_INCLK_bus\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \upll|altpll_component|auto_generated|pll1_CLK_bus\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \usin_a|Mux6_rtl_0|auto_generated|ram_block1a7_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
-SIGNAL \usin_a|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \usin_a|Mux6_rtl_0|auto_generated|ram_block1a6_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
+SIGNAL \usin_a|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \usin_a|Mux6_rtl_0|auto_generated|ram_block1a0_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
 SIGNAL \usin_a|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \usin_a|Mux6_rtl_0|auto_generated|ram_block1a2_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
-SIGNAL \usin_a|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \usin_b|Mux6_rtl_0|auto_generated|ram_block1a7_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
-SIGNAL \usin_b|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \usin_a|Mux6_rtl_0|auto_generated|ram_block1a1_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
+SIGNAL \usin_a|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \usin_b|Mux6_rtl_0|auto_generated|ram_block1a6_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
+SIGNAL \usin_b|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \usin_b|Mux6_rtl_0|auto_generated|ram_block1a0_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
 SIGNAL \usin_b|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \usin_b|Mux6_rtl_0|auto_generated|ram_block1a2_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
-SIGNAL \usin_b|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \usin_c|Mux6_rtl_0|auto_generated|ram_block1a7_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
-SIGNAL \usin_c|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \usin_b|Mux6_rtl_0|auto_generated|ram_block1a1_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
+SIGNAL \usin_b|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \usin_c|Mux6_rtl_0|auto_generated|ram_block1a6_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
+SIGNAL \usin_c|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \usin_c|Mux6_rtl_0|auto_generated|ram_block1a0_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
 SIGNAL \usin_c|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \usin_c|Mux6_rtl_0|auto_generated|ram_block1a2_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
-SIGNAL \usin_c|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \usin_c|Mux6_rtl_0|auto_generated|ram_block1a1_PORTAADDR_bus\ : std_logic_vector(10 DOWNTO 0);
+SIGNAL \usin_c|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \rst~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \u1|clk_out_bi~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
@@ -663,12 +663,6 @@ SIGNAL \PWM1_FA03|Equal0~1_combout\ : std_logic;
 SIGNAL \PWM1_FA03|Equal0~0_combout\ : std_logic;
 SIGNAL \PWM1_FA03|port_PWM01~0_combout\ : std_logic;
 SIGNAL \PWM1_FA03|port_PWM01~q\ : std_logic;
-SIGNAL \PWM1_FA01|Add1~10\ : std_logic;
-SIGNAL \PWM1_FA01|Add1~11_combout\ : std_logic;
-SIGNAL \PWM1_FA01|Add1~17_combout\ : std_logic;
-SIGNAL \PWM1_FA01|Add1~12\ : std_logic;
-SIGNAL \PWM1_FA01|Add1~13_combout\ : std_logic;
-SIGNAL \PWM1_FA01|Add1~15_combout\ : std_logic;
 SIGNAL \PWM1_FA01|Add1~0_combout\ : std_logic;
 SIGNAL \PWM1_FA01|Add1~18_combout\ : std_logic;
 SIGNAL \PWM1_FA01|LessThan2~0_combout\ : std_logic;
@@ -685,6 +679,12 @@ SIGNAL \PWM1_FA01|Add1~8_combout\ : std_logic;
 SIGNAL \PWM1_FA01|Add1~7\ : std_logic;
 SIGNAL \PWM1_FA01|Add1~9_combout\ : std_logic;
 SIGNAL \PWM1_FA01|Add1~16_combout\ : std_logic;
+SIGNAL \PWM1_FA01|Add1~10\ : std_logic;
+SIGNAL \PWM1_FA01|Add1~11_combout\ : std_logic;
+SIGNAL \PWM1_FA01|Add1~17_combout\ : std_logic;
+SIGNAL \PWM1_FA01|Add1~12\ : std_logic;
+SIGNAL \PWM1_FA01|Add1~13_combout\ : std_logic;
+SIGNAL \PWM1_FA01|Add1~15_combout\ : std_logic;
 SIGNAL \PWM1_FA01|Equal1~1_combout\ : std_logic;
 SIGNAL \PWM1_FA01|Equal1~0_combout\ : std_logic;
 SIGNAL \PWM1_FA01|port_PWM02~0_combout\ : std_logic;
@@ -780,8 +780,6 @@ SIGNAL \ucr2|Add1~14_combout\ : std_logic;
 SIGNAL \ucr2|Add2~15\ : std_logic;
 SIGNAL \ucr2|Add2~16_combout\ : std_logic;
 SIGNAL \ucr2|Add2~24_combout\ : std_logic;
-SIGNAL \ucr2|c_int[13]~6_combout\ : std_logic;
-SIGNAL \ucr2|c_int[13]~7_combout\ : std_logic;
 SIGNAL \ucr2|Add1~15\ : std_logic;
 SIGNAL \ucr2|Add1~16_combout\ : std_logic;
 SIGNAL \ucr2|Add2~17\ : std_logic;
@@ -793,16 +791,18 @@ SIGNAL \ucr2|Add2~19\ : std_logic;
 SIGNAL \ucr2|Add2~20_combout\ : std_logic;
 SIGNAL \ucr2|Add2~22_combout\ : std_logic;
 SIGNAL \ucr2|c_int[13]~5_combout\ : std_logic;
+SIGNAL \ucr2|c_int[13]~6_combout\ : std_logic;
+SIGNAL \ucr2|c_int[13]~7_combout\ : std_logic;
 SIGNAL \ucr2|dir_int~q\ : std_logic;
-SIGNAL \ucr2|c_int[13]~1_combout\ : std_logic;
-SIGNAL \ucr2|c_int[13]~2_combout\ : std_logic;
-SIGNAL \ucr2|c_int[13]~3_combout\ : std_logic;
 SIGNAL \ucr2|Add1~19\ : std_logic;
 SIGNAL \ucr2|Add1~20_combout\ : std_logic;
 SIGNAL \ucr2|Add2~21\ : std_logic;
 SIGNAL \ucr2|Add2~32_combout\ : std_logic;
 SIGNAL \ucr2|Add2~46_combout\ : std_logic;
 SIGNAL \ucr2|c_int[13]~0_combout\ : std_logic;
+SIGNAL \ucr2|c_int[13]~2_combout\ : std_logic;
+SIGNAL \ucr2|c_int[13]~1_combout\ : std_logic;
+SIGNAL \ucr2|c_int[13]~3_combout\ : std_logic;
 SIGNAL \ucr2|c_int[13]~4_combout\ : std_logic;
 SIGNAL \ucr2|c_int[13]~8_combout\ : std_logic;
 SIGNAL \ucr2|Add1~21\ : std_logic;
@@ -904,10 +904,10 @@ SIGNAL \ucr4|Add2~16_combout\ : std_logic;
 SIGNAL \ucr4|Add1~13\ : std_logic;
 SIGNAL \ucr4|Add1~14_combout\ : std_logic;
 SIGNAL \ucr4|Add2~24_combout\ : std_logic;
-SIGNAL \ucr4|Add1~15\ : std_logic;
-SIGNAL \ucr4|Add1~16_combout\ : std_logic;
 SIGNAL \ucr4|Add2~17\ : std_logic;
 SIGNAL \ucr4|Add2~18_combout\ : std_logic;
+SIGNAL \ucr4|Add1~15\ : std_logic;
+SIGNAL \ucr4|Add1~16_combout\ : std_logic;
 SIGNAL \ucr4|Add2~23_combout\ : std_logic;
 SIGNAL \ucr4|Add1~17\ : std_logic;
 SIGNAL \ucr4|Add1~19\ : std_logic;
@@ -1476,15 +1476,6 @@ SIGNAL \PWM2_FB03|LessThan0~19_cout\ : std_logic;
 SIGNAL \PWM2_FB03|LessThan0~20_combout\ : std_logic;
 SIGNAL \PWM2_FB03|LessThan0~22_combout\ : std_logic;
 SIGNAL \PWM2_FB03|comp_out~q\ : std_logic;
-SIGNAL \PWM2_FB03|LessThan2~0_combout\ : std_logic;
-SIGNAL \PWM2_FB03|Add1~12\ : std_logic;
-SIGNAL \PWM2_FB03|Add1~13_combout\ : std_logic;
-SIGNAL \PWM2_FB03|Add1~15_combout\ : std_logic;
-SIGNAL \PWM2_FB03|LessThan2~1_combout\ : std_logic;
-SIGNAL \PWM2_FB03|Add1~0_combout\ : std_logic;
-SIGNAL \PWM2_FB03|Add1~18_combout\ : std_logic;
-SIGNAL \PWM2_FB03|Add1~1\ : std_logic;
-SIGNAL \PWM2_FB03|Add1~2_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Add1~19_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Add1~3\ : std_logic;
 SIGNAL \PWM2_FB03|Add1~4_combout\ : std_logic;
@@ -1495,11 +1486,20 @@ SIGNAL \PWM2_FB03|Add1~8_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Add1~7\ : std_logic;
 SIGNAL \PWM2_FB03|Add1~9_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Add1~16_combout\ : std_logic;
+SIGNAL \PWM2_FB03|LessThan2~0_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Add1~10\ : std_logic;
 SIGNAL \PWM2_FB03|Add1~11_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Add1~17_combout\ : std_logic;
-SIGNAL \PWM2_FB03|Equal1~1_combout\ : std_logic;
+SIGNAL \PWM2_FB03|Add1~12\ : std_logic;
+SIGNAL \PWM2_FB03|Add1~13_combout\ : std_logic;
+SIGNAL \PWM2_FB03|Add1~15_combout\ : std_logic;
+SIGNAL \PWM2_FB03|LessThan2~1_combout\ : std_logic;
+SIGNAL \PWM2_FB03|Add1~0_combout\ : std_logic;
+SIGNAL \PWM2_FB03|Add1~18_combout\ : std_logic;
+SIGNAL \PWM2_FB03|Add1~1\ : std_logic;
+SIGNAL \PWM2_FB03|Add1~2_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Equal1~0_combout\ : std_logic;
+SIGNAL \PWM2_FB03|Equal1~1_combout\ : std_logic;
 SIGNAL \PWM2_FB03|port_PWM02~0_combout\ : std_logic;
 SIGNAL \PWM2_FB03|port_PWM02~q\ : std_logic;
 SIGNAL \PWM2_FB01|Add0~10\ : std_logic;
@@ -1554,15 +1554,6 @@ SIGNAL \PWM2_FB02|Equal0~0_combout\ : std_logic;
 SIGNAL \PWM2_FB02|Equal0~1_combout\ : std_logic;
 SIGNAL \PWM2_FB02|port_PWM01~0_combout\ : std_logic;
 SIGNAL \PWM2_FB02|port_PWM01~q\ : std_logic;
-SIGNAL \PWM2_FB03|Add0~10\ : std_logic;
-SIGNAL \PWM2_FB03|Add0~11_combout\ : std_logic;
-SIGNAL \PWM2_FB03|Add0~17_combout\ : std_logic;
-SIGNAL \PWM2_FB03|Add0~12\ : std_logic;
-SIGNAL \PWM2_FB03|Add0~13_combout\ : std_logic;
-SIGNAL \PWM2_FB03|Add0~15_combout\ : std_logic;
-SIGNAL \PWM2_FB03|LessThan1~0_combout\ : std_logic;
-SIGNAL \PWM2_FB03|LessThan1~1_combout\ : std_logic;
-SIGNAL \PWM2_FB03|Add0~0_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Add0~18_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Add0~1\ : std_logic;
 SIGNAL \PWM2_FB03|Add0~2_combout\ : std_logic;
@@ -1573,11 +1564,20 @@ SIGNAL \PWM2_FB03|Add0~20_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Add0~5\ : std_logic;
 SIGNAL \PWM2_FB03|Add0~6_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Add0~8_combout\ : std_logic;
+SIGNAL \PWM2_FB03|LessThan1~0_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Add0~7\ : std_logic;
 SIGNAL \PWM2_FB03|Add0~9_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Add0~16_combout\ : std_logic;
-SIGNAL \PWM2_FB03|Equal0~1_combout\ : std_logic;
+SIGNAL \PWM2_FB03|Add0~10\ : std_logic;
+SIGNAL \PWM2_FB03|Add0~11_combout\ : std_logic;
+SIGNAL \PWM2_FB03|Add0~17_combout\ : std_logic;
+SIGNAL \PWM2_FB03|Add0~12\ : std_logic;
+SIGNAL \PWM2_FB03|Add0~13_combout\ : std_logic;
+SIGNAL \PWM2_FB03|Add0~15_combout\ : std_logic;
+SIGNAL \PWM2_FB03|LessThan1~1_combout\ : std_logic;
+SIGNAL \PWM2_FB03|Add0~0_combout\ : std_logic;
 SIGNAL \PWM2_FB03|Equal0~0_combout\ : std_logic;
+SIGNAL \PWM2_FB03|Equal0~1_combout\ : std_logic;
 SIGNAL \PWM2_FB03|port_PWM01~0_combout\ : std_logic;
 SIGNAL \PWM2_FB03|port_PWM01~q\ : std_logic;
 SIGNAL \u6|th_ci[5]~12_cout\ : std_logic;
@@ -1732,12 +1732,6 @@ SIGNAL \PWM1_FC03|Equal0~1_combout\ : std_logic;
 SIGNAL \PWM1_FC03|Equal0~0_combout\ : std_logic;
 SIGNAL \PWM1_FC03|port_PWM01~0_combout\ : std_logic;
 SIGNAL \PWM1_FC03|port_PWM01~q\ : std_logic;
-SIGNAL \PWM1_FC01|Add1~12\ : std_logic;
-SIGNAL \PWM1_FC01|Add1~13_combout\ : std_logic;
-SIGNAL \PWM1_FC01|Add1~15_combout\ : std_logic;
-SIGNAL \PWM1_FC01|LessThan2~0_combout\ : std_logic;
-SIGNAL \PWM1_FC01|LessThan2~1_combout\ : std_logic;
-SIGNAL \PWM1_FC01|Add1~0_combout\ : std_logic;
 SIGNAL \PWM1_FC01|Add1~18_combout\ : std_logic;
 SIGNAL \PWM1_FC01|Add1~1\ : std_logic;
 SIGNAL \PWM1_FC01|Add1~2_combout\ : std_logic;
@@ -1748,14 +1742,20 @@ SIGNAL \PWM1_FC01|Add1~20_combout\ : std_logic;
 SIGNAL \PWM1_FC01|Add1~5\ : std_logic;
 SIGNAL \PWM1_FC01|Add1~6_combout\ : std_logic;
 SIGNAL \PWM1_FC01|Add1~8_combout\ : std_logic;
+SIGNAL \PWM1_FC01|LessThan2~0_combout\ : std_logic;
 SIGNAL \PWM1_FC01|Add1~7\ : std_logic;
 SIGNAL \PWM1_FC01|Add1~9_combout\ : std_logic;
 SIGNAL \PWM1_FC01|Add1~16_combout\ : std_logic;
 SIGNAL \PWM1_FC01|Add1~10\ : std_logic;
 SIGNAL \PWM1_FC01|Add1~11_combout\ : std_logic;
 SIGNAL \PWM1_FC01|Add1~17_combout\ : std_logic;
-SIGNAL \PWM1_FC01|Equal1~1_combout\ : std_logic;
+SIGNAL \PWM1_FC01|Add1~12\ : std_logic;
+SIGNAL \PWM1_FC01|Add1~13_combout\ : std_logic;
+SIGNAL \PWM1_FC01|Add1~15_combout\ : std_logic;
+SIGNAL \PWM1_FC01|LessThan2~1_combout\ : std_logic;
+SIGNAL \PWM1_FC01|Add1~0_combout\ : std_logic;
 SIGNAL \PWM1_FC01|Equal1~0_combout\ : std_logic;
+SIGNAL \PWM1_FC01|Equal1~1_combout\ : std_logic;
 SIGNAL \PWM1_FC01|port_PWM02~0_combout\ : std_logic;
 SIGNAL \PWM1_FC01|port_PWM02~q\ : std_logic;
 SIGNAL \PWM1_FC02|Add1~7\ : std_logic;
@@ -2103,65 +2103,65 @@ ww_devpor <= devpor;
 \upll|altpll_component|auto_generated|wire_pll1_clk\(3) <= \upll|altpll_component|auto_generated|pll1_CLK_bus\(3);
 \upll|altpll_component|auto_generated|wire_pll1_clk\(4) <= \upll|altpll_component|auto_generated|pll1_CLK_bus\(4);
 
-\usin_a|Mux6_rtl_0|auto_generated|ram_block1a7_PORTAADDR_bus\ <= (\u6|th_a\(15) & \u6|th_a\(14) & \u6|th_a\(13) & \u6|th_a\(12) & \u6|th_a\(11) & \u6|th_a\(10) & \u6|th_a\(9) & \u6|th_a\(8) & \u6|th_a\(7) & \u6|th_a\(6) & \u6|th_a\(5));
+\usin_a|Mux6_rtl_0|auto_generated|ram_block1a6_PORTAADDR_bus\ <= (\u6|th_a\(15) & \u6|th_a\(14) & \u6|th_a\(13) & \u6|th_a\(12) & \u6|th_a\(11) & \u6|th_a\(10) & \u6|th_a\(9) & \u6|th_a\(8) & \u6|th_a\(7) & \u6|th_a\(6) & \u6|th_a\(5));
 
-\PWM2_FA03|comp_int\(7) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\(0);
-\PWM2_FA03|comp_int\(8) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\(1);
-\PWM2_FA03|comp_int\(9) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\(2);
-\PWM2_FA03|comp_int\(10) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\(3);
+\PWM2_FA03|comp_int\(7) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\(0);
+\PWM2_FA03|comp_int\(8) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\(1);
+\PWM2_FA03|comp_int\(9) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\(2);
+\PWM2_FA03|comp_int\(10) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\(3);
 
 \usin_a|Mux6_rtl_0|auto_generated|ram_block1a0_PORTAADDR_bus\ <= (\u6|th_a\(15) & \u6|th_a\(14) & \u6|th_a\(13) & \u6|th_a\(12) & \u6|th_a\(11) & \u6|th_a\(10) & \u6|th_a\(9) & \u6|th_a\(8) & \u6|th_a\(7) & \u6|th_a\(6) & \u6|th_a\(5));
 
 \PWM2_FA03|comp_int\(4) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(0);
-\PWM2_FA03|comp_int\(3) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(1);
-\PWM2_FA03|comp_int\(5) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(2);
-\PWM2_FA03|comp_int\(6) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(3);
+\PWM2_FA03|comp_int\(5) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(1);
+\PWM2_FA03|comp_int\(6) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(2);
+\PWM2_FA03|comp_int\(3) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(3);
 
-\usin_a|Mux6_rtl_0|auto_generated|ram_block1a2_PORTAADDR_bus\ <= (\u6|th_a\(15) & \u6|th_a\(14) & \u6|th_a\(13) & \u6|th_a\(12) & \u6|th_a\(11) & \u6|th_a\(10) & \u6|th_a\(9) & \u6|th_a\(8) & \u6|th_a\(7) & \u6|th_a\(6) & \u6|th_a\(5));
+\usin_a|Mux6_rtl_0|auto_generated|ram_block1a1_PORTAADDR_bus\ <= (\u6|th_a\(15) & \u6|th_a\(14) & \u6|th_a\(13) & \u6|th_a\(12) & \u6|th_a\(11) & \u6|th_a\(10) & \u6|th_a\(9) & \u6|th_a\(8) & \u6|th_a\(7) & \u6|th_a\(6) & \u6|th_a\(5));
 
-\PWM2_FA03|comp_int\(2) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\(0);
-\PWM2_FA03|comp_int\(1) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\(1);
-\PWM2_FA03|comp_int\(0) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\(2);
+\PWM2_FA03|comp_int\(2) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\(0);
+\PWM2_FA03|comp_int\(1) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\(1);
+\PWM2_FA03|comp_int\(0) <= \usin_a|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\(2);
 
-\usin_b|Mux6_rtl_0|auto_generated|ram_block1a7_PORTAADDR_bus\ <= (\u6|th_b\(15) & \u6|th_b\(14) & \u6|th_b\(13) & \u6|th_b\(12) & \u6|th_b\(11) & \u6|th_b\(10) & \u6|th_b\(9) & \u6|th_b\(8) & \u6|th_b\(7) & \u6|th_b\(6) & \u6|th_b\(5));
+\usin_b|Mux6_rtl_0|auto_generated|ram_block1a6_PORTAADDR_bus\ <= (\u6|th_b\(15) & \u6|th_b\(14) & \u6|th_b\(13) & \u6|th_b\(12) & \u6|th_b\(11) & \u6|th_b\(10) & \u6|th_b\(9) & \u6|th_b\(8) & \u6|th_b\(7) & \u6|th_b\(6) & \u6|th_b\(5));
 
-\PWM2_FB03|comp_int\(7) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\(0);
-\PWM2_FB03|comp_int\(8) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\(1);
-\PWM2_FB03|comp_int\(9) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\(2);
-\PWM2_FB03|comp_int\(10) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\(3);
+\PWM2_FB03|comp_int\(7) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\(0);
+\PWM2_FB03|comp_int\(8) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\(1);
+\PWM2_FB03|comp_int\(9) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\(2);
+\PWM2_FB03|comp_int\(10) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\(3);
 
 \usin_b|Mux6_rtl_0|auto_generated|ram_block1a0_PORTAADDR_bus\ <= (\u6|th_b\(15) & \u6|th_b\(14) & \u6|th_b\(13) & \u6|th_b\(12) & \u6|th_b\(11) & \u6|th_b\(10) & \u6|th_b\(9) & \u6|th_b\(8) & \u6|th_b\(7) & \u6|th_b\(6) & \u6|th_b\(5));
 
 \PWM2_FB03|comp_int\(4) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(0);
-\PWM2_FB03|comp_int\(3) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(1);
-\PWM2_FB03|comp_int\(5) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(2);
-\PWM2_FB03|comp_int\(6) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(3);
+\PWM2_FB03|comp_int\(5) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(1);
+\PWM2_FB03|comp_int\(6) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(2);
+\PWM2_FB03|comp_int\(3) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(3);
 
-\usin_b|Mux6_rtl_0|auto_generated|ram_block1a2_PORTAADDR_bus\ <= (\u6|th_b\(15) & \u6|th_b\(14) & \u6|th_b\(13) & \u6|th_b\(12) & \u6|th_b\(11) & \u6|th_b\(10) & \u6|th_b\(9) & \u6|th_b\(8) & \u6|th_b\(7) & \u6|th_b\(6) & \u6|th_b\(5));
+\usin_b|Mux6_rtl_0|auto_generated|ram_block1a1_PORTAADDR_bus\ <= (\u6|th_b\(15) & \u6|th_b\(14) & \u6|th_b\(13) & \u6|th_b\(12) & \u6|th_b\(11) & \u6|th_b\(10) & \u6|th_b\(9) & \u6|th_b\(8) & \u6|th_b\(7) & \u6|th_b\(6) & \u6|th_b\(5));
 
-\PWM2_FB03|comp_int\(2) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\(0);
-\PWM2_FB03|comp_int\(1) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\(1);
-\PWM2_FB03|comp_int\(0) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\(2);
+\PWM2_FB03|comp_int\(2) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\(0);
+\PWM2_FB03|comp_int\(1) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\(1);
+\PWM2_FB03|comp_int\(0) <= \usin_b|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\(2);
 
-\usin_c|Mux6_rtl_0|auto_generated|ram_block1a7_PORTAADDR_bus\ <= (\u6|th_c\(15) & \u6|th_c\(14) & \u6|th_c\(13) & \u6|th_c\(12) & \u6|th_c\(11) & \u6|th_c\(10) & \u6|th_c\(9) & \u6|th_c\(8) & \u6|th_c\(7) & \u6|th_c\(6) & \u6|th_c\(5));
+\usin_c|Mux6_rtl_0|auto_generated|ram_block1a6_PORTAADDR_bus\ <= (\u6|th_c\(15) & \u6|th_c\(14) & \u6|th_c\(13) & \u6|th_c\(12) & \u6|th_c\(11) & \u6|th_c\(10) & \u6|th_c\(9) & \u6|th_c\(8) & \u6|th_c\(7) & \u6|th_c\(6) & \u6|th_c\(5));
 
-\PWM2_FC03|comp_int\(7) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\(0);
-\PWM2_FC03|comp_int\(8) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\(1);
-\PWM2_FC03|comp_int\(9) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\(2);
-\PWM2_FC03|comp_int\(10) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\(3);
+\PWM2_FC03|comp_int\(7) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\(0);
+\PWM2_FC03|comp_int\(8) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\(1);
+\PWM2_FC03|comp_int\(9) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\(2);
+\PWM2_FC03|comp_int\(10) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\(3);
 
 \usin_c|Mux6_rtl_0|auto_generated|ram_block1a0_PORTAADDR_bus\ <= (\u6|th_c\(15) & \u6|th_c\(14) & \u6|th_c\(13) & \u6|th_c\(12) & \u6|th_c\(11) & \u6|th_c\(10) & \u6|th_c\(9) & \u6|th_c\(8) & \u6|th_c\(7) & \u6|th_c\(6) & \u6|th_c\(5));
 
 \PWM2_FC03|comp_int\(4) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(0);
-\PWM2_FC03|comp_int\(3) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(1);
-\PWM2_FC03|comp_int\(5) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(2);
-\PWM2_FC03|comp_int\(6) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(3);
+\PWM2_FC03|comp_int\(5) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(1);
+\PWM2_FC03|comp_int\(6) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(2);
+\PWM2_FC03|comp_int\(3) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\(3);
 
-\usin_c|Mux6_rtl_0|auto_generated|ram_block1a2_PORTAADDR_bus\ <= (\u6|th_c\(15) & \u6|th_c\(14) & \u6|th_c\(13) & \u6|th_c\(12) & \u6|th_c\(11) & \u6|th_c\(10) & \u6|th_c\(9) & \u6|th_c\(8) & \u6|th_c\(7) & \u6|th_c\(6) & \u6|th_c\(5));
+\usin_c|Mux6_rtl_0|auto_generated|ram_block1a1_PORTAADDR_bus\ <= (\u6|th_c\(15) & \u6|th_c\(14) & \u6|th_c\(13) & \u6|th_c\(12) & \u6|th_c\(11) & \u6|th_c\(10) & \u6|th_c\(9) & \u6|th_c\(8) & \u6|th_c\(7) & \u6|th_c\(6) & \u6|th_c\(5));
 
-\PWM2_FC03|comp_int\(2) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\(0);
-\PWM2_FC03|comp_int\(1) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\(1);
-\PWM2_FC03|comp_int\(0) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\(2);
+\PWM2_FC03|comp_int\(2) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\(0);
+\PWM2_FC03|comp_int\(1) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\(1);
+\PWM2_FC03|comp_int\(0) <= \usin_c|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\(2);
 
 \rst~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \rst~q\);
 
@@ -3132,16 +3132,16 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y17_N20
 \ucr1|c_int[6]~38\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr1|c_int[6]~38_combout\ = (!\ucr1|c_int\(7) & !\ucr1|c_int\(6))
+-- \ucr1|c_int[6]~38_combout\ = (!\ucr1|c_int\(6) & !\ucr1|c_int\(7))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000001111",
+	lut_mask => "0000010100000101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	dataa => \ucr1|c_int\(6),
 	datac => \ucr1|c_int\(7),
-	datad => \ucr1|c_int\(6),
 	combout => \ucr1|c_int[6]~38_combout\);
 
 -- Location: LCCOMB_X35_Y17_N0
@@ -3213,17 +3213,17 @@ PORT MAP (
 -- Location: LCCOMB_X35_Y17_N6
 \ucr1|c_int[6]~37\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr1|c_int[6]~37_combout\ = (\ucr1|c_int\(3)) # ((\ucr5|c_int\(0) & (\ucr1|c_int\(2) & \ucr1|c_int\(1))))
+-- \ucr1|c_int[6]~37_combout\ = (\ucr1|c_int\(3)) # ((\ucr1|c_int\(2) & (\ucr5|c_int\(0) & \ucr1|c_int\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110110011001100",
+	lut_mask => "1110101010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr5|c_int\(0),
-	datab => \ucr1|c_int\(3),
-	datac => \ucr1|c_int\(2),
+	dataa => \ucr1|c_int\(3),
+	datab => \ucr1|c_int\(2),
+	datac => \ucr5|c_int\(0),
 	datad => \ucr1|c_int\(1),
 	combout => \ucr1|c_int[6]~37_combout\);
 
@@ -3427,11 +3427,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr1|c_int\(4),
+	datab => \ucr1|c_int\(4),
 	datad => VCC,
 	cin => \ucr1|Add1~5\,
 	combout => \ucr1|Add1~6_combout\,
@@ -3480,11 +3480,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010010100001010",
+	lut_mask => "1100001100001100",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr1|c_int\(5),
+	datab => \ucr1|c_int\(5),
 	datad => VCC,
 	cin => \ucr1|Add1~7\,
 	combout => \ucr1|Add1~8_combout\,
@@ -3639,11 +3639,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111111",
+	lut_mask => "0101101001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \ucr1|c_int\(8),
+	dataa => \ucr1|c_int\(8),
 	datad => VCC,
 	cin => \ucr1|Add1~13\,
 	combout => \ucr1|Add1~14_combout\,
@@ -5873,7 +5873,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u6|th_ai\(9));
 
--- Location: LCCOMB_X23_Y12_N8
+-- Location: LCCOMB_X23_Y12_N20
 \u6|th_a[9]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u6|th_a[9]~feeder_combout\ = \u6|th_ai\(9)
@@ -5887,7 +5887,7 @@ PORT MAP (
 	datad => \u6|th_ai\(9),
 	combout => \u6|th_a[9]~feeder_combout\);
 
--- Location: FF_X23_Y12_N9
+-- Location: FF_X23_Y12_N21
 \u6|th_a[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -5997,7 +5997,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u6|th_ai\(11));
 
--- Location: LCCOMB_X23_Y12_N24
+-- Location: LCCOMB_X23_Y12_N28
 \u6|th_a[11]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u6|th_a[11]~feeder_combout\ = \u6|th_ai\(11)
@@ -6011,7 +6011,7 @@ PORT MAP (
 	datad => \u6|th_ai\(11),
 	combout => \u6|th_a[11]~feeder_combout\);
 
--- Location: FF_X23_Y12_N25
+-- Location: FF_X23_Y12_N29
 \u6|th_a[11]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6121,7 +6121,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u6|th_ai\(13));
 
--- Location: LCCOMB_X23_Y12_N20
+-- Location: LCCOMB_X23_Y12_N24
 \u6|th_a[13]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u6|th_a[13]~feeder_combout\ = \u6|th_ai\(13)
@@ -6135,7 +6135,7 @@ PORT MAP (
 	datad => \u6|th_ai\(13),
 	combout => \u6|th_a[13]~feeder_combout\);
 
--- Location: FF_X23_Y12_N21
+-- Location: FF_X23_Y12_N25
 \u6|th_a[13]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6242,7 +6242,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \u6|th_ai\(15));
 
--- Location: LCCOMB_X23_Y12_N28
+-- Location: LCCOMB_X23_Y12_N4
 \u6|th_a[15]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \u6|th_a[15]~feeder_combout\ = \u6|th_ai\(15)
@@ -6256,7 +6256,7 @@ PORT MAP (
 	datad => \u6|th_ai\(15),
 	combout => \u6|th_a[15]~feeder_combout\);
 
--- Location: FF_X23_Y12_N29
+-- Location: FF_X23_Y12_N5
 \u6|th_a[15]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6272,13 +6272,13 @@ PORT MAP (
 	q => \u6|th_a\(15));
 
 -- Location: M9K_X22_Y13_N0
-\usin_a|Mux6_rtl_0|auto_generated|ram_block1a7\ : cycloneive_ram_block
+\usin_a|Mux6_rtl_0|auto_generated|ram_block1a6\ : cycloneive_ram_block
 -- pragma translate_off
 GENERIC MAP (
-	mem_init3 => X"44444444444444444444444444444444444555555555555555555555555555555555555555555555556666666666666666666666666666666666666666666666666677777777777777777777777777777777777777777777777777777778888888888888888888888888888888888888888888888888888888888888888888888889999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998888888888888",
-	mem_init2 => X"88888888888888888888888888888888888888888888888888888888887777777777777777777777777777777777777777777777777777777766666666666666666666666666666666666666666666666665555555555555555555555555555555555555555555555554444444444444444444444444444444444444444444444443333333333333333333333333333333333333333333333333333222222222222222222222222222222222222222222222222222222222222111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000",
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111122222222222222222222222222222222222222222222222222222222222233333333333333333333333333333333333333333333333333344444444444444444444444444444444444444444444444445555555555555555555555555555555555555555555555566666666666666666666666666666666666666666666666666777777777777777777777777777777777777777777777777777777788888888888888",
-	mem_init0 => X"88888888888888888888888888888888888888888888888888888888889999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998888888888888888888888888888888888888888888888888888888888888888888888877777777777777777777777777777777777777777777777777777777666666666666666666666666666666666666666666666666655555555555555555555555555555555555555",
+	mem_init3 => X"55555555555555544444444444444444444444444444444444444444444444444444444444444444444444444333333333333333333333333333333333333333333333333333333333333333333333333333333322222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222211111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+	mem_init2 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111112222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222223333333333333333333333333333333333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444444444444444444444444444445555555555555555",
+	mem_init1 => X"55555555555555555555555555555555555555555555555555555555566666666666666666666666666666666666666666666666666666666666666666666666666667777777777777777777777777777777777777777777777777777777777777777777777777777777777777888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888899999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+	mem_init0 => X"99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888777777777777777777777777777777777777777777777777777777777777777777777777777777777777766666666666666666666666666666666666666666666666666666666666666666666666666665555555555555555555555555555555555555555555555555555555555",
 	data_interleave_offset_in_bits => 1,
 	data_interleave_width_in_bits => 1,
 	init_file => "DE0_NANO_PWM.DE0_NANO_PWM0.rtl.mif",
@@ -6292,7 +6292,7 @@ GENERIC MAP (
 	port_a_data_out_clock => "clock0",
 	port_a_data_width => 4,
 	port_a_first_address => 0,
-	port_a_first_bit_number => 7,
+	port_a_first_bit_number => 6,
 	port_a_last_address => 2047,
 	port_a_logical_ram_depth => 2048,
 	port_a_logical_ram_width => 11,
@@ -6305,19 +6305,19 @@ GENERIC MAP (
 PORT MAP (
 	portare => VCC,
 	clk0 => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	portaaddr => \usin_a|Mux6_rtl_0|auto_generated|ram_block1a7_PORTAADDR_bus\,
+	portaaddr => \usin_a|Mux6_rtl_0|auto_generated|ram_block1a6_PORTAADDR_bus\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	portadataout => \usin_a|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\);
+	portadataout => \usin_a|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\);
 
 -- Location: M9K_X22_Y12_N0
 \usin_a|Mux6_rtl_0|auto_generated|ram_block1a0\ : cycloneive_ram_block
 -- pragma translate_off
 GENERIC MAP (
-	mem_init3 => X"44666555777888AAA999BBBCCCEEEDDDFFF00022211133444666555777888AAA999BBBCCCEEEDDDFFF0002221113334446665555777888AAA999BBBCCCEEEDDDDFFF000222111133344466665557777888AAAA999BBBBCCCEEEEDDDDFFF0000222211113333444466665555777778888AAAAA9999BBBBBCCCCCEEEEEDDDDDFFFFFF00000222222111111333333344444446666666655555555777777777888888888888AAAAAAAAAAAAAA999999999999999999999999BBBBBBBBBBBBBBBBBBBBBBBBBBBB999999999999999999999999AAAAAAAAAAAAAA88888888888777777777555555555666666644444444333333111111222222000000FFFFFDDDDDDEE",
-	mem_init2 => X"EEECCCCBBBBB99999AAAA8888877775555666644444333311122220000FFFFDDDDEEECCCCBBB9999AAA8888777555566644433331112220000FFFDDDEEECCCBBBB999AAA888777555666444333111222000FFFDDDEEECCCBBB999AAA888777555666444333111222000FFFDDDEEECCCBBB999AAA888777555666444333111222000FFFDDDEEECCCBBBB999AAA888777555566644433331112220000FFFDDDDEEECCCCBBB9999AAA888877775555666644433331111122220000FFFFDDDDDEEEECCCCCBBBBB9999AAAAA88888877777555555666666444444333333111111112222222000000000FFFFFFFFFDDDDDDDDDDDEEEEEEEEEEEEEECCCCCCCCCCCCCCCC",
-	mem_init1 => X"CCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBCCCCCCCCCCCCCCCCCCCCCCCCEEEEEEEEEEEEEEDDDDDDDDDDDDFFFFFFFFF0000000022222222111111133333334444446666665555577777788888AAAAA99999BBBBBCCCCEEEEEDDDDFFFFF00002222111133334444666655557778888AAAA999BBBBCCCEEEEDDDFFFF000222211133344446665557778888AAA999BBBCCCEEEDDDFFF0000222111333444666555777888AAA999BBBCCCEEEDDDFFF00022211133444666555777888AAA999BBBCCCEEEDDDFFF0002221113334446665555777888AAA999BBBCCCEEEDDDDFFF000222111133344466665557777888AAAA999BBBBCCCEEEEDDDDFFF00002222111133",
-	mem_init0 => X"33444466665555777778888AAAAA9999BBBBBCCCCCEEEEEDDDDDFFFFFF00000222222111111333333344444446666666655555555777777777888888888888AAAAAAAAAAAAAA999999999999999999999999BBBBBBBBBBBBBBBBBBBBBBBBBBBB999999999999999999999999AAAAAAAAAAAAAA88888888888777777777555555555666666644444444333333111111222222000000FFFFFDDDDDDEEEEECCCCBBBBB99999AAAA8888877775555666644444333311122220000FFFFDDDDEEECCCCBBB9999AAA8888777555566644433331112220000FFFDDDEEECCCBBBB999AAA888777555666444333111222000FFFDDDEEECCCBBB999AAA88877755566644433",
+	mem_init3 => X"991111888880000FFFFF77777EEEE66666DDDD55555CCCC44444BBBBB3333AAAAA22222999911111888880000FFFFF77777EEEEE6666DDDDD55555CCCCC44444BBBBB33333AAAAA2222299999111118888800000FFFFFF77777EEEEE666666DDDDD555555CCCCC444444BBBBBB333333AAAAAA2222229999991111118888880000000FFFFFFF777777EEEEEEE6666666DDDDDDDD5555555CCCCCCCC44444444BBBBBBBB333333333AAAAAAAAA2222222229999999999911111111118888888888880000000000000FFFFFFFFFFFFFF77777777777777777EEEEEEEEEEEEEEEEEEEEEE6666666666666666666666666666666666666DDDDDDDDDDDDDDDDDDDDDD",
+	mem_init2 => X"DDDDDDDDDDDDDDDDDDDDD6666666666666666666666666666666666666EEEEEEEEEEEEEEEEEEEEEE77777777777777777FFFFFFFFFFFFFF0000000000000888888888888111111111199999999999222222222AAAAAAAAA333333333BBBBBBBB44444444CCCCCCCC5555555DDDDDDDD6666666EEEEEEE777777FFFFFFF0000000888888111111999999222222AAAAAA333333BBBBBB444444CCCCC555555DDDDD666666EEEEE77777FFFFFF0000088888111119999922222AAAAA33333BBBBB44444CCCCC55555DDDDD6666EEEEE77777FFFFF00008888811111999922222AAAAA3333BBBBB44444CCCC55555DDDD66666EEEE77777FFFFF0000888881111999",
+	mem_init1 => X"992222AAAAA3333BBBBB44444CCCC55555DDDD66666EEEE77777FFFFF00008888811111999922222AAAAA3333BBBBB44444CCCCC5555DDDDD66666EEEEE77777FFFFF0000088888111119999922222AAAAA33333BBBBBB44444CCCCC555555DDDDD666666EEEEE777777FFFFFF000000888888111111999999222222AAAAAA3333333BBBBBBB444444CCCCCCC5555555DDDDDDDD6666666EEEEEEEE77777777FFFFFFFF000000000888888888111111111999999999992222222222AAAAAAAAAAAA3333333333333BBBBBBBBBBBBBB44444444444444444CCCCCCCCCCCCCCCCCCCCCC5555555555555555555555555555555555555DDDDDDDDDDDDDDDDDDDDDD",
+	mem_init0 => X"DDDDDDDDDDDDDDDDDDDDD5555555555555555555555555555555555555CCCCCCCCCCCCCCCCCCCCCC44444444444444444BBBBBBBBBBBBBB3333333333333AAAAAAAAAAAA222222222299999999999111111111888888888000000000FFFFFFFF77777777EEEEEEEE6666666DDDDDDDD5555555CCCCCCC444444BBBBBBB3333333AAAAAA222222999999111111888888000000FFFFFF777777EEEEE666666DDDDD555555CCCCC44444BBBBBB33333AAAAA2222299999111118888800000FFFFF77777EEEEE66666DDDDD5555CCCCC44444BBBBB3333AAAAA22222999911111888880000FFFFF77777EEEE66666DDDD55555CCCC44444BBBBB3333AAAAA2222999",
 	data_interleave_offset_in_bits => 1,
 	data_interleave_width_in_bits => 1,
 	init_file => "DE0_NANO_PWM.DE0_NANO_PWM0.rtl.mif",
@@ -6350,13 +6350,13 @@ PORT MAP (
 	portadataout => \usin_a|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\);
 
 -- Location: M9K_X22_Y11_N0
-\usin_a|Mux6_rtl_0|auto_generated|ram_block1a2\ : cycloneive_ram_block
+\usin_a|Mux6_rtl_0|auto_generated|ram_block1a1\ : cycloneive_ram_block
 -- pragma translate_off
 GENERIC MAP (
-	mem_init3 => X"17217217217417417217217217217217217257257257250250250250650650650650650650630630650650650650650250250257257217417413463065065025721346306502574134650257413065721346572134657413021746574130213021302574657465302130213026574653021374653026570215702157026530461374215304615704615304265370421537042615370426153704266153700426615537704426611553377004422666111555333377777000000004444444444440000000077777333555511166222440077335511622400733511624407335162407735162407351624735162403516407316247356247316207512473164031",
-	mem_init2 => X"64031647312475120356473120316475647564751203120364756475647520312036475603127564312756431275203647127560364312752056036431471275205205603603643643143147147147147147127127147147147147147147143143143143643643643643603603603603603603605605603603603603603643643143147147127527520560364314712752056431471205603147520564312056431205647120314756475203120312031475647562031203120316475640312475620356403164731647316403562075164035124035164073162473516240351624073516240073516244073351662440773551662244007733555116662222",
-	mem_init1 => X"44400000777777773333333333337777777700000444422266611155337700442266115337004226115377042611537042615370426153704265370421537426137026137426530461374215702657026570215742130465742130215746574657421302130257465746574630213065746302134650213465021746302572134630257217413465025721721741346306306502502572572572172172172172174174172172172172172172172572572572502502502506506506506506506506306306506506506506502502502572572174174134630650650257213463065025741346502574130657213465721346574130217465741302130213025746",
-	mem_init0 => X"57465302130213026574653021374653026570215702157026530461374215304615704615304265370421537042615370426153704266153700426615537704426611553377004422666111555333377777000000004444444444440000000077777333555511166222440077335511622400733511624407335162407735162407351624735162403516407316247356247316207512473164031640316473124751203564731203164756475647512031203647564756475203120364756031275643127564312752036471275603643127520560364314712752052056036036436431431471471471471471271271471471471471471471431431431431",
+	mem_init3 => X"20316475120356473120756403124756203164751203564731207564031647512035640312475120756403164731207562035640316473124751207512075620756203562035620356203562075620751247312473164035620751247316403512473164075124735620731640751640351240351240351640751640731624735124073162403516207351640735164073516240751624073516240735162407351624073516624073516224073511624077351662400735516224077355166244077355166224007735511662240077335511666224400777335551166622244400077733335551111666662222244444400000007777777777773333333333",
+	mem_init2 => X"33333333377777777777700000004444442222266666111155533337770004442226661155533777004422666115533770042266115537700422661553770442661553770422615537004266153770426115370422615370426615370426153704261537042615370426157042615370461537046153702615304261370421537426137046157046153042153042153046157046137026537421570461374215304613742157026530461374213742157026570265302653026530265302657026570215702157421374613046530265702137461304657021574213046530215746130465702137465302157461302657421304657021374653021574613021",
+	mem_init1 => X"57461302657421304657021374653021574613026574213046570213746130265742137465302657021374613046570215742137461304653026570265702157021574215742157421574215702157026530465304613742157026530461374265304613702653042157046137026137426537426537426137026137046153042653704615374261570426137042613704261537026153704261537042615370426153704261153704261553704266153700426115377042261553700422611533700422611553770042266115537700442266111553377000442226611155533377700044442226666111115555533333377777770000000000004444444444",
+	mem_init0 => X"44444444400000000000077777773333335555511111666622244440007773335551116622244000773355111662244007735511662240077355116224007335116224007355162240773511624007351662407355162407351162407351624073516240735162407351620735162407316240731624075162473516407356240351640731620731624735624735624731620731640751240356207316403562473164035620751247316403564035620751207512475124751247512475120751207562075620356403164731247512075640316473120756203564731247562031647312075640312475620316475120356473120756403124756203164751",
 	data_interleave_offset_in_bits => 1,
 	data_interleave_width_in_bits => 1,
 	init_file => "DE0_NANO_PWM.DE0_NANO_PWM0.rtl.mif",
@@ -6370,7 +6370,7 @@ GENERIC MAP (
 	port_a_data_out_clock => "clock0",
 	port_a_data_width => 4,
 	port_a_first_address => 0,
-	port_a_first_bit_number => 2,
+	port_a_first_bit_number => 1,
 	port_a_last_address => 2047,
 	port_a_logical_ram_depth => 2048,
 	port_a_logical_ram_width => 11,
@@ -6383,24 +6383,24 @@ GENERIC MAP (
 PORT MAP (
 	portare => VCC,
 	clk0 => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	portaaddr => \usin_a|Mux6_rtl_0|auto_generated|ram_block1a2_PORTAADDR_bus\,
+	portaaddr => \usin_a|Mux6_rtl_0|auto_generated|ram_block1a1_PORTAADDR_bus\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	portadataout => \usin_a|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\);
+	portadataout => \usin_a|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\);
 
 -- Location: LCCOMB_X29_Y18_N0
 \PWM1_FA01|LessThan0~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FA01|LessThan0~3_cout\ = CARRY((\PWM2_FA03|comp_int\(0) & !\ucr5|c_int\(0)))
+-- \PWM1_FA01|LessThan0~3_cout\ = CARRY((!\ucr5|c_int\(0) & \PWM2_FA03|comp_int\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000100010",
+	lut_mask => "0000000001000100",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FA03|comp_int\(0),
-	datab => \ucr5|c_int\(0),
+	dataa => \ucr5|c_int\(0),
+	datab => \PWM2_FA03|comp_int\(0),
 	datad => VCC,
 	cout => \PWM1_FA01|LessThan0~3_cout\);
 
@@ -6475,16 +6475,16 @@ PORT MAP (
 -- Location: LCCOMB_X29_Y18_N10
 \PWM1_FA01|LessThan0~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FA01|LessThan0~13_cout\ = CARRY((\PWM2_FA03|comp_int\(5) & (\ucr1|c_int\(5) & !\PWM1_FA01|LessThan0~11_cout\)) # (!\PWM2_FA03|comp_int\(5) & ((\ucr1|c_int\(5)) # (!\PWM1_FA01|LessThan0~11_cout\))))
+-- \PWM1_FA01|LessThan0~13_cout\ = CARRY((\ucr1|c_int\(5) & ((!\PWM1_FA01|LessThan0~11_cout\) # (!\PWM2_FA03|comp_int\(5)))) # (!\ucr1|c_int\(5) & (!\PWM2_FA03|comp_int\(5) & !\PWM1_FA01|LessThan0~11_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001001101",
+	lut_mask => "0000000000101011",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FA03|comp_int\(5),
-	datab => \ucr1|c_int\(5),
+	dataa => \ucr1|c_int\(5),
+	datab => \PWM2_FA03|comp_int\(5),
 	datad => VCC,
 	cin => \PWM1_FA01|LessThan0~11_cout\,
 	cout => \PWM1_FA01|LessThan0~13_cout\);
@@ -6580,11 +6580,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100111111111111",
+	lut_mask => "1010111111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \ucr1|c_int\(15),
+	dataa => \ucr1|c_int\(15),
 	datac => \PWM1_FA01|LessThan0~24_combout\,
 	datad => \PWM1_FA01|LessThan0~22_combout\,
 	combout => \PWM1_FA01|LessThan0~26_combout\);
@@ -6715,7 +6715,7 @@ PORT MAP (
 	combout => \PWM1_FA01|Add0~9_combout\,
 	cout => \PWM1_FA01|Add0~10\);
 
--- Location: LCCOMB_X34_Y17_N8
+-- Location: LCCOMB_X34_Y17_N12
 \PWM1_FA01|Add0~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \PWM1_FA01|Add0~16_combout\ = (\PWM1_FA01|comp_out~q\ & \PWM1_FA01|Add0~9_combout\)
@@ -6730,7 +6730,7 @@ PORT MAP (
 	datac => \PWM1_FA01|Add0~9_combout\,
 	combout => \PWM1_FA01|Add0~16_combout\);
 
--- Location: FF_X34_Y17_N9
+-- Location: FF_X34_Y17_N13
 \PWM1_FA01|var_Dead_Count1[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -6937,16 +6937,16 @@ PORT MAP (
 -- Location: LCCOMB_X34_Y17_N0
 \PWM1_FA01|Add0~19\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FA01|Add0~19_combout\ = (\PWM1_FA01|Add0~2_combout\ & \PWM1_FA01|comp_out~q\)
+-- \PWM1_FA01|Add0~19_combout\ = (\PWM1_FA01|comp_out~q\ & \PWM1_FA01|Add0~2_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010000010100000",
+	lut_mask => "1111000000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM1_FA01|Add0~2_combout\,
 	datac => \PWM1_FA01|comp_out~q\,
+	datad => \PWM1_FA01|Add0~2_combout\,
 	combout => \PWM1_FA01|Add0~19_combout\);
 
 -- Location: FF_X34_Y17_N1
@@ -6980,21 +6980,21 @@ PORT MAP (
 	datad => \PWM1_FA01|Add0~0_combout\,
 	combout => \PWM1_FA01|Equal0~0_combout\);
 
--- Location: LCCOMB_X34_Y17_N12
+-- Location: LCCOMB_X34_Y17_N8
 \PWM1_FA01|Equal0~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FA01|Equal0~1_combout\ = (!\PWM1_FA01|Add0~17_combout\ & (!\PWM1_FA01|Add0~15_combout\ & (\PWM1_FA01|Add0~8_combout\ & !\PWM1_FA01|Add0~16_combout\)))
+-- \PWM1_FA01|Equal0~1_combout\ = (!\PWM1_FA01|Add0~17_combout\ & (\PWM1_FA01|Add0~8_combout\ & (!\PWM1_FA01|Add0~16_combout\ & !\PWM1_FA01|Add0~15_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000010000",
+	lut_mask => "0000000000000100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \PWM1_FA01|Add0~17_combout\,
-	datab => \PWM1_FA01|Add0~15_combout\,
-	datac => \PWM1_FA01|Add0~8_combout\,
-	datad => \PWM1_FA01|Add0~16_combout\,
+	datab => \PWM1_FA01|Add0~8_combout\,
+	datac => \PWM1_FA01|Add0~16_combout\,
+	datad => \PWM1_FA01|Add0~15_combout\,
 	combout => \PWM1_FA01|Equal0~1_combout\);
 
 -- Location: LCCOMB_X35_Y17_N24
@@ -7695,7 +7695,7 @@ PORT MAP (
 -- Location: LCCOMB_X31_Y12_N28
 \ucr3|c_int[6]~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr3|c_int[6]~5_combout\ = (\ucr3|c_int\(6)) # ((\ucr3|c_int\(9)) # ((\ucr3|c_int\(10)) # (!\ucr3|c_int\(7))))
+-- \ucr3|c_int[6]~5_combout\ = (\ucr3|c_int\(9)) # ((\ucr3|c_int\(6)) # ((\ucr3|c_int\(10)) # (!\ucr3|c_int\(7))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7703,8 +7703,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr3|c_int\(6),
-	datab => \ucr3|c_int\(9),
+	dataa => \ucr3|c_int\(9),
+	datab => \ucr3|c_int\(6),
 	datac => \ucr3|c_int\(10),
 	datad => \ucr3|c_int\(7),
 	combout => \ucr3|c_int[6]~5_combout\);
@@ -8409,7 +8409,7 @@ PORT MAP (
 -- Location: LCCOMB_X26_Y12_N24
 \PWM1_FA02|LessThan0~17\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FA02|LessThan0~17_cout\ = CARRY((\ucr3|c_int\(8) & ((\PWM2_FA03|comp_int\(8)) # (!\PWM1_FA02|LessThan0~15_cout\))) # (!\ucr3|c_int\(8) & (\PWM2_FA03|comp_int\(8) & !\PWM1_FA02|LessThan0~15_cout\)))
+-- \PWM1_FA02|LessThan0~17_cout\ = CARRY((\PWM2_FA03|comp_int\(8) & ((\ucr3|c_int\(8)) # (!\PWM1_FA02|LessThan0~15_cout\))) # (!\PWM2_FA03|comp_int\(8) & (\ucr3|c_int\(8) & !\PWM1_FA02|LessThan0~15_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8417,8 +8417,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr3|c_int\(8),
-	datab => \PWM2_FA03|comp_int\(8),
+	dataa => \PWM2_FA03|comp_int\(8),
+	datab => \ucr3|c_int\(8),
 	datad => VCC,
 	cin => \PWM1_FA02|LessThan0~15_cout\,
 	cout => \PWM1_FA02|LessThan0~17_cout\);
@@ -8981,7 +8981,7 @@ PORT MAP (
 	combout => \ucr5|Add2~2_combout\,
 	cout => \ucr5|Add2~3\);
 
--- Location: LCCOMB_X29_Y15_N4
+-- Location: LCCOMB_X29_Y15_N0
 \ucr5|c_int[1]~14\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr5|c_int[1]~14_combout\ = !\ucr5|Add2~2_combout\
@@ -8995,7 +8995,7 @@ PORT MAP (
 	datad => \ucr5|Add2~2_combout\,
 	combout => \ucr5|c_int[1]~14_combout\);
 
--- Location: FF_X29_Y15_N5
+-- Location: FF_X29_Y15_N1
 \ucr5|c_int[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -9161,7 +9161,7 @@ PORT MAP (
 	combout => \ucr5|Add2~10_combout\,
 	cout => \ucr5|Add2~11\);
 
--- Location: LCCOMB_X29_Y15_N28
+-- Location: LCCOMB_X29_Y15_N12
 \ucr5|c_int[5]~11\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr5|c_int[5]~11_combout\ = !\ucr5|Add2~10_combout\
@@ -9175,7 +9175,7 @@ PORT MAP (
 	datad => \ucr5|Add2~10_combout\,
 	combout => \ucr5|c_int[5]~11_combout\);
 
--- Location: FF_X29_Y15_N29
+-- Location: FF_X29_Y15_N13
 \ucr5|c_int[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -9193,18 +9193,18 @@ PORT MAP (
 -- Location: LCCOMB_X29_Y15_N30
 \ucr5|c_int[15]~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr5|c_int[15]~2_combout\ = ((!\ucr5|c_int\(1) & (\ucr5|c_int\(2) & \ucr5|c_int\(0)))) # (!\ucr5|c_int\(3))
+-- \ucr5|c_int[15]~2_combout\ = ((\ucr5|c_int\(0) & (\ucr5|c_int\(2) & !\ucr5|c_int\(1)))) # (!\ucr5|c_int\(3))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111010101010101",
+	lut_mask => "0000111110001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr5|c_int\(3),
-	datab => \ucr5|c_int\(1),
-	datac => \ucr5|c_int\(2),
-	datad => \ucr5|c_int\(0),
+	dataa => \ucr5|c_int\(0),
+	datab => \ucr5|c_int\(2),
+	datac => \ucr5|c_int\(3),
+	datad => \ucr5|c_int\(1),
 	combout => \ucr5|c_int[15]~2_combout\);
 
 -- Location: LCCOMB_X28_Y15_N12
@@ -9439,7 +9439,7 @@ PORT MAP (
 -- Location: LCCOMB_X29_Y14_N4
 \ucr5|c_int[15]~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr5|c_int[15]~3_combout\ = (!\ucr5|c_int\(5) & (!\ucr5|c_int\(4) & (\ucr5|c_int[15]~2_combout\ & \ucr5|c_int[15]~0_combout\)))
+-- \ucr5|c_int[15]~3_combout\ = (!\ucr5|c_int\(4) & (!\ucr5|c_int\(5) & (\ucr5|c_int[15]~2_combout\ & \ucr5|c_int[15]~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9447,8 +9447,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr5|c_int\(5),
-	datab => \ucr5|c_int\(4),
+	dataa => \ucr5|c_int\(4),
+	datab => \ucr5|c_int\(5),
 	datac => \ucr5|c_int[15]~2_combout\,
 	datad => \ucr5|c_int[15]~0_combout\,
 	combout => \ucr5|c_int[15]~3_combout\);
@@ -9456,24 +9456,24 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y16_N4
 \ucr5|c_int[15]~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr5|c_int[15]~4_combout\ = (!\ucr5|c_int\(2) & (!\ucr5|c_int\(0) & (\ucr5|c_int\(8) & \ucr5|c_int\(1))))
+-- \ucr5|c_int[15]~4_combout\ = (!\ucr5|c_int\(2) & (\ucr5|c_int\(8) & (!\ucr5|c_int\(0) & \ucr5|c_int\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0001000000000000",
+	lut_mask => "0000010000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \ucr5|c_int\(2),
-	datab => \ucr5|c_int\(0),
-	datac => \ucr5|c_int\(8),
+	datab => \ucr5|c_int\(8),
+	datac => \ucr5|c_int\(0),
 	datad => \ucr5|c_int\(1),
 	combout => \ucr5|c_int[15]~4_combout\);
 
--- Location: LCCOMB_X29_Y15_N0
+-- Location: LCCOMB_X29_Y15_N4
 \ucr5|c_int[15]~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr5|c_int[15]~5_combout\ = (\ucr5|c_int\(4) & (\ucr5|c_int[15]~4_combout\ & (\ucr5|c_int\(3) & \ucr5|c_int\(5))))
+-- \ucr5|c_int[15]~5_combout\ = (\ucr5|c_int\(5) & (\ucr5|c_int[15]~4_combout\ & (\ucr5|c_int\(3) & \ucr5|c_int\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9481,10 +9481,10 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr5|c_int\(4),
+	dataa => \ucr5|c_int\(5),
 	datab => \ucr5|c_int[15]~4_combout\,
 	datac => \ucr5|c_int\(3),
-	datad => \ucr5|c_int\(5),
+	datad => \ucr5|c_int\(4),
 	combout => \ucr5|c_int[15]~5_combout\);
 
 -- Location: LCCOMB_X29_Y14_N12
@@ -9855,7 +9855,7 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y14_N20
 \PWM1_FA03|LessThan0~11\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FA03|LessThan0~11_cout\ = CARRY((\PWM2_FA03|comp_int\(5) & (!\ucr5|c_int\(5) & !\PWM1_FA03|LessThan0~9_cout\)) # (!\PWM2_FA03|comp_int\(5) & ((!\PWM1_FA03|LessThan0~9_cout\) # (!\ucr5|c_int\(5)))))
+-- \PWM1_FA03|LessThan0~11_cout\ = CARRY((\ucr5|c_int\(5) & (!\PWM2_FA03|comp_int\(5) & !\PWM1_FA03|LessThan0~9_cout\)) # (!\ucr5|c_int\(5) & ((!\PWM1_FA03|LessThan0~9_cout\) # (!\PWM2_FA03|comp_int\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9863,8 +9863,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FA03|comp_int\(5),
-	datab => \ucr5|c_int\(5),
+	dataa => \ucr5|c_int\(5),
+	datab => \PWM2_FA03|comp_int\(5),
 	datad => VCC,
 	cin => \PWM1_FA03|LessThan0~9_cout\,
 	cout => \PWM1_FA03|LessThan0~11_cout\);
@@ -9872,7 +9872,7 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y14_N22
 \PWM1_FA03|LessThan0~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FA03|LessThan0~13_cout\ = CARRY((\ucr5|c_int\(6) & ((\PWM2_FA03|comp_int\(6)) # (!\PWM1_FA03|LessThan0~11_cout\))) # (!\ucr5|c_int\(6) & (\PWM2_FA03|comp_int\(6) & !\PWM1_FA03|LessThan0~11_cout\)))
+-- \PWM1_FA03|LessThan0~13_cout\ = CARRY((\PWM2_FA03|comp_int\(6) & ((\ucr5|c_int\(6)) # (!\PWM1_FA03|LessThan0~11_cout\))) # (!\PWM2_FA03|comp_int\(6) & (\ucr5|c_int\(6) & !\PWM1_FA03|LessThan0~11_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9880,8 +9880,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr5|c_int\(6),
-	datab => \PWM2_FA03|comp_int\(6),
+	dataa => \PWM2_FA03|comp_int\(6),
+	datab => \ucr5|c_int\(6),
 	datad => VCC,
 	cin => \PWM1_FA03|LessThan0~11_cout\,
 	cout => \PWM1_FA03|LessThan0~13_cout\);
@@ -10357,116 +10357,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \PWM1_FA03|port_PWM01~q\);
 
--- Location: FF_X36_Y17_N7
-\PWM1_FA01|var_Dead_Count2[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \PWM1_FA01|Add1~16_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \PWM1_FA01|var_Dead_Count2\(4));
-
--- Location: LCCOMB_X36_Y17_N20
-\PWM1_FA01|Add1~9\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM1_FA01|Add1~9_combout\ = (\PWM1_FA01|var_Dead_Count2\(4) & (\PWM1_FA01|Add1~7\ $ (GND))) # (!\PWM1_FA01|var_Dead_Count2\(4) & (!\PWM1_FA01|Add1~7\ & VCC))
--- \PWM1_FA01|Add1~10\ = CARRY((\PWM1_FA01|var_Dead_Count2\(4) & !\PWM1_FA01|Add1~7\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM1_FA01|var_Dead_Count2\(4),
-	datad => VCC,
-	cin => \PWM1_FA01|Add1~7\,
-	combout => \PWM1_FA01|Add1~9_combout\,
-	cout => \PWM1_FA01|Add1~10\);
-
--- Location: LCCOMB_X36_Y17_N22
-\PWM1_FA01|Add1~11\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM1_FA01|Add1~11_combout\ = (\PWM1_FA01|var_Dead_Count2\(5) & (!\PWM1_FA01|Add1~10\)) # (!\PWM1_FA01|var_Dead_Count2\(5) & ((\PWM1_FA01|Add1~10\) # (GND)))
--- \PWM1_FA01|Add1~12\ = CARRY((!\PWM1_FA01|Add1~10\) # (!\PWM1_FA01|var_Dead_Count2\(5)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM1_FA01|var_Dead_Count2\(5),
-	datad => VCC,
-	cin => \PWM1_FA01|Add1~10\,
-	combout => \PWM1_FA01|Add1~11_combout\,
-	cout => \PWM1_FA01|Add1~12\);
-
--- Location: LCCOMB_X35_Y17_N8
-\PWM1_FA01|Add1~17\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM1_FA01|Add1~17_combout\ = (!\PWM1_FA01|comp_out~q\ & \PWM1_FA01|Add1~11_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM1_FA01|comp_out~q\,
-	datad => \PWM1_FA01|Add1~11_combout\,
-	combout => \PWM1_FA01|Add1~17_combout\);
-
--- Location: FF_X35_Y17_N9
-\PWM1_FA01|var_Dead_Count2[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \PWM1_FA01|Add1~17_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \PWM1_FA01|var_Dead_Count2\(5));
-
--- Location: LCCOMB_X36_Y17_N24
-\PWM1_FA01|Add1~13\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM1_FA01|Add1~13_combout\ = \PWM1_FA01|Add1~12\ $ (!\PWM1_FA01|var_Dead_Count2\(6))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datad => \PWM1_FA01|var_Dead_Count2\(6),
-	cin => \PWM1_FA01|Add1~12\,
-	combout => \PWM1_FA01|Add1~13_combout\);
-
--- Location: LCCOMB_X36_Y17_N10
-\PWM1_FA01|Add1~15\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM1_FA01|Add1~15_combout\ = (!\PWM1_FA01|comp_out~q\ & \PWM1_FA01|Add1~13_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \PWM1_FA01|comp_out~q\,
-	datad => \PWM1_FA01|Add1~13_combout\,
-	combout => \PWM1_FA01|Add1~15_combout\);
-
--- Location: FF_X36_Y17_N11
+-- Location: FF_X36_Y17_N3
 \PWM1_FA01|var_Dead_Count2[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -10530,7 +10421,7 @@ PORT MAP (
 -- Location: LCCOMB_X36_Y17_N4
 \PWM1_FA01|LessThan2~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FA01|LessThan2~0_combout\ = (((!\PWM1_FA01|var_Dead_Count2\(1)) # (!\PWM1_FA01|var_Dead_Count2\(0))) # (!\PWM1_FA01|var_Dead_Count2\(2))) # (!\PWM1_FA01|var_Dead_Count2\(3))
+-- \PWM1_FA01|LessThan2~0_combout\ = (((!\PWM1_FA01|var_Dead_Count2\(2)) # (!\PWM1_FA01|var_Dead_Count2\(3))) # (!\PWM1_FA01|var_Dead_Count2\(0))) # (!\PWM1_FA01|var_Dead_Count2\(1))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -10538,26 +10429,26 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM1_FA01|var_Dead_Count2\(3),
-	datab => \PWM1_FA01|var_Dead_Count2\(2),
-	datac => \PWM1_FA01|var_Dead_Count2\(0),
-	datad => \PWM1_FA01|var_Dead_Count2\(1),
+	dataa => \PWM1_FA01|var_Dead_Count2\(1),
+	datab => \PWM1_FA01|var_Dead_Count2\(0),
+	datac => \PWM1_FA01|var_Dead_Count2\(3),
+	datad => \PWM1_FA01|var_Dead_Count2\(2),
 	combout => \PWM1_FA01|LessThan2~0_combout\);
 
 -- Location: LCCOMB_X36_Y17_N0
 \PWM1_FA01|LessThan2~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FA01|LessThan2~1_combout\ = (!\PWM1_FA01|var_Dead_Count2\(6) & (\PWM1_FA01|LessThan2~0_combout\ & (!\PWM1_FA01|var_Dead_Count2\(5) & !\PWM1_FA01|var_Dead_Count2\(4))))
+-- \PWM1_FA01|LessThan2~1_combout\ = (!\PWM1_FA01|var_Dead_Count2\(5) & (!\PWM1_FA01|var_Dead_Count2\(6) & (\PWM1_FA01|LessThan2~0_combout\ & !\PWM1_FA01|var_Dead_Count2\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000000100",
+	lut_mask => "0000000000010000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM1_FA01|var_Dead_Count2\(6),
-	datab => \PWM1_FA01|LessThan2~0_combout\,
-	datac => \PWM1_FA01|var_Dead_Count2\(5),
+	dataa => \PWM1_FA01|var_Dead_Count2\(5),
+	datab => \PWM1_FA01|var_Dead_Count2\(6),
+	datac => \PWM1_FA01|LessThan2~0_combout\,
 	datad => \PWM1_FA01|var_Dead_Count2\(4),
 	combout => \PWM1_FA01|LessThan2~1_combout\);
 
@@ -10569,11 +10460,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111111",
+	lut_mask => "0101101001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \PWM1_FA01|var_Dead_Count2\(1),
+	dataa => \PWM1_FA01|var_Dead_Count2\(1),
 	datad => VCC,
 	cin => \PWM1_FA01|Add1~1\,
 	combout => \PWM1_FA01|Add1~2_combout\,
@@ -10702,7 +10593,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \PWM1_FA01|var_Dead_Count2\(3));
 
--- Location: LCCOMB_X36_Y17_N6
+-- Location: LCCOMB_X36_Y17_N20
+\PWM1_FA01|Add1~9\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM1_FA01|Add1~9_combout\ = (\PWM1_FA01|var_Dead_Count2\(4) & (\PWM1_FA01|Add1~7\ $ (GND))) # (!\PWM1_FA01|var_Dead_Count2\(4) & (!\PWM1_FA01|Add1~7\ & VCC))
+-- \PWM1_FA01|Add1~10\ = CARRY((\PWM1_FA01|var_Dead_Count2\(4) & !\PWM1_FA01|Add1~7\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM1_FA01|var_Dead_Count2\(4),
+	datad => VCC,
+	cin => \PWM1_FA01|Add1~7\,
+	combout => \PWM1_FA01|Add1~9_combout\,
+	cout => \PWM1_FA01|Add1~10\);
+
+-- Location: LCCOMB_X36_Y17_N10
 \PWM1_FA01|Add1~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \PWM1_FA01|Add1~16_combout\ = (!\PWM1_FA01|comp_out~q\ & \PWM1_FA01|Add1~9_combout\)
@@ -10717,10 +10626,101 @@ PORT MAP (
 	datad => \PWM1_FA01|Add1~9_combout\,
 	combout => \PWM1_FA01|Add1~16_combout\);
 
+-- Location: FF_X36_Y17_N11
+\PWM1_FA01|var_Dead_Count2[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \PWM1_FA01|Add1~16_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PWM1_FA01|var_Dead_Count2\(4));
+
+-- Location: LCCOMB_X36_Y17_N22
+\PWM1_FA01|Add1~11\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM1_FA01|Add1~11_combout\ = (\PWM1_FA01|var_Dead_Count2\(5) & (!\PWM1_FA01|Add1~10\)) # (!\PWM1_FA01|var_Dead_Count2\(5) & ((\PWM1_FA01|Add1~10\) # (GND)))
+-- \PWM1_FA01|Add1~12\ = CARRY((!\PWM1_FA01|Add1~10\) # (!\PWM1_FA01|var_Dead_Count2\(5)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM1_FA01|var_Dead_Count2\(5),
+	datad => VCC,
+	cin => \PWM1_FA01|Add1~10\,
+	combout => \PWM1_FA01|Add1~11_combout\,
+	cout => \PWM1_FA01|Add1~12\);
+
+-- Location: LCCOMB_X35_Y17_N8
+\PWM1_FA01|Add1~17\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM1_FA01|Add1~17_combout\ = (!\PWM1_FA01|comp_out~q\ & \PWM1_FA01|Add1~11_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101010100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM1_FA01|comp_out~q\,
+	datad => \PWM1_FA01|Add1~11_combout\,
+	combout => \PWM1_FA01|Add1~17_combout\);
+
+-- Location: FF_X35_Y17_N9
+\PWM1_FA01|var_Dead_Count2[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \PWM1_FA01|Add1~17_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PWM1_FA01|var_Dead_Count2\(5));
+
+-- Location: LCCOMB_X36_Y17_N24
+\PWM1_FA01|Add1~13\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM1_FA01|Add1~13_combout\ = \PWM1_FA01|Add1~12\ $ (!\PWM1_FA01|var_Dead_Count2\(6))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111000000001111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datad => \PWM1_FA01|var_Dead_Count2\(6),
+	cin => \PWM1_FA01|Add1~12\,
+	combout => \PWM1_FA01|Add1~13_combout\);
+
+-- Location: LCCOMB_X36_Y17_N2
+\PWM1_FA01|Add1~15\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM1_FA01|Add1~15_combout\ = (!\PWM1_FA01|comp_out~q\ & \PWM1_FA01|Add1~13_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \PWM1_FA01|comp_out~q\,
+	datad => \PWM1_FA01|Add1~13_combout\,
+	combout => \PWM1_FA01|Add1~15_combout\);
+
 -- Location: LCCOMB_X35_Y17_N14
 \PWM1_FA01|Equal1~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FA01|Equal1~1_combout\ = (!\PWM1_FA01|Add1~16_combout\ & (!\PWM1_FA01|Add1~15_combout\ & (!\PWM1_FA01|Add1~17_combout\ & \PWM1_FA01|Add1~8_combout\)))
+-- \PWM1_FA01|Equal1~1_combout\ = (!\PWM1_FA01|Add1~15_combout\ & (!\PWM1_FA01|Add1~16_combout\ & (!\PWM1_FA01|Add1~17_combout\ & \PWM1_FA01|Add1~8_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -10728,13 +10728,13 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM1_FA01|Add1~16_combout\,
-	datab => \PWM1_FA01|Add1~15_combout\,
+	dataa => \PWM1_FA01|Add1~15_combout\,
+	datab => \PWM1_FA01|Add1~16_combout\,
 	datac => \PWM1_FA01|Add1~17_combout\,
 	datad => \PWM1_FA01|Add1~8_combout\,
 	combout => \PWM1_FA01|Equal1~1_combout\);
 
--- Location: LCCOMB_X36_Y17_N2
+-- Location: LCCOMB_X36_Y17_N6
 \PWM1_FA01|Equal1~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \PWM1_FA01|Equal1~0_combout\ = (\PWM1_FA01|Add1~0_combout\ & (!\PWM1_FA01|comp_out~q\ & (\PWM1_FA01|Add1~2_combout\ & \PWM1_FA01|Add1~4_combout\)))
@@ -11688,17 +11688,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000001100",
+	lut_mask => "0101101000001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \ucr2|c_int\(1),
+	dataa => \ucr2|c_int\(1),
 	datad => VCC,
 	cin => \ucr2|Add2~1_cout\,
 	combout => \ucr2|Add2~2_combout\,
 	cout => \ucr2|Add2~3\);
 
--- Location: LCCOMB_X28_Y12_N6
+-- Location: LCCOMB_X28_Y12_N14
 \ucr2|Add2~31\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr2|Add2~31_combout\ = (\ucr2|c_int[13]~8_combout\ & ((!\ucr2|Add2~2_combout\))) # (!\ucr2|c_int[13]~8_combout\ & (!\ucr2|Add1~0_combout\))
@@ -11714,7 +11714,7 @@ PORT MAP (
 	datad => \ucr2|Add2~2_combout\,
 	combout => \ucr2|Add2~31_combout\);
 
--- Location: FF_X28_Y12_N7
+-- Location: FF_X28_Y12_N15
 \ucr2|c_int[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -11772,11 +11772,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000111100110011",
+	lut_mask => "0000111101010101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \ucr2|Add1~2_combout\,
+	dataa => \ucr2|Add1~2_combout\,
 	datac => \ucr2|Add2~4_combout\,
 	datad => \ucr2|c_int[13]~8_combout\,
 	combout => \ucr2|Add2~30_combout\);
@@ -11956,11 +11956,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101000001010",
+	lut_mask => "0011110000001100",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr2|c_int\(5),
+	datab => \ucr2|c_int\(5),
 	datad => VCC,
 	cin => \ucr2|Add2~9\,
 	combout => \ucr2|Add2~10_combout\,
@@ -12072,11 +12072,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \ucr2|c_int\(7),
+	dataa => \ucr2|c_int\(7),
 	datad => VCC,
 	cin => \ucr2|Add1~11\,
 	combout => \ucr2|Add1~12_combout\,
@@ -12100,7 +12100,7 @@ PORT MAP (
 	combout => \ucr2|Add2~14_combout\,
 	cout => \ucr2|Add2~15\);
 
--- Location: LCCOMB_X28_Y12_N14
+-- Location: LCCOMB_X28_Y12_N2
 \ucr2|Add2~25\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr2|Add2~25_combout\ = (\ucr2|c_int[13]~8_combout\ & ((\ucr2|Add2~14_combout\))) # (!\ucr2|c_int[13]~8_combout\ & (\ucr2|Add1~12_combout\))
@@ -12116,7 +12116,7 @@ PORT MAP (
 	datad => \ucr2|c_int[13]~8_combout\,
 	combout => \ucr2|Add2~25_combout\);
 
--- Location: FF_X28_Y12_N15
+-- Location: FF_X28_Y12_N3
 \ucr2|c_int[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -12198,40 +12198,6 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \ucr2|c_int\(8));
 
--- Location: LCCOMB_X28_Y11_N2
-\ucr2|c_int[13]~6\ : cycloneive_lcell_comb
--- Equation(s):
--- \ucr2|c_int[13]~6_combout\ = (((\ucr2|c_int\(3)) # (!\ucr2|c_int\(4))) # (!\ucr2|c_int\(8))) # (!\ucr2|c_int\(5))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111101111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \ucr2|c_int\(5),
-	datab => \ucr2|c_int\(8),
-	datac => \ucr2|c_int\(4),
-	datad => \ucr2|c_int\(3),
-	combout => \ucr2|c_int[13]~6_combout\);
-
--- Location: LCCOMB_X28_Y11_N4
-\ucr2|c_int[13]~7\ : cycloneive_lcell_comb
--- Equation(s):
--- \ucr2|c_int[13]~7_combout\ = ((\ucr2|c_int[13]~6_combout\) # ((!\ucr6|c_int\(0)) # (!\ucr2|c_int\(2)))) # (!\ucr2|c_int\(1))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1101111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \ucr2|c_int\(1),
-	datab => \ucr2|c_int[13]~6_combout\,
-	datac => \ucr2|c_int\(2),
-	datad => \ucr6|c_int\(0),
-	combout => \ucr2|c_int[13]~7_combout\);
-
 -- Location: LCCOMB_X27_Y12_N16
 \ucr2|Add1~16\ : cycloneive_lcell_comb
 -- Equation(s):
@@ -12307,11 +12273,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001111001111",
+	lut_mask => "1010010110101111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \ucr2|c_int\(10),
+	dataa => \ucr2|c_int\(10),
 	datad => VCC,
 	cin => \ucr2|Add1~17\,
 	combout => \ucr2|Add1~18_combout\,
@@ -12369,19 +12335,53 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y12_N30
 \ucr2|c_int[13]~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr2|c_int[13]~5_combout\ = (\ucr2|c_int\(6)) # ((\ucr2|c_int\(7)) # ((\ucr2|c_int\(9)) # (!\ucr2|c_int\(10))))
+-- \ucr2|c_int[13]~5_combout\ = ((\ucr2|c_int\(6)) # ((\ucr2|c_int\(7)) # (\ucr2|c_int\(9)))) # (!\ucr2|c_int\(10))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111101111",
+	lut_mask => "1111111111111101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr2|c_int\(6),
-	datab => \ucr2|c_int\(7),
-	datac => \ucr2|c_int\(10),
+	dataa => \ucr2|c_int\(10),
+	datab => \ucr2|c_int\(6),
+	datac => \ucr2|c_int\(7),
 	datad => \ucr2|c_int\(9),
 	combout => \ucr2|c_int[13]~5_combout\);
+
+-- Location: LCCOMB_X28_Y11_N2
+\ucr2|c_int[13]~6\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \ucr2|c_int[13]~6_combout\ = (((\ucr2|c_int\(3)) # (!\ucr2|c_int\(4))) # (!\ucr2|c_int\(8))) # (!\ucr2|c_int\(5))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111011111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ucr2|c_int\(5),
+	datab => \ucr2|c_int\(8),
+	datac => \ucr2|c_int\(3),
+	datad => \ucr2|c_int\(4),
+	combout => \ucr2|c_int[13]~6_combout\);
+
+-- Location: LCCOMB_X28_Y11_N4
+\ucr2|c_int[13]~7\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \ucr2|c_int[13]~7_combout\ = ((\ucr2|c_int[13]~6_combout\) # ((!\ucr2|c_int\(1)) # (!\ucr2|c_int\(2)))) # (!\ucr6|c_int\(0))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ucr6|c_int\(0),
+	datab => \ucr2|c_int[13]~6_combout\,
+	datac => \ucr2|c_int\(2),
+	datad => \ucr2|c_int\(1),
+	combout => \ucr2|c_int[13]~7_combout\);
 
 -- Location: FF_X28_Y12_N11
 \ucr2|dir_int\ : dffeas
@@ -12397,55 +12397,6 @@ PORT MAP (
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \ucr2|dir_int~q\);
-
--- Location: LCCOMB_X28_Y11_N8
-\ucr2|c_int[13]~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \ucr2|c_int[13]~1_combout\ = (\ucr2|c_int\(3)) # ((!\ucr2|c_int\(1) & (!\ucr2|c_int\(2) & !\ucr6|c_int\(0))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000011110001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \ucr2|c_int\(1),
-	datab => \ucr2|c_int\(2),
-	datac => \ucr2|c_int\(3),
-	datad => \ucr6|c_int\(0),
-	combout => \ucr2|c_int[13]~1_combout\);
-
--- Location: LCCOMB_X28_Y11_N6
-\ucr2|c_int[13]~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \ucr2|c_int[13]~2_combout\ = (!\ucr2|c_int\(7) & !\ucr2|c_int\(6))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000001100000011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \ucr2|c_int\(7),
-	datac => \ucr2|c_int\(6),
-	combout => \ucr2|c_int[13]~2_combout\);
-
--- Location: LCCOMB_X28_Y11_N0
-\ucr2|c_int[13]~3\ : cycloneive_lcell_comb
--- Equation(s):
--- \ucr2|c_int[13]~3_combout\ = ((!\ucr2|c_int\(4) & (\ucr2|c_int[13]~1_combout\ & !\ucr2|c_int\(5)))) # (!\ucr2|c_int[13]~2_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000010011111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \ucr2|c_int\(4),
-	datab => \ucr2|c_int[13]~1_combout\,
-	datac => \ucr2|c_int\(5),
-	datad => \ucr2|c_int[13]~2_combout\,
-	combout => \ucr2|c_int[13]~3_combout\);
 
 -- Location: LCCOMB_X27_Y12_N20
 \ucr2|Add1~20\ : cycloneive_lcell_comb
@@ -12514,7 +12465,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \ucr2|c_int\(11));
 
--- Location: LCCOMB_X28_Y12_N18
+-- Location: LCCOMB_X28_Y12_N6
 \ucr2|c_int[13]~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr2|c_int[13]~0_combout\ = ((\ucr2|c_int\(11)) # ((\ucr2|c_int\(9) & !\ucr2|c_int\(10)))) # (!\PWM2_FC01|LessThan0~0_combout\)
@@ -12531,27 +12482,76 @@ PORT MAP (
 	datad => \ucr2|c_int\(11),
 	combout => \ucr2|c_int[13]~0_combout\);
 
--- Location: LCCOMB_X28_Y12_N0
-\ucr2|c_int[13]~4\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X28_Y11_N6
+\ucr2|c_int[13]~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr2|c_int[13]~4_combout\ = (\ucr2|c_int[13]~0_combout\) # ((!\ucr2|c_int\(8) & (\ucr2|c_int[13]~3_combout\ & !\ucr2|c_int\(10))))
+-- \ucr2|c_int[13]~2_combout\ = (!\ucr2|c_int\(6) & !\ucr2|c_int\(7))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111100000100",
+	lut_mask => "0000001100000011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr2|c_int\(8),
+	datab => \ucr2|c_int\(6),
+	datac => \ucr2|c_int\(7),
+	combout => \ucr2|c_int[13]~2_combout\);
+
+-- Location: LCCOMB_X28_Y11_N8
+\ucr2|c_int[13]~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \ucr2|c_int[13]~1_combout\ = (\ucr2|c_int\(3)) # ((!\ucr2|c_int\(1) & (!\ucr2|c_int\(2) & !\ucr6|c_int\(0))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101010101011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ucr2|c_int\(3),
+	datab => \ucr2|c_int\(1),
+	datac => \ucr2|c_int\(2),
+	datad => \ucr6|c_int\(0),
+	combout => \ucr2|c_int[13]~1_combout\);
+
+-- Location: LCCOMB_X28_Y11_N0
+\ucr2|c_int[13]~3\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \ucr2|c_int[13]~3_combout\ = ((\ucr2|c_int[13]~1_combout\ & (!\ucr2|c_int\(5) & !\ucr2|c_int\(4)))) # (!\ucr2|c_int[13]~2_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101010101011101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ucr2|c_int[13]~2_combout\,
+	datab => \ucr2|c_int[13]~1_combout\,
+	datac => \ucr2|c_int\(5),
+	datad => \ucr2|c_int\(4),
+	combout => \ucr2|c_int[13]~3_combout\);
+
+-- Location: LCCOMB_X28_Y12_N0
+\ucr2|c_int[13]~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \ucr2|c_int[13]~4_combout\ = (\ucr2|c_int[13]~0_combout\) # ((\ucr2|c_int[13]~3_combout\ & (!\ucr2|c_int\(10) & !\ucr2|c_int\(8))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101010101110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ucr2|c_int[13]~0_combout\,
 	datab => \ucr2|c_int[13]~3_combout\,
 	datac => \ucr2|c_int\(10),
-	datad => \ucr2|c_int[13]~0_combout\,
+	datad => \ucr2|c_int\(8),
 	combout => \ucr2|c_int[13]~4_combout\);
 
 -- Location: LCCOMB_X28_Y12_N10
 \ucr2|c_int[13]~8\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr2|c_int[13]~8_combout\ = (\ucr2|c_int[13]~4_combout\) # ((\ucr2|dir_int~q\ & ((\ucr2|c_int[13]~7_combout\) # (\ucr2|c_int[13]~5_combout\))))
+-- \ucr2|c_int[13]~8_combout\ = (\ucr2|c_int[13]~4_combout\) # ((\ucr2|dir_int~q\ & ((\ucr2|c_int[13]~5_combout\) # (\ucr2|c_int[13]~7_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -12559,8 +12559,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr2|c_int[13]~7_combout\,
-	datab => \ucr2|c_int[13]~5_combout\,
+	dataa => \ucr2|c_int[13]~5_combout\,
+	datab => \ucr2|c_int[13]~7_combout\,
 	datac => \ucr2|dir_int~q\,
 	datad => \ucr2|c_int[13]~4_combout\,
 	combout => \ucr2|c_int[13]~8_combout\);
@@ -12707,11 +12707,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr2|c_int\(14),
+	datab => \ucr2|c_int\(14),
 	datad => VCC,
 	cin => \ucr2|Add1~25\,
 	combout => \ucr2|Add1~26_combout\,
@@ -12725,17 +12725,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101010101111",
+	lut_mask => "0011110011001111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr2|c_int\(14),
+	datab => \ucr2|c_int\(14),
 	datad => VCC,
 	cin => \ucr2|Add2~37\,
 	combout => \ucr2|Add2~38_combout\,
 	cout => \ucr2|Add2~39\);
 
--- Location: LCCOMB_X28_Y12_N2
+-- Location: LCCOMB_X28_Y12_N18
 \ucr2|Add2~43\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr2|Add2~43_combout\ = (\ucr2|c_int[13]~8_combout\ & ((\ucr2|Add2~38_combout\))) # (!\ucr2|c_int[13]~8_combout\ & (\ucr2|Add1~26_combout\))
@@ -12751,7 +12751,7 @@ PORT MAP (
 	datad => \ucr2|Add2~38_combout\,
 	combout => \ucr2|Add2~43_combout\);
 
--- Location: FF_X28_Y12_N3
+-- Location: FF_X28_Y12_N19
 \ucr2|c_int[14]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -12863,7 +12863,7 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y11_N2
 \PWM2_FA01|LessThan0~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FA01|LessThan0~3_cout\ = CARRY((\PWM2_FA03|comp_int\(1) & (!\ucr2|c_int\(1) & !\PWM2_FA01|LessThan0~1_cout\)) # (!\PWM2_FA03|comp_int\(1) & ((!\PWM2_FA01|LessThan0~1_cout\) # (!\ucr2|c_int\(1)))))
+-- \PWM2_FA01|LessThan0~3_cout\ = CARRY((\ucr2|c_int\(1) & (!\PWM2_FA03|comp_int\(1) & !\PWM2_FA01|LessThan0~1_cout\)) # (!\ucr2|c_int\(1) & ((!\PWM2_FA01|LessThan0~1_cout\) # (!\PWM2_FA03|comp_int\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -12871,8 +12871,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FA03|comp_int\(1),
-	datab => \ucr2|c_int\(1),
+	dataa => \ucr2|c_int\(1),
+	datab => \PWM2_FA03|comp_int\(1),
 	datad => VCC,
 	cin => \PWM2_FA01|LessThan0~1_cout\,
 	cout => \PWM2_FA01|LessThan0~3_cout\);
@@ -12982,7 +12982,7 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y11_N16
 \PWM2_FA01|LessThan0~17\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FA01|LessThan0~17_cout\ = CARRY((\ucr2|c_int\(8) & ((\PWM2_FA03|comp_int\(8)) # (!\PWM2_FA01|LessThan0~15_cout\))) # (!\ucr2|c_int\(8) & (\PWM2_FA03|comp_int\(8) & !\PWM2_FA01|LessThan0~15_cout\)))
+-- \PWM2_FA01|LessThan0~17_cout\ = CARRY((\PWM2_FA03|comp_int\(8) & ((\ucr2|c_int\(8)) # (!\PWM2_FA01|LessThan0~15_cout\))) # (!\PWM2_FA03|comp_int\(8) & (\ucr2|c_int\(8) & !\PWM2_FA01|LessThan0~15_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -12990,8 +12990,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr2|c_int\(8),
-	datab => \PWM2_FA03|comp_int\(8),
+	dataa => \PWM2_FA03|comp_int\(8),
+	datab => \ucr2|c_int\(8),
 	datad => VCC,
 	cin => \PWM2_FA01|LessThan0~15_cout\,
 	cout => \PWM2_FA01|LessThan0~17_cout\);
@@ -13528,13 +13528,13 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000010111110101",
+	lut_mask => "0011010100110101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \ucr4|Add1~0_combout\,
+	datab => \ucr4|Add2~2_combout\,
 	datac => \ucr4|c_int[10]~8_combout\,
-	datad => \ucr4|Add2~2_combout\,
 	combout => \ucr4|Add2~31_combout\);
 
 -- Location: FF_X28_Y19_N29
@@ -13560,11 +13560,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111111",
+	lut_mask => "0101101001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \ucr4|c_int\(2),
+	dataa => \ucr4|c_int\(2),
 	datad => VCC,
 	cin => \ucr4|Add1~1\,
 	combout => \ucr4|Add1~2_combout\,
@@ -13595,11 +13595,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111101001010000",
+	lut_mask => "1111110000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr4|c_int[10]~8_combout\,
+	datab => \ucr4|c_int[10]~8_combout\,
 	datac => \ucr4|Add1~2_combout\,
 	datad => \ucr4|Add2~4_combout\,
 	combout => \ucr4|Add2~30_combout\);
@@ -13627,11 +13627,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101000000101",
+	lut_mask => "0011110000000011",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr4|c_int\(3),
+	datab => \ucr4|c_int\(3),
 	datad => VCC,
 	cin => \ucr4|Add1~3\,
 	combout => \ucr4|Add1~4_combout\,
@@ -13662,12 +13662,12 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000010110101111",
+	lut_mask => "0001000111011101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr4|c_int[10]~8_combout\,
-	datac => \ucr4|Add1~4_combout\,
+	dataa => \ucr4|Add1~4_combout\,
+	datab => \ucr4|c_int[10]~8_combout\,
 	datad => \ucr4|Add2~6_combout\,
 	combout => \ucr4|Add2~29_combout\);
 
@@ -13789,7 +13789,7 @@ PORT MAP (
 	combout => \ucr4|Add2~10_combout\,
 	cout => \ucr4|Add2~11\);
 
--- Location: LCCOMB_X26_Y19_N2
+-- Location: LCCOMB_X26_Y19_N30
 \ucr4|Add2~27\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr4|Add2~27_combout\ = (\ucr4|c_int[10]~8_combout\ & ((!\ucr4|Add2~10_combout\))) # (!\ucr4|c_int[10]~8_combout\ & (!\ucr4|Add1~8_combout\))
@@ -13805,7 +13805,7 @@ PORT MAP (
 	datad => \ucr4|Add2~10_combout\,
 	combout => \ucr4|Add2~27_combout\);
 
--- Location: FF_X26_Y19_N3
+-- Location: FF_X26_Y19_N31
 \ucr4|c_int[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -14021,24 +14021,6 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \ucr4|c_int\(8));
 
--- Location: LCCOMB_X27_Y19_N18
-\ucr4|Add1~16\ : cycloneive_lcell_comb
--- Equation(s):
--- \ucr4|Add1~16_combout\ = (\ucr4|c_int\(9) & (!\ucr4|Add1~15\ & VCC)) # (!\ucr4|c_int\(9) & (\ucr4|Add1~15\ $ (GND)))
--- \ucr4|Add1~17\ = CARRY((!\ucr4|c_int\(9) & !\ucr4|Add1~15\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \ucr4|c_int\(9),
-	datad => VCC,
-	cin => \ucr4|Add1~15\,
-	combout => \ucr4|Add1~16_combout\,
-	cout => \ucr4|Add1~17\);
-
 -- Location: LCCOMB_X29_Y19_N18
 \ucr4|Add2~18\ : cycloneive_lcell_comb
 -- Equation(s):
@@ -14047,33 +14029,51 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000001100",
+	lut_mask => "0101101000001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \ucr4|c_int\(9),
+	dataa => \ucr4|c_int\(9),
 	datad => VCC,
 	cin => \ucr4|Add2~17\,
 	combout => \ucr4|Add2~18_combout\,
 	cout => \ucr4|Add2~19\);
 
--- Location: LCCOMB_X26_Y19_N30
-\ucr4|Add2~23\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X27_Y19_N18
+\ucr4|Add1~16\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr4|Add2~23_combout\ = (\ucr4|c_int[10]~8_combout\ & ((!\ucr4|Add2~18_combout\))) # (!\ucr4|c_int[10]~8_combout\ & (!\ucr4|Add1~16_combout\))
+-- \ucr4|Add1~16_combout\ = (\ucr4|c_int\(9) & (!\ucr4|Add1~15\ & VCC)) # (!\ucr4|c_int\(9) & (\ucr4|Add1~15\ $ (GND)))
+-- \ucr4|Add1~17\ = CARRY((!\ucr4|c_int\(9) & !\ucr4|Add1~15\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000001111110011",
+	lut_mask => "0101101000000101",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ucr4|c_int\(9),
+	datad => VCC,
+	cin => \ucr4|Add1~15\,
+	combout => \ucr4|Add1~16_combout\,
+	cout => \ucr4|Add1~17\);
+
+-- Location: LCCOMB_X26_Y19_N14
+\ucr4|Add2~23\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \ucr4|Add2~23_combout\ = (\ucr4|c_int[10]~8_combout\ & (!\ucr4|Add2~18_combout\)) # (!\ucr4|c_int[10]~8_combout\ & ((!\ucr4|Add1~16_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000110000111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \ucr4|Add1~16_combout\,
-	datac => \ucr4|c_int[10]~8_combout\,
-	datad => \ucr4|Add2~18_combout\,
+	datab => \ucr4|c_int[10]~8_combout\,
+	datac => \ucr4|Add2~18_combout\,
+	datad => \ucr4|Add1~16_combout\,
 	combout => \ucr4|Add2~23_combout\);
 
--- Location: FF_X26_Y19_N31
+-- Location: FF_X26_Y19_N15
 \ucr4|c_int[9]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -14114,11 +14114,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \ucr4|c_int\(11),
+	dataa => \ucr4|c_int\(11),
 	datad => VCC,
 	cin => \ucr4|Add1~19\,
 	combout => \ucr4|Add1~20_combout\,
@@ -14199,11 +14199,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011110000111111",
+	lut_mask => "0101101001011111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \ucr4|c_int\(12),
+	dataa => \ucr4|c_int\(12),
 	datad => VCC,
 	cin => \ucr4|Add1~21\,
 	combout => \ucr4|Add1~22_combout\,
@@ -14429,11 +14429,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111101001010000",
+	lut_mask => "1111110000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr4|c_int[10]~8_combout\,
+	datab => \ucr4|c_int[10]~8_combout\,
 	datac => \ucr4|Add1~28_combout\,
 	datad => \ucr4|Add2~40_combout\,
 	combout => \ucr4|Add2~42_combout\);
@@ -14470,21 +14470,21 @@ PORT MAP (
 	datad => \ucr4|c_int\(13),
 	combout => \PWM2_FC02|LessThan0~0_combout\);
 
--- Location: LCCOMB_X26_Y19_N14
+-- Location: LCCOMB_X26_Y19_N2
 \ucr4|c_int[10]~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr4|c_int[10]~0_combout\ = (\ucr4|c_int\(11)) # (((!\ucr4|c_int\(9) & \ucr4|c_int\(10))) # (!\PWM2_FC02|LessThan0~0_combout\))
+-- \ucr4|c_int[10]~0_combout\ = (\ucr4|c_int\(11)) # (((\ucr4|c_int\(10) & !\ucr4|c_int\(9))) # (!\PWM2_FC02|LessThan0~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111010011111111",
+	lut_mask => "1010111111101111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr4|c_int\(9),
+	dataa => \ucr4|c_int\(11),
 	datab => \ucr4|c_int\(10),
-	datac => \ucr4|c_int\(11),
-	datad => \PWM2_FC02|LessThan0~0_combout\,
+	datac => \PWM2_FC02|LessThan0~0_combout\,
+	datad => \ucr4|c_int\(9),
 	combout => \ucr4|c_int[10]~0_combout\);
 
 -- Location: LCCOMB_X26_Y19_N26
@@ -14502,38 +14502,38 @@ PORT MAP (
 	datac => \ucr4|c_int\(6),
 	combout => \ucr4|c_int[10]~2_combout\);
 
--- Location: LCCOMB_X26_Y19_N8
+-- Location: LCCOMB_X26_Y19_N28
 \ucr4|c_int[10]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr4|c_int[10]~1_combout\ = ((!\ucr4|c_int\(1) & (\ucr5|c_int\(0) & \ucr4|c_int\(2)))) # (!\ucr4|c_int\(3))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100000011111111",
+	lut_mask => "0111001100110011",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \ucr4|c_int\(1),
-	datab => \ucr5|c_int\(0),
-	datac => \ucr4|c_int\(2),
-	datad => \ucr4|c_int\(3),
+	datab => \ucr4|c_int\(3),
+	datac => \ucr5|c_int\(0),
+	datad => \ucr4|c_int\(2),
 	combout => \ucr4|c_int[10]~1_combout\);
 
 -- Location: LCCOMB_X26_Y19_N24
 \ucr4|c_int[10]~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr4|c_int[10]~3_combout\ = ((!\ucr4|c_int\(5) & (\ucr4|c_int[10]~1_combout\ & !\ucr4|c_int\(4)))) # (!\ucr4|c_int[10]~2_combout\)
+-- \ucr4|c_int[10]~3_combout\ = ((!\ucr4|c_int\(4) & (!\ucr4|c_int\(5) & \ucr4|c_int[10]~1_combout\))) # (!\ucr4|c_int[10]~2_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101010101110101",
+	lut_mask => "0101011101010101",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \ucr4|c_int[10]~2_combout\,
-	datab => \ucr4|c_int\(5),
-	datac => \ucr4|c_int[10]~1_combout\,
-	datad => \ucr4|c_int\(4),
+	datab => \ucr4|c_int\(4),
+	datac => \ucr4|c_int\(5),
+	datad => \ucr4|c_int[10]~1_combout\,
 	combout => \ucr4|c_int[10]~3_combout\);
 
 -- Location: LCCOMB_X26_Y19_N22
@@ -14570,7 +14570,7 @@ PORT MAP (
 	datad => \ucr4|c_int\(10),
 	combout => \ucr4|c_int[10]~5_combout\);
 
--- Location: FF_X26_Y19_N29
+-- Location: FF_X26_Y19_N9
 \ucr4|dir_int\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -14605,7 +14605,7 @@ PORT MAP (
 -- Location: LCCOMB_X26_Y19_N10
 \ucr4|c_int[10]~7\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr4|c_int[10]~7_combout\ = ((\ucr5|c_int\(0)) # ((\ucr4|c_int\(2)) # (\ucr4|c_int[10]~6_combout\))) # (!\ucr4|c_int\(1))
+-- \ucr4|c_int[10]~7_combout\ = ((\ucr4|c_int[10]~6_combout\) # ((\ucr5|c_int\(0)) # (\ucr4|c_int\(2)))) # (!\ucr4|c_int\(1))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14614,12 +14614,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \ucr4|c_int\(1),
-	datab => \ucr5|c_int\(0),
-	datac => \ucr4|c_int\(2),
-	datad => \ucr4|c_int[10]~6_combout\,
+	datab => \ucr4|c_int[10]~6_combout\,
+	datac => \ucr5|c_int\(0),
+	datad => \ucr4|c_int\(2),
 	combout => \ucr4|c_int[10]~7_combout\);
 
--- Location: LCCOMB_X26_Y19_N28
+-- Location: LCCOMB_X26_Y19_N8
 \ucr4|c_int[10]~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr4|c_int[10]~8_combout\ = (\ucr4|c_int[10]~4_combout\) # ((\ucr4|dir_int~q\ & ((\ucr4|c_int[10]~5_combout\) # (\ucr4|c_int[10]~7_combout\))))
@@ -14686,7 +14686,7 @@ PORT MAP (
 -- Location: LCCOMB_X26_Y18_N4
 \PWM2_FA02|LessThan0~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FA02|LessThan0~3_cout\ = CARRY((\ucr4|c_int\(1) & (!\PWM2_FA03|comp_int\(1) & !\PWM2_FA02|LessThan0~1_cout\)) # (!\ucr4|c_int\(1) & ((!\PWM2_FA02|LessThan0~1_cout\) # (!\PWM2_FA03|comp_int\(1)))))
+-- \PWM2_FA02|LessThan0~3_cout\ = CARRY((\PWM2_FA03|comp_int\(1) & (!\ucr4|c_int\(1) & !\PWM2_FA02|LessThan0~1_cout\)) # (!\PWM2_FA03|comp_int\(1) & ((!\PWM2_FA02|LessThan0~1_cout\) # (!\ucr4|c_int\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14694,8 +14694,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr4|c_int\(1),
-	datab => \PWM2_FA03|comp_int\(1),
+	dataa => \PWM2_FA03|comp_int\(1),
+	datab => \ucr4|c_int\(1),
 	datad => VCC,
 	cin => \PWM2_FA02|LessThan0~1_cout\,
 	cout => \PWM2_FA02|LessThan0~3_cout\);
@@ -14771,7 +14771,7 @@ PORT MAP (
 -- Location: LCCOMB_X26_Y18_N14
 \PWM2_FA02|LessThan0~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FA02|LessThan0~13_cout\ = CARRY((\PWM2_FA03|comp_int\(6) & ((\ucr4|c_int\(6)) # (!\PWM2_FA02|LessThan0~11_cout\))) # (!\PWM2_FA03|comp_int\(6) & (\ucr4|c_int\(6) & !\PWM2_FA02|LessThan0~11_cout\)))
+-- \PWM2_FA02|LessThan0~13_cout\ = CARRY((\ucr4|c_int\(6) & ((\PWM2_FA03|comp_int\(6)) # (!\PWM2_FA02|LessThan0~11_cout\))) # (!\ucr4|c_int\(6) & (\PWM2_FA03|comp_int\(6) & !\PWM2_FA02|LessThan0~11_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14779,8 +14779,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FA03|comp_int\(6),
-	datab => \ucr4|c_int\(6),
+	dataa => \ucr4|c_int\(6),
+	datab => \PWM2_FA03|comp_int\(6),
 	datad => VCC,
 	cin => \PWM2_FA02|LessThan0~11_cout\,
 	cout => \PWM2_FA02|LessThan0~13_cout\);
@@ -14788,16 +14788,16 @@ PORT MAP (
 -- Location: LCCOMB_X26_Y18_N16
 \PWM2_FA02|LessThan0~15\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FA02|LessThan0~15_cout\ = CARRY((\PWM2_FA03|comp_int\(7) & (\ucr4|c_int\(7) & !\PWM2_FA02|LessThan0~13_cout\)) # (!\PWM2_FA03|comp_int\(7) & ((\ucr4|c_int\(7)) # (!\PWM2_FA02|LessThan0~13_cout\))))
+-- \PWM2_FA02|LessThan0~15_cout\ = CARRY((\ucr4|c_int\(7) & ((!\PWM2_FA02|LessThan0~13_cout\) # (!\PWM2_FA03|comp_int\(7)))) # (!\ucr4|c_int\(7) & (!\PWM2_FA03|comp_int\(7) & !\PWM2_FA02|LessThan0~13_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001001101",
+	lut_mask => "0000000000101011",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FA03|comp_int\(7),
-	datab => \ucr4|c_int\(7),
+	dataa => \ucr4|c_int\(7),
+	datab => \PWM2_FA03|comp_int\(7),
 	datad => VCC,
 	cin => \PWM2_FA02|LessThan0~13_cout\,
 	cout => \PWM2_FA02|LessThan0~15_cout\);
@@ -14822,7 +14822,7 @@ PORT MAP (
 -- Location: LCCOMB_X26_Y18_N20
 \PWM2_FA02|LessThan0~19\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FA02|LessThan0~19_cout\ = CARRY((\ucr4|c_int\(9) & (!\PWM2_FA03|comp_int\(9) & !\PWM2_FA02|LessThan0~17_cout\)) # (!\ucr4|c_int\(9) & ((!\PWM2_FA02|LessThan0~17_cout\) # (!\PWM2_FA03|comp_int\(9)))))
+-- \PWM2_FA02|LessThan0~19_cout\ = CARRY((\PWM2_FA03|comp_int\(9) & (!\ucr4|c_int\(9) & !\PWM2_FA02|LessThan0~17_cout\)) # (!\PWM2_FA03|comp_int\(9) & ((!\PWM2_FA02|LessThan0~17_cout\) # (!\ucr4|c_int\(9)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14830,8 +14830,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr4|c_int\(9),
-	datab => \PWM2_FA03|comp_int\(9),
+	dataa => \PWM2_FA03|comp_int\(9),
+	datab => \ucr4|c_int\(9),
 	datad => VCC,
 	cin => \PWM2_FA02|LessThan0~17_cout\,
 	cout => \PWM2_FA02|LessThan0~19_cout\);
@@ -14843,11 +14843,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000110011001111",
+	lut_mask => "0000101010101111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \PWM2_FA03|comp_int\(10),
+	dataa => \PWM2_FA03|comp_int\(10),
 	datad => \ucr4|c_int\(10),
 	cin => \PWM2_FA02|LessThan0~19_cout\,
 	combout => \PWM2_FA02|LessThan0~20_combout\);
@@ -15411,7 +15411,7 @@ PORT MAP (
 	combout => \ucr6|Add2~4_combout\,
 	cout => \ucr6|Add2~5\);
 
--- Location: LCCOMB_X26_Y17_N30
+-- Location: LCCOMB_X26_Y17_N22
 \ucr6|c_int[2]~14\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr6|c_int[2]~14_combout\ = !\ucr6|Add2~4_combout\
@@ -15474,7 +15474,7 @@ PORT MAP (
 	combout => \ucr6|Add2~6_combout\,
 	cout => \ucr6|Add2~7\);
 
--- Location: LCCOMB_X26_Y17_N22
+-- Location: LCCOMB_X26_Y17_N10
 \ucr6|c_int[3]~13\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr6|c_int[3]~13_combout\ = !\ucr6|Add2~6_combout\
@@ -15488,7 +15488,7 @@ PORT MAP (
 	datac => \ucr6|Add2~6_combout\,
 	combout => \ucr6|c_int[3]~13_combout\);
 
--- Location: FF_X26_Y17_N23
+-- Location: FF_X26_Y17_N11
 \ucr6|c_int[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -15522,7 +15522,7 @@ PORT MAP (
 	combout => \ucr6|Add2~8_combout\,
 	cout => \ucr6|Add2~9\);
 
--- Location: LCCOMB_X26_Y17_N8
+-- Location: LCCOMB_X26_Y17_N16
 \ucr6|c_int[4]~12\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr6|c_int[4]~12_combout\ = !\ucr6|Add2~8_combout\
@@ -15536,7 +15536,7 @@ PORT MAP (
 	datad => \ucr6|Add2~8_combout\,
 	combout => \ucr6|c_int[4]~12_combout\);
 
--- Location: FF_X26_Y17_N9
+-- Location: FF_X26_Y17_N17
 \ucr6|c_int[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -15603,8 +15603,8 @@ PORT MAP (
 -- Location: LCCOMB_X25_Y17_N12
 \ucr6|Add2~12\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr6|Add2~12_combout\ = ((\ucr6|c_int[0]~7_combout\ $ (\ucr6|c_int\(6) $ (!\ucr6|Add2~11\)))) # (GND)
--- \ucr6|Add2~13\ = CARRY((\ucr6|c_int[0]~7_combout\ & ((\ucr6|c_int\(6)) # (!\ucr6|Add2~11\))) # (!\ucr6|c_int[0]~7_combout\ & (\ucr6|c_int\(6) & !\ucr6|Add2~11\)))
+-- \ucr6|Add2~12_combout\ = ((\ucr6|c_int\(6) $ (\ucr6|c_int[0]~7_combout\ $ (!\ucr6|Add2~11\)))) # (GND)
+-- \ucr6|Add2~13\ = CARRY((\ucr6|c_int\(6) & ((\ucr6|c_int[0]~7_combout\) # (!\ucr6|Add2~11\))) # (!\ucr6|c_int\(6) & (\ucr6|c_int[0]~7_combout\ & !\ucr6|Add2~11\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15612,8 +15612,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr6|c_int[0]~7_combout\,
-	datab => \ucr6|c_int\(6),
+	dataa => \ucr6|c_int\(6),
+	datab => \ucr6|c_int[0]~7_combout\,
 	datad => VCC,
 	cin => \ucr6|Add2~11\,
 	combout => \ucr6|Add2~12_combout\,
@@ -15654,7 +15654,7 @@ PORT MAP (
 	combout => \ucr6|Add2~14_combout\,
 	cout => \ucr6|Add2~15\);
 
--- Location: LCCOMB_X26_Y17_N24
+-- Location: LCCOMB_X26_Y17_N0
 \ucr6|c_int[7]~10\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr6|c_int[7]~10_combout\ = !\ucr6|Add2~14_combout\
@@ -15668,7 +15668,7 @@ PORT MAP (
 	datad => \ucr6|Add2~14_combout\,
 	combout => \ucr6|c_int[7]~10_combout\);
 
--- Location: FF_X26_Y17_N25
+-- Location: FF_X26_Y17_N1
 \ucr6|c_int[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -15734,9 +15734,9 @@ PORT MAP (
 -- Location: LCCOMB_X25_Y17_N18
 \ucr6|Add2~18\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr6|Add2~18_combout\ = (\ucr6|c_int\(9) & ((\ucr6|c_int[0]~7_combout\ & (\ucr6|Add2~17\ & VCC)) # (!\ucr6|c_int[0]~7_combout\ & (!\ucr6|Add2~17\)))) # (!\ucr6|c_int\(9) & ((\ucr6|c_int[0]~7_combout\ & (!\ucr6|Add2~17\)) # (!\ucr6|c_int[0]~7_combout\ & 
--- ((\ucr6|Add2~17\) # (GND)))))
--- \ucr6|Add2~19\ = CARRY((\ucr6|c_int\(9) & (!\ucr6|c_int[0]~7_combout\ & !\ucr6|Add2~17\)) # (!\ucr6|c_int\(9) & ((!\ucr6|Add2~17\) # (!\ucr6|c_int[0]~7_combout\))))
+-- \ucr6|Add2~18_combout\ = (\ucr6|c_int[0]~7_combout\ & ((\ucr6|c_int\(9) & (\ucr6|Add2~17\ & VCC)) # (!\ucr6|c_int\(9) & (!\ucr6|Add2~17\)))) # (!\ucr6|c_int[0]~7_combout\ & ((\ucr6|c_int\(9) & (!\ucr6|Add2~17\)) # (!\ucr6|c_int\(9) & ((\ucr6|Add2~17\) # 
+-- (GND)))))
+-- \ucr6|Add2~19\ = CARRY((\ucr6|c_int[0]~7_combout\ & (!\ucr6|c_int\(9) & !\ucr6|Add2~17\)) # (!\ucr6|c_int[0]~7_combout\ & ((!\ucr6|Add2~17\) # (!\ucr6|c_int\(9)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15744,8 +15744,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr6|c_int\(9),
-	datab => \ucr6|c_int[0]~7_combout\,
+	dataa => \ucr6|c_int[0]~7_combout\,
+	datab => \ucr6|c_int\(9),
 	datad => VCC,
 	cin => \ucr6|Add2~17\,
 	combout => \ucr6|Add2~18_combout\,
@@ -15800,7 +15800,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \ucr6|c_int\(10));
 
--- Location: LCCOMB_X26_Y17_N16
+-- Location: LCCOMB_X26_Y17_N24
 \ucr6|c_int[0]~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr6|c_int[0]~0_combout\ = (\ucr6|c_int\(10) & !\ucr6|c_int\(8))
@@ -15831,7 +15831,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \ucr6|dir_int~q\);
 
--- Location: LCCOMB_X26_Y17_N10
+-- Location: LCCOMB_X26_Y17_N30
 \ucr6|c_int[0]~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr6|c_int[0]~1_combout\ = (\ucr6|c_int\(6) & ((\ucr6|c_int[0]~0_combout\) # ((\ucr6|dir_int~q\)))) # (!\ucr6|c_int\(6) & (!\ucr6|c_int\(7) & ((\ucr6|c_int[0]~0_combout\) # (\ucr6|dir_int~q\))))
@@ -15851,24 +15851,24 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y17_N4
 \ucr6|c_int[0]~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr6|c_int[0]~4_combout\ = (\ucr6|c_int\(8) & (!\ucr6|c_int\(1) & (\ucr6|c_int\(0) & \ucr6|c_int\(2))))
+-- \ucr6|c_int[0]~4_combout\ = (\ucr6|c_int\(8) & (\ucr6|c_int\(0) & (!\ucr6|c_int\(1) & \ucr6|c_int\(2))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010000000000000",
+	lut_mask => "0000100000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \ucr6|c_int\(8),
-	datab => \ucr6|c_int\(1),
-	datac => \ucr6|c_int\(0),
+	datab => \ucr6|c_int\(0),
+	datac => \ucr6|c_int\(1),
 	datad => \ucr6|c_int\(2),
 	combout => \ucr6|c_int[0]~4_combout\);
 
 -- Location: LCCOMB_X26_Y17_N28
 \ucr6|c_int[0]~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr6|c_int[0]~5_combout\ = (\ucr6|c_int\(5) & (\ucr6|c_int\(3) & (\ucr6|c_int\(4) & \ucr6|c_int[0]~4_combout\)))
+-- \ucr6|c_int[0]~5_combout\ = (\ucr6|c_int\(5) & (\ucr6|c_int\(4) & (\ucr6|c_int\(3) & \ucr6|c_int[0]~4_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15877,8 +15877,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \ucr6|c_int\(5),
-	datab => \ucr6|c_int\(3),
-	datac => \ucr6|c_int\(4),
+	datab => \ucr6|c_int\(4),
+	datac => \ucr6|c_int\(3),
 	datad => \ucr6|c_int[0]~4_combout\,
 	combout => \ucr6|c_int[0]~5_combout\);
 
@@ -15899,7 +15899,7 @@ PORT MAP (
 	datad => \ucr6|c_int[0]~5_combout\,
 	combout => \ucr6|c_int[0]~6_combout\);
 
--- Location: LCCOMB_X26_Y17_N0
+-- Location: LCCOMB_X26_Y17_N8
 \ucr6|c_int[0]~2\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \ucr6|c_int[0]~2_combout\ = ((\ucr6|c_int\(1) & (!\ucr6|c_int\(0) & !\ucr6|c_int\(2)))) # (!\ucr6|c_int\(3))
@@ -15919,18 +15919,18 @@ PORT MAP (
 -- Location: LCCOMB_X26_Y17_N26
 \ucr6|c_int[0]~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \ucr6|c_int[0]~3_combout\ = (!\ucr6|c_int\(5) & (\ucr6|c_int[0]~0_combout\ & (!\ucr6|c_int\(4) & \ucr6|c_int[0]~2_combout\)))
+-- \ucr6|c_int[0]~3_combout\ = (!\ucr6|c_int\(5) & (\ucr6|c_int[0]~0_combout\ & (\ucr6|c_int[0]~2_combout\ & !\ucr6|c_int\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000010000000000",
+	lut_mask => "0000000001000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \ucr6|c_int\(5),
 	datab => \ucr6|c_int[0]~0_combout\,
-	datac => \ucr6|c_int\(4),
-	datad => \ucr6|c_int[0]~2_combout\,
+	datac => \ucr6|c_int[0]~2_combout\,
+	datad => \ucr6|c_int\(4),
 	combout => \ucr6|c_int[0]~3_combout\);
 
 -- Location: LCCOMB_X26_Y17_N4
@@ -16154,7 +16154,7 @@ PORT MAP (
 -- Location: LCCOMB_X25_Y18_N0
 \PWM2_FA03|LessThan0~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FA03|LessThan0~1_cout\ = CARRY((\PWM2_FA03|comp_int\(0) & \ucr6|c_int\(0)))
+-- \PWM2_FA03|LessThan0~1_cout\ = CARRY((\ucr6|c_int\(0) & \PWM2_FA03|comp_int\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16162,8 +16162,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FA03|comp_int\(0),
-	datab => \ucr6|c_int\(0),
+	dataa => \ucr6|c_int\(0),
+	datab => \PWM2_FA03|comp_int\(0),
 	datad => VCC,
 	cout => \PWM2_FA03|LessThan0~1_cout\);
 
@@ -16238,7 +16238,7 @@ PORT MAP (
 -- Location: LCCOMB_X25_Y18_N10
 \PWM2_FA03|LessThan0~11\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FA03|LessThan0~11_cout\ = CARRY((\ucr6|c_int\(5) & (!\PWM2_FA03|comp_int\(5) & !\PWM2_FA03|LessThan0~9_cout\)) # (!\ucr6|c_int\(5) & ((!\PWM2_FA03|LessThan0~9_cout\) # (!\PWM2_FA03|comp_int\(5)))))
+-- \PWM2_FA03|LessThan0~11_cout\ = CARRY((\PWM2_FA03|comp_int\(5) & (!\ucr6|c_int\(5) & !\PWM2_FA03|LessThan0~9_cout\)) # (!\PWM2_FA03|comp_int\(5) & ((!\PWM2_FA03|LessThan0~9_cout\) # (!\ucr6|c_int\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16246,8 +16246,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr6|c_int\(5),
-	datab => \PWM2_FA03|comp_int\(5),
+	dataa => \PWM2_FA03|comp_int\(5),
+	datab => \ucr6|c_int\(5),
 	datad => VCC,
 	cin => \PWM2_FA03|LessThan0~9_cout\,
 	cout => \PWM2_FA03|LessThan0~11_cout\);
@@ -16323,16 +16323,16 @@ PORT MAP (
 -- Location: LCCOMB_X25_Y18_N20
 \PWM2_FA03|LessThan0~20\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FA03|LessThan0~20_combout\ = (\ucr6|c_int\(10) & (!\PWM2_FA03|LessThan0~19_cout\ & \PWM2_FA03|comp_int\(10))) # (!\ucr6|c_int\(10) & ((\PWM2_FA03|comp_int\(10)) # (!\PWM2_FA03|LessThan0~19_cout\)))
+-- \PWM2_FA03|LessThan0~20_combout\ = (\PWM2_FA03|comp_int\(10) & ((!\ucr6|c_int\(10)) # (!\PWM2_FA03|LessThan0~19_cout\))) # (!\PWM2_FA03|comp_int\(10) & (!\PWM2_FA03|LessThan0~19_cout\ & !\ucr6|c_int\(10)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101111100000101",
+	lut_mask => "0000110011001111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr6|c_int\(10),
-	datad => \PWM2_FA03|comp_int\(10),
+	datab => \PWM2_FA03|comp_int\(10),
+	datad => \ucr6|c_int\(10),
 	cin => \PWM2_FA03|LessThan0~19_cout\,
 	combout => \PWM2_FA03|LessThan0~20_combout\);
 
@@ -18758,13 +18758,13 @@ PORT MAP (
 	q => \u6|th_b\(15));
 
 -- Location: M9K_X33_Y3_N0
-\usin_b|Mux6_rtl_0|auto_generated|ram_block1a7\ : cycloneive_ram_block
+\usin_b|Mux6_rtl_0|auto_generated|ram_block1a6\ : cycloneive_ram_block
 -- pragma translate_off
 GENERIC MAP (
-	mem_init3 => X"44444444444444444444444444444444444555555555555555555555555555555555555555555555556666666666666666666666666666666666666666666666666677777777777777777777777777777777777777777777777777777778888888888888888888888888888888888888888888888888888888888888888888888889999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998888888888888",
-	mem_init2 => X"88888888888888888888888888888888888888888888888888888888887777777777777777777777777777777777777777777777777777777766666666666666666666666666666666666666666666666665555555555555555555555555555555555555555555555554444444444444444444444444444444444444444444444443333333333333333333333333333333333333333333333333333222222222222222222222222222222222222222222222222222222222222111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000",
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111122222222222222222222222222222222222222222222222222222222222233333333333333333333333333333333333333333333333333344444444444444444444444444444444444444444444444445555555555555555555555555555555555555555555555566666666666666666666666666666666666666666666666666777777777777777777777777777777777777777777777777777777788888888888888",
-	mem_init0 => X"88888888888888888888888888888888888888888888888888888888889999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998888888888888888888888888888888888888888888888888888888888888888888888877777777777777777777777777777777777777777777777777777777666666666666666666666666666666666666666666666666655555555555555555555555555555555555555",
+	mem_init3 => X"55555555555555544444444444444444444444444444444444444444444444444444444444444444444444444333333333333333333333333333333333333333333333333333333333333333333333333333333322222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222211111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+	mem_init2 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111112222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222223333333333333333333333333333333333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444444444444444444444444444445555555555555555",
+	mem_init1 => X"55555555555555555555555555555555555555555555555555555555566666666666666666666666666666666666666666666666666666666666666666666666666667777777777777777777777777777777777777777777777777777777777777777777777777777777777777888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888899999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+	mem_init0 => X"99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888777777777777777777777777777777777777777777777777777777777777777777777777777777777777766666666666666666666666666666666666666666666666666666666666666666666666666665555555555555555555555555555555555555555555555555555555555",
 	data_interleave_offset_in_bits => 1,
 	data_interleave_width_in_bits => 1,
 	init_file => "DE0_NANO_PWM.DE0_NANO_PWM1.rtl.mif",
@@ -18778,7 +18778,7 @@ GENERIC MAP (
 	port_a_data_out_clock => "clock0",
 	port_a_data_width => 4,
 	port_a_first_address => 0,
-	port_a_first_bit_number => 7,
+	port_a_first_bit_number => 6,
 	port_a_last_address => 2047,
 	port_a_logical_ram_depth => 2048,
 	port_a_logical_ram_width => 11,
@@ -18791,19 +18791,19 @@ GENERIC MAP (
 PORT MAP (
 	portare => VCC,
 	clk0 => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	portaaddr => \usin_b|Mux6_rtl_0|auto_generated|ram_block1a7_PORTAADDR_bus\,
+	portaaddr => \usin_b|Mux6_rtl_0|auto_generated|ram_block1a6_PORTAADDR_bus\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	portadataout => \usin_b|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\);
+	portadataout => \usin_b|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\);
 
 -- Location: M9K_X33_Y4_N0
 \usin_b|Mux6_rtl_0|auto_generated|ram_block1a0\ : cycloneive_ram_block
 -- pragma translate_off
 GENERIC MAP (
-	mem_init3 => X"44666555777888AAA999BBBCCCEEEDDDFFF00022211133444666555777888AAA999BBBCCCEEEDDDFFF0002221113334446665555777888AAA999BBBCCCEEEDDDDFFF000222111133344466665557777888AAAA999BBBBCCCEEEEDDDDFFF0000222211113333444466665555777778888AAAAA9999BBBBBCCCCCEEEEEDDDDDFFFFFF00000222222111111333333344444446666666655555555777777777888888888888AAAAAAAAAAAAAA999999999999999999999999BBBBBBBBBBBBBBBBBBBBBBBBBBBB999999999999999999999999AAAAAAAAAAAAAA88888888888777777777555555555666666644444444333333111111222222000000FFFFFDDDDDDEE",
-	mem_init2 => X"EEECCCCBBBBB99999AAAA8888877775555666644444333311122220000FFFFDDDDEEECCCCBBB9999AAA8888777555566644433331112220000FFFDDDEEECCCBBBB999AAA888777555666444333111222000FFFDDDEEECCCBBB999AAA888777555666444333111222000FFFDDDEEECCCBBB999AAA888777555666444333111222000FFFDDDEEECCCBBBB999AAA888777555566644433331112220000FFFDDDDEEECCCCBBB9999AAA888877775555666644433331111122220000FFFFDDDDDEEEECCCCCBBBBB9999AAAAA88888877777555555666666444444333333111111112222222000000000FFFFFFFFFDDDDDDDDDDDEEEEEEEEEEEEEECCCCCCCCCCCCCCCC",
-	mem_init1 => X"CCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBCCCCCCCCCCCCCCCCCCCCCCCCEEEEEEEEEEEEEEDDDDDDDDDDDDFFFFFFFFF0000000022222222111111133333334444446666665555577777788888AAAAA99999BBBBBCCCCEEEEEDDDDFFFFF00002222111133334444666655557778888AAAA999BBBBCCCEEEEDDDFFFF000222211133344446665557778888AAA999BBBCCCEEEDDDFFF0000222111333444666555777888AAA999BBBCCCEEEDDDFFF00022211133444666555777888AAA999BBBCCCEEEDDDFFF0002221113334446665555777888AAA999BBBCCCEEEDDDDFFF000222111133344466665557777888AAAA999BBBBCCCEEEEDDDDFFF00002222111133",
-	mem_init0 => X"33444466665555777778888AAAAA9999BBBBBCCCCCEEEEEDDDDDFFFFFF00000222222111111333333344444446666666655555555777777777888888888888AAAAAAAAAAAAAA999999999999999999999999BBBBBBBBBBBBBBBBBBBBBBBBBBBB999999999999999999999999AAAAAAAAAAAAAA88888888888777777777555555555666666644444444333333111111222222000000FFFFFDDDDDDEEEEECCCCBBBBB99999AAAA8888877775555666644444333311122220000FFFFDDDDEEECCCCBBB9999AAA8888777555566644433331112220000FFFDDDEEECCCBBBB999AAA888777555666444333111222000FFFDDDEEECCCBBB999AAA88877755566644433",
+	mem_init3 => X"991111888880000FFFFF77777EEEE66666DDDD55555CCCC44444BBBBB3333AAAAA22222999911111888880000FFFFF77777EEEEE6666DDDDD55555CCCCC44444BBBBB33333AAAAA2222299999111118888800000FFFFFF77777EEEEE666666DDDDD555555CCCCC444444BBBBBB333333AAAAAA2222229999991111118888880000000FFFFFFF777777EEEEEEE6666666DDDDDDDD5555555CCCCCCCC44444444BBBBBBBB333333333AAAAAAAAA2222222229999999999911111111118888888888880000000000000FFFFFFFFFFFFFF77777777777777777EEEEEEEEEEEEEEEEEEEEEE6666666666666666666666666666666666666DDDDDDDDDDDDDDDDDDDDDD",
+	mem_init2 => X"DDDDDDDDDDDDDDDDDDDDD6666666666666666666666666666666666666EEEEEEEEEEEEEEEEEEEEEE77777777777777777FFFFFFFFFFFFFF0000000000000888888888888111111111199999999999222222222AAAAAAAAA333333333BBBBBBBB44444444CCCCCCCC5555555DDDDDDDD6666666EEEEEEE777777FFFFFFF0000000888888111111999999222222AAAAAA333333BBBBBB444444CCCCC555555DDDDD666666EEEEE77777FFFFFF0000088888111119999922222AAAAA33333BBBBB44444CCCCC55555DDDDD6666EEEEE77777FFFFF00008888811111999922222AAAAA3333BBBBB44444CCCC55555DDDD66666EEEE77777FFFFF0000888881111999",
+	mem_init1 => X"992222AAAAA3333BBBBB44444CCCC55555DDDD66666EEEE77777FFFFF00008888811111999922222AAAAA3333BBBBB44444CCCCC5555DDDDD66666EEEEE77777FFFFF0000088888111119999922222AAAAA33333BBBBBB44444CCCCC555555DDDDD666666EEEEE777777FFFFFF000000888888111111999999222222AAAAAA3333333BBBBBBB444444CCCCCCC5555555DDDDDDDD6666666EEEEEEEE77777777FFFFFFFF000000000888888888111111111999999999992222222222AAAAAAAAAAAA3333333333333BBBBBBBBBBBBBB44444444444444444CCCCCCCCCCCCCCCCCCCCCC5555555555555555555555555555555555555DDDDDDDDDDDDDDDDDDDDDD",
+	mem_init0 => X"DDDDDDDDDDDDDDDDDDDDD5555555555555555555555555555555555555CCCCCCCCCCCCCCCCCCCCCC44444444444444444BBBBBBBBBBBBBB3333333333333AAAAAAAAAAAA222222222299999999999111111111888888888000000000FFFFFFFF77777777EEEEEEEE6666666DDDDDDDD5555555CCCCCCC444444BBBBBBB3333333AAAAAA222222999999111111888888000000FFFFFF777777EEEEE666666DDDDD555555CCCCC44444BBBBBB33333AAAAA2222299999111118888800000FFFFF77777EEEEE66666DDDDD5555CCCCC44444BBBBB3333AAAAA22222999911111888880000FFFFF77777EEEE66666DDDD55555CCCC44444BBBBB3333AAAAA2222999",
 	data_interleave_offset_in_bits => 1,
 	data_interleave_width_in_bits => 1,
 	init_file => "DE0_NANO_PWM.DE0_NANO_PWM1.rtl.mif",
@@ -18836,13 +18836,13 @@ PORT MAP (
 	portadataout => \usin_b|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\);
 
 -- Location: M9K_X33_Y2_N0
-\usin_b|Mux6_rtl_0|auto_generated|ram_block1a2\ : cycloneive_ram_block
+\usin_b|Mux6_rtl_0|auto_generated|ram_block1a1\ : cycloneive_ram_block
 -- pragma translate_off
 GENERIC MAP (
-	mem_init3 => X"17217217217417417217217217217217217257257257250250250250650650650650650650630630650650650650650250250257257217417413463065065025721346306502574134650257413065721346572134657413021746574130213021302574657465302130213026574653021374653026570215702157026530461374215304615704615304265370421537042615370426153704266153700426615537704426611553377004422666111555333377777000000004444444444440000000077777333555511166222440077335511622400733511624407335162407735162407351624735162403516407316247356247316207512473164031",
-	mem_init2 => X"64031647312475120356473120316475647564751203120364756475647520312036475603127564312756431275203647127560364312752056036431471275205205603603643643143147147147147147127127147147147147147147143143143143643643643643603603603603603603605605603603603603603643643143147147127527520560364314712752056431471205603147520564312056431205647120314756475203120312031475647562031203120316475640312475620356403164731647316403562075164035124035164073162473516240351624073516240073516244073351662440773551662244007733555116662222",
-	mem_init1 => X"44400000777777773333333333337777777700000444422266611155337700442266115337004226115377042611537042615370426153704265370421537426137026137426530461374215702657026570215742130465742130215746574657421302130257465746574630213065746302134650213465021746302572134630257217413465025721721741346306306502502572572572172172172172174174172172172172172172172572572572502502502506506506506506506506306306506506506506502502502572572174174134630650650257213463065025741346502574130657213465721346574130217465741302130213025746",
-	mem_init0 => X"57465302130213026574653021374653026570215702157026530461374215304615704615304265370421537042615370426153704266153700426615537704426611553377004422666111555333377777000000004444444444440000000077777333555511166222440077335511622400733511624407335162407735162407351624735162403516407316247356247316207512473164031640316473124751203564731203164756475647512031203647564756475203120364756031275643127564312752036471275603643127520560364314712752052056036036436431431471471471471471271271471471471471471471431431431431",
+	mem_init3 => X"20316475120356473120756403124756203164751203564731207564031647512035640312475120756403164731207562035640316473124751207512075620756203562035620356203562075620751247312473164035620751247316403512473164075124735620731640751640351240351240351640751640731624735124073162403516207351640735164073516240751624073516240735162407351624073516624073516224073511624077351662400735516224077355166244077355166224007735511662240077335511666224400777335551166622244400077733335551111666662222244444400000007777777777773333333333",
+	mem_init2 => X"33333333377777777777700000004444442222266666111155533337770004442226661155533777004422666115533770042266115537700422661553770442661553770422615537004266153770426115370422615370426615370426153704261537042615370426157042615370461537046153702615304261370421537426137046157046153042153042153046157046137026537421570461374215304613742157026530461374213742157026570265302653026530265302657026570215702157421374613046530265702137461304657021574213046530215746130465702137465302157461302657421304657021374653021574613021",
+	mem_init1 => X"57461302657421304657021374653021574613026574213046570213746130265742137465302657021374613046570215742137461304653026570265702157021574215742157421574215702157026530465304613742157026530461374265304613702653042157046137026137426537426537426137026137046153042653704615374261570426137042613704261537026153704261537042615370426153704261153704261553704266153700426115377042261553700422611533700422611553770042266115537700442266111553377000442226611155533377700044442226666111115555533333377777770000000000004444444444",
+	mem_init0 => X"44444444400000000000077777773333335555511111666622244440007773335551116622244000773355111662244007735511662240077355116224007335116224007355162240773511624007351662407355162407351162407351624073516240735162407351620735162407316240731624075162473516407356240351640731620731624735624735624731620731640751240356207316403562473164035620751247316403564035620751207512475124751247512475120751207562075620356403164731247512075640316473120756203564731247562031647312075640312475620316475120356473120756403124756203164751",
 	data_interleave_offset_in_bits => 1,
 	data_interleave_width_in_bits => 1,
 	init_file => "DE0_NANO_PWM.DE0_NANO_PWM1.rtl.mif",
@@ -18856,7 +18856,7 @@ GENERIC MAP (
 	port_a_data_out_clock => "clock0",
 	port_a_data_width => 4,
 	port_a_first_address => 0,
-	port_a_first_bit_number => 2,
+	port_a_first_bit_number => 1,
 	port_a_last_address => 2047,
 	port_a_logical_ram_depth => 2048,
 	port_a_logical_ram_width => 11,
@@ -18869,10 +18869,10 @@ GENERIC MAP (
 PORT MAP (
 	portare => VCC,
 	clk0 => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	portaaddr => \usin_b|Mux6_rtl_0|auto_generated|ram_block1a2_PORTAADDR_bus\,
+	portaaddr => \usin_b|Mux6_rtl_0|auto_generated|ram_block1a1_PORTAADDR_bus\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	portadataout => \usin_b|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\);
+	portadataout => \usin_b|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\);
 
 -- Location: LCCOMB_X31_Y17_N2
 \PWM1_FB01|LessThan0~3\ : cycloneive_lcell_comb
@@ -19050,11 +19050,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000101010101111",
+	lut_mask => "0000110011001111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|comp_int\(10),
+	datab => \PWM2_FB03|comp_int\(10),
 	datad => \ucr1|c_int\(10),
 	cin => \PWM1_FB01|LessThan0~21_cout\,
 	combout => \PWM1_FB01|LessThan0~22_combout\);
@@ -19066,11 +19066,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111010111111111",
+	lut_mask => "1111001111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM1_FA01|LessThan0~24_combout\,
+	datab => \PWM1_FA01|LessThan0~24_combout\,
 	datac => \ucr1|c_int\(15),
 	datad => \PWM1_FB01|LessThan0~22_combout\,
 	combout => \PWM1_FB01|LessThan0~24_combout\);
@@ -19550,7 +19550,7 @@ PORT MAP (
 -- Location: LCCOMB_X29_Y10_N10
 \PWM1_FB02|LessThan0~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FB02|LessThan0~5_cout\ = CARRY((\PWM2_FB03|comp_int\(2) & ((\ucr3|c_int\(2)) # (!\PWM1_FB02|LessThan0~3_cout\))) # (!\PWM2_FB03|comp_int\(2) & (\ucr3|c_int\(2) & !\PWM1_FB02|LessThan0~3_cout\)))
+-- \PWM1_FB02|LessThan0~5_cout\ = CARRY((\ucr3|c_int\(2) & ((\PWM2_FB03|comp_int\(2)) # (!\PWM1_FB02|LessThan0~3_cout\))) # (!\ucr3|c_int\(2) & (\PWM2_FB03|comp_int\(2) & !\PWM1_FB02|LessThan0~3_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -19558,8 +19558,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|comp_int\(2),
-	datab => \ucr3|c_int\(2),
+	dataa => \ucr3|c_int\(2),
+	datab => \PWM2_FB03|comp_int\(2),
 	datad => VCC,
 	cin => \PWM1_FB02|LessThan0~3_cout\,
 	cout => \PWM1_FB02|LessThan0~5_cout\);
@@ -19567,7 +19567,7 @@ PORT MAP (
 -- Location: LCCOMB_X29_Y10_N12
 \PWM1_FB02|LessThan0~7\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FB02|LessThan0~7_cout\ = CARRY((\ucr3|c_int\(3) & (!\PWM2_FB03|comp_int\(3) & !\PWM1_FB02|LessThan0~5_cout\)) # (!\ucr3|c_int\(3) & ((!\PWM1_FB02|LessThan0~5_cout\) # (!\PWM2_FB03|comp_int\(3)))))
+-- \PWM1_FB02|LessThan0~7_cout\ = CARRY((\PWM2_FB03|comp_int\(3) & (!\ucr3|c_int\(3) & !\PWM1_FB02|LessThan0~5_cout\)) # (!\PWM2_FB03|comp_int\(3) & ((!\PWM1_FB02|LessThan0~5_cout\) # (!\ucr3|c_int\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -19575,8 +19575,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr3|c_int\(3),
-	datab => \PWM2_FB03|comp_int\(3),
+	dataa => \PWM2_FB03|comp_int\(3),
+	datab => \ucr3|c_int\(3),
 	datad => VCC,
 	cin => \PWM1_FB02|LessThan0~5_cout\,
 	cout => \PWM1_FB02|LessThan0~7_cout\);
@@ -19601,7 +19601,7 @@ PORT MAP (
 -- Location: LCCOMB_X29_Y10_N16
 \PWM1_FB02|LessThan0~11\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FB02|LessThan0~11_cout\ = CARRY((\PWM2_FB03|comp_int\(5) & (!\ucr3|c_int\(5) & !\PWM1_FB02|LessThan0~9_cout\)) # (!\PWM2_FB03|comp_int\(5) & ((!\PWM1_FB02|LessThan0~9_cout\) # (!\ucr3|c_int\(5)))))
+-- \PWM1_FB02|LessThan0~11_cout\ = CARRY((\ucr3|c_int\(5) & (!\PWM2_FB03|comp_int\(5) & !\PWM1_FB02|LessThan0~9_cout\)) # (!\ucr3|c_int\(5) & ((!\PWM1_FB02|LessThan0~9_cout\) # (!\PWM2_FB03|comp_int\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -19609,8 +19609,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|comp_int\(5),
-	datab => \ucr3|c_int\(5),
+	dataa => \ucr3|c_int\(5),
+	datab => \PWM2_FB03|comp_int\(5),
 	datad => VCC,
 	cin => \PWM1_FB02|LessThan0~9_cout\,
 	cout => \PWM1_FB02|LessThan0~11_cout\);
@@ -20207,7 +20207,7 @@ PORT MAP (
 -- Location: LCCOMB_X29_Y16_N10
 \PWM1_FB03|LessThan0~7\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FB03|LessThan0~7_cout\ = CARRY((\ucr5|c_int\(3) & (!\PWM2_FB03|comp_int\(3) & !\PWM1_FB03|LessThan0~5_cout\)) # (!\ucr5|c_int\(3) & ((!\PWM1_FB03|LessThan0~5_cout\) # (!\PWM2_FB03|comp_int\(3)))))
+-- \PWM1_FB03|LessThan0~7_cout\ = CARRY((\PWM2_FB03|comp_int\(3) & (!\ucr5|c_int\(3) & !\PWM1_FB03|LessThan0~5_cout\)) # (!\PWM2_FB03|comp_int\(3) & ((!\PWM1_FB03|LessThan0~5_cout\) # (!\ucr5|c_int\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -20215,8 +20215,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr5|c_int\(3),
-	datab => \PWM2_FB03|comp_int\(3),
+	dataa => \PWM2_FB03|comp_int\(3),
+	datab => \ucr5|c_int\(3),
 	datad => VCC,
 	cin => \PWM1_FB03|LessThan0~5_cout\,
 	cout => \PWM1_FB03|LessThan0~7_cout\);
@@ -20258,7 +20258,7 @@ PORT MAP (
 -- Location: LCCOMB_X29_Y16_N16
 \PWM1_FB03|LessThan0~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FB03|LessThan0~13_cout\ = CARRY((\PWM2_FB03|comp_int\(6) & ((\ucr5|c_int\(6)) # (!\PWM1_FB03|LessThan0~11_cout\))) # (!\PWM2_FB03|comp_int\(6) & (\ucr5|c_int\(6) & !\PWM1_FB03|LessThan0~11_cout\)))
+-- \PWM1_FB03|LessThan0~13_cout\ = CARRY((\ucr5|c_int\(6) & ((\PWM2_FB03|comp_int\(6)) # (!\PWM1_FB03|LessThan0~11_cout\))) # (!\ucr5|c_int\(6) & (\PWM2_FB03|comp_int\(6) & !\PWM1_FB03|LessThan0~11_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -20266,8 +20266,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|comp_int\(6),
-	datab => \ucr5|c_int\(6),
+	dataa => \ucr5|c_int\(6),
+	datab => \PWM2_FB03|comp_int\(6),
 	datad => VCC,
 	cin => \PWM1_FB03|LessThan0~11_cout\,
 	cout => \PWM1_FB03|LessThan0~13_cout\);
@@ -20326,16 +20326,16 @@ PORT MAP (
 -- Location: LCCOMB_X29_Y16_N24
 \PWM1_FB03|LessThan0~20\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FB03|LessThan0~20_combout\ = (\ucr5|c_int\(10) & (!\PWM1_FB03|LessThan0~19_cout\ & \PWM2_FB03|comp_int\(10))) # (!\ucr5|c_int\(10) & ((\PWM2_FB03|comp_int\(10)) # (!\PWM1_FB03|LessThan0~19_cout\)))
+-- \PWM1_FB03|LessThan0~20_combout\ = (\ucr5|c_int\(10) & (\PWM2_FB03|comp_int\(10) & !\PWM1_FB03|LessThan0~19_cout\)) # (!\ucr5|c_int\(10) & ((\PWM2_FB03|comp_int\(10)) # (!\PWM1_FB03|LessThan0~19_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101111100000101",
+	lut_mask => "0100110101001101",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
 	dataa => \ucr5|c_int\(10),
-	datad => \PWM2_FB03|comp_int\(10),
+	datab => \PWM2_FB03|comp_int\(10),
 	cin => \PWM1_FB03|LessThan0~19_cout\,
 	combout => \PWM1_FB03|LessThan0~20_combout\);
 
@@ -21763,12 +21763,12 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011001100000000",
+	lut_mask => "0011000000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	datab => \PWM1_FB03|comp_out~q\,
-	datad => \PWM1_FB03|Add1~2_combout\,
+	datac => \PWM1_FB03|Add1~2_combout\,
 	combout => \PWM1_FB03|Add1~19_combout\);
 
 -- Location: FF_X25_Y15_N17
@@ -22040,18 +22040,18 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y15_N16
 \PWM1_FB03|port_PWM02~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FB03|port_PWM02~0_combout\ = (\PWM1_FB03|Equal1~1_combout\ & ((\PWM1_FB03|Equal1~0_combout\) # ((!\PWM1_FB03|comp_out~q\ & \PWM1_FB03|port_PWM02~q\)))) # (!\PWM1_FB03|Equal1~1_combout\ & (!\PWM1_FB03|comp_out~q\ & (\PWM1_FB03|port_PWM02~q\)))
+-- \PWM1_FB03|port_PWM02~0_combout\ = (\PWM1_FB03|Equal1~1_combout\ & ((\PWM1_FB03|Equal1~0_combout\) # ((\PWM1_FB03|port_PWM02~q\ & !\PWM1_FB03|comp_out~q\)))) # (!\PWM1_FB03|Equal1~1_combout\ & (((\PWM1_FB03|port_PWM02~q\ & !\PWM1_FB03|comp_out~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101000110000",
+	lut_mask => "1000100011111000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \PWM1_FB03|Equal1~1_combout\,
-	datab => \PWM1_FB03|comp_out~q\,
+	datab => \PWM1_FB03|Equal1~0_combout\,
 	datac => \PWM1_FB03|port_PWM02~q\,
-	datad => \PWM1_FB03|Equal1~0_combout\,
+	datad => \PWM1_FB03|comp_out~q\,
 	combout => \PWM1_FB03|port_PWM02~0_combout\);
 
 -- Location: FF_X27_Y15_N17
@@ -22087,7 +22087,7 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y11_N12
 \PWM2_FB01|LessThan0~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB01|LessThan0~3_cout\ = CARRY((\ucr2|c_int\(1) & (!\PWM2_FB03|comp_int\(1) & !\PWM2_FB01|LessThan0~1_cout\)) # (!\ucr2|c_int\(1) & ((!\PWM2_FB01|LessThan0~1_cout\) # (!\PWM2_FB03|comp_int\(1)))))
+-- \PWM2_FB01|LessThan0~3_cout\ = CARRY((\PWM2_FB03|comp_int\(1) & (!\ucr2|c_int\(1) & !\PWM2_FB01|LessThan0~1_cout\)) # (!\PWM2_FB03|comp_int\(1) & ((!\PWM2_FB01|LessThan0~1_cout\) # (!\ucr2|c_int\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22095,8 +22095,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr2|c_int\(1),
-	datab => \PWM2_FB03|comp_int\(1),
+	dataa => \PWM2_FB03|comp_int\(1),
+	datab => \ucr2|c_int\(1),
 	datad => VCC,
 	cin => \PWM2_FB01|LessThan0~1_cout\,
 	cout => \PWM2_FB01|LessThan0~3_cout\);
@@ -22138,7 +22138,7 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y11_N18
 \PWM2_FB01|LessThan0~9\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB01|LessThan0~9_cout\ = CARRY((\ucr2|c_int\(4) & ((\PWM2_FB03|comp_int\(4)) # (!\PWM2_FB01|LessThan0~7_cout\))) # (!\ucr2|c_int\(4) & (\PWM2_FB03|comp_int\(4) & !\PWM2_FB01|LessThan0~7_cout\)))
+-- \PWM2_FB01|LessThan0~9_cout\ = CARRY((\PWM2_FB03|comp_int\(4) & ((\ucr2|c_int\(4)) # (!\PWM2_FB01|LessThan0~7_cout\))) # (!\PWM2_FB03|comp_int\(4) & (\ucr2|c_int\(4) & !\PWM2_FB01|LessThan0~7_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22146,8 +22146,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr2|c_int\(4),
-	datab => \PWM2_FB03|comp_int\(4),
+	dataa => \PWM2_FB03|comp_int\(4),
+	datab => \ucr2|c_int\(4),
 	datad => VCC,
 	cin => \PWM2_FB01|LessThan0~7_cout\,
 	cout => \PWM2_FB01|LessThan0~9_cout\);
@@ -22172,16 +22172,16 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y11_N22
 \PWM2_FB01|LessThan0~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB01|LessThan0~13_cout\ = CARRY((\ucr2|c_int\(6) & (\PWM2_FB03|comp_int\(6) & !\PWM2_FB01|LessThan0~11_cout\)) # (!\ucr2|c_int\(6) & ((\PWM2_FB03|comp_int\(6)) # (!\PWM2_FB01|LessThan0~11_cout\))))
+-- \PWM2_FB01|LessThan0~13_cout\ = CARRY((\PWM2_FB03|comp_int\(6) & ((!\PWM2_FB01|LessThan0~11_cout\) # (!\ucr2|c_int\(6)))) # (!\PWM2_FB03|comp_int\(6) & (!\ucr2|c_int\(6) & !\PWM2_FB01|LessThan0~11_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001001101",
+	lut_mask => "0000000000101011",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr2|c_int\(6),
-	datab => \PWM2_FB03|comp_int\(6),
+	dataa => \PWM2_FB03|comp_int\(6),
+	datab => \ucr2|c_int\(6),
 	datad => VCC,
 	cin => \PWM2_FB01|LessThan0~11_cout\,
 	cout => \PWM2_FB01|LessThan0~13_cout\);
@@ -22189,16 +22189,16 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y11_N24
 \PWM2_FB01|LessThan0~15\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB01|LessThan0~15_cout\ = CARRY((\PWM2_FB03|comp_int\(7) & (\ucr2|c_int\(7) & !\PWM2_FB01|LessThan0~13_cout\)) # (!\PWM2_FB03|comp_int\(7) & ((\ucr2|c_int\(7)) # (!\PWM2_FB01|LessThan0~13_cout\))))
+-- \PWM2_FB01|LessThan0~15_cout\ = CARRY((\ucr2|c_int\(7) & ((!\PWM2_FB01|LessThan0~13_cout\) # (!\PWM2_FB03|comp_int\(7)))) # (!\ucr2|c_int\(7) & (!\PWM2_FB03|comp_int\(7) & !\PWM2_FB01|LessThan0~13_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001001101",
+	lut_mask => "0000000000101011",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|comp_int\(7),
-	datab => \ucr2|c_int\(7),
+	dataa => \ucr2|c_int\(7),
+	datab => \PWM2_FB03|comp_int\(7),
 	datad => VCC,
 	cin => \PWM2_FB01|LessThan0~13_cout\,
 	cout => \PWM2_FB01|LessThan0~15_cout\);
@@ -22240,7 +22240,7 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y11_N30
 \PWM2_FB01|LessThan0~20\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB01|LessThan0~20_combout\ = (\ucr2|c_int\(10) & ((\PWM2_FB03|comp_int\(10)) # (!\PWM2_FB01|LessThan0~19_cout\))) # (!\ucr2|c_int\(10) & (!\PWM2_FB01|LessThan0~19_cout\ & \PWM2_FB03|comp_int\(10)))
+-- \PWM2_FB01|LessThan0~20_combout\ = (\PWM2_FB03|comp_int\(10) & ((\ucr2|c_int\(10)) # (!\PWM2_FB01|LessThan0~19_cout\))) # (!\PWM2_FB03|comp_int\(10) & (!\PWM2_FB01|LessThan0~19_cout\ & \ucr2|c_int\(10)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22248,8 +22248,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr2|c_int\(10),
-	datad => \PWM2_FB03|comp_int\(10),
+	dataa => \PWM2_FB03|comp_int\(10),
+	datad => \ucr2|c_int\(10),
 	cin => \PWM2_FB01|LessThan0~19_cout\,
 	combout => \PWM2_FB01|LessThan0~20_combout\);
 
@@ -22812,7 +22812,7 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y18_N12
 \PWM2_FB02|LessThan0~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB02|LessThan0~13_cout\ = CARRY((\ucr4|c_int\(6) & ((\PWM2_FB03|comp_int\(6)) # (!\PWM2_FB02|LessThan0~11_cout\))) # (!\ucr4|c_int\(6) & (\PWM2_FB03|comp_int\(6) & !\PWM2_FB02|LessThan0~11_cout\)))
+-- \PWM2_FB02|LessThan0~13_cout\ = CARRY((\PWM2_FB03|comp_int\(6) & ((\ucr4|c_int\(6)) # (!\PWM2_FB02|LessThan0~11_cout\))) # (!\PWM2_FB03|comp_int\(6) & (\ucr4|c_int\(6) & !\PWM2_FB02|LessThan0~11_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22820,8 +22820,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr4|c_int\(6),
-	datab => \PWM2_FB03|comp_int\(6),
+	dataa => \PWM2_FB03|comp_int\(6),
+	datab => \ucr4|c_int\(6),
 	datad => VCC,
 	cin => \PWM2_FB02|LessThan0~11_cout\,
 	cout => \PWM2_FB02|LessThan0~13_cout\);
@@ -23352,7 +23352,7 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y17_N10
 \PWM2_FB03|LessThan0~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB03|LessThan0~1_cout\ = CARRY((\ucr6|c_int\(0) & \PWM2_FB03|comp_int\(0)))
+-- \PWM2_FB03|LessThan0~1_cout\ = CARRY((\PWM2_FB03|comp_int\(0) & \ucr6|c_int\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23360,8 +23360,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr6|c_int\(0),
-	datab => \PWM2_FB03|comp_int\(0),
+	dataa => \PWM2_FB03|comp_int\(0),
+	datab => \ucr6|c_int\(0),
 	datad => VCC,
 	cout => \PWM2_FB03|LessThan0~1_cout\);
 
@@ -23402,7 +23402,7 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y17_N16
 \PWM2_FB03|LessThan0~7\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB03|LessThan0~7_cout\ = CARRY((\ucr6|c_int\(3) & (!\PWM2_FB03|comp_int\(3) & !\PWM2_FB03|LessThan0~5_cout\)) # (!\ucr6|c_int\(3) & ((!\PWM2_FB03|LessThan0~5_cout\) # (!\PWM2_FB03|comp_int\(3)))))
+-- \PWM2_FB03|LessThan0~7_cout\ = CARRY((\PWM2_FB03|comp_int\(3) & (!\ucr6|c_int\(3) & !\PWM2_FB03|LessThan0~5_cout\)) # (!\PWM2_FB03|comp_int\(3) & ((!\PWM2_FB03|LessThan0~5_cout\) # (!\ucr6|c_int\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23410,8 +23410,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr6|c_int\(3),
-	datab => \PWM2_FB03|comp_int\(3),
+	dataa => \PWM2_FB03|comp_int\(3),
+	datab => \ucr6|c_int\(3),
 	datad => VCC,
 	cin => \PWM2_FB03|LessThan0~5_cout\,
 	cout => \PWM2_FB03|LessThan0~7_cout\);
@@ -23436,7 +23436,7 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y17_N20
 \PWM2_FB03|LessThan0~11\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB03|LessThan0~11_cout\ = CARRY((\PWM2_FB03|comp_int\(5) & (!\ucr6|c_int\(5) & !\PWM2_FB03|LessThan0~9_cout\)) # (!\PWM2_FB03|comp_int\(5) & ((!\PWM2_FB03|LessThan0~9_cout\) # (!\ucr6|c_int\(5)))))
+-- \PWM2_FB03|LessThan0~11_cout\ = CARRY((\ucr6|c_int\(5) & (!\PWM2_FB03|comp_int\(5) & !\PWM2_FB03|LessThan0~9_cout\)) # (!\ucr6|c_int\(5) & ((!\PWM2_FB03|LessThan0~9_cout\) # (!\PWM2_FB03|comp_int\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23444,8 +23444,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|comp_int\(5),
-	datab => \ucr6|c_int\(5),
+	dataa => \ucr6|c_int\(5),
+	datab => \PWM2_FB03|comp_int\(5),
 	datad => VCC,
 	cin => \PWM2_FB03|LessThan0~9_cout\,
 	cout => \PWM2_FB03|LessThan0~11_cout\);
@@ -23453,16 +23453,16 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y17_N22
 \PWM2_FB03|LessThan0~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB03|LessThan0~13_cout\ = CARRY((\PWM2_FB03|comp_int\(6) & ((!\PWM2_FB03|LessThan0~11_cout\) # (!\ucr6|c_int\(6)))) # (!\PWM2_FB03|comp_int\(6) & (!\ucr6|c_int\(6) & !\PWM2_FB03|LessThan0~11_cout\)))
+-- \PWM2_FB03|LessThan0~13_cout\ = CARRY((\ucr6|c_int\(6) & (\PWM2_FB03|comp_int\(6) & !\PWM2_FB03|LessThan0~11_cout\)) # (!\ucr6|c_int\(6) & ((\PWM2_FB03|comp_int\(6)) # (!\PWM2_FB03|LessThan0~11_cout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000101011",
+	lut_mask => "0000000001001101",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|comp_int\(6),
-	datab => \ucr6|c_int\(6),
+	dataa => \ucr6|c_int\(6),
+	datab => \PWM2_FB03|comp_int\(6),
 	datad => VCC,
 	cin => \PWM2_FB03|LessThan0~11_cout\,
 	cout => \PWM2_FB03|LessThan0~13_cout\);
@@ -23470,7 +23470,7 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y17_N24
 \PWM2_FB03|LessThan0~15\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB03|LessThan0~15_cout\ = CARRY((\PWM2_FB03|comp_int\(7) & (!\ucr6|c_int\(7) & !\PWM2_FB03|LessThan0~13_cout\)) # (!\PWM2_FB03|comp_int\(7) & ((!\PWM2_FB03|LessThan0~13_cout\) # (!\ucr6|c_int\(7)))))
+-- \PWM2_FB03|LessThan0~15_cout\ = CARRY((\ucr6|c_int\(7) & (!\PWM2_FB03|comp_int\(7) & !\PWM2_FB03|LessThan0~13_cout\)) # (!\ucr6|c_int\(7) & ((!\PWM2_FB03|LessThan0~13_cout\) # (!\PWM2_FB03|comp_int\(7)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23478,8 +23478,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|comp_int\(7),
-	datab => \ucr6|c_int\(7),
+	dataa => \ucr6|c_int\(7),
+	datab => \PWM2_FB03|comp_int\(7),
 	datad => VCC,
 	cin => \PWM2_FB03|LessThan0~13_cout\,
 	cout => \PWM2_FB03|LessThan0~15_cout\);
@@ -23525,11 +23525,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000110011001111",
+	lut_mask => "0000101010101111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \PWM2_FB03|comp_int\(10),
+	dataa => \PWM2_FB03|comp_int\(10),
 	datad => \ucr6|c_int\(10),
 	cin => \PWM2_FB03|LessThan0~19_cout\,
 	combout => \PWM2_FB03|LessThan0~20_combout\);
@@ -23563,8 +23563,23 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \PWM2_FB03|comp_out~q\);
 
--- Location: FF_X46_Y32_N5
-\PWM2_FB03|var_Dead_Count2[5]\ : dffeas
+-- Location: LCCOMB_X46_Y32_N10
+\PWM2_FB03|Add1~19\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add1~19_combout\ = (!\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add1~2_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000000110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \PWM2_FB03|comp_out~q\,
+	datac => \PWM2_FB03|Add1~2_combout\,
+	combout => \PWM2_FB03|Add1~19_combout\);
+
+-- Location: FF_X46_Y32_N11
+\PWM2_FB03|var_Dead_Count2[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -23572,16 +23587,174 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	asdata => \PWM2_FB03|Add1~17_combout\,
-	sload => VCC,
+	d => \PWM2_FB03|Add1~19_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \PWM2_FB03|var_Dead_Count2\(5));
+	q => \PWM2_FB03|var_Dead_Count2\(1));
+
+-- Location: LCCOMB_X46_Y32_N16
+\PWM2_FB03|Add1~2\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add1~2_combout\ = (\PWM2_FB03|var_Dead_Count2\(1) & (!\PWM2_FB03|Add1~1\)) # (!\PWM2_FB03|var_Dead_Count2\(1) & ((\PWM2_FB03|Add1~1\) # (GND)))
+-- \PWM2_FB03|Add1~3\ = CARRY((!\PWM2_FB03|Add1~1\) # (!\PWM2_FB03|var_Dead_Count2\(1)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101101001011111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM2_FB03|var_Dead_Count2\(1),
+	datad => VCC,
+	cin => \PWM2_FB03|Add1~1\,
+	combout => \PWM2_FB03|Add1~2_combout\,
+	cout => \PWM2_FB03|Add1~3\);
+
+-- Location: LCCOMB_X46_Y32_N18
+\PWM2_FB03|Add1~4\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add1~4_combout\ = (\PWM2_FB03|var_Dead_Count2\(2) & (\PWM2_FB03|Add1~3\ $ (GND))) # (!\PWM2_FB03|var_Dead_Count2\(2) & (!\PWM2_FB03|Add1~3\ & VCC))
+-- \PWM2_FB03|Add1~5\ = CARRY((\PWM2_FB03|var_Dead_Count2\(2) & !\PWM2_FB03|Add1~3\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \PWM2_FB03|var_Dead_Count2\(2),
+	datad => VCC,
+	cin => \PWM2_FB03|Add1~3\,
+	combout => \PWM2_FB03|Add1~4_combout\,
+	cout => \PWM2_FB03|Add1~5\);
+
+-- Location: LCCOMB_X46_Y32_N8
+\PWM2_FB03|Add1~20\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add1~20_combout\ = (!\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add1~4_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \PWM2_FB03|comp_out~q\,
+	datad => \PWM2_FB03|Add1~4_combout\,
+	combout => \PWM2_FB03|Add1~20_combout\);
+
+-- Location: FF_X46_Y32_N9
+\PWM2_FB03|var_Dead_Count2[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \PWM2_FB03|Add1~20_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PWM2_FB03|var_Dead_Count2\(2));
+
+-- Location: LCCOMB_X46_Y32_N20
+\PWM2_FB03|Add1~6\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add1~6_combout\ = (\PWM2_FB03|var_Dead_Count2\(3) & (!\PWM2_FB03|Add1~5\)) # (!\PWM2_FB03|var_Dead_Count2\(3) & ((\PWM2_FB03|Add1~5\) # (GND)))
+-- \PWM2_FB03|Add1~7\ = CARRY((!\PWM2_FB03|Add1~5\) # (!\PWM2_FB03|var_Dead_Count2\(3)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \PWM2_FB03|var_Dead_Count2\(3),
+	datad => VCC,
+	cin => \PWM2_FB03|Add1~5\,
+	combout => \PWM2_FB03|Add1~6_combout\,
+	cout => \PWM2_FB03|Add1~7\);
+
+-- Location: LCCOMB_X46_Y32_N2
+\PWM2_FB03|Add1~8\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add1~8_combout\ = (!\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add1~6_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \PWM2_FB03|comp_out~q\,
+	datad => \PWM2_FB03|Add1~6_combout\,
+	combout => \PWM2_FB03|Add1~8_combout\);
+
+-- Location: FF_X46_Y32_N3
+\PWM2_FB03|var_Dead_Count2[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \PWM2_FB03|Add1~8_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PWM2_FB03|var_Dead_Count2\(3));
+
+-- Location: LCCOMB_X46_Y32_N22
+\PWM2_FB03|Add1~9\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add1~9_combout\ = (\PWM2_FB03|var_Dead_Count2\(4) & (\PWM2_FB03|Add1~7\ $ (GND))) # (!\PWM2_FB03|var_Dead_Count2\(4) & (!\PWM2_FB03|Add1~7\ & VCC))
+-- \PWM2_FB03|Add1~10\ = CARRY((\PWM2_FB03|var_Dead_Count2\(4) & !\PWM2_FB03|Add1~7\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010010100001010",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM2_FB03|var_Dead_Count2\(4),
+	datad => VCC,
+	cin => \PWM2_FB03|Add1~7\,
+	combout => \PWM2_FB03|Add1~9_combout\,
+	cout => \PWM2_FB03|Add1~10\);
+
+-- Location: LCCOMB_X46_Y32_N6
+\PWM2_FB03|Add1~16\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add1~16_combout\ = (\PWM2_FB03|Add1~9_combout\ & !\PWM2_FB03|comp_out~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \PWM2_FB03|Add1~9_combout\,
+	datad => \PWM2_FB03|comp_out~q\,
+	combout => \PWM2_FB03|Add1~16_combout\);
+
+-- Location: FF_X46_Y32_N7
+\PWM2_FB03|var_Dead_Count2[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \PWM2_FB03|Add1~16_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PWM2_FB03|var_Dead_Count2\(4));
 
 -- Location: LCCOMB_X46_Y32_N0
 \PWM2_FB03|LessThan2~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB03|LessThan2~0_combout\ = (((!\PWM2_FB03|var_Dead_Count2\(0)) # (!\PWM2_FB03|var_Dead_Count2\(2))) # (!\PWM2_FB03|var_Dead_Count2\(1))) # (!\PWM2_FB03|var_Dead_Count2\(3))
+-- \PWM2_FB03|LessThan2~0_combout\ = (((!\PWM2_FB03|var_Dead_Count2\(0)) # (!\PWM2_FB03|var_Dead_Count2\(2))) # (!\PWM2_FB03|var_Dead_Count2\(3))) # (!\PWM2_FB03|var_Dead_Count2\(1))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23589,8 +23762,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|var_Dead_Count2\(3),
-	datab => \PWM2_FB03|var_Dead_Count2\(1),
+	dataa => \PWM2_FB03|var_Dead_Count2\(1),
+	datab => \PWM2_FB03|var_Dead_Count2\(3),
 	datac => \PWM2_FB03|var_Dead_Count2\(2),
 	datad => \PWM2_FB03|var_Dead_Count2\(0),
 	combout => \PWM2_FB03|LessThan2~0_combout\);
@@ -23612,6 +23785,36 @@ PORT MAP (
 	cin => \PWM2_FB03|Add1~10\,
 	combout => \PWM2_FB03|Add1~11_combout\,
 	cout => \PWM2_FB03|Add1~12\);
+
+-- Location: LCCOMB_X47_Y32_N6
+\PWM2_FB03|Add1~17\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add1~17_combout\ = (!\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add1~11_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \PWM2_FB03|comp_out~q\,
+	datad => \PWM2_FB03|Add1~11_combout\,
+	combout => \PWM2_FB03|Add1~17_combout\);
+
+-- Location: FF_X46_Y32_N5
+\PWM2_FB03|var_Dead_Count2[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	asdata => \PWM2_FB03|Add1~17_combout\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PWM2_FB03|var_Dead_Count2\(5));
 
 -- Location: LCCOMB_X46_Y32_N26
 \PWM2_FB03|Add1~13\ : cycloneive_lcell_comb
@@ -23635,11 +23838,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011000000110000",
+	lut_mask => "0101000001010000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \PWM2_FB03|comp_out~q\,
+	dataa => \PWM2_FB03|comp_out~q\,
 	datac => \PWM2_FB03|Add1~13_combout\,
 	combout => \PWM2_FB03|Add1~15_combout\);
 
@@ -23721,258 +23924,55 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \PWM2_FB03|var_Dead_Count2\(0));
 
--- Location: LCCOMB_X46_Y32_N16
-\PWM2_FB03|Add1~2\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add1~2_combout\ = (\PWM2_FB03|var_Dead_Count2\(1) & (!\PWM2_FB03|Add1~1\)) # (!\PWM2_FB03|var_Dead_Count2\(1) & ((\PWM2_FB03|Add1~1\) # (GND)))
--- \PWM2_FB03|Add1~3\ = CARRY((!\PWM2_FB03|Add1~1\) # (!\PWM2_FB03|var_Dead_Count2\(1)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \PWM2_FB03|var_Dead_Count2\(1),
-	datad => VCC,
-	cin => \PWM2_FB03|Add1~1\,
-	combout => \PWM2_FB03|Add1~2_combout\,
-	cout => \PWM2_FB03|Add1~3\);
-
--- Location: LCCOMB_X46_Y32_N2
-\PWM2_FB03|Add1~19\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add1~19_combout\ = (!\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add1~2_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM2_FB03|comp_out~q\,
-	datad => \PWM2_FB03|Add1~2_combout\,
-	combout => \PWM2_FB03|Add1~19_combout\);
-
--- Location: FF_X46_Y32_N3
-\PWM2_FB03|var_Dead_Count2[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \PWM2_FB03|Add1~19_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \PWM2_FB03|var_Dead_Count2\(1));
-
--- Location: LCCOMB_X46_Y32_N18
-\PWM2_FB03|Add1~4\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add1~4_combout\ = (\PWM2_FB03|var_Dead_Count2\(2) & (\PWM2_FB03|Add1~3\ $ (GND))) # (!\PWM2_FB03|var_Dead_Count2\(2) & (!\PWM2_FB03|Add1~3\ & VCC))
--- \PWM2_FB03|Add1~5\ = CARRY((\PWM2_FB03|var_Dead_Count2\(2) & !\PWM2_FB03|Add1~3\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \PWM2_FB03|var_Dead_Count2\(2),
-	datad => VCC,
-	cin => \PWM2_FB03|Add1~3\,
-	combout => \PWM2_FB03|Add1~4_combout\,
-	cout => \PWM2_FB03|Add1~5\);
-
--- Location: LCCOMB_X46_Y32_N8
-\PWM2_FB03|Add1~20\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add1~20_combout\ = (!\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add1~4_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM2_FB03|comp_out~q\,
-	datad => \PWM2_FB03|Add1~4_combout\,
-	combout => \PWM2_FB03|Add1~20_combout\);
-
--- Location: FF_X46_Y32_N9
-\PWM2_FB03|var_Dead_Count2[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \PWM2_FB03|Add1~20_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \PWM2_FB03|var_Dead_Count2\(2));
-
--- Location: LCCOMB_X46_Y32_N20
-\PWM2_FB03|Add1~6\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add1~6_combout\ = (\PWM2_FB03|var_Dead_Count2\(3) & (!\PWM2_FB03|Add1~5\)) # (!\PWM2_FB03|var_Dead_Count2\(3) & ((\PWM2_FB03|Add1~5\) # (GND)))
--- \PWM2_FB03|Add1~7\ = CARRY((!\PWM2_FB03|Add1~5\) # (!\PWM2_FB03|var_Dead_Count2\(3)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM2_FB03|var_Dead_Count2\(3),
-	datad => VCC,
-	cin => \PWM2_FB03|Add1~5\,
-	combout => \PWM2_FB03|Add1~6_combout\,
-	cout => \PWM2_FB03|Add1~7\);
-
--- Location: LCCOMB_X46_Y32_N6
-\PWM2_FB03|Add1~8\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add1~8_combout\ = (!\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add1~6_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101010100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM2_FB03|comp_out~q\,
-	datad => \PWM2_FB03|Add1~6_combout\,
-	combout => \PWM2_FB03|Add1~8_combout\);
-
--- Location: FF_X46_Y32_N7
-\PWM2_FB03|var_Dead_Count2[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \PWM2_FB03|Add1~8_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \PWM2_FB03|var_Dead_Count2\(3));
-
--- Location: LCCOMB_X46_Y32_N22
-\PWM2_FB03|Add1~9\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add1~9_combout\ = (\PWM2_FB03|var_Dead_Count2\(4) & (\PWM2_FB03|Add1~7\ $ (GND))) # (!\PWM2_FB03|var_Dead_Count2\(4) & (!\PWM2_FB03|Add1~7\ & VCC))
--- \PWM2_FB03|Add1~10\ = CARRY((\PWM2_FB03|var_Dead_Count2\(4) & !\PWM2_FB03|Add1~7\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1010010100001010",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM2_FB03|var_Dead_Count2\(4),
-	datad => VCC,
-	cin => \PWM2_FB03|Add1~7\,
-	combout => \PWM2_FB03|Add1~9_combout\,
-	cout => \PWM2_FB03|Add1~10\);
-
--- Location: LCCOMB_X46_Y32_N30
-\PWM2_FB03|Add1~16\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add1~16_combout\ = (\PWM2_FB03|Add1~9_combout\ & !\PWM2_FB03|comp_out~q\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000011110000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \PWM2_FB03|Add1~9_combout\,
-	datad => \PWM2_FB03|comp_out~q\,
-	combout => \PWM2_FB03|Add1~16_combout\);
-
--- Location: FF_X46_Y32_N31
-\PWM2_FB03|var_Dead_Count2[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \PWM2_FB03|Add1~16_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \PWM2_FB03|var_Dead_Count2\(4));
-
--- Location: LCCOMB_X47_Y32_N22
-\PWM2_FB03|Add1~17\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add1~17_combout\ = (!\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add1~11_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \PWM2_FB03|comp_out~q\,
-	datad => \PWM2_FB03|Add1~11_combout\,
-	combout => \PWM2_FB03|Add1~17_combout\);
-
--- Location: LCCOMB_X46_Y32_N10
-\PWM2_FB03|Equal1~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Equal1~1_combout\ = (!\PWM2_FB03|Add1~17_combout\ & (!\PWM2_FB03|Add1~16_combout\ & (\PWM2_FB03|Add1~8_combout\ & !\PWM2_FB03|Add1~15_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM2_FB03|Add1~17_combout\,
-	datab => \PWM2_FB03|Add1~16_combout\,
-	datac => \PWM2_FB03|Add1~8_combout\,
-	datad => \PWM2_FB03|Add1~15_combout\,
-	combout => \PWM2_FB03|Equal1~1_combout\);
-
 -- Location: LCCOMB_X46_Y32_N28
 \PWM2_FB03|Equal1~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB03|Equal1~0_combout\ = (!\PWM2_FB03|comp_out~q\ & (\PWM2_FB03|Add1~4_combout\ & (\PWM2_FB03|Add1~0_combout\ & \PWM2_FB03|Add1~2_combout\)))
+-- \PWM2_FB03|Equal1~0_combout\ = (\PWM2_FB03|Add1~2_combout\ & (\PWM2_FB03|Add1~4_combout\ & (\PWM2_FB03|Add1~0_combout\ & !\PWM2_FB03|comp_out~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0100000000000000",
+	lut_mask => "0000000010000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|comp_out~q\,
+	dataa => \PWM2_FB03|Add1~2_combout\,
 	datab => \PWM2_FB03|Add1~4_combout\,
 	datac => \PWM2_FB03|Add1~0_combout\,
-	datad => \PWM2_FB03|Add1~2_combout\,
+	datad => \PWM2_FB03|comp_out~q\,
 	combout => \PWM2_FB03|Equal1~0_combout\);
+
+-- Location: LCCOMB_X46_Y32_N30
+\PWM2_FB03|Equal1~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Equal1~1_combout\ = (\PWM2_FB03|Add1~8_combout\ & (!\PWM2_FB03|Add1~16_combout\ & (!\PWM2_FB03|Add1~17_combout\ & !\PWM2_FB03|Add1~15_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM2_FB03|Add1~8_combout\,
+	datab => \PWM2_FB03|Add1~16_combout\,
+	datac => \PWM2_FB03|Add1~17_combout\,
+	datad => \PWM2_FB03|Add1~15_combout\,
+	combout => \PWM2_FB03|Equal1~1_combout\);
 
 -- Location: LCCOMB_X47_Y32_N24
 \PWM2_FB03|port_PWM02~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB03|port_PWM02~0_combout\ = (\PWM2_FB03|Equal1~1_combout\ & ((\PWM2_FB03|Equal1~0_combout\) # ((!\PWM2_FB03|comp_out~q\ & \PWM2_FB03|port_PWM02~q\)))) # (!\PWM2_FB03|Equal1~1_combout\ & (!\PWM2_FB03|comp_out~q\ & (\PWM2_FB03|port_PWM02~q\)))
+-- \PWM2_FB03|port_PWM02~0_combout\ = (\PWM2_FB03|comp_out~q\ & (\PWM2_FB03|Equal1~0_combout\ & ((\PWM2_FB03|Equal1~1_combout\)))) # (!\PWM2_FB03|comp_out~q\ & ((\PWM2_FB03|port_PWM02~q\) # ((\PWM2_FB03|Equal1~0_combout\ & \PWM2_FB03|Equal1~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101000110000",
+	lut_mask => "1101110001010000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|Equal1~1_combout\,
-	datab => \PWM2_FB03|comp_out~q\,
+	dataa => \PWM2_FB03|comp_out~q\,
+	datab => \PWM2_FB03|Equal1~0_combout\,
 	datac => \PWM2_FB03|port_PWM02~q\,
-	datad => \PWM2_FB03|Equal1~0_combout\,
+	datad => \PWM2_FB03|Equal1~1_combout\,
 	combout => \PWM2_FB03|port_PWM02~0_combout\);
 
 -- Location: FF_X47_Y32_N25
@@ -24839,119 +24839,23 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \PWM2_FB02|port_PWM01~q\);
 
--- Location: FF_X47_Y31_N19
-\PWM2_FB03|var_Dead_Count1[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	asdata => \PWM2_FB03|Add0~16_combout\,
-	sload => VCC,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \PWM2_FB03|var_Dead_Count1\(4));
-
--- Location: LCCOMB_X47_Y31_N24
-\PWM2_FB03|Add0~9\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X47_Y31_N8
+\PWM2_FB03|Add0~18\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB03|Add0~9_combout\ = (\PWM2_FB03|var_Dead_Count1\(4) & (\PWM2_FB03|Add0~7\ $ (GND))) # (!\PWM2_FB03|var_Dead_Count1\(4) & (!\PWM2_FB03|Add0~7\ & VCC))
--- \PWM2_FB03|Add0~10\ = CARRY((\PWM2_FB03|var_Dead_Count1\(4) & !\PWM2_FB03|Add0~7\))
+-- \PWM2_FB03|Add0~18_combout\ = (\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add0~0_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \PWM2_FB03|var_Dead_Count1\(4),
-	datad => VCC,
-	cin => \PWM2_FB03|Add0~7\,
-	combout => \PWM2_FB03|Add0~9_combout\,
-	cout => \PWM2_FB03|Add0~10\);
-
--- Location: LCCOMB_X47_Y31_N26
-\PWM2_FB03|Add0~11\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add0~11_combout\ = (\PWM2_FB03|var_Dead_Count1\(5) & (!\PWM2_FB03|Add0~10\)) # (!\PWM2_FB03|var_Dead_Count1\(5) & ((\PWM2_FB03|Add0~10\) # (GND)))
--- \PWM2_FB03|Add0~12\ = CARRY((!\PWM2_FB03|Add0~10\) # (!\PWM2_FB03|var_Dead_Count1\(5)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0101101001011111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM2_FB03|var_Dead_Count1\(5),
-	datad => VCC,
-	cin => \PWM2_FB03|Add0~10\,
-	combout => \PWM2_FB03|Add0~11_combout\,
-	cout => \PWM2_FB03|Add0~12\);
-
--- Location: LCCOMB_X47_Y31_N10
-\PWM2_FB03|Add0~17\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add0~17_combout\ = (\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add0~11_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110000000000",
+	lut_mask => "1010101000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \PWM2_FB03|comp_out~q\,
-	datad => \PWM2_FB03|Add0~11_combout\,
-	combout => \PWM2_FB03|Add0~17_combout\);
-
--- Location: FF_X47_Y31_N7
-\PWM2_FB03|var_Dead_Count1[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	asdata => \PWM2_FB03|Add0~17_combout\,
-	sload => VCC,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \PWM2_FB03|var_Dead_Count1\(5));
-
--- Location: LCCOMB_X47_Y31_N28
-\PWM2_FB03|Add0~13\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add0~13_combout\ = \PWM2_FB03|var_Dead_Count1\(6) $ (!\PWM2_FB03|Add0~12\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100001111000011",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \PWM2_FB03|var_Dead_Count1\(6),
-	cin => \PWM2_FB03|Add0~12\,
-	combout => \PWM2_FB03|Add0~13_combout\);
-
--- Location: LCCOMB_X47_Y31_N0
-\PWM2_FB03|Add0~15\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add0~15_combout\ = (\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add0~13_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100110000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \PWM2_FB03|comp_out~q\,
-	datad => \PWM2_FB03|Add0~13_combout\,
-	combout => \PWM2_FB03|Add0~15_combout\);
+	dataa => \PWM2_FB03|comp_out~q\,
+	datad => \PWM2_FB03|Add0~0_combout\,
+	combout => \PWM2_FB03|Add0~18_combout\);
 
 -- Location: FF_X47_Y31_N9
-\PWM2_FB03|var_Dead_Count1[6]\ : dffeas
+\PWM2_FB03|var_Dead_Count1[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -24959,45 +24863,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	asdata => \PWM2_FB03|Add0~15_combout\,
-	sload => VCC,
+	d => \PWM2_FB03|Add0~18_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \PWM2_FB03|var_Dead_Count1\(6));
-
--- Location: LCCOMB_X47_Y31_N4
-\PWM2_FB03|LessThan1~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|LessThan1~0_combout\ = (((!\PWM2_FB03|var_Dead_Count1\(3)) # (!\PWM2_FB03|var_Dead_Count1\(0))) # (!\PWM2_FB03|var_Dead_Count1\(2))) # (!\PWM2_FB03|var_Dead_Count1\(1))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM2_FB03|var_Dead_Count1\(1),
-	datab => \PWM2_FB03|var_Dead_Count1\(2),
-	datac => \PWM2_FB03|var_Dead_Count1\(0),
-	datad => \PWM2_FB03|var_Dead_Count1\(3),
-	combout => \PWM2_FB03|LessThan1~0_combout\);
-
--- Location: LCCOMB_X47_Y31_N2
-\PWM2_FB03|LessThan1~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|LessThan1~1_combout\ = (!\PWM2_FB03|var_Dead_Count1\(5) & (!\PWM2_FB03|var_Dead_Count1\(4) & (!\PWM2_FB03|var_Dead_Count1\(6) & \PWM2_FB03|LessThan1~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM2_FB03|var_Dead_Count1\(5),
-	datab => \PWM2_FB03|var_Dead_Count1\(4),
-	datac => \PWM2_FB03|var_Dead_Count1\(6),
-	datad => \PWM2_FB03|LessThan1~0_combout\,
-	combout => \PWM2_FB03|LessThan1~1_combout\);
+	q => \PWM2_FB03|var_Dead_Count1\(0));
 
 -- Location: LCCOMB_X47_Y31_N16
 \PWM2_FB03|Add0~0\ : cycloneive_lcell_comb
@@ -25016,35 +24885,6 @@ PORT MAP (
 	datad => VCC,
 	combout => \PWM2_FB03|Add0~0_combout\,
 	cout => \PWM2_FB03|Add0~1\);
-
--- Location: LCCOMB_X47_Y31_N12
-\PWM2_FB03|Add0~18\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Add0~18_combout\ = (\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add0~0_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => \PWM2_FB03|comp_out~q\,
-	datad => \PWM2_FB03|Add0~0_combout\,
-	combout => \PWM2_FB03|Add0~18_combout\);
-
--- Location: FF_X47_Y31_N13
-\PWM2_FB03|var_Dead_Count1[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \PWM2_FB03|Add0~18_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \PWM2_FB03|var_Dead_Count1\(0));
 
 -- Location: LCCOMB_X47_Y31_N18
 \PWM2_FB03|Add0~2\ : cycloneive_lcell_comb
@@ -25067,7 +24907,7 @@ PORT MAP (
 -- Location: LCCOMB_X47_Y31_N30
 \PWM2_FB03|Add0~19\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB03|Add0~19_combout\ = (\PWM2_FB03|Add0~2_combout\ & \PWM2_FB03|comp_out~q\)
+-- \PWM2_FB03|Add0~19_combout\ = (\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add0~2_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25075,8 +24915,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|Add0~2_combout\,
-	datac => \PWM2_FB03|comp_out~q\,
+	dataa => \PWM2_FB03|comp_out~q\,
+	datac => \PWM2_FB03|Add0~2_combout\,
 	combout => \PWM2_FB03|Add0~19_combout\);
 
 -- Location: FF_X47_Y31_N31
@@ -25159,22 +24999,22 @@ PORT MAP (
 	combout => \PWM2_FB03|Add0~6_combout\,
 	cout => \PWM2_FB03|Add0~7\);
 
--- Location: LCCOMB_X47_Y31_N8
+-- Location: LCCOMB_X47_Y31_N4
 \PWM2_FB03|Add0~8\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \PWM2_FB03|Add0~8_combout\ = (\PWM2_FB03|Add0~6_combout\ & \PWM2_FB03|comp_out~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000100010001000",
+	lut_mask => "1100110000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|Add0~6_combout\,
-	datab => \PWM2_FB03|comp_out~q\,
+	datab => \PWM2_FB03|Add0~6_combout\,
+	datad => \PWM2_FB03|comp_out~q\,
 	combout => \PWM2_FB03|Add0~8_combout\);
 
--- Location: FF_X47_Y31_N11
+-- Location: FF_X47_Y31_N7
 \PWM2_FB03|var_Dead_Count1[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -25189,22 +25029,199 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \PWM2_FB03|var_Dead_Count1\(3));
 
--- Location: LCCOMB_X47_Y32_N20
-\PWM2_FB03|Add0~16\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X47_Y31_N12
+\PWM2_FB03|LessThan1~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB03|Add0~16_combout\ = (\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add0~9_combout\)
+-- \PWM2_FB03|LessThan1~0_combout\ = (((!\PWM2_FB03|var_Dead_Count1\(0)) # (!\PWM2_FB03|var_Dead_Count1\(1))) # (!\PWM2_FB03|var_Dead_Count1\(2))) # (!\PWM2_FB03|var_Dead_Count1\(3))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000000000000",
+	lut_mask => "0111111111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	dataa => \PWM2_FB03|var_Dead_Count1\(3),
+	datab => \PWM2_FB03|var_Dead_Count1\(2),
+	datac => \PWM2_FB03|var_Dead_Count1\(1),
+	datad => \PWM2_FB03|var_Dead_Count1\(0),
+	combout => \PWM2_FB03|LessThan1~0_combout\);
+
+-- Location: LCCOMB_X47_Y31_N24
+\PWM2_FB03|Add0~9\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add0~9_combout\ = (\PWM2_FB03|var_Dead_Count1\(4) & (\PWM2_FB03|Add0~7\ $ (GND))) # (!\PWM2_FB03|var_Dead_Count1\(4) & (!\PWM2_FB03|Add0~7\ & VCC))
+-- \PWM2_FB03|Add0~10\ = CARRY((\PWM2_FB03|var_Dead_Count1\(4) & !\PWM2_FB03|Add0~7\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001100001100",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \PWM2_FB03|var_Dead_Count1\(4),
+	datad => VCC,
+	cin => \PWM2_FB03|Add0~7\,
+	combout => \PWM2_FB03|Add0~9_combout\,
+	cout => \PWM2_FB03|Add0~10\);
+
+-- Location: LCCOMB_X47_Y32_N8
+\PWM2_FB03|Add0~16\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add0~16_combout\ = (\PWM2_FB03|Add0~9_combout\ & \PWM2_FB03|comp_out~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100000011000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \PWM2_FB03|Add0~9_combout\,
 	datac => \PWM2_FB03|comp_out~q\,
-	datad => \PWM2_FB03|Add0~9_combout\,
 	combout => \PWM2_FB03|Add0~16_combout\);
 
+-- Location: FF_X47_Y31_N19
+\PWM2_FB03|var_Dead_Count1[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	asdata => \PWM2_FB03|Add0~16_combout\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PWM2_FB03|var_Dead_Count1\(4));
+
+-- Location: LCCOMB_X47_Y31_N26
+\PWM2_FB03|Add0~11\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add0~11_combout\ = (\PWM2_FB03|var_Dead_Count1\(5) & (!\PWM2_FB03|Add0~10\)) # (!\PWM2_FB03|var_Dead_Count1\(5) & ((\PWM2_FB03|Add0~10\) # (GND)))
+-- \PWM2_FB03|Add0~12\ = CARRY((!\PWM2_FB03|Add0~10\) # (!\PWM2_FB03|var_Dead_Count1\(5)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \PWM2_FB03|var_Dead_Count1\(5),
+	datad => VCC,
+	cin => \PWM2_FB03|Add0~10\,
+	combout => \PWM2_FB03|Add0~11_combout\,
+	cout => \PWM2_FB03|Add0~12\);
+
 -- Location: LCCOMB_X47_Y31_N6
+\PWM2_FB03|Add0~17\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add0~17_combout\ = (\PWM2_FB03|Add0~11_combout\ & \PWM2_FB03|comp_out~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \PWM2_FB03|Add0~11_combout\,
+	datad => \PWM2_FB03|comp_out~q\,
+	combout => \PWM2_FB03|Add0~17_combout\);
+
+-- Location: FF_X47_Y31_N3
+\PWM2_FB03|var_Dead_Count1[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	asdata => \PWM2_FB03|Add0~17_combout\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PWM2_FB03|var_Dead_Count1\(5));
+
+-- Location: LCCOMB_X47_Y31_N28
+\PWM2_FB03|Add0~13\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add0~13_combout\ = \PWM2_FB03|var_Dead_Count1\(6) $ (!\PWM2_FB03|Add0~12\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100001111000011",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \PWM2_FB03|var_Dead_Count1\(6),
+	cin => \PWM2_FB03|Add0~12\,
+	combout => \PWM2_FB03|Add0~13_combout\);
+
+-- Location: LCCOMB_X47_Y31_N0
+\PWM2_FB03|Add0~15\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Add0~15_combout\ = (\PWM2_FB03|Add0~13_combout\ & \PWM2_FB03|comp_out~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \PWM2_FB03|Add0~13_combout\,
+	datad => \PWM2_FB03|comp_out~q\,
+	combout => \PWM2_FB03|Add0~15_combout\);
+
+-- Location: FF_X47_Y31_N5
+\PWM2_FB03|var_Dead_Count1[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	asdata => \PWM2_FB03|Add0~15_combout\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PWM2_FB03|var_Dead_Count1\(6));
+
+-- Location: LCCOMB_X47_Y31_N14
+\PWM2_FB03|LessThan1~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|LessThan1~1_combout\ = (\PWM2_FB03|LessThan1~0_combout\ & (!\PWM2_FB03|var_Dead_Count1\(4) & (!\PWM2_FB03|var_Dead_Count1\(6) & !\PWM2_FB03|var_Dead_Count1\(5))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM2_FB03|LessThan1~0_combout\,
+	datab => \PWM2_FB03|var_Dead_Count1\(4),
+	datac => \PWM2_FB03|var_Dead_Count1\(6),
+	datad => \PWM2_FB03|var_Dead_Count1\(5),
+	combout => \PWM2_FB03|LessThan1~1_combout\);
+
+-- Location: LCCOMB_X47_Y31_N10
+\PWM2_FB03|Equal0~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM2_FB03|Equal0~0_combout\ = (\PWM2_FB03|comp_out~q\ & (\PWM2_FB03|Add0~0_combout\ & (\PWM2_FB03|Add0~2_combout\ & \PWM2_FB03|Add0~4_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM2_FB03|comp_out~q\,
+	datab => \PWM2_FB03|Add0~0_combout\,
+	datac => \PWM2_FB03|Add0~2_combout\,
+	datad => \PWM2_FB03|Add0~4_combout\,
+	combout => \PWM2_FB03|Equal0~0_combout\);
+
+-- Location: LCCOMB_X47_Y31_N2
 \PWM2_FB03|Equal0~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \PWM2_FB03|Equal0~1_combout\ = (!\PWM2_FB03|Add0~16_combout\ & (\PWM2_FB03|Add0~8_combout\ & (!\PWM2_FB03|Add0~17_combout\ & !\PWM2_FB03|Add0~15_combout\)))
@@ -25221,38 +25238,21 @@ PORT MAP (
 	datad => \PWM2_FB03|Add0~15_combout\,
 	combout => \PWM2_FB03|Equal0~1_combout\);
 
--- Location: LCCOMB_X47_Y31_N14
-\PWM2_FB03|Equal0~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM2_FB03|Equal0~0_combout\ = (\PWM2_FB03|Add0~2_combout\ & (\PWM2_FB03|Add0~0_combout\ & (\PWM2_FB03|comp_out~q\ & \PWM2_FB03|Add0~4_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1000000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM2_FB03|Add0~2_combout\,
-	datab => \PWM2_FB03|Add0~0_combout\,
-	datac => \PWM2_FB03|comp_out~q\,
-	datad => \PWM2_FB03|Add0~4_combout\,
-	combout => \PWM2_FB03|Equal0~0_combout\);
-
 -- Location: LCCOMB_X47_Y32_N26
 \PWM2_FB03|port_PWM01~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FB03|port_PWM01~0_combout\ = (\PWM2_FB03|Equal0~1_combout\ & ((\PWM2_FB03|Equal0~0_combout\) # ((\PWM2_FB03|comp_out~q\ & \PWM2_FB03|port_PWM01~q\)))) # (!\PWM2_FB03|Equal0~1_combout\ & (\PWM2_FB03|comp_out~q\ & (\PWM2_FB03|port_PWM01~q\)))
+-- \PWM2_FB03|port_PWM01~0_combout\ = (\PWM2_FB03|comp_out~q\ & ((\PWM2_FB03|port_PWM01~q\) # ((\PWM2_FB03|Equal0~0_combout\ & \PWM2_FB03|Equal0~1_combout\)))) # (!\PWM2_FB03|comp_out~q\ & (\PWM2_FB03|Equal0~0_combout\ & ((\PWM2_FB03|Equal0~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110101011000000",
+	lut_mask => "1110110010100000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FB03|Equal0~1_combout\,
-	datab => \PWM2_FB03|comp_out~q\,
+	dataa => \PWM2_FB03|comp_out~q\,
+	datab => \PWM2_FB03|Equal0~0_combout\,
 	datac => \PWM2_FB03|port_PWM01~q\,
-	datad => \PWM2_FB03|Equal0~0_combout\,
+	datad => \PWM2_FB03|Equal0~1_combout\,
 	combout => \PWM2_FB03|port_PWM01~0_combout\);
 
 -- Location: FF_X47_Y32_N27
@@ -25997,13 +25997,13 @@ PORT MAP (
 	q => \u6|th_c\(15));
 
 -- Location: M9K_X33_Y7_N0
-\usin_c|Mux6_rtl_0|auto_generated|ram_block1a7\ : cycloneive_ram_block
+\usin_c|Mux6_rtl_0|auto_generated|ram_block1a6\ : cycloneive_ram_block
 -- pragma translate_off
 GENERIC MAP (
-	mem_init3 => X"44444444444444444444444444444444444555555555555555555555555555555555555555555555556666666666666666666666666666666666666666666666666677777777777777777777777777777777777777777777777777777778888888888888888888888888888888888888888888888888888888888888888888888889999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998888888888888",
-	mem_init2 => X"88888888888888888888888888888888888888888888888888888888887777777777777777777777777777777777777777777777777777777766666666666666666666666666666666666666666666666665555555555555555555555555555555555555555555555554444444444444444444444444444444444444444444444443333333333333333333333333333333333333333333333333333222222222222222222222222222222222222222222222222222222222222111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000",
-	mem_init1 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111122222222222222222222222222222222222222222222222222222222222233333333333333333333333333333333333333333333333333344444444444444444444444444444444444444444444444445555555555555555555555555555555555555555555555566666666666666666666666666666666666666666666666666777777777777777777777777777777777777777777777777777777788888888888888",
-	mem_init0 => X"88888888888888888888888888888888888888888888888888888888889999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998888888888888888888888888888888888888888888888888888888888888888888888877777777777777777777777777777777777777777777777777777777666666666666666666666666666666666666666666666666655555555555555555555555555555555555555",
+	mem_init3 => X"55555555555555544444444444444444444444444444444444444444444444444444444444444444444444444333333333333333333333333333333333333333333333333333333333333333333333333333333322222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222211111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+	mem_init2 => X"00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111112222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222223333333333333333333333333333333333333333333333333333333333333333333333333333333444444444444444444444444444444444444444444444444444444444444444444444444445555555555555555",
+	mem_init1 => X"55555555555555555555555555555555555555555555555555555555566666666666666666666666666666666666666666666666666666666666666666666666666667777777777777777777777777777777777777777777777777777777777777777777777777777777777777888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888899999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+	mem_init0 => X"99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888777777777777777777777777777777777777777777777777777777777777777777777777777777777777766666666666666666666666666666666666666666666666666666666666666666666666666665555555555555555555555555555555555555555555555555555555555",
 	data_interleave_offset_in_bits => 1,
 	data_interleave_width_in_bits => 1,
 	init_file => "DE0_NANO_PWM.DE0_NANO_PWM2.rtl.mif",
@@ -26017,7 +26017,7 @@ GENERIC MAP (
 	port_a_data_out_clock => "clock0",
 	port_a_data_width => 4,
 	port_a_first_address => 0,
-	port_a_first_bit_number => 7,
+	port_a_first_bit_number => 6,
 	port_a_last_address => 2047,
 	port_a_logical_ram_depth => 2048,
 	port_a_logical_ram_width => 11,
@@ -26030,19 +26030,19 @@ GENERIC MAP (
 PORT MAP (
 	portare => VCC,
 	clk0 => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	portaaddr => \usin_c|Mux6_rtl_0|auto_generated|ram_block1a7_PORTAADDR_bus\,
+	portaaddr => \usin_c|Mux6_rtl_0|auto_generated|ram_block1a6_PORTAADDR_bus\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	portadataout => \usin_c|Mux6_rtl_0|auto_generated|ram_block1a7_PORTADATAOUT_bus\);
+	portadataout => \usin_c|Mux6_rtl_0|auto_generated|ram_block1a6_PORTADATAOUT_bus\);
 
 -- Location: M9K_X33_Y8_N0
 \usin_c|Mux6_rtl_0|auto_generated|ram_block1a0\ : cycloneive_ram_block
 -- pragma translate_off
 GENERIC MAP (
-	mem_init3 => X"44666555777888AAA999BBBCCCEEEDDDFFF00022211133444666555777888AAA999BBBCCCEEEDDDFFF0002221113334446665555777888AAA999BBBCCCEEEDDDDFFF000222111133344466665557777888AAAA999BBBBCCCEEEEDDDDFFF0000222211113333444466665555777778888AAAAA9999BBBBBCCCCCEEEEEDDDDDFFFFFF00000222222111111333333344444446666666655555555777777777888888888888AAAAAAAAAAAAAA999999999999999999999999BBBBBBBBBBBBBBBBBBBBBBBBBBBB999999999999999999999999AAAAAAAAAAAAAA88888888888777777777555555555666666644444444333333111111222222000000FFFFFDDDDDDEE",
-	mem_init2 => X"EEECCCCBBBBB99999AAAA8888877775555666644444333311122220000FFFFDDDDEEECCCCBBB9999AAA8888777555566644433331112220000FFFDDDEEECCCBBBB999AAA888777555666444333111222000FFFDDDEEECCCBBB999AAA888777555666444333111222000FFFDDDEEECCCBBB999AAA888777555666444333111222000FFFDDDEEECCCBBBB999AAA888777555566644433331112220000FFFDDDDEEECCCCBBB9999AAA888877775555666644433331111122220000FFFFDDDDDEEEECCCCCBBBBB9999AAAAA88888877777555555666666444444333333111111112222222000000000FFFFFFFFFDDDDDDDDDDDEEEEEEEEEEEEEECCCCCCCCCCCCCCCC",
-	mem_init1 => X"CCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBCCCCCCCCCCCCCCCCCCCCCCCCEEEEEEEEEEEEEEDDDDDDDDDDDDFFFFFFFFF0000000022222222111111133333334444446666665555577777788888AAAAA99999BBBBBCCCCEEEEEDDDDFFFFF00002222111133334444666655557778888AAAA999BBBBCCCEEEEDDDFFFF000222211133344446665557778888AAA999BBBCCCEEEDDDFFF0000222111333444666555777888AAA999BBBCCCEEEDDDFFF00022211133444666555777888AAA999BBBCCCEEEDDDFFF0002221113334446665555777888AAA999BBBCCCEEEDDDDFFF000222111133344466665557777888AAAA999BBBBCCCEEEEDDDDFFF00002222111133",
-	mem_init0 => X"33444466665555777778888AAAAA9999BBBBBCCCCCEEEEEDDDDDFFFFFF00000222222111111333333344444446666666655555555777777777888888888888AAAAAAAAAAAAAA999999999999999999999999BBBBBBBBBBBBBBBBBBBBBBBBBBBB999999999999999999999999AAAAAAAAAAAAAA88888888888777777777555555555666666644444444333333111111222222000000FFFFFDDDDDDEEEEECCCCBBBBB99999AAAA8888877775555666644444333311122220000FFFFDDDDEEECCCCBBB9999AAA8888777555566644433331112220000FFFDDDEEECCCBBBB999AAA888777555666444333111222000FFFDDDEEECCCBBB999AAA88877755566644433",
+	mem_init3 => X"991111888880000FFFFF77777EEEE66666DDDD55555CCCC44444BBBBB3333AAAAA22222999911111888880000FFFFF77777EEEEE6666DDDDD55555CCCCC44444BBBBB33333AAAAA2222299999111118888800000FFFFFF77777EEEEE666666DDDDD555555CCCCC444444BBBBBB333333AAAAAA2222229999991111118888880000000FFFFFFF777777EEEEEEE6666666DDDDDDDD5555555CCCCCCCC44444444BBBBBBBB333333333AAAAAAAAA2222222229999999999911111111118888888888880000000000000FFFFFFFFFFFFFF77777777777777777EEEEEEEEEEEEEEEEEEEEEE6666666666666666666666666666666666666DDDDDDDDDDDDDDDDDDDDDD",
+	mem_init2 => X"DDDDDDDDDDDDDDDDDDDDD6666666666666666666666666666666666666EEEEEEEEEEEEEEEEEEEEEE77777777777777777FFFFFFFFFFFFFF0000000000000888888888888111111111199999999999222222222AAAAAAAAA333333333BBBBBBBB44444444CCCCCCCC5555555DDDDDDDD6666666EEEEEEE777777FFFFFFF0000000888888111111999999222222AAAAAA333333BBBBBB444444CCCCC555555DDDDD666666EEEEE77777FFFFFF0000088888111119999922222AAAAA33333BBBBB44444CCCCC55555DDDDD6666EEEEE77777FFFFF00008888811111999922222AAAAA3333BBBBB44444CCCC55555DDDD66666EEEE77777FFFFF0000888881111999",
+	mem_init1 => X"992222AAAAA3333BBBBB44444CCCC55555DDDD66666EEEE77777FFFFF00008888811111999922222AAAAA3333BBBBB44444CCCCC5555DDDDD66666EEEEE77777FFFFF0000088888111119999922222AAAAA33333BBBBBB44444CCCCC555555DDDDD666666EEEEE777777FFFFFF000000888888111111999999222222AAAAAA3333333BBBBBBB444444CCCCCCC5555555DDDDDDDD6666666EEEEEEEE77777777FFFFFFFF000000000888888888111111111999999999992222222222AAAAAAAAAAAA3333333333333BBBBBBBBBBBBBB44444444444444444CCCCCCCCCCCCCCCCCCCCCC5555555555555555555555555555555555555DDDDDDDDDDDDDDDDDDDDDD",
+	mem_init0 => X"DDDDDDDDDDDDDDDDDDDDD5555555555555555555555555555555555555CCCCCCCCCCCCCCCCCCCCCC44444444444444444BBBBBBBBBBBBBB3333333333333AAAAAAAAAAAA222222222299999999999111111111888888888000000000FFFFFFFF77777777EEEEEEEE6666666DDDDDDDD5555555CCCCCCC444444BBBBBBB3333333AAAAAA222222999999111111888888000000FFFFFF777777EEEEE666666DDDDD555555CCCCC44444BBBBBB33333AAAAA2222299999111118888800000FFFFF77777EEEEE66666DDDDD5555CCCCC44444BBBBB3333AAAAA22222999911111888880000FFFFF77777EEEE66666DDDD55555CCCC44444BBBBB3333AAAAA2222999",
 	data_interleave_offset_in_bits => 1,
 	data_interleave_width_in_bits => 1,
 	init_file => "DE0_NANO_PWM.DE0_NANO_PWM2.rtl.mif",
@@ -26075,13 +26075,13 @@ PORT MAP (
 	portadataout => \usin_c|Mux6_rtl_0|auto_generated|ram_block1a0_PORTADATAOUT_bus\);
 
 -- Location: M9K_X33_Y6_N0
-\usin_c|Mux6_rtl_0|auto_generated|ram_block1a2\ : cycloneive_ram_block
+\usin_c|Mux6_rtl_0|auto_generated|ram_block1a1\ : cycloneive_ram_block
 -- pragma translate_off
 GENERIC MAP (
-	mem_init3 => X"17217217217417417217217217217217217257257257250250250250650650650650650650630630650650650650650250250257257217417413463065065025721346306502574134650257413065721346572134657413021746574130213021302574657465302130213026574653021374653026570215702157026530461374215304615704615304265370421537042615370426153704266153700426615537704426611553377004422666111555333377777000000004444444444440000000077777333555511166222440077335511622400733511624407335162407735162407351624735162403516407316247356247316207512473164031",
-	mem_init2 => X"64031647312475120356473120316475647564751203120364756475647520312036475603127564312756431275203647127560364312752056036431471275205205603603643643143147147147147147127127147147147147147147143143143143643643643643603603603603603603605605603603603603603643643143147147127527520560364314712752056431471205603147520564312056431205647120314756475203120312031475647562031203120316475640312475620356403164731647316403562075164035124035164073162473516240351624073516240073516244073351662440773551662244007733555116662222",
-	mem_init1 => X"44400000777777773333333333337777777700000444422266611155337700442266115337004226115377042611537042615370426153704265370421537426137026137426530461374215702657026570215742130465742130215746574657421302130257465746574630213065746302134650213465021746302572134630257217413465025721721741346306306502502572572572172172172172174174172172172172172172172572572572502502502506506506506506506506306306506506506506502502502572572174174134630650650257213463065025741346502574130657213465721346574130217465741302130213025746",
-	mem_init0 => X"57465302130213026574653021374653026570215702157026530461374215304615704615304265370421537042615370426153704266153700426615537704426611553377004422666111555333377777000000004444444444440000000077777333555511166222440077335511622400733511624407335162407735162407351624735162403516407316247356247316207512473164031640316473124751203564731203164756475647512031203647564756475203120364756031275643127564312752036471275603643127520560364314712752052056036036436431431471471471471471271271471471471471471471431431431431",
+	mem_init3 => X"20316475120356473120756403124756203164751203564731207564031647512035640312475120756403164731207562035640316473124751207512075620756203562035620356203562075620751247312473164035620751247316403512473164075124735620731640751640351240351240351640751640731624735124073162403516207351640735164073516240751624073516240735162407351624073516624073516224073511624077351662400735516224077355166244077355166224007735511662240077335511666224400777335551166622244400077733335551111666662222244444400000007777777777773333333333",
+	mem_init2 => X"33333333377777777777700000004444442222266666111155533337770004442226661155533777004422666115533770042266115537700422661553770442661553770422615537004266153770426115370422615370426615370426153704261537042615370426157042615370461537046153702615304261370421537426137046157046153042153042153046157046137026537421570461374215304613742157026530461374213742157026570265302653026530265302657026570215702157421374613046530265702137461304657021574213046530215746130465702137465302157461302657421304657021374653021574613021",
+	mem_init1 => X"57461302657421304657021374653021574613026574213046570213746130265742137465302657021374613046570215742137461304653026570265702157021574215742157421574215702157026530465304613742157026530461374265304613702653042157046137026137426537426537426137026137046153042653704615374261570426137042613704261537026153704261537042615370426153704261153704261553704266153700426115377042261553700422611533700422611553770042266115537700442266111553377000442226611155533377700044442226666111115555533333377777770000000000004444444444",
+	mem_init0 => X"44444444400000000000077777773333335555511111666622244440007773335551116622244000773355111662244007735511662240077355116224007335116224007355162240773511624007351662407355162407351162407351624073516240735162407351620735162407316240731624075162473516407356240351640731620731624735624735624731620731640751240356207316403562473164035620751247316403564035620751207512475124751247512475120751207562075620356403164731247512075640316473120756203564731247562031647312075640312475620316475120356473120756403124756203164751",
 	data_interleave_offset_in_bits => 1,
 	data_interleave_width_in_bits => 1,
 	init_file => "DE0_NANO_PWM.DE0_NANO_PWM2.rtl.mif",
@@ -26095,7 +26095,7 @@ GENERIC MAP (
 	port_a_data_out_clock => "clock0",
 	port_a_data_width => 4,
 	port_a_first_address => 0,
-	port_a_first_bit_number => 2,
+	port_a_first_bit_number => 1,
 	port_a_last_address => 2047,
 	port_a_logical_ram_depth => 2048,
 	port_a_logical_ram_width => 11,
@@ -26108,10 +26108,10 @@ GENERIC MAP (
 PORT MAP (
 	portare => VCC,
 	clk0 => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	portaaddr => \usin_c|Mux6_rtl_0|auto_generated|ram_block1a2_PORTAADDR_bus\,
+	portaaddr => \usin_c|Mux6_rtl_0|auto_generated|ram_block1a1_PORTAADDR_bus\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	portadataout => \usin_c|Mux6_rtl_0|auto_generated|ram_block1a2_PORTADATAOUT_bus\);
+	portadataout => \usin_c|Mux6_rtl_0|auto_generated|ram_block1a1_PORTADATAOUT_bus\);
 
 -- Location: LCCOMB_X32_Y16_N2
 \PWM1_FC01|LessThan0~3\ : cycloneive_lcell_comb
@@ -26183,16 +26183,16 @@ PORT MAP (
 -- Location: LCCOMB_X32_Y16_N10
 \PWM1_FC01|LessThan0~11\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC01|LessThan0~11_cout\ = CARRY((\PWM2_FC03|comp_int\(4) & ((!\PWM1_FC01|LessThan0~9_cout\) # (!\ucr1|c_int\(4)))) # (!\PWM2_FC03|comp_int\(4) & (!\ucr1|c_int\(4) & !\PWM1_FC01|LessThan0~9_cout\)))
+-- \PWM1_FC01|LessThan0~11_cout\ = CARRY((\ucr1|c_int\(4) & (\PWM2_FC03|comp_int\(4) & !\PWM1_FC01|LessThan0~9_cout\)) # (!\ucr1|c_int\(4) & ((\PWM2_FC03|comp_int\(4)) # (!\PWM1_FC01|LessThan0~9_cout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000101011",
+	lut_mask => "0000000001001101",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FC03|comp_int\(4),
-	datab => \ucr1|c_int\(4),
+	dataa => \ucr1|c_int\(4),
+	datab => \PWM2_FC03|comp_int\(4),
 	datad => VCC,
 	cin => \PWM1_FC01|LessThan0~9_cout\,
 	cout => \PWM1_FC01|LessThan0~11_cout\);
@@ -26217,16 +26217,16 @@ PORT MAP (
 -- Location: LCCOMB_X32_Y16_N14
 \PWM1_FC01|LessThan0~15\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC01|LessThan0~15_cout\ = CARRY((\PWM2_FC03|comp_int\(6) & ((!\PWM1_FC01|LessThan0~13_cout\) # (!\ucr1|c_int\(6)))) # (!\PWM2_FC03|comp_int\(6) & (!\ucr1|c_int\(6) & !\PWM1_FC01|LessThan0~13_cout\)))
+-- \PWM1_FC01|LessThan0~15_cout\ = CARRY((\ucr1|c_int\(6) & (\PWM2_FC03|comp_int\(6) & !\PWM1_FC01|LessThan0~13_cout\)) # (!\ucr1|c_int\(6) & ((\PWM2_FC03|comp_int\(6)) # (!\PWM1_FC01|LessThan0~13_cout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000101011",
+	lut_mask => "0000000001001101",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FC03|comp_int\(6),
-	datab => \ucr1|c_int\(6),
+	dataa => \ucr1|c_int\(6),
+	datab => \PWM2_FC03|comp_int\(6),
 	datad => VCC,
 	cin => \PWM1_FC01|LessThan0~13_cout\,
 	cout => \PWM1_FC01|LessThan0~15_cout\);
@@ -26251,16 +26251,16 @@ PORT MAP (
 -- Location: LCCOMB_X32_Y16_N18
 \PWM1_FC01|LessThan0~19\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC01|LessThan0~19_cout\ = CARRY((\PWM2_FC03|comp_int\(8) & ((!\PWM1_FC01|LessThan0~17_cout\) # (!\ucr1|c_int\(8)))) # (!\PWM2_FC03|comp_int\(8) & (!\ucr1|c_int\(8) & !\PWM1_FC01|LessThan0~17_cout\)))
+-- \PWM1_FC01|LessThan0~19_cout\ = CARRY((\ucr1|c_int\(8) & (\PWM2_FC03|comp_int\(8) & !\PWM1_FC01|LessThan0~17_cout\)) # (!\ucr1|c_int\(8) & ((\PWM2_FC03|comp_int\(8)) # (!\PWM1_FC01|LessThan0~17_cout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000101011",
+	lut_mask => "0000000001001101",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FC03|comp_int\(8),
-	datab => \ucr1|c_int\(8),
+	dataa => \ucr1|c_int\(8),
+	datab => \PWM2_FC03|comp_int\(8),
 	datad => VCC,
 	cin => \PWM1_FC01|LessThan0~17_cout\,
 	cout => \PWM1_FC01|LessThan0~19_cout\);
@@ -26285,16 +26285,16 @@ PORT MAP (
 -- Location: LCCOMB_X32_Y16_N22
 \PWM1_FC01|LessThan0~22\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC01|LessThan0~22_combout\ = (\PWM2_FC03|comp_int\(10) & ((!\ucr1|c_int\(10)) # (!\PWM1_FC01|LessThan0~21_cout\))) # (!\PWM2_FC03|comp_int\(10) & (!\PWM1_FC01|LessThan0~21_cout\ & !\ucr1|c_int\(10)))
+-- \PWM1_FC01|LessThan0~22_combout\ = (\PWM2_FC03|comp_int\(10) & ((!\PWM1_FC01|LessThan0~21_cout\) # (!\ucr1|c_int\(10)))) # (!\PWM2_FC03|comp_int\(10) & (!\ucr1|c_int\(10) & !\PWM1_FC01|LessThan0~21_cout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000101010101111",
+	lut_mask => "0010101100101011",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
 	dataa => \PWM2_FC03|comp_int\(10),
-	datad => \ucr1|c_int\(10),
+	datab => \ucr1|c_int\(10),
 	cin => \PWM1_FC01|LessThan0~21_cout\,
 	combout => \PWM1_FC01|LessThan0~22_combout\);
 
@@ -26305,11 +26305,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111100111111",
+	lut_mask => "1111111101011111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \PWM1_FA01|LessThan0~24_combout\,
+	dataa => \PWM1_FA01|LessThan0~24_combout\,
 	datac => \PWM1_FC01|LessThan0~22_combout\,
 	datad => \ucr1|c_int\(15),
 	combout => \PWM1_FC01|LessThan0~24_combout\);
@@ -26858,16 +26858,16 @@ PORT MAP (
 -- Location: LCCOMB_X31_Y12_N14
 \PWM1_FC02|LessThan0~14\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC02|LessThan0~14_cout\ = CARRY((\ucr3|c_int\(6) & (\PWM2_FC03|comp_int\(6) & !\PWM1_FC02|LessThan0~12_cout\)) # (!\ucr3|c_int\(6) & ((\PWM2_FC03|comp_int\(6)) # (!\PWM1_FC02|LessThan0~12_cout\))))
+-- \PWM1_FC02|LessThan0~14_cout\ = CARRY((\PWM2_FC03|comp_int\(6) & ((!\PWM1_FC02|LessThan0~12_cout\) # (!\ucr3|c_int\(6)))) # (!\PWM2_FC03|comp_int\(6) & (!\ucr3|c_int\(6) & !\PWM1_FC02|LessThan0~12_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001001101",
+	lut_mask => "0000000000101011",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr3|c_int\(6),
-	datab => \PWM2_FC03|comp_int\(6),
+	dataa => \PWM2_FC03|comp_int\(6),
+	datab => \ucr3|c_int\(6),
 	datad => VCC,
 	cin => \PWM1_FC02|LessThan0~12_cout\,
 	cout => \PWM1_FC02|LessThan0~14_cout\);
@@ -26892,7 +26892,7 @@ PORT MAP (
 -- Location: LCCOMB_X31_Y12_N18
 \PWM1_FC02|LessThan0~18\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC02|LessThan0~18_cout\ = CARRY((\ucr3|c_int\(8) & ((\PWM2_FC03|comp_int\(8)) # (!\PWM1_FC02|LessThan0~16_cout\))) # (!\ucr3|c_int\(8) & (\PWM2_FC03|comp_int\(8) & !\PWM1_FC02|LessThan0~16_cout\)))
+-- \PWM1_FC02|LessThan0~18_cout\ = CARRY((\PWM2_FC03|comp_int\(8) & ((\ucr3|c_int\(8)) # (!\PWM1_FC02|LessThan0~16_cout\))) # (!\PWM2_FC03|comp_int\(8) & (\ucr3|c_int\(8) & !\PWM1_FC02|LessThan0~16_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26900,8 +26900,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr3|c_int\(8),
-	datab => \PWM2_FC03|comp_int\(8),
+	dataa => \PWM2_FC03|comp_int\(8),
+	datab => \ucr3|c_int\(8),
 	datad => VCC,
 	cin => \PWM1_FC02|LessThan0~16_cout\,
 	cout => \PWM1_FC02|LessThan0~18_cout\);
@@ -27397,23 +27397,23 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y16_N6
 \PWM1_FC03|LessThan0~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC03|LessThan0~3_cout\ = CARRY((\PWM2_FC03|comp_int\(0) & !\ucr5|c_int\(0)))
+-- \PWM1_FC03|LessThan0~3_cout\ = CARRY((!\ucr5|c_int\(0) & \PWM2_FC03|comp_int\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000100010",
+	lut_mask => "0000000001000100",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FC03|comp_int\(0),
-	datab => \ucr5|c_int\(0),
+	dataa => \ucr5|c_int\(0),
+	datab => \PWM2_FC03|comp_int\(0),
 	datad => VCC,
 	cout => \PWM1_FC03|LessThan0~3_cout\);
 
 -- Location: LCCOMB_X28_Y16_N8
 \PWM1_FC03|LessThan0~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC03|LessThan0~5_cout\ = CARRY((\ucr5|c_int\(1) & (!\PWM2_FC03|comp_int\(1) & !\PWM1_FC03|LessThan0~3_cout\)) # (!\ucr5|c_int\(1) & ((!\PWM1_FC03|LessThan0~3_cout\) # (!\PWM2_FC03|comp_int\(1)))))
+-- \PWM1_FC03|LessThan0~5_cout\ = CARRY((\PWM2_FC03|comp_int\(1) & (!\ucr5|c_int\(1) & !\PWM1_FC03|LessThan0~3_cout\)) # (!\PWM2_FC03|comp_int\(1) & ((!\PWM1_FC03|LessThan0~3_cout\) # (!\ucr5|c_int\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27421,8 +27421,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr5|c_int\(1),
-	datab => \PWM2_FC03|comp_int\(1),
+	dataa => \PWM2_FC03|comp_int\(1),
+	datab => \ucr5|c_int\(1),
 	datad => VCC,
 	cin => \PWM1_FC03|LessThan0~3_cout\,
 	cout => \PWM1_FC03|LessThan0~5_cout\);
@@ -27481,7 +27481,7 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y16_N16
 \PWM1_FC03|LessThan0~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC03|LessThan0~13_cout\ = CARRY((\PWM2_FC03|comp_int\(5) & (!\ucr5|c_int\(5) & !\PWM1_FC03|LessThan0~11_cout\)) # (!\PWM2_FC03|comp_int\(5) & ((!\PWM1_FC03|LessThan0~11_cout\) # (!\ucr5|c_int\(5)))))
+-- \PWM1_FC03|LessThan0~13_cout\ = CARRY((\ucr5|c_int\(5) & (!\PWM2_FC03|comp_int\(5) & !\PWM1_FC03|LessThan0~11_cout\)) # (!\ucr5|c_int\(5) & ((!\PWM1_FC03|LessThan0~11_cout\) # (!\PWM2_FC03|comp_int\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27489,8 +27489,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FC03|comp_int\(5),
-	datab => \ucr5|c_int\(5),
+	dataa => \ucr5|c_int\(5),
+	datab => \PWM2_FC03|comp_int\(5),
 	datad => VCC,
 	cin => \PWM1_FC03|LessThan0~11_cout\,
 	cout => \PWM1_FC03|LessThan0~13_cout\);
@@ -27498,7 +27498,7 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y16_N18
 \PWM1_FC03|LessThan0~15\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC03|LessThan0~15_cout\ = CARRY((\ucr5|c_int\(6) & ((\PWM2_FC03|comp_int\(6)) # (!\PWM1_FC03|LessThan0~13_cout\))) # (!\ucr5|c_int\(6) & (\PWM2_FC03|comp_int\(6) & !\PWM1_FC03|LessThan0~13_cout\)))
+-- \PWM1_FC03|LessThan0~15_cout\ = CARRY((\PWM2_FC03|comp_int\(6) & ((\ucr5|c_int\(6)) # (!\PWM1_FC03|LessThan0~13_cout\))) # (!\PWM2_FC03|comp_int\(6) & (\ucr5|c_int\(6) & !\PWM1_FC03|LessThan0~13_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27506,8 +27506,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr5|c_int\(6),
-	datab => \PWM2_FC03|comp_int\(6),
+	dataa => \PWM2_FC03|comp_int\(6),
+	datab => \ucr5|c_int\(6),
 	datad => VCC,
 	cin => \PWM1_FC03|LessThan0~13_cout\,
 	cout => \PWM1_FC03|LessThan0~15_cout\);
@@ -27756,12 +27756,12 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010000010100000",
+	lut_mask => "1010101000000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
 	dataa => \PWM1_FC03|comp_out~q\,
-	datac => \PWM1_FC03|Add0~13_combout\,
+	datad => \PWM1_FC03|Add0~13_combout\,
 	combout => \PWM1_FC03|Add0~15_combout\);
 
 -- Location: FF_X28_Y17_N3
@@ -27825,7 +27825,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \PWM1_FC03|var_Dead_Count1\(0));
 
--- Location: LCCOMB_X28_Y17_N30
+-- Location: LCCOMB_X28_Y17_N26
 \PWM1_FC03|LessThan1~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \PWM1_FC03|LessThan1~0_combout\ = (((!\PWM1_FC03|var_Dead_Count1\(3)) # (!\PWM1_FC03|var_Dead_Count1\(1))) # (!\PWM1_FC03|var_Dead_Count1\(0))) # (!\PWM1_FC03|var_Dead_Count1\(2))
@@ -27880,16 +27880,16 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y13_N12
 \PWM1_FC03|Add0~19\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC03|Add0~19_combout\ = (\PWM1_FC03|comp_out~q\ & \PWM1_FC03|Add0~2_combout\)
+-- \PWM1_FC03|Add0~19_combout\ = (\PWM1_FC03|Add0~2_combout\ & \PWM1_FC03|comp_out~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000000000000",
+	lut_mask => "1100000011000000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	datab => \PWM1_FC03|Add0~2_combout\,
 	datac => \PWM1_FC03|comp_out~q\,
-	datad => \PWM1_FC03|Add0~2_combout\,
 	combout => \PWM1_FC03|Add0~19_combout\);
 
 -- Location: FF_X28_Y13_N13
@@ -27924,7 +27924,7 @@ PORT MAP (
 	combout => \PWM1_FC03|Add0~4_combout\,
 	cout => \PWM1_FC03|Add0~5\);
 
--- Location: LCCOMB_X28_Y17_N26
+-- Location: LCCOMB_X28_Y17_N30
 \PWM1_FC03|Add0~20\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \PWM1_FC03|Add0~20_combout\ = (\PWM1_FC03|comp_out~q\ & \PWM1_FC03|Add0~4_combout\)
@@ -27939,7 +27939,7 @@ PORT MAP (
 	datac => \PWM1_FC03|Add0~4_combout\,
 	combout => \PWM1_FC03|Add0~20_combout\);
 
--- Location: FF_X28_Y17_N27
+-- Location: FF_X28_Y17_N31
 \PWM1_FC03|var_Dead_Count1[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -27988,7 +27988,7 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y13_N18
 \PWM1_FC03|Equal0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC03|Equal0~0_combout\ = (\PWM1_FC03|Add0~2_combout\ & (\PWM1_FC03|Add0~0_combout\ & (\PWM1_FC03|comp_out~q\ & \PWM1_FC03|Add0~4_combout\)))
+-- \PWM1_FC03|Equal0~0_combout\ = (\PWM1_FC03|Add0~0_combout\ & (\PWM1_FC03|comp_out~q\ & (\PWM1_FC03|Add0~2_combout\ & \PWM1_FC03|Add0~4_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -27996,9 +27996,9 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM1_FC03|Add0~2_combout\,
-	datab => \PWM1_FC03|Add0~0_combout\,
-	datac => \PWM1_FC03|comp_out~q\,
+	dataa => \PWM1_FC03|Add0~0_combout\,
+	datab => \PWM1_FC03|comp_out~q\,
+	datac => \PWM1_FC03|Add0~2_combout\,
 	datad => \PWM1_FC03|Add0~4_combout\,
 	combout => \PWM1_FC03|Equal0~0_combout\);
 
@@ -28033,134 +28033,6 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \PWM1_FC03|port_PWM01~q\);
 
--- Location: FF_X31_Y16_N1
-\PWM1_FC01|var_Dead_Count2[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \PWM1_FC01|Add1~17_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \PWM1_FC01|var_Dead_Count2\(5));
-
--- Location: LCCOMB_X31_Y16_N12
-\PWM1_FC01|Add1~11\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM1_FC01|Add1~11_combout\ = (\PWM1_FC01|var_Dead_Count2\(5) & (!\PWM1_FC01|Add1~10\)) # (!\PWM1_FC01|var_Dead_Count2\(5) & ((\PWM1_FC01|Add1~10\) # (GND)))
--- \PWM1_FC01|Add1~12\ = CARRY((!\PWM1_FC01|Add1~10\) # (!\PWM1_FC01|var_Dead_Count2\(5)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011110000111111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datab => \PWM1_FC01|var_Dead_Count2\(5),
-	datad => VCC,
-	cin => \PWM1_FC01|Add1~10\,
-	combout => \PWM1_FC01|Add1~11_combout\,
-	cout => \PWM1_FC01|Add1~12\);
-
--- Location: LCCOMB_X31_Y16_N14
-\PWM1_FC01|Add1~13\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM1_FC01|Add1~13_combout\ = \PWM1_FC01|Add1~12\ $ (!\PWM1_FC01|var_Dead_Count2\(6))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000001111",
-	sum_lutc_input => "cin")
--- pragma translate_on
-PORT MAP (
-	datad => \PWM1_FC01|var_Dead_Count2\(6),
-	cin => \PWM1_FC01|Add1~12\,
-	combout => \PWM1_FC01|Add1~13_combout\);
-
--- Location: LCCOMB_X31_Y16_N30
-\PWM1_FC01|Add1~15\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM1_FC01|Add1~15_combout\ = (!\PWM1_FC01|comp_out~q\ & \PWM1_FC01|Add1~13_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011001100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \PWM1_FC01|comp_out~q\,
-	datad => \PWM1_FC01|Add1~13_combout\,
-	combout => \PWM1_FC01|Add1~15_combout\);
-
--- Location: FF_X31_Y16_N31
-\PWM1_FC01|var_Dead_Count2[6]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
-	d => \PWM1_FC01|Add1~15_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \PWM1_FC01|var_Dead_Count2\(6));
-
--- Location: LCCOMB_X31_Y16_N24
-\PWM1_FC01|LessThan2~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM1_FC01|LessThan2~0_combout\ = (((!\PWM1_FC01|var_Dead_Count2\(1)) # (!\PWM1_FC01|var_Dead_Count2\(3))) # (!\PWM1_FC01|var_Dead_Count2\(2))) # (!\PWM1_FC01|var_Dead_Count2\(0))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111111111111111",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM1_FC01|var_Dead_Count2\(0),
-	datab => \PWM1_FC01|var_Dead_Count2\(2),
-	datac => \PWM1_FC01|var_Dead_Count2\(3),
-	datad => \PWM1_FC01|var_Dead_Count2\(1),
-	combout => \PWM1_FC01|LessThan2~0_combout\);
-
--- Location: LCCOMB_X31_Y16_N16
-\PWM1_FC01|LessThan2~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM1_FC01|LessThan2~1_combout\ = (!\PWM1_FC01|var_Dead_Count2\(4) & (!\PWM1_FC01|var_Dead_Count2\(6) & (\PWM1_FC01|LessThan2~0_combout\ & !\PWM1_FC01|var_Dead_Count2\(5))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000010000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM1_FC01|var_Dead_Count2\(4),
-	datab => \PWM1_FC01|var_Dead_Count2\(6),
-	datac => \PWM1_FC01|LessThan2~0_combout\,
-	datad => \PWM1_FC01|var_Dead_Count2\(5),
-	combout => \PWM1_FC01|LessThan2~1_combout\);
-
--- Location: LCCOMB_X31_Y16_N2
-\PWM1_FC01|Add1~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \PWM1_FC01|Add1~0_combout\ = (\PWM1_FC01|var_Dead_Count2\(0) & (\PWM1_FC01|LessThan2~1_combout\ $ (VCC))) # (!\PWM1_FC01|var_Dead_Count2\(0) & (\PWM1_FC01|LessThan2~1_combout\ & VCC))
--- \PWM1_FC01|Add1~1\ = CARRY((\PWM1_FC01|var_Dead_Count2\(0) & \PWM1_FC01|LessThan2~1_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110011010001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \PWM1_FC01|var_Dead_Count2\(0),
-	datab => \PWM1_FC01|LessThan2~1_combout\,
-	datad => VCC,
-	combout => \PWM1_FC01|Add1~0_combout\,
-	cout => \PWM1_FC01|Add1~1\);
-
 -- Location: LCCOMB_X32_Y16_N30
 \PWM1_FC01|Add1~18\ : cycloneive_lcell_comb
 -- Equation(s):
@@ -28189,6 +28061,24 @@ PORT MAP (
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \PWM1_FC01|var_Dead_Count2\(0));
+
+-- Location: LCCOMB_X31_Y16_N2
+\PWM1_FC01|Add1~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM1_FC01|Add1~0_combout\ = (\PWM1_FC01|var_Dead_Count2\(0) & (\PWM1_FC01|LessThan2~1_combout\ $ (VCC))) # (!\PWM1_FC01|var_Dead_Count2\(0) & (\PWM1_FC01|LessThan2~1_combout\ & VCC))
+-- \PWM1_FC01|Add1~1\ = CARRY((\PWM1_FC01|var_Dead_Count2\(0) & \PWM1_FC01|LessThan2~1_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110011010001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM1_FC01|var_Dead_Count2\(0),
+	datab => \PWM1_FC01|LessThan2~1_combout\,
+	datad => VCC,
+	combout => \PWM1_FC01|Add1~0_combout\,
+	cout => \PWM1_FC01|Add1~1\);
 
 -- Location: LCCOMB_X31_Y16_N4
 \PWM1_FC01|Add1~2\ : cycloneive_lcell_comb
@@ -28245,17 +28135,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1100001100001100",
+	lut_mask => "1010010100001010",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	datab => \PWM1_FC01|var_Dead_Count2\(2),
+	dataa => \PWM1_FC01|var_Dead_Count2\(2),
 	datad => VCC,
 	cin => \PWM1_FC01|Add1~3\,
 	combout => \PWM1_FC01|Add1~4_combout\,
 	cout => \PWM1_FC01|Add1~5\);
 
--- Location: LCCOMB_X31_Y16_N20
+-- Location: LCCOMB_X31_Y16_N0
 \PWM1_FC01|Add1~20\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \PWM1_FC01|Add1~20_combout\ = (\PWM1_FC01|Add1~4_combout\ & !\PWM1_FC01|comp_out~q\)
@@ -28270,7 +28160,7 @@ PORT MAP (
 	datac => \PWM1_FC01|comp_out~q\,
 	combout => \PWM1_FC01|Add1~20_combout\);
 
--- Location: FF_X31_Y16_N21
+-- Location: FF_X31_Y16_N1
 \PWM1_FC01|var_Dead_Count2[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -28292,11 +28182,11 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0101101001011111",
+	lut_mask => "0011110000111111",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM1_FC01|var_Dead_Count2\(3),
+	datab => \PWM1_FC01|var_Dead_Count2\(3),
 	datad => VCC,
 	cin => \PWM1_FC01|Add1~5\,
 	combout => \PWM1_FC01|Add1~6_combout\,
@@ -28331,6 +28221,23 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \PWM1_FC01|var_Dead_Count2\(3));
 
+-- Location: LCCOMB_X31_Y16_N20
+\PWM1_FC01|LessThan2~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM1_FC01|LessThan2~0_combout\ = (((!\PWM1_FC01|var_Dead_Count2\(1)) # (!\PWM1_FC01|var_Dead_Count2\(2))) # (!\PWM1_FC01|var_Dead_Count2\(3))) # (!\PWM1_FC01|var_Dead_Count2\(0))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM1_FC01|var_Dead_Count2\(0),
+	datab => \PWM1_FC01|var_Dead_Count2\(3),
+	datac => \PWM1_FC01|var_Dead_Count2\(2),
+	datad => \PWM1_FC01|var_Dead_Count2\(1),
+	combout => \PWM1_FC01|LessThan2~0_combout\);
+
 -- Location: LCCOMB_X31_Y16_N10
 \PWM1_FC01|Add1~9\ : cycloneive_lcell_comb
 -- Equation(s):
@@ -28339,17 +28246,17 @@ PORT MAP (
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010010100001010",
+	lut_mask => "1100001100001100",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM1_FC01|var_Dead_Count2\(4),
+	datab => \PWM1_FC01|var_Dead_Count2\(4),
 	datad => VCC,
 	cin => \PWM1_FC01|Add1~7\,
 	combout => \PWM1_FC01|Add1~9_combout\,
 	cout => \PWM1_FC01|Add1~10\);
 
--- Location: LCCOMB_X31_Y16_N26
+-- Location: LCCOMB_X31_Y16_N18
 \PWM1_FC01|Add1~16\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \PWM1_FC01|Add1~16_combout\ = (!\PWM1_FC01|comp_out~q\ & \PWM1_FC01|Add1~9_combout\)
@@ -28364,7 +28271,7 @@ PORT MAP (
 	datad => \PWM1_FC01|Add1~9_combout\,
 	combout => \PWM1_FC01|Add1~16_combout\);
 
--- Location: FF_X31_Y16_N27
+-- Location: FF_X31_Y16_N19
 \PWM1_FC01|var_Dead_Count2[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -28378,7 +28285,25 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \PWM1_FC01|var_Dead_Count2\(4));
 
--- Location: LCCOMB_X31_Y16_N0
+-- Location: LCCOMB_X31_Y16_N12
+\PWM1_FC01|Add1~11\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM1_FC01|Add1~11_combout\ = (\PWM1_FC01|var_Dead_Count2\(5) & (!\PWM1_FC01|Add1~10\)) # (!\PWM1_FC01|var_Dead_Count2\(5) & ((\PWM1_FC01|Add1~10\) # (GND)))
+-- \PWM1_FC01|Add1~12\ = CARRY((!\PWM1_FC01|Add1~10\) # (!\PWM1_FC01|var_Dead_Count2\(5)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110000111111",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \PWM1_FC01|var_Dead_Count2\(5),
+	datad => VCC,
+	cin => \PWM1_FC01|Add1~10\,
+	combout => \PWM1_FC01|Add1~11_combout\,
+	cout => \PWM1_FC01|Add1~12\);
+
+-- Location: LCCOMB_X31_Y16_N16
 \PWM1_FC01|Add1~17\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \PWM1_FC01|Add1~17_combout\ = (!\PWM1_FC01|comp_out~q\ & \PWM1_FC01|Add1~11_combout\)
@@ -28393,22 +28318,80 @@ PORT MAP (
 	datad => \PWM1_FC01|Add1~11_combout\,
 	combout => \PWM1_FC01|Add1~17_combout\);
 
--- Location: LCCOMB_X31_Y16_N18
-\PWM1_FC01|Equal1~1\ : cycloneive_lcell_comb
+-- Location: FF_X31_Y16_N17
+\PWM1_FC01|var_Dead_Count2[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \PWM1_FC01|Add1~17_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PWM1_FC01|var_Dead_Count2\(5));
+
+-- Location: LCCOMB_X31_Y16_N14
+\PWM1_FC01|Add1~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC01|Equal1~1_combout\ = (!\PWM1_FC01|Add1~17_combout\ & (!\PWM1_FC01|Add1~16_combout\ & (!\PWM1_FC01|Add1~15_combout\ & \PWM1_FC01|Add1~8_combout\)))
+-- \PWM1_FC01|Add1~13_combout\ = \PWM1_FC01|var_Dead_Count2\(6) $ (!\PWM1_FC01|Add1~12\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000100000000",
+	lut_mask => "1010010110100101",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM1_FC01|var_Dead_Count2\(6),
+	cin => \PWM1_FC01|Add1~12\,
+	combout => \PWM1_FC01|Add1~13_combout\);
+
+-- Location: LCCOMB_X31_Y16_N30
+\PWM1_FC01|Add1~15\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM1_FC01|Add1~15_combout\ = (!\PWM1_FC01|comp_out~q\ & \PWM1_FC01|Add1~13_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011000000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM1_FC01|Add1~17_combout\,
-	datab => \PWM1_FC01|Add1~16_combout\,
-	datac => \PWM1_FC01|Add1~15_combout\,
-	datad => \PWM1_FC01|Add1~8_combout\,
-	combout => \PWM1_FC01|Equal1~1_combout\);
+	datab => \PWM1_FC01|comp_out~q\,
+	datac => \PWM1_FC01|Add1~13_combout\,
+	combout => \PWM1_FC01|Add1~15_combout\);
+
+-- Location: FF_X31_Y16_N31
+\PWM1_FC01|var_Dead_Count2[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \upll|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \PWM1_FC01|Add1~15_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \PWM1_FC01|var_Dead_Count2\(6));
+
+-- Location: LCCOMB_X31_Y16_N24
+\PWM1_FC01|LessThan2~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM1_FC01|LessThan2~1_combout\ = (\PWM1_FC01|LessThan2~0_combout\ & (!\PWM1_FC01|var_Dead_Count2\(5) & (!\PWM1_FC01|var_Dead_Count2\(6) & !\PWM1_FC01|var_Dead_Count2\(4))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM1_FC01|LessThan2~0_combout\,
+	datab => \PWM1_FC01|var_Dead_Count2\(5),
+	datac => \PWM1_FC01|var_Dead_Count2\(6),
+	datad => \PWM1_FC01|var_Dead_Count2\(4),
+	combout => \PWM1_FC01|LessThan2~1_combout\);
 
 -- Location: LCCOMB_X32_Y16_N24
 \PWM1_FC01|Equal1~0\ : cycloneive_lcell_comb
@@ -28427,21 +28410,38 @@ PORT MAP (
 	datad => \PWM1_FC01|Add1~4_combout\,
 	combout => \PWM1_FC01|Equal1~0_combout\);
 
--- Location: LCCOMB_X32_Y16_N28
-\PWM1_FC01|port_PWM02~0\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X31_Y16_N26
+\PWM1_FC01|Equal1~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM1_FC01|port_PWM02~0_combout\ = (\PWM1_FC01|Equal1~1_combout\ & ((\PWM1_FC01|Equal1~0_combout\) # ((\PWM1_FC01|port_PWM02~q\ & !\PWM1_FC01|comp_out~q\)))) # (!\PWM1_FC01|Equal1~1_combout\ & (((\PWM1_FC01|port_PWM02~q\ & !\PWM1_FC01|comp_out~q\))))
+-- \PWM1_FC01|Equal1~1_combout\ = (\PWM1_FC01|Add1~8_combout\ & (!\PWM1_FC01|Add1~17_combout\ & (!\PWM1_FC01|Add1~16_combout\ & !\PWM1_FC01|Add1~15_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1000100011111000",
+	lut_mask => "0000000000000010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM1_FC01|Equal1~1_combout\,
+	dataa => \PWM1_FC01|Add1~8_combout\,
+	datab => \PWM1_FC01|Add1~17_combout\,
+	datac => \PWM1_FC01|Add1~16_combout\,
+	datad => \PWM1_FC01|Add1~15_combout\,
+	combout => \PWM1_FC01|Equal1~1_combout\);
+
+-- Location: LCCOMB_X32_Y16_N28
+\PWM1_FC01|port_PWM02~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \PWM1_FC01|port_PWM02~0_combout\ = (\PWM1_FC01|comp_out~q\ & (\PWM1_FC01|Equal1~0_combout\ & ((\PWM1_FC01|Equal1~1_combout\)))) # (!\PWM1_FC01|comp_out~q\ & ((\PWM1_FC01|port_PWM02~q\) # ((\PWM1_FC01|Equal1~0_combout\ & \PWM1_FC01|Equal1~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1101110001010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \PWM1_FC01|comp_out~q\,
 	datab => \PWM1_FC01|Equal1~0_combout\,
 	datac => \PWM1_FC01|port_PWM02~q\,
-	datad => \PWM1_FC01|comp_out~q\,
+	datad => \PWM1_FC01|Equal1~1_combout\,
 	combout => \PWM1_FC01|port_PWM02~0_combout\);
 
 -- Location: FF_X32_Y16_N29
@@ -29443,16 +29443,16 @@ PORT MAP (
 -- Location: LCCOMB_X29_Y11_N16
 \PWM2_FC01|LessThan0~16\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FC01|LessThan0~16_cout\ = CARRY((\ucr2|c_int\(7) & ((!\PWM2_FC01|LessThan0~14_cout\) # (!\PWM2_FC03|comp_int\(7)))) # (!\ucr2|c_int\(7) & (!\PWM2_FC03|comp_int\(7) & !\PWM2_FC01|LessThan0~14_cout\)))
+-- \PWM2_FC01|LessThan0~16_cout\ = CARRY((\PWM2_FC03|comp_int\(7) & (\ucr2|c_int\(7) & !\PWM2_FC01|LessThan0~14_cout\)) # (!\PWM2_FC03|comp_int\(7) & ((\ucr2|c_int\(7)) # (!\PWM2_FC01|LessThan0~14_cout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000101011",
+	lut_mask => "0000000001001101",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr2|c_int\(7),
-	datab => \PWM2_FC03|comp_int\(7),
+	dataa => \PWM2_FC03|comp_int\(7),
+	datab => \ucr2|c_int\(7),
 	datad => VCC,
 	cin => \PWM2_FC01|LessThan0~14_cout\,
 	cout => \PWM2_FC01|LessThan0~16_cout\);
@@ -29951,16 +29951,16 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y19_N4
 \PWM2_FC02|LessThan0~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FC02|LessThan0~2_cout\ = CARRY((\PWM2_FC03|comp_int\(0) & !\ucr5|c_int\(0)))
+-- \PWM2_FC02|LessThan0~2_cout\ = CARRY((!\ucr5|c_int\(0) & \PWM2_FC03|comp_int\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000000100010",
+	lut_mask => "0000000001000100",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FC03|comp_int\(0),
-	datab => \ucr5|c_int\(0),
+	dataa => \ucr5|c_int\(0),
+	datab => \PWM2_FC03|comp_int\(0),
 	datad => VCC,
 	cout => \PWM2_FC02|LessThan0~2_cout\);
 
@@ -30136,16 +30136,16 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y19_N0
 \PWM2_FC02|LessThan0~23\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FC02|LessThan0~23_combout\ = ((\ucr4|c_int\(11)) # (!\PWM2_FC02|LessThan0~0_combout\)) # (!\PWM2_FC02|LessThan0~21_combout\)
+-- \PWM2_FC02|LessThan0~23_combout\ = (\ucr4|c_int\(11)) # ((!\PWM2_FC02|LessThan0~0_combout\) # (!\PWM2_FC02|LessThan0~21_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111001111111111",
+	lut_mask => "1100111111111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \PWM2_FC02|LessThan0~21_combout\,
-	datac => \ucr4|c_int\(11),
+	datab => \ucr4|c_int\(11),
+	datac => \PWM2_FC02|LessThan0~21_combout\,
 	datad => \PWM2_FC02|LessThan0~0_combout\,
 	combout => \PWM2_FC02|LessThan0~23_combout\);
 
@@ -30658,7 +30658,7 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y18_N18
 \PWM2_FC03|LessThan0~11\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FC03|LessThan0~11_cout\ = CARRY((\ucr6|c_int\(4) & ((\PWM2_FC03|comp_int\(4)) # (!\PWM2_FC03|LessThan0~9_cout\))) # (!\ucr6|c_int\(4) & (\PWM2_FC03|comp_int\(4) & !\PWM2_FC03|LessThan0~9_cout\)))
+-- \PWM2_FC03|LessThan0~11_cout\ = CARRY((\PWM2_FC03|comp_int\(4) & ((\ucr6|c_int\(4)) # (!\PWM2_FC03|LessThan0~9_cout\))) # (!\PWM2_FC03|comp_int\(4) & (\ucr6|c_int\(4) & !\PWM2_FC03|LessThan0~9_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30666,8 +30666,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr6|c_int\(4),
-	datab => \PWM2_FC03|comp_int\(4),
+	dataa => \PWM2_FC03|comp_int\(4),
+	datab => \ucr6|c_int\(4),
 	datad => VCC,
 	cin => \PWM2_FC03|LessThan0~9_cout\,
 	cout => \PWM2_FC03|LessThan0~11_cout\);
@@ -30675,7 +30675,7 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y18_N20
 \PWM2_FC03|LessThan0~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FC03|LessThan0~13_cout\ = CARRY((\PWM2_FC03|comp_int\(5) & (!\ucr6|c_int\(5) & !\PWM2_FC03|LessThan0~11_cout\)) # (!\PWM2_FC03|comp_int\(5) & ((!\PWM2_FC03|LessThan0~11_cout\) # (!\ucr6|c_int\(5)))))
+-- \PWM2_FC03|LessThan0~13_cout\ = CARRY((\ucr6|c_int\(5) & (!\PWM2_FC03|comp_int\(5) & !\PWM2_FC03|LessThan0~11_cout\)) # (!\ucr6|c_int\(5) & ((!\PWM2_FC03|LessThan0~11_cout\) # (!\PWM2_FC03|comp_int\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -30683,8 +30683,8 @@ GENERIC MAP (
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \PWM2_FC03|comp_int\(5),
-	datab => \ucr6|c_int\(5),
+	dataa => \ucr6|c_int\(5),
+	datab => \PWM2_FC03|comp_int\(5),
 	datad => VCC,
 	cin => \PWM2_FC03|LessThan0~11_cout\,
 	cout => \PWM2_FC03|LessThan0~13_cout\);
@@ -30692,16 +30692,16 @@ PORT MAP (
 -- Location: LCCOMB_X28_Y18_N22
 \PWM2_FC03|LessThan0~15\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FC03|LessThan0~15_cout\ = CARRY((\ucr6|c_int\(6) & (\PWM2_FC03|comp_int\(6) & !\PWM2_FC03|LessThan0~13_cout\)) # (!\ucr6|c_int\(6) & ((\PWM2_FC03|comp_int\(6)) # (!\PWM2_FC03|LessThan0~13_cout\))))
+-- \PWM2_FC03|LessThan0~15_cout\ = CARRY((\PWM2_FC03|comp_int\(6) & ((!\PWM2_FC03|LessThan0~13_cout\) # (!\ucr6|c_int\(6)))) # (!\PWM2_FC03|comp_int\(6) & (!\ucr6|c_int\(6) & !\PWM2_FC03|LessThan0~13_cout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000001001101",
+	lut_mask => "0000000000101011",
 	sum_lutc_input => "cin")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ucr6|c_int\(6),
-	datab => \PWM2_FC03|comp_int\(6),
+	dataa => \PWM2_FC03|comp_int\(6),
+	datab => \ucr6|c_int\(6),
 	datad => VCC,
 	cin => \PWM2_FC03|LessThan0~13_cout\,
 	cout => \PWM2_FC03|LessThan0~15_cout\);
@@ -30776,16 +30776,16 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y18_N24
 \PWM2_FC03|LessThan0~24\ : cycloneive_lcell_comb
 -- Equation(s):
--- \PWM2_FC03|LessThan0~24_combout\ = (!\PWM2_FC03|LessThan0~1_combout\) # (!\PWM2_FC03|LessThan0~22_combout\)
+-- \PWM2_FC03|LessThan0~24_combout\ = (!\PWM2_FC03|LessThan0~22_combout\) # (!\PWM2_FC03|LessThan0~1_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000111111111111",
+	lut_mask => "0101111101011111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	dataa => \PWM2_FC03|LessThan0~1_combout\,
 	datac => \PWM2_FC03|LessThan0~22_combout\,
-	datad => \PWM2_FC03|LessThan0~1_combout\,
 	combout => \PWM2_FC03|LessThan0~24_combout\);
 
 -- Location: FF_X27_Y18_N25

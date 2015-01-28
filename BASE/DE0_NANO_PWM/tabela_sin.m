@@ -37,14 +37,13 @@ theta_c = fi(th_ci,1,16,0);
 fid = fopen('tabela_sin.txt', 'w');
 
 
-Nbits=11; % log2(1335)
+Nbits=11; % log2(1335) = 10.3826
 max_phase = 2^16-1;
 
 duty=0.858794; % Duty cycle
 cmax = 1335;
 med = cmax/2;
 amp = med*duty;
-
 
 
 
@@ -62,3 +61,44 @@ fprintf(fid, '		    std_logic_vector(to_unsigned(0, n_bits_c)) when others;');
 
 fclose(fid);
 
+%%
+
+duty=0.858794; % Duty cycle
+cmax = 1335;
+med = cmax/2;
+amp = med;
+% amp = med*duty;
+
+
+Nbits=11; % log2(1335) = 10.3826
+
+id=0:1:2^Nbits-1;
+idfi = fi(id,0,Nbits,0);
+
+wt=id*2*pi/(2^Nbits)
+y=sin(wt);
+
+
+
+senofi=fi(y,0,16,0)
+
+seno=round(amp*y+med);
+
+
+
+%% Escreve no arquivo .txt
+fid = fopen('tabelaDuty_sin.txt', 'w');
+
+fprintf(fid, 'with id select\n');
+fprintf(fid, '  sin <= ');
+
+
+for k=1:2^Nbits
+    id = idfi(k);
+    fprintf(fid, '		    std_logic_vector(to_unsigned(%u, n_bits_c)) when "%s", \n', seno(k), id.bin);
+end
+
+
+fprintf(fid, '		    std_logic_vector(to_unsigned(0, n_bits_c)) when others;');
+
+fclose(fid);

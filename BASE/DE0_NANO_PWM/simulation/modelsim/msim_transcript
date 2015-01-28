@@ -275,3 +275,5 @@ run
 force -freeze sim:/tabela_sin/theta 0000000000100001 0
 run
 run
+# End time: 20:24:44 on Jan 27,2015, Elapsed time: 6:31:27
+# Errors: 1, Warnings: 0
