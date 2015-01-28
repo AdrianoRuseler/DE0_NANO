@@ -66,7 +66,10 @@ architecture fbpspwmdt_arch of fbpspwmdt is
         variable var_Dead_Count2: integer range 0 to 127 := 0;
      
     begin
-        if (clk 'event and clk = '1') then
+	    if en = '0' then
+					port_PWM01 <= '0';
+					port_PWM02 <= '0';
+				elsif (clk 'event and clk = '1') then
             if (p_Pwm_In = '1') then
                 if (var_Dead_Count1 < c_Dead_t) then
                     var_Dead_Count1 := var_Dead_Count1 + 1;
