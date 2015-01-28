@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_NANO_PWM
-Wed Jan 28 15:25:28 2015
+Wed Jan 28 17:36:02 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -99,15 +99,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 28 15:25:28 2015      ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 28 17:36:02 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; DE0_NANO_PWM                               ;
 ; Top-level Entity Name              ; DE0_NANO_PWM                               ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 1,334                                      ;
-;     Total combinational functions  ; 1,267                                      ;
-;     Dedicated logic registers      ; 546                                        ;
-; Total registers                    ; 546                                        ;
+; Total logic elements               ; 1,342                                      ;
+;     Total combinational functions  ; 1,275                                      ;
+;     Dedicated logic registers      ; 547                                        ;
+; Total registers                    ; 547                                        ;
 ; Total pins                         ; 73                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 67,584                                     ;
@@ -262,20 +262,20 @@ agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                       ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,334                                                                       ;
+; Estimated Total logic elements              ; 1,342                                                                       ;
 ;                                             ;                                                                             ;
-; Total combinational functions               ; 1267                                                                        ;
+; Total combinational functions               ; 1275                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                             ;
 ;     -- 4 input functions                    ; 236                                                                         ;
-;     -- 3 input functions                    ; 307                                                                         ;
-;     -- <=2 input functions                  ; 724                                                                         ;
+;     -- 3 input functions                    ; 318                                                                         ;
+;     -- <=2 input functions                  ; 721                                                                         ;
 ;                                             ;                                                                             ;
 ; Logic elements by mode                      ;                                                                             ;
-;     -- normal mode                          ; 645                                                                         ;
+;     -- normal mode                          ; 653                                                                         ;
 ;     -- arithmetic mode                      ; 622                                                                         ;
 ;                                             ;                                                                             ;
-; Total registers                             ; 546                                                                         ;
-;     -- Dedicated logic registers            ; 546                                                                         ;
+; Total registers                             ; 547                                                                         ;
+;     -- Dedicated logic registers            ; 547                                                                         ;
 ;     -- I/O registers                        ; 0                                                                           ;
 ;                                             ;                                                                             ;
 ; I/O pins                                    ; 73                                                                          ;
@@ -287,8 +287,8 @@ agreement for further details.
 ;     -- PLLs                                 ; 1                                                                           ;
 ;                                             ;                                                                             ;
 ; Maximum fan-out node                        ; pll:upll|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 489                                                                         ;
-; Total fan-out                               ; 5416                                                                        ;
+; Maximum fan-out                             ; 490                                                                         ;
+; Total fan-out                               ; 5450                                                                        ;
 ; Average fan-out                             ; 2.72                                                                        ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
 
@@ -298,7 +298,7 @@ agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
-; |DE0_NANO_PWM                             ; 1267 (0)          ; 546 (1)      ; 67584       ; 0            ; 0       ; 0         ; 73   ; 0            ; |DE0_NANO_PWM                                                                        ; work         ;
+; |DE0_NANO_PWM                             ; 1275 (8)          ; 547 (2)      ; 67584       ; 0            ; 0       ; 0         ; 73   ; 0            ; |DE0_NANO_PWM                                                                        ; work         ;
 ;    |clk_div:u1|                           ; 22 (22)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|clk_div:u1                                                             ; work         ;
 ;    |fbpspwmdt:PWM1_FA01|                  ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA01                                                    ; work         ;
 ;    |fbpspwmdt:PWM1_FA02|                  ; 50 (50)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA02                                                    ; work         ;
@@ -621,7 +621,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 546   ;
+; Total registers                              ; 547   ;
 ; Number of registers using Synchronous Clear  ; 41    ;
 ; Number of registers using Synchronous Load   ; 15    ;
 ; Number of registers using Asynchronous Clear ; 210   ;
@@ -636,6 +636,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
+; en_PWM                                  ; 5       ;
 ; portadora_tringular:ucr3|c_int[8]       ; 7       ;
 ; portadora_tringular:ucr3|c_int[7]       ; 7       ;
 ; portadora_tringular:ucr3|c_int[5]       ; 7       ;
@@ -672,7 +673,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rst                                     ; 189     ;
 ; portadora_tringular:ucr3|dir_int        ; 1       ;
 ; portadora_tringular:ucr5|dir_int        ; 2       ;
-; Total number of inverted registers = 36 ;         ;
+; Total number of inverted registers = 37 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -692,17 +693,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr1|c_int[3]   ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr5|c_int[14]  ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr3|c_int[6]   ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr6|c_int[9]   ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr2|c_int[11]  ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr4|c_int[11]  ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr1|c_int[11]  ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr5|c_int[12]  ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr3|c_int[1]   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr6|c_int[10]  ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr2|c_int[15]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr4|c_int[13]  ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr5|c_int[8]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr3|c_int[5]   ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr6|c_int[7]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr2|c_int[10]  ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr4|c_int[4]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr3|c_int[2]   ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr6|c_int[4]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr2|c_int[2]   ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_PWM|portadora_tringular:ucr4|c_int[1]   ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA01|var_Dead_Count1 ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA02|var_Dead_Count1 ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DE0_NANO_PWM|fbpspwmdt:PWM1_FA03|var_Dead_Count1 ;
@@ -1920,22 +1921,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 73                          ;
-; cycloneiii_ff         ; 546                         ;
+; cycloneiii_ff         ; 547                         ;
 ;     CLR               ; 170                         ;
 ;     CLR SCLR          ; 25                          ;
 ;     CLR SLD           ; 15                          ;
 ;     ENA               ; 285                         ;
 ;     SCLR              ; 16                          ;
-;     plain             ; 35                          ;
-; cycloneiii_lcell_comb ; 1268                        ;
+;     plain             ; 36                          ;
+; cycloneiii_lcell_comb ; 1281                        ;
 ;     arith             ; 622                         ;
 ;         2 data inputs ; 372                         ;
 ;         3 data inputs ; 250                         ;
-;     normal            ; 646                         ;
+;     normal            ; 659                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 64                          ;
-;         2 data inputs ; 288                         ;
-;         3 data inputs ; 57                          ;
+;         1 data inputs ; 69                          ;
+;         2 data inputs ; 285                         ;
+;         3 data inputs ; 68                          ;
 ;         4 data inputs ; 236                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 33                          ;
@@ -1960,7 +1961,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Wed Jan 28 15:25:07 2015
+    Info: Processing started: Wed Jan 28 17:35:40 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_NANO_PWM -c DE0_NANO_PWM
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
@@ -2014,9 +2015,9 @@ Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(39): used i
 Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(47): used implicit default value for signal "RESET_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(56): used implicit default value for signal "RESET_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at DE0_NANO_PWM.vhd(64): used implicit default value for signal "GPIO_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(194): object "pll_lock" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(204): object "sinc_int" assigned a value but never read
-Warning (10873): Using initial value X (don't care) for net "LED[7..3]" at DE0_NANO_PWM.vhd(31)
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(187): object "pll_lock" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_PWM.vhd(197): object "sinc_int" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at DE0_NANO_PWM.vhd(389): signal "clk_pll" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "pll" for hierarchy "pll:upll"
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:upll|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "pll:upll|altpll:altpll_component"
@@ -2167,11 +2168,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED[3]" is stuck at GND
-    Warning (13410): Pin "LED[4]" is stuck at GND
-    Warning (13410): Pin "LED[5]" is stuck at GND
-    Warning (13410): Pin "LED[6]" is stuck at GND
-    Warning (13410): Pin "LED[7]" is stuck at GND
     Warning (13410): Pin "RESET_FA[0]" is stuck at GND
     Warning (13410): Pin "RESET_FA[1]" is stuck at GND
     Warning (13410): Pin "RESET_FA[2]" is stuck at GND
@@ -2188,29 +2184,19 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[3]"
-    Warning (15610): No output dependent on input pin "KEY[0]"
     Warning (15610): No output dependent on input pin "KEY[1]"
-    Warning (15610): No output dependent on input pin "INT0_FA[0]"
-    Warning (15610): No output dependent on input pin "INT0_FA[1]"
-    Warning (15610): No output dependent on input pin "INT0_FA[2]"
-    Warning (15610): No output dependent on input pin "INT0_FB[0]"
-    Warning (15610): No output dependent on input pin "INT0_FB[1]"
-    Warning (15610): No output dependent on input pin "INT0_FB[2]"
-    Warning (15610): No output dependent on input pin "INT0_FC[0]"
-    Warning (15610): No output dependent on input pin "INT0_FC[1]"
-    Warning (15610): No output dependent on input pin "INT0_FC[2]"
-Info (21057): Implemented 1586 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1598 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 1479 logic cells
+    Info (21061): Implemented 1491 logic cells
     Info (21064): Implemented 33 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 700 megabytes
-    Info: Processing ended: Wed Jan 28 15:25:28 2015
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:45
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 699 megabytes
+    Info: Processing ended: Wed Jan 28 17:36:02 2015
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:50
 
 
