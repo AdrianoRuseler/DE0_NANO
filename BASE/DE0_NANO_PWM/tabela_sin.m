@@ -63,7 +63,8 @@ fclose(fid);
 
 %%
 
-duty=0.858794; % Duty cycle
+
+duty=0.8137; % Duty cycle
 cmax = 1335;
 med = cmax/2;
 amp = med;
@@ -80,14 +81,14 @@ y=sin(wt);
 
 
 
-senofi=fi(y,0,16,0)
+% senofi=fi(y,0,16,0)
 
 seno=round(amp*y+med);
 
 
 
 %% Escreve no arquivo .txt
-fid = fopen('tabelaDuty_sin.txt', 'w');
+fid = fopen('tabelaDuty0_8137_sin.txt', 'w');
 
 fprintf(fid, 'with id select\n');
 fprintf(fid, '  sin <= ');

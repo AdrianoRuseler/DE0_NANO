@@ -11,7 +11,7 @@ use ieee.numeric_std.all;
 entity fbpspwmdt is
 	generic  (
 		 constant n_bits_c: integer := 16; --numero de bits da portadora
-		 constant c_Dead_t : integer :=  15		
+		 constant c_Dead_t : integer :=  45		
 				);
 	port( 
 		 clk : in std_logic; -- clock
