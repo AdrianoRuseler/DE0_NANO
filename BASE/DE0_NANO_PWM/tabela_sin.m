@@ -67,8 +67,8 @@ fclose(fid);
 duty=0.8137; % Duty cycle
 cmax = 1335;
 med = cmax/2;
-amp = med;
-% amp = med*duty;
+% amp = med;
+amp = med*duty;
 
 
 Nbits=11; % log2(1335) = 10.3826
