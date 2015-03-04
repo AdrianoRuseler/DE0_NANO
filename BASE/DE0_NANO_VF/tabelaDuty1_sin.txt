@@ -1,35 +1,3 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
-use ieee.numeric_std.all;
-
-
-entity tabela_sin is
-    generic (-- constant THETA_MAX : integer := 380808000;  --eqquivalente a 2*pi
-                 constant n_bits_phase : integer :=16;  --numero de bits que representa a fase da rede
-                 constant n_bits_c: integer := 16  --numero de bits da portadora    
-             );
-    port (clk : in std_logic;
-          theta: in std_logic_vector(n_bits_phase-1 downto 0);
-          va : out std_logic_vector(n_bits_c-1 downto 0)
-          );
-end tabela_sin;
-
-architecture tabela_sin of tabela_sin is
-    signal id : std_logic_vector(10 downto 0);
-    signal sin : std_logic_vector(n_bits_c-1 downto 0);
-	 signal va_int : std_logic_vector(n_bits_c*2-1 downto 0);
-begin 
-    
-  id <= theta(n_bits_phase-1 downto n_bits_phase-11); -- 15 downto 5 - resolução do pwm?
-   -- id <= theta; 
-    
-    process(clk)
-    begin
-        if rising_edge(clk) then
-				va <= sin;
-        end if;
-    end process;
 with id select
   sin <= 		    std_logic_vector(to_unsigned(668, n_bits_c)) when "00000000000", 
 		    std_logic_vector(to_unsigned(670, n_bits_c)) when "00000000001", 
@@ -2080,6 +2048,3 @@ with id select
 		    std_logic_vector(to_unsigned(663, n_bits_c)) when "11111111110", 
 		    std_logic_vector(to_unsigned(665, n_bits_c)) when "11111111111", 
 		    std_logic_vector(to_unsigned(0, n_bits_c)) when others;
-    
-end architecture tabela_sin;
-

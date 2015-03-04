@@ -20,22 +20,15 @@ MAXmax=2^Nout-1;
 
 N16= 16;
 
-a = fi(4832, 0,13, 0)
-
-
-
 
 MAX=536870911;
 int_data=4832;
-INC60Hz=4832;
 
 fout=(int_data*fin)/MAX;
 
 fout = 6;
-INCdata=fout*MAX/fin;
+INCdata=fout*MAX/fin
 
-duty60Hz=0.858794; % Duty cycle
-slope=duty60Hz/INC60Hz
 
 foutMax=(INCmax*fin)/MAX;
 foutMin=(INCmin*fin)/MAX;

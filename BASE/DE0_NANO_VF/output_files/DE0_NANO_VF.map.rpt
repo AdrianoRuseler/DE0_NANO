@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_NANO_VF
-Tue Mar 03 09:26:27 2015
+Tue Mar 03 10:02:20 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -99,7 +99,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 03 09:26:27 2015      ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 03 10:02:20 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; DE0_NANO_VF                                ;
 ; Top-level Entity Name              ; DE0_NANO_VF                                ;
@@ -1954,7 +1954,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -1964,7 +1964,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Tue Mar 03 09:26:02 2015
+    Info: Processing started: Tue Mar 03 10:01:54 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_NANO_VF -c DE0_NANO_VF
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
@@ -1977,9 +1977,6 @@ Info (12021): Found 2 design units, including 0 entities, in source file fixed_p
     Info (12022): Found design unit 2: fixed_pkg-body
 Info (12021): Found 1 design units, including 0 entities, in source file fixed_float_types_c.vhdl
     Info (12022): Found design unit 1: fixed_float_types
-Info (12021): Found 2 design units, including 1 entities, in source file sinewave.vhd
-    Info (12022): Found design unit 1: sinewave-Behavioral
-    Info (12023): Found entity 1: sinewave
 Info (12021): Found 2 design units, including 1 entities, in source file contador.vhd
     Info (12022): Found design unit 1: contador-contador
     Info (12023): Found entity 1: contador
@@ -2014,13 +2011,13 @@ Info (12127): Elaborating entity "DE0_NANO_VF" for the top level hierarchy
 Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1470): subtype or type has null range
 Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1471): subtype or type has null range
 Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1472): subtype or type has null range
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_VF.vhd(39): used implicit default value for signal "RESET_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_VF.vhd(47): used implicit default value for signal "RESET_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_VF.vhd(56): used implicit default value for signal "RESET_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DE0_NANO_VF.vhd(64): used implicit default value for signal "GPIO_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_VF.vhd(187): object "pll_lock" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_VF.vhd(197): object "sinc_int" assigned a value but never read
-Warning (10492): VHDL Process Statement warning at DE0_NANO_VF.vhd(389): signal "clk_pll" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_VF.vhd(37): used implicit default value for signal "RESET_FA" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_VF.vhd(45): used implicit default value for signal "RESET_FB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_VF.vhd(54): used implicit default value for signal "RESET_FC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DE0_NANO_VF.vhd(62): used implicit default value for signal "GPIO_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_VF.vhd(185): object "pll_lock" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_VF.vhd(195): object "sinc_int" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at DE0_NANO_VF.vhd(387): signal "clk_pll" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "pll" for hierarchy "pll:upll"
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:upll|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "pll:upll|altpll:altpll_component"
@@ -2188,9 +2185,9 @@ Info (21057): Implemented 1595 device resources after synthesis - the final reso
     Info (21064): Implemented 33 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 697 megabytes
-    Info: Processing ended: Tue Mar 03 09:26:27 2015
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:49
+    Info: Peak virtual memory: 706 megabytes
+    Info: Processing ended: Tue Mar 03 10:02:20 2015
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:50
 
 

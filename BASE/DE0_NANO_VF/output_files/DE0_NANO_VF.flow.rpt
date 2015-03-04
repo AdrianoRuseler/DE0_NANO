@@ -1,5 +1,5 @@
 Flow report for DE0_NANO_VF
-Tue Mar 03 09:27:14 2015
+Tue Mar 03 10:03:11 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Mar 03 09:27:14 2015      ;
+; Flow Status                        ; Successful - Tue Mar 03 10:03:11 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; DE0_NANO_VF                                ;
 ; Top-level Entity Name              ; DE0_NANO_VF                                ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/03/2015 09:26:03 ;
+; Start date & time ; 03/03/2015 10:01:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE0_NANO_VF         ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 31264774864470.142538556304548        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 31264774864470.142538771507872        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -98,12 +98,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:24     ; 1.0                     ; 697 MB              ; 00:00:48                           ;
-; Fitter                    ; 00:00:20     ; 1.6                     ; 1401 MB             ; 00:00:28                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 570 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 685 MB              ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 550 MB              ; 00:00:04                           ;
-; Total                     ; 00:00:58     ; --                      ; --                  ; 00:01:30                           ;
+; Analysis & Synthesis      ; 00:00:25     ; 1.0                     ; 706 MB              ; 00:00:49                           ;
+; Fitter                    ; 00:00:22     ; 1.9                     ; 1403 MB             ; 00:00:28                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 571 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 686 MB              ; 00:00:06                           ;
+; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 550 MB              ; 00:00:04                           ;
+; Total                     ; 00:01:03     ; --                      ; --                  ; 00:01:30                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -48,9 +48,7 @@ architecture integrador of integrador is
 							out_int <= (others => '0');
 							--sinc_int <= '1';
 						end if;
-					end if;
-					
-					
+					end if;							
 					
 					
 				else
@@ -62,3 +60,5 @@ architecture integrador of integrador is
 		out_data <= out_int; 
 		sinc <= sinc_int;
 end architecture integrador;
+
+

@@ -5,7 +5,6 @@ source_file = 1, C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_
 source_file = 1, C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/fixed_pkg_c.vhdl
 source_file = 1, C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/fixed_float_types_c.vhdl
 source_file = 1, C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/output_files/Chain1.cdf
-source_file = 1, C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/sinewave.vhd
 source_file = 1, C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/contador.vhd
 source_file = 1, C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/tabela_sin.vhd
 source_file = 1, C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/theta_abc.vhd

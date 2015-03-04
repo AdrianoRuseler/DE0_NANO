@@ -12,8 +12,6 @@ USE work.my_types_pkg.all;
 
 
 
-
-
 ENTITY DE0_NANO_VF IS -- Base entity
   GENERIC(
             constant N : integer := 3; -- Number of inverters in the same phase
@@ -182,10 +180,20 @@ component fbpspwmdt
 		 );	 
 end component;
 
+--
+component vfcontrol
+	port( 
+		 clk : in std_logic; -- clock
+		 reset : in std_logic; -- reset
+		 inc_data : out std_logic_vector(12 downto 0); -- incremento do integrador
+		 m_vf : out std_logic_vector(15 downto 0) -- 
+		 );	 
+end component;
+
 
 -- SIGNALS --- 
 signal clk_pll, pll_lock, clk_wt : std_logic;
-signal clk_int, clk_led : std_logic;
+signal clk_int, clk_vf, clk_led : std_logic;
 signal reset : std_logic;
 	
 	
@@ -249,10 +257,11 @@ begin
 								div => std_logic_vector(to_unsigned(4, 16)),
                         clk_out => clk_int
                         );		
-					
-								
+											
 		
-	 -- int_data = 3428 => 60 Hz	
+	 -- int_data = 4832 => 60 Hz	
+	 -- 483 => 6 Hz	
+	 
  u5: integrador port map(
 										clk => clk_int, --	clk_int = 6.666_ MHz	
 										en => '1',
@@ -260,12 +269,10 @@ begin
 										MAX => std_logic_vector(to_unsigned(536870911, 30)),
 										sinc => sinc_int,
 										out_data => theta_pll,
-										int_data => std_logic_vector(to_unsigned(4832, 13))  -- daonde vem esse numero?
+										int_data => std_logic_vector(to_unsigned(4832, 13))  -- Incremento do contador.
 										--int_data => omega_pll
 									);
-									
-					
-					
+
 							
 -----------------   Portadoras Triangulares -----------------------------
     ucr1: portadora_tringular port map(
@@ -347,8 +354,7 @@ begin
 										theta_in => theta_pll -- 30 bits
 									);
 																
-							
-							
+	-- acesso a tabelo de senos						
 	usin_a: tabela_sin port map (clk => clk_pll,
 					theta => th_a,
 					va => sin_a
@@ -633,10 +639,6 @@ process(clk_pll)
 				rst<='0';		 
 			 end if;		 
 		 end process;
-		 
-		 
-		 
-		 
 		 
 		 
 
