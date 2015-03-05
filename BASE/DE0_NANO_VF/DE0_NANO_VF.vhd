@@ -22,7 +22,9 @@ ENTITY DE0_NANO_VF IS -- Base entity
 				constant TAM_MEM : integer := 32; -- tamanho da memoria (numero de palavras de 16 bits)
 				constant NBITS_MEM_ADDRESS : integer := 6; --numero de bits de dendereco do banco de memoria (read do dsp)
 				constant ID_MEM_DAC : integer := 28; --inicio do endereco de memoria destinado ao DAC conectado ao FPGA
-				constant ID_MEM_SW1 : integer := 30 --inicio do endereco de memoria destinado ao DAC conectado ao FPGA
+				constant ID_MEM_SW1 : integer := 30; --inicio do endereco de memoria destinado ao DAC conectado ao FPGA
+				constant I : integer := 1;  --número de bits da parte inteira excluindo sinal
+				constant F : integer := 14 --número de bits da parte fracinária  
 				);
   PORT(
 	CLOCK_50 : in std_logic;
@@ -104,10 +106,13 @@ component tabela_sin
 	port(
 		clk : in std_logic;
 		theta: in std_logic_vector(15 downto 0);
+		MAX :  in sfixed(15 downto 0); -- valor de contagem maximo
+		ma : in sfixed(I downto -F); -- Indice de modulação em Q15
 		va : out std_logic_vector(15 downto 0)
 	);
 end component;
 		
+-- 		
 component pll
 	port(
 		areset		: IN STD_LOGIC  := '0';
@@ -184,9 +189,9 @@ end component;
 component vfcontrol
 	port( 
 		 clk : in std_logic; -- clock
-		 reset : in std_logic; -- reset
+		 en : in std_logic; -- enable
 		 inc_data : out std_logic_vector(12 downto 0); -- incremento do integrador
-		 m_vf : out std_logic_vector(15 downto 0) -- 
+		 m_vf : out  sfixed(I downto -F) -- Indice de modulação em Q15  
 		 );	 
 end component;
 
@@ -218,12 +223,10 @@ signal err_FA,err_FB,err_FC,err_FABC :std_logic;
 
 
 
-signal mest_a, mest_b, mest_c : std_logic;
-signal sin_a, sin_b, sin_c : std_logic_vector(15 downto 0);
-signal da : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(767, 16));
-signal db : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(767, 16));
-signal dc : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(767, 16));
-signal ma, mb, mc : std_logic_vector(15 downto 0);
+signal sin_a, sin_b, sin_c : std_logic_vector(n_bits_c-1 downto 0);
+signal ma, mb, mc : std_logic_vector(n_bits_c-1 downto 0);
+signal mVF : sfixed(I downto -F);
+signal incVF :  std_logic_vector(12 downto 0);
 
 signal bidir : std_logic;
 
@@ -257,10 +260,25 @@ begin
 								div => std_logic_vector(to_unsigned(4, 16)),
                         clk_out => clk_int
                         );		
+								
+		--	clk_vf = 73 Hz 					
+	uclkVF: clk_div port map (clk_in => clk_int, -- 4349
+								en => '1',
+								div => std_logic_vector(to_unsigned(45662, 16)),  -- Divide clk por 2*div
+                        clk_out => clk_vf
+                        );		
+																
 											
 		
 	 -- int_data = 4832 => 60 Hz	
-	 -- 483 => 6 Hz	
+	 -- 483 => 6 Hz
+
+uVF: vfcontrol port map( clk => clk_vf, -- clock
+		 en => SW(3), -- enable VF
+		 inc_data => incVF,-- incremento do integrador
+		 m_vf => mVF -- Indice de modulação em Q15  
+		 );	 
+	
 	 
  u5: integrador port map(
 										clk => clk_int, --	clk_int = 6.666_ MHz	
@@ -269,7 +287,7 @@ begin
 										MAX => std_logic_vector(to_unsigned(536870911, 30)),
 										sinc => sinc_int,
 										out_data => theta_pll,
-										int_data => std_logic_vector(to_unsigned(4832, 13))  -- Incremento do contador.
+										int_data => incVF  -- Incremento do contador.
 										--int_data => omega_pll
 									);
 
@@ -336,7 +354,7 @@ begin
 			reset => rst, --
 			count_ini => std_logic_vector(to_unsigned( 445, 16)), -- valor inicial da contagem
 			dir_ini => '0', -- direcao inicial da contagem 0: cresente ou 1: decrescente 
-			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
+			MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo Q0
 		--	dir =>  dirTRI6, -- direcao atual 0: cresente ou 1: decrescente 
 			c => cTRI6 -- data out 
 			);
@@ -357,23 +375,26 @@ begin
 	-- acesso a tabelo de senos						
 	usin_a: tabela_sin port map (clk => clk_pll,
 					theta => th_a,
-					va => sin_a
+					MAX => to_sfixed(1335,15,0), -- valor de contagem maximo to_sfixed(1335,16,0); -- Converte para Q0
+					ma => mVF, -- Indice de modulação do controle VF
+					va => ma
 					);						
 	
 	usin_b: tabela_sin port map (clk => clk_pll,
 					theta => th_b,
-					va => sin_b
+					MAX => to_sfixed(1335,15,0), -- valor de contagem maximo
+					ma => mVF, -- Indice de modulação do controle VF
+					va => mb
 					);		
 	
 	
 	usin_c: tabela_sin port map (clk => clk_pll,
 					theta => th_c,
-					va => sin_c
+					MAX => to_sfixed(1335,15,0), -- valor de contagem maximo
+					ma => mVF, -- Indice de modulação do controle VF
+					va => mc
 					);			
-	-- 				
-		ma	<= sin_a;
-		mb	<= sin_b;
-		mc	<= sin_c;		
+	
 		
 -------  PWM ENABLE -------
 

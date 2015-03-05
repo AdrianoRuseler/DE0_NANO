@@ -16,15 +16,16 @@ entity fbpspwmdt is
 	port( 
 		 clk : in std_logic; -- clock
 		 en : in std_logic; -- habilta modulo
-		 comp : in std_logic_vector(n_bits_c-1 downto 0); -- moduladora     
+		 comp : std_logic_vector(n_bits_c-1 downto 0);-- Razão ciclica em Q0  
 		 c : in std_logic_vector(n_bits_c-1 downto 0); -- portadora
-		 amost :  in std_logic; -- amostra moduladora na borda de amost ?????	   
+		 amost :  in std_logic; -- amostra moduladora na borda de amost 
 		 port_PWM01 : out std_logic;
 		 port_PWM02 : out std_logic		 
 		 );	 
 end entity fbpspwmdt;
 
 
+-- slv7 <= to_slv (uf7_3);
 
 
 architecture fbpspwmdt_arch of fbpspwmdt is
@@ -34,6 +35,8 @@ architecture fbpspwmdt_arch of fbpspwmdt is
    signal sig_Not_Pwm_In: std_logic;
    signal comp_out : std_logic;
 	signal p_Pwm_In: std_logic ;		
+	
+	
 	
 	begin 	
 	   process(clk)

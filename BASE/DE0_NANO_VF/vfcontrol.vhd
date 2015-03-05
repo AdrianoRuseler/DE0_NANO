@@ -12,15 +12,17 @@ entity vfcontrol is
 		 constant n_bits_c: integer := 16; --numero de bits da portadora
 		 constant incMAX : std_logic_vector(12 downto 0) := std_logic_vector(to_unsigned(4832, 13)); -- Max INC for 60Hz
 		 constant incMIN : std_logic_vector(12 downto 0) := std_logic_vector(to_unsigned(483, 13));  -- Min INC for 6Hz
-		 constant mMAX : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(4832, 13)); -- Max modulation index 
-		 constant mMIN : std_logic_vector(15 downto 0) := std_logic_vector(to_unsigned(483, 13));  -- Min modulation index 
+		 constant I : integer := 1;  --número de bits da parte inteira excluindo sinal
+		 constant F : integer := 14; --número de bits da parte fracinária  
+		 constant mMAX : sfixed(1 downto -14) := to_sfixed(0.8137,  1, -14); -- Max modulation index 
+		 constant mMIN : sfixed(1 downto -14) := to_sfixed(0.08137,  1, -14)  -- Min modulation index 
 				);
 				
 		port( 
 		 clk : in std_logic; -- clock
-		 reset : in std_logic; -- reset
+		 en : in std_logic; -- reset
 		 inc_data : out std_logic_vector(12 downto 0); -- incremento do integrador
-		 m_vf : out std_logic_vector(15 downto 0) -- 
+		 m_vf : out sfixed(I downto -F) -- 
 		 );	 
 		 
  -- int_data = 4832 => 60 Hz	
@@ -30,34 +32,34 @@ end entity vfcontrol;
 
 architecture vfcontrol_arch of vfcontrol is
 
-   signal incsignal : std_logic_vector(12 downto 0); -- 13 bits signal
-	signal msignal :  std_logic_vector(n_bits_c-1 downto 0); -- 16 bits signal
+   signal incsignal : std_logic_vector(12 downto 0) := std_logic_vector(to_unsigned(0, 13)); -- 13 bits signal
+	signal msignal :  sfixed(1 downto -14) := to_sfixed(0,  1, -14); -- 16 bits signal
+	signal incstep : std_logic_vector(12 downto 0) := std_logic_vector(to_unsigned(1, 13));  -- data inc step
+	signal mstep :  sfixed(1 downto -14) := to_sfixed(1.8311e-04,  1, -14); -- 16 bits signal
 
 	
 	begin  
 	   process(clk)
 			begin			
-					if reset = '1' then
+					if en = '0' then
 						incsignal <= incMIN; -- 483
-						msignal <= mMIN;
-					elsif rising_edge(clk) then	
-					
-						if incsignal < incMAX then
-							incsignal <= out_int+int_data;							
+						msignal <= mMIN; -- 0.08137 
+						
+					elsif rising_edge(clk) then						
+						if incsignal(12 downto 0) < incMAX(12 downto 0) then
+							incsignal <= incsignal+incstep; -- data inc step	
+							msignal <= resize((msignal + mstep),1,-14);
 						else
-							out_int <= (others => '0');
-							--sinc_int <= '1';
-						end if;					
-					
-					
-				else
-					out_int <= (others => '0');
-					--sinc_int <= (others => '0');
-				end if;
-		end process;
+							incsignal <= incMAX; -- 4832 
+						   msignal <= mMAX; -- 0.8137 
+						end if;	
+				  end if;
+				  
+		 end process;
 		
-		out_data <= out_int; 
-		sinc <= sinc_int;
-
+	    inc_data <= incsignal; -- incremento do integrador
+		 m_vf <= msignal; -- Indice de Modulação
+		 
+		
 
 end architecture vfcontrol_arch;

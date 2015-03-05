@@ -1,4 +1,14 @@
                                                                                        
+mMIN = to_sfixed(0.08137,  1, -14)
+
+mMAX = to_sfixed(0.8137,  1, -14)
+
+(mMAX-mMIN)/(4832-483)
+
+3/2^14
+
+
+
 %% Integrador
 
 
@@ -20,9 +30,9 @@ MAXmax=2^Nout-1;
 
 N16= 16;
 
-a = fi(4832, 0,13, 0)
+a = fi(4832, 0,13, 0);
 
-
+log2(735801)
 
 
 MAX=536870911;
@@ -102,6 +112,12 @@ duty=0.8137; % Duty cycle
 
 duty=1;
 cmax = 1335;
+
+log2(cmax)
+
+
+fimax=fi(1335,0,16,0);
+
 med = cmax/2;
 % amp = med;
 amp = med*duty;
@@ -112,7 +128,7 @@ Nbits=11; % log2(1335) = 10.3826
 id=0:1:2^Nbits-1;
 idfi = fi(id,0,Nbits,0);
 
-wt=id*2*pi/(2^Nbits)
+wt=id*2*pi/(2^Nbits);
 y=sin(wt);
 
 
@@ -143,3 +159,46 @@ end
 fprintf(fid, '		    std_logic_vector(to_unsigned(0, n_bits_c)) when others;');
 
 fclose(fid);
+
+%% tabela em ponto fixo:
+
+Nbits=11; % log2(1335) = 10.3826
+
+id=0:1:2^Nbits-1; % gera todos os indices
+idfi = fi(id,0,Nbits,0); % Gera objeto fi com todos os indices
+max_phase = 2^16-1;
+
+wt=id*2*pi/(2^Nbits);
+y=sin(wt);
+
+fimax=fi(1335,0,16,0);
+yQ15=fi(y,1,16,15);
+
+comp=fi((yQ15*fimax/2+fimax/2),0,16,0);
+
+% MAX => std_logic_vector(to_unsigned( 1335, 16)), -- valor de contagem maximo
+
+% 1/2^15
+% to_sfixed(0.999300704788399, I, -F) when "000000010", 
+
+fid = fopen('tabelaSFIXEDsin.txt', 'w');
+
+fprintf(fid, 'with id select\n');
+fprintf(fid, '  sin <= ');
+
+
+for k=1:2^Nbits
+    id = idfi(k);
+    fprintf(fid, '		    to_sfixed(%1.6f,  I, -F) when "%s", \n', y(k), id.bin);
+end
+
+
+fprintf(fid, '		    to_sfixed(0, I, -F) when others;');
+
+fclose(fid);
+
+
+
+
+
+
