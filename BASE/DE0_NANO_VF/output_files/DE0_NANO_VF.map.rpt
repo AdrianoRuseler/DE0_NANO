@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_NANO_VF
-Thu Mar 05 15:35:35 2015
+Sat Mar 07 19:17:21 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -102,15 +102,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 05 15:35:34 2015      ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 07 19:17:21 2015      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; DE0_NANO_VF                                ;
 ; Top-level Entity Name              ; DE0_NANO_VF                                ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 8,348                                      ;
-;     Total combinational functions  ; 8,269                                      ;
-;     Dedicated logic registers      ; 703                                        ;
-; Total registers                    ; 703                                        ;
+; Total logic elements               ; 8,460                                      ;
+;     Total combinational functions  ; 8,381                                      ;
+;     Dedicated logic registers      ; 716                                        ;
+; Total registers                    ; 716                                        ;
 ; Total pins                         ; 73                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -279,20 +279,20 @@ agreement for further details.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Estimated Total logic elements              ; 8,348                 ;
+; Estimated Total logic elements              ; 8,460                 ;
 ;                                             ;                       ;
-; Total combinational functions               ; 8269                  ;
+; Total combinational functions               ; 8381                  ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 6628                  ;
-;     -- 3 input functions                    ; 694                   ;
-;     -- <=2 input functions                  ; 947                   ;
+;     -- 4 input functions                    ; 6697                  ;
+;     -- 3 input functions                    ; 693                   ;
+;     -- <=2 input functions                  ; 991                   ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 7545                  ;
-;     -- arithmetic mode                      ; 724                   ;
+;     -- normal mode                          ; 7628                  ;
+;     -- arithmetic mode                      ; 753                   ;
 ;                                             ;                       ;
-; Total registers                             ; 703                   ;
-;     -- Dedicated logic registers            ; 703                   ;
+; Total registers                             ; 716                   ;
+;     -- Dedicated logic registers            ; 716                   ;
 ;     -- I/O registers                        ; 0                     ;
 ;                                             ;                       ;
 ; I/O pins                                    ; 73                    ;
@@ -302,10 +302,10 @@ agreement for further details.
 ; Total PLLs                                  ; 1                     ;
 ;     -- PLLs                                 ; 1                     ;
 ;                                             ;                       ;
-; Maximum fan-out node                        ; theta_abc:u6|th_a[14] ;
-; Maximum fan-out                             ; 802                   ;
-; Total fan-out                               ; 32557                 ;
-; Average fan-out                             ; 3.57                  ;
+; Maximum fan-out node                        ; theta_abc:u6|th_c[14] ;
+; Maximum fan-out                             ; 803                   ;
+; Total fan-out                               ; 32954                 ;
+; Average fan-out                             ; 3.56                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -314,26 +314,26 @@ agreement for further details.
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                   ; Library Name ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE0_NANO_VF                                      ; 8269 (8)          ; 703 (2)      ; 0           ; 6            ; 0       ; 3         ; 73   ; 0            ; |DE0_NANO_VF                                                                                                                                          ; work         ;
+; |DE0_NANO_VF                                      ; 8381 (8)          ; 716 (2)      ; 0           ; 6            ; 0       ; 3         ; 73   ; 0            ; |DE0_NANO_VF                                                                                                                                          ; work         ;
 ;    |clk_div:u1|                                   ; 22 (22)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|clk_div:u1                                                                                                                               ; work         ;
-;    |clk_div:uclkVF|                               ; 22 (22)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|clk_div:uclkVF                                                                                                                           ; work         ;
+;    |clk_div:uclkVF|                               ; 21 (21)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|clk_div:uclkVF                                                                                                                           ; work         ;
 ;    |fbpspwmdt:PWM1_FA01|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FA01                                                                                                                      ; work         ;
-;    |fbpspwmdt:PWM1_FA02|                          ; 53 (53)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FA02                                                                                                                      ; work         ;
-;    |fbpspwmdt:PWM1_FA03|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FA03                                                                                                                      ; work         ;
-;    |fbpspwmdt:PWM1_FB01|                          ; 54 (54)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FB01                                                                                                                      ; work         ;
-;    |fbpspwmdt:PWM1_FB02|                          ; 53 (53)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FB02                                                                                                                      ; work         ;
+;    |fbpspwmdt:PWM1_FA02|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FA02                                                                                                                      ; work         ;
+;    |fbpspwmdt:PWM1_FA03|                          ; 53 (53)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FA03                                                                                                                      ; work         ;
+;    |fbpspwmdt:PWM1_FB01|                          ; 53 (53)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FB01                                                                                                                      ; work         ;
+;    |fbpspwmdt:PWM1_FB02|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FB02                                                                                                                      ; work         ;
 ;    |fbpspwmdt:PWM1_FB03|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FB03                                                                                                                      ; work         ;
-;    |fbpspwmdt:PWM1_FC01|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FC01                                                                                                                      ; work         ;
+;    |fbpspwmdt:PWM1_FC01|                          ; 53 (53)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FC01                                                                                                                      ; work         ;
 ;    |fbpspwmdt:PWM1_FC02|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FC02                                                                                                                      ; work         ;
-;    |fbpspwmdt:PWM1_FC03|                          ; 53 (53)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FC03                                                                                                                      ; work         ;
+;    |fbpspwmdt:PWM1_FC03|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM1_FC03                                                                                                                      ; work         ;
 ;    |fbpspwmdt:PWM2_FA01|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM2_FA01                                                                                                                      ; work         ;
 ;    |fbpspwmdt:PWM2_FA02|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM2_FA02                                                                                                                      ; work         ;
 ;    |fbpspwmdt:PWM2_FA03|                          ; 52 (52)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM2_FA03                                                                                                                      ; work         ;
 ;    |fbpspwmdt:PWM2_FB01|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM2_FB01                                                                                                                      ; work         ;
 ;    |fbpspwmdt:PWM2_FB02|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM2_FB02                                                                                                                      ; work         ;
 ;    |fbpspwmdt:PWM2_FB03|                          ; 52 (52)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM2_FB03                                                                                                                      ; work         ;
-;    |fbpspwmdt:PWM2_FC01|                          ; 52 (52)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM2_FC01                                                                                                                      ; work         ;
-;    |fbpspwmdt:PWM2_FC02|                          ; 54 (54)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM2_FC02                                                                                                                      ; work         ;
+;    |fbpspwmdt:PWM2_FC01|                          ; 53 (53)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM2_FC01                                                                                                                      ; work         ;
+;    |fbpspwmdt:PWM2_FC02|                          ; 53 (53)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM2_FC02                                                                                                                      ; work         ;
 ;    |fbpspwmdt:PWM2_FC03|                          ; 52 (52)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|fbpspwmdt:PWM2_FC03                                                                                                                      ; work         ;
 ;    |integrador:u5|                                ; 40 (40)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|integrador:u5                                                                                                                            ; work         ;
 ;    |pll:upll|                                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|pll:upll                                                                                                                                 ; work         ;
@@ -345,7 +345,7 @@ agreement for further details.
 ;    |portadora_tringular:ucr4|                     ; 56 (56)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|portadora_tringular:ucr4                                                                                                                 ; work         ;
 ;    |portadora_tringular:ucr5|                     ; 34 (34)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|portadora_tringular:ucr5                                                                                                                 ; work         ;
 ;    |portadora_tringular:ucr6|                     ; 33 (33)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|portadora_tringular:ucr6                                                                                                                 ; work         ;
-;    |tabela_sin:usin_a|                            ; 2287 (2183)       ; 31 (31)      ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_a                                                                                                                        ; work         ;
+;    |tabela_sin:usin_a|                            ; 2297 (2193)       ; 31 (31)      ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_a                                                                                                                        ; work         ;
 ;       |lpm_mult:Mult0|                            ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_a|lpm_mult:Mult0                                                                                                         ; work         ;
 ;          |mult_36t:auto_generated|                ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_a|lpm_mult:Mult0|mult_36t:auto_generated                                                                                 ; work         ;
 ;       |lpm_mult:Mult1|                            ; 104 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_a|lpm_mult:Mult1                                                                                                         ; work         ;
@@ -358,7 +358,7 @@ agreement for further details.
 ;                |mpar_add:sub_par_add|             ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_a|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
 ;                   |lpm_add_sub:adder[0]|          ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_a|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
 ;                      |add_sub_bkh:auto_generated| ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_a|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_bkh:auto_generated ; work         ;
-;    |tabela_sin:usin_b|                            ; 2281 (2177)       ; 31 (31)      ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_b                                                                                                                        ; work         ;
+;    |tabela_sin:usin_b|                            ; 2295 (2191)       ; 31 (31)      ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_b                                                                                                                        ; work         ;
 ;       |lpm_mult:Mult0|                            ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_b|lpm_mult:Mult0                                                                                                         ; work         ;
 ;          |mult_36t:auto_generated|                ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_b|lpm_mult:Mult0|mult_36t:auto_generated                                                                                 ; work         ;
 ;       |lpm_mult:Mult1|                            ; 104 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_b|lpm_mult:Mult1                                                                                                         ; work         ;
@@ -371,7 +371,7 @@ agreement for further details.
 ;                |mpar_add:sub_par_add|             ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_b|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
 ;                   |lpm_add_sub:adder[0]|          ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_b|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
 ;                      |add_sub_bkh:auto_generated| ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_b|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_bkh:auto_generated ; work         ;
-;    |tabela_sin:usin_c|                            ; 2284 (2180)       ; 31 (31)      ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_c                                                                                                                        ; work         ;
+;    |tabela_sin:usin_c|                            ; 2288 (2184)       ; 31 (31)      ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_c                                                                                                                        ; work         ;
 ;       |lpm_mult:Mult0|                            ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_c|lpm_mult:Mult0                                                                                                         ; work         ;
 ;          |mult_36t:auto_generated|                ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_c|lpm_mult:Mult0|mult_36t:auto_generated                                                                                 ; work         ;
 ;       |lpm_mult:Mult1|                            ; 104 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_c|lpm_mult:Mult1                                                                                                         ; work         ;
@@ -385,7 +385,7 @@ agreement for further details.
 ;                   |lpm_add_sub:adder[0]|          ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_c|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
 ;                      |add_sub_bkh:auto_generated| ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|tabela_sin:usin_c|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_bkh:auto_generated ; work         ;
 ;    |theta_abc:u6|                                 ; 44 (44)           ; 66 (66)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|theta_abc:u6                                                                                                                             ; work         ;
-;    |vfcontrol:uVF|                                ; 62 (62)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|vfcontrol:uVF                                                                                                                            ; work         ;
+;    |vfcontrol:uVF|                                ; 149 (149)         ; 42 (42)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO_VF|vfcontrol:uVF                                                                                                                            ; work         ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -681,10 +681,10 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 703   ;
+; Total registers                              ; 716   ;
 ; Number of registers using Synchronous Clear  ; 62    ;
 ; Number of registers using Synchronous Load   ; 54    ;
-; Number of registers using Asynchronous Clear ; 244   ;
+; Number of registers using Asynchronous Clear ; 257   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 285   ;
 ; Number of registers using Preset             ; 0     ;
@@ -696,14 +696,14 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; en_PWM                                  ; 5       ;
+; en_PWM                                  ; 6       ;
 ; portadora_tringular:ucr3|c_int[8]       ; 7       ;
-; portadora_tringular:ucr3|c_int[5]       ; 9       ;
-; portadora_tringular:ucr3|c_int[4]       ; 9       ;
+; portadora_tringular:ucr3|c_int[7]       ; 7       ;
 ; portadora_tringular:ucr3|c_int[3]       ; 7       ;
 ; portadora_tringular:ucr3|c_int[2]       ; 7       ;
 ; portadora_tringular:ucr6|c_int[0]       ; 20      ;
-; portadora_tringular:ucr3|c_int[7]       ; 8       ;
+; portadora_tringular:ucr3|c_int[4]       ; 10      ;
+; portadora_tringular:ucr3|c_int[5]       ; 10      ;
 ; portadora_tringular:ucr5|c_int[9]       ; 6       ;
 ; portadora_tringular:ucr5|c_int[8]       ; 6       ;
 ; portadora_tringular:ucr5|c_int[6]       ; 6       ;
@@ -716,10 +716,10 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; portadora_tringular:ucr2|c_int[1]       ; 7       ;
 ; portadora_tringular:ucr2|c_int[4]       ; 10      ;
 ; portadora_tringular:ucr2|c_int[5]       ; 10      ;
-; portadora_tringular:ucr2|c_int[10]      ; 10      ;
+; portadora_tringular:ucr2|c_int[10]      ; 9       ;
 ; portadora_tringular:ucr4|c_int[9]       ; 7       ;
 ; portadora_tringular:ucr4|c_int[8]       ; 7       ;
-; portadora_tringular:ucr4|c_int[6]       ; 8       ;
+; portadora_tringular:ucr4|c_int[6]       ; 7       ;
 ; portadora_tringular:ucr4|c_int[3]       ; 7       ;
 ; portadora_tringular:ucr4|c_int[1]       ; 7       ;
 ; portadora_tringular:ucr4|c_int[4]       ; 10      ;
@@ -734,18 +734,22 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; portadora_tringular:ucr3|dir_int        ; 1       ;
 ; portadora_tringular:ucr5|dir_int        ; 1       ;
 ; vfcontrol:uVF|msignal[-14]              ; 4       ;
-; vfcontrol:uVF|msignal[-12]              ; 4       ;
-; vfcontrol:uVF|msignal[-10]              ; 4       ;
-; vfcontrol:uVF|msignal[-9]               ; 4       ;
-; vfcontrol:uVF|msignal[-6]               ; 4       ;
-; vfcontrol:uVF|msignal[-4]               ; 4       ;
+; vfcontrol:uVF|msignal[-17]              ; 2       ;
+; vfcontrol:uVF|msignal[-19]              ; 2       ;
+; vfcontrol:uVF|msignal[-21]              ; 2       ;
+; vfcontrol:uVF|msignal[-23]              ; 2       ;
+; vfcontrol:uVF|msignal[-4]               ; 3       ;
+; vfcontrol:uVF|msignal[-6]               ; 3       ;
+; vfcontrol:uVF|msignal[-9]               ; 3       ;
+; vfcontrol:uVF|msignal[-10]              ; 3       ;
+; vfcontrol:uVF|msignal[-12]              ; 3       ;
 ; vfcontrol:uVF|incsignal[8]              ; 3       ;
 ; vfcontrol:uVF|incsignal[7]              ; 3       ;
 ; vfcontrol:uVF|incsignal[6]              ; 3       ;
 ; vfcontrol:uVF|incsignal[5]              ; 3       ;
 ; vfcontrol:uVF|incsignal[1]              ; 2       ;
 ; vfcontrol:uVF|incsignal[0]              ; 3       ;
-; Total number of inverted registers = 49 ;         ;
+; Total number of inverted registers = 53 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -754,24 +758,26 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |DE0_NANO_VF|tabela_sin:usin_a|va[11]            ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |DE0_NANO_VF|tabela_sin:usin_b|va[2]             ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |DE0_NANO_VF|tabela_sin:usin_c|va[10]            ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr1|c_int[12]  ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr5|c_int[12]  ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr3|c_int[14]  ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr6|c_int[15]  ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr2|c_int[3]   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr4|c_int[14]  ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |DE0_NANO_VF|vfcontrol:uVF|msignal[-2]           ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |DE0_NANO_VF|tabela_sin:usin_a|va[10]            ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |DE0_NANO_VF|tabela_sin:usin_b|va[0]             ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |DE0_NANO_VF|tabela_sin:usin_c|va[5]             ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 36 LEs               ; 18 LEs                 ; Yes        ; |DE0_NANO_VF|vfcontrol:uVF|msignal[0]            ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr1|c_int[1]   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr5|c_int[15]  ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr3|c_int[1]   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr6|c_int[6]   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr2|c_int[12]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr4|c_int[7]   ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |DE0_NANO_VF|vfcontrol:uVF|msignal[-6]           ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr5|c_int[1]   ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr3|c_int[8]   ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr6|c_int[8]   ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr2|c_int[8]   ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr4|c_int[5]   ;
-; 6:1                ; 14 bits   ; 56 LEs        ; 42 LEs               ; 14 LEs                 ; Yes        ; |DE0_NANO_VF|tabela_sin:usin_a|va_Q14[-14]       ;
-; 6:1                ; 14 bits   ; 56 LEs        ; 42 LEs               ; 14 LEs                 ; Yes        ; |DE0_NANO_VF|tabela_sin:usin_b|va_Q14[-6]        ;
-; 6:1                ; 14 bits   ; 56 LEs        ; 42 LEs               ; 14 LEs                 ; Yes        ; |DE0_NANO_VF|tabela_sin:usin_c|va_Q14[-14]       ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr6|c_int[2]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr2|c_int[1]   ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE0_NANO_VF|portadora_tringular:ucr4|c_int[1]   ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 42 LEs               ; 14 LEs                 ; Yes        ; |DE0_NANO_VF|tabela_sin:usin_a|va_Q14[-1]        ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 42 LEs               ; 14 LEs                 ; Yes        ; |DE0_NANO_VF|tabela_sin:usin_b|va_Q14[-8]        ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 42 LEs               ; 14 LEs                 ; Yes        ; |DE0_NANO_VF|tabela_sin:usin_c|va_Q14[-5]        ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |DE0_NANO_VF|vfcontrol:uVF|m_vf[-5]              ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DE0_NANO_VF|fbpspwmdt:PWM1_FA01|var_Dead_Count1 ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DE0_NANO_VF|fbpspwmdt:PWM1_FA02|var_Dead_Count1 ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DE0_NANO_VF|fbpspwmdt:PWM1_FA03|var_Dead_Count1 ;
@@ -1208,19 +1214,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: vfcontrol:uVF ;
-+----------------+------------------+------------------------+
-; Parameter Name ; Value            ; Type                   ;
-+----------------+------------------+------------------------+
-; n_bits_c       ; 16               ; Signed Integer         ;
-; incMAX         ; 1001011100000    ; Unsigned Binary        ;
-; incMIN         ; 0000111100011    ; Unsigned Binary        ;
-; I              ; 1                ; Signed Integer         ;
-; F              ; 14               ; Signed Integer         ;
-; mMAX           ; 0011010000010100 ; Unsigned Binary        ;
-; mMIN           ; 0000010100110101 ; Unsigned Binary        ;
-+----------------+------------------+------------------------+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vfcontrol:uVF       ;
++----------------+-------------------------------+-----------------+
+; Parameter Name ; Value                         ; Type            ;
++----------------+-------------------------------+-----------------+
+; n_bits_c       ; 16                            ; Signed Integer  ;
+; incMAX         ; 1001011100000                 ; Unsigned Binary ;
+; incMIN         ; 0000111100011                 ; Unsigned Binary ;
+; I              ; 1                             ; Signed Integer  ;
+; F              ; 14                            ; Signed Integer  ;
+; mMAX           ; 00110100000100111010100100101 ; Unsigned Binary ;
+; mMIN           ; 00000101001101010010101010000 ; Unsigned Binary ;
++----------------+-------------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2069,16 +2075,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
 ; en          ; Input ; Info     ; Stuck at VCC ;
-; div[13..12] ; Input ; Info     ; Stuck at VCC ;
-; div[4..1]   ; Input ; Info     ; Stuck at VCC ;
-; div[11..10] ; Input ; Info     ; Stuck at GND ;
-; div[8..7]   ; Input ; Info     ; Stuck at GND ;
-; div[15]     ; Input ; Info     ; Stuck at VCC ;
-; div[14]     ; Input ; Info     ; Stuck at GND ;
-; div[9]      ; Input ; Info     ; Stuck at VCC ;
-; div[6]      ; Input ; Info     ; Stuck at VCC ;
-; div[5]      ; Input ; Info     ; Stuck at GND ;
-; div[0]      ; Input ; Info     ; Stuck at GND ;
+; div[13..11] ; Input ; Info     ; Stuck at VCC ;
+; div[9..5]   ; Input ; Info     ; Stuck at VCC ;
+; div[15..14] ; Input ; Info     ; Stuck at GND ;
+; div[4..1]   ; Input ; Info     ; Stuck at GND ;
+; div[10]     ; Input ; Info     ; Stuck at GND ;
+; div[0]      ; Input ; Info     ; Stuck at VCC ;
 +-------------+-------+----------+--------------+
 
 
@@ -2110,30 +2112,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 73                          ;
-; cycloneiii_ff         ; 703                         ;
-;     CLR               ; 199                         ;
+; cycloneiii_ff         ; 716                         ;
+;     CLR               ; 212                         ;
 ;     CLR SCLR          ; 30                          ;
 ;     CLR SLD           ; 15                          ;
 ;     ENA               ; 285                         ;
 ;     SCLR              ; 32                          ;
 ;     SLD               ; 39                          ;
 ;     plain             ; 103                         ;
-; cycloneiii_lcell_comb ; 8275                        ;
-;     arith             ; 724                         ;
-;         2 data inputs ; 518                         ;
+; cycloneiii_lcell_comb ; 8384                        ;
+;     arith             ; 753                         ;
+;         2 data inputs ; 547                         ;
 ;         3 data inputs ; 206                         ;
-;     normal            ; 7551                        ;
+;     normal            ; 7631                        ;
 ;         0 data inputs ; 4                           ;
-;         1 data inputs ; 84                          ;
-;         2 data inputs ; 347                         ;
-;         3 data inputs ; 488                         ;
-;         4 data inputs ; 6628                        ;
+;         1 data inputs ; 82                          ;
+;         2 data inputs ; 361                         ;
+;         3 data inputs ; 487                         ;
+;         4 data inputs ; 6697                        ;
 ; cycloneiii_mac_mult   ; 3                           ;
 ; cycloneiii_mac_out    ; 3                           ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.00                       ;
-; Average LUT depth     ; 6.43                        ;
+; Average LUT depth     ; 6.42                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2142,7 +2144,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:53     ;
+; Top            ; 00:02:07     ;
 +----------------+--------------+
 
 
@@ -2152,7 +2154,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Thu Mar 05 15:33:21 2015
+    Info: Processing started: Sat Mar 07 19:14:55 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_NANO_VF -c DE0_NANO_VF
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
@@ -2209,6 +2211,7 @@ Warning (10541): VHDL Signal Declaration warning at DE0_NANO_VF.vhd(64): used im
 Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_VF.vhd(200): object "pll_lock" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at DE0_NANO_VF.vhd(210): object "sinc_int" assigned a value but never read
 Warning (10492): VHDL Process Statement warning at DE0_NANO_VF.vhd(416): signal "clk_pll" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10873): Using initial value X (don't care) for net "LED[5..4]" at DE0_NANO_VF.vhd(31)
 Info (12128): Elaborating entity "pll" for hierarchy "pll:upll"
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:upll|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "pll:upll|altpll:altpll_component"
@@ -2273,9 +2276,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/pll_
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:upll|altpll:altpll_component|pll_altpll:auto_generated"
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:u1"
 Info (12128): Elaborating entity "vfcontrol" for hierarchy "vfcontrol:uVF"
-Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1470): subtype or type has null range
-Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1471): subtype or type has null range
-Warning (10445): VHDL Subtype or Type Declaration warning at fixed_pkg_c.vhdl(1472): subtype or type has null range
 Warning (10540): VHDL Signal Declaration warning at vfcontrol.vhd(37): used explicit default value for signal "incstep" because signal was never assigned a value
 Warning (10540): VHDL Signal Declaration warning at vfcontrol.vhd(38): used explicit default value for signal "mstep" because signal was never assigned a value
 Warning (10492): VHDL Process Statement warning at vfcontrol.vhd(44): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -2346,6 +2346,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mult
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED[4]" is stuck at GND
+    Warning (13410): Pin "LED[5]" is stuck at GND
     Warning (13410): Pin "RESET_FA[0]" is stuck at GND
     Warning (13410): Pin "RESET_FA[1]" is stuck at GND
     Warning (13410): Pin "RESET_FA[2]" is stuck at GND
@@ -2361,12 +2363,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GPIO_0[3]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register vfcontrol:uVF|msignal[-14] will power up to High
-    Critical Warning (18010): Register vfcontrol:uVF|msignal[-12] will power up to High
-    Critical Warning (18010): Register vfcontrol:uVF|msignal[-10] will power up to High
-    Critical Warning (18010): Register vfcontrol:uVF|msignal[-9] will power up to High
-    Critical Warning (18010): Register vfcontrol:uVF|msignal[-6] will power up to High
-    Critical Warning (18010): Register vfcontrol:uVF|msignal[-4] will power up to High
     Critical Warning (18010): Register vfcontrol:uVF|incsignal[8] will power up to High
     Critical Warning (18010): Register vfcontrol:uVF|incsignal[7] will power up to High
     Critical Warning (18010): Register vfcontrol:uVF|incsignal[6] will power up to High
@@ -2377,16 +2373,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
-Info (21057): Implemented 8577 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 8689 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 8497 logic cells
+    Info (21061): Implemented 8609 logic cells
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 6 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 60 warnings
-    Info: Peak virtual memory: 715 megabytes
-    Info: Processing ended: Thu Mar 05 15:35:35 2015
-    Info: Elapsed time: 00:02:14
-    Info: Total CPU time (on all processors): 00:02:38
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 54 warnings
+    Info: Peak virtual memory: 721 megabytes
+    Info: Processing ended: Sat Mar 07 19:17:21 2015
+    Info: Elapsed time: 00:02:26
+    Info: Total CPU time (on all processors): 00:02:51
 
 

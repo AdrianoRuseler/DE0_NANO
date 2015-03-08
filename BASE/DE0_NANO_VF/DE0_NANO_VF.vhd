@@ -261,10 +261,10 @@ begin
                         clk_out => clk_int
                         );		
 								
-		--	clk_vf = 73 Hz 					
+		--	clk_vf = 217.45 Hz  -> 20 s					
 	uclkVF: clk_div port map (clk_in => clk_int, -- 4349
 								en => '1',
-								div => std_logic_vector(to_unsigned(45662, 16)),  -- Divide clk por 2*div
+								div => std_logic_vector(to_unsigned(15329, 16)),  -- Divide clk por 2*div
                         clk_out => clk_vf
                         );		
 																
@@ -274,10 +274,13 @@ begin
 	 -- 483 => 6 Hz
 
 uVF: vfcontrol port map( clk => clk_vf, -- clock
-		 en => SW(3), -- enable VF
+		 en => SW(3) and en_PWM, -- enable VF
 		 inc_data => incVF,-- incremento do integrador
 		 m_vf => mVF -- Indice de modulação em Q15  
-		 );	 
+		 );	
+		 
+	LED(3) <= SW(3);  -- 
+	
 	
 	 
  u5: integrador port map(
@@ -403,9 +406,6 @@ err_FB <= INT0_FB(0) and INT0_FB(1) and INT0_FB(2); -- Ativo Baixo
 err_FC <= INT0_FC(0) and INT0_FC(1) and INT0_FC(2); -- Ativo Baixo
 err_FABC <= err_FA  and err_FB and err_FC;
 
-LED(3) <= not err_FA;
-LED(4) <= not err_FB;
-LED(5) <= not err_FC;
 
 LED(6) <= not err_FABC;
 LED(7) <= en_PWM;

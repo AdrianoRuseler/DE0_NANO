@@ -14,8 +14,8 @@ entity vfcontrol is
 		 constant incMIN : std_logic_vector(12 downto 0) := std_logic_vector(to_unsigned(483, 13));  -- Min INC for 6Hz
 		 constant I : integer := 1;  --número de bits da parte inteira excluindo sinal
 		 constant F : integer := 14; --número de bits da parte fracinária  
-		 constant mMAX : sfixed(1 downto -14) := to_sfixed(0.8137,  1, -14); -- Max modulation index 
-		 constant mMIN : sfixed(1 downto -14) := to_sfixed(0.08137,  1, -14)  -- Min modulation index 
+		 constant mMAX : sfixed(1 downto -27) := to_sfixed(0.8137,  1, -27); -- Max modulation index 
+		 constant mMIN : sfixed(1 downto -27) := to_sfixed(0.08137,  1, -27)  -- Min modulation index 
 				);
 				
 		port( 
@@ -25,7 +25,7 @@ entity vfcontrol is
 		 m_vf : out sfixed(I downto -F) -- 
 		 );	 
 		 
- -- int_data = 4832 => 60 Hz	
+ -- int_data = 4832 => 60 Hz	 Delta = 4349 Dm= 0.73233
 	 -- 483 => 6 Hz	
 end entity vfcontrol;
 
@@ -33,9 +33,9 @@ end entity vfcontrol;
 architecture vfcontrol_arch of vfcontrol is
 
    signal incsignal : std_logic_vector(12 downto 0) := std_logic_vector(to_unsigned(0, 13)); -- 13 bits signal
-	signal msignal :  sfixed(1 downto -14) := to_sfixed(0,  1, -14); -- 16 bits signal
+	signal msignal :  sfixed(1 downto -27) := to_sfixed(0.08137,  1, -27); -- 16 bits signal
 	signal incstep : std_logic_vector(12 downto 0) := std_logic_vector(to_unsigned(1, 13));  -- data inc step
-	signal mstep :  sfixed(1 downto -14) := to_sfixed(1.8311e-04,  1, -14); -- 16 bits signal
+	signal mstep :  sfixed(1 downto -27) := to_sfixed(1.6839e-04,  1, -27); -- 16 bits signal
 
 	
 	begin  
@@ -48,7 +48,7 @@ architecture vfcontrol_arch of vfcontrol is
 					elsif rising_edge(clk) then						
 						if incsignal(12 downto 0) < incMAX(12 downto 0) then
 							incsignal <= incsignal+incstep; -- data inc step	
-							msignal <= resize((msignal + mstep),1,-14);
+							msignal <= resize((msignal + mstep),1,-27);
 						else
 							incsignal <= incMAX; -- 4832 
 						   msignal <= mMAX; -- 0.8137 
@@ -58,7 +58,7 @@ architecture vfcontrol_arch of vfcontrol is
 		 end process;
 		
 	    inc_data <= incsignal; -- incremento do integrador
-		 m_vf <= msignal; -- Indice de Modulação
+		 m_vf <= resize(msignal,1,-14); -- Indice de Modulação
 		 
 		
 

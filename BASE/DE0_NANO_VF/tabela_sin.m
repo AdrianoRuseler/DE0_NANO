@@ -7,6 +7,27 @@ mMAX = to_sfixed(0.8137,  1, -14)
 
 3/2^14
 
+istep=0.73233/(4832-483)
+log2(istep)
+
+TotalBits=16;
+out = fixptbestprec(istep,16,1) 
+
+out = fixptbestexp(istep,TotalBits,1)
+
+
+to_sfixed(istep,  1, -27)
+
+
+%% Ganho estático
+
+
+Vcc*n*m
+
+Vout=sqrt(2)*220
+
+
+Vout/400
 
 
 %% Integrador
