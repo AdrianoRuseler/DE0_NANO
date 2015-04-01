@@ -1,0 +1,38 @@
+\hypertarget{fixed__float__types__c_8vhdl_source}{}\section{fixed\+\_\+float\+\_\+types\+\_\+c.\+vhdl}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{-- --------------------------------------------------------------------}
+00002 \textcolor{keyword}{-- "fixed\_float\_types" package contains types used in the fixed and floating}
+00003 \textcolor{keyword}{-- point packages..}
+00004 \textcolor{keyword}{-- Please see the documentation for the floating point package.}
+00005 \textcolor{keyword}{-- This package should be compiled into "ieee\_proposed" and used as follows:}
+00006 \textcolor{keyword}{--}
+00007 \textcolor{keyword}{--  This verison is designed to work with the VHDL-93 compilers.  Please}
+00008 \textcolor{keyword}{--  note the "%%%" comments.  These are where we diverge from the}
+00009 \textcolor{keyword}{--  VHDL-200X LRM.}
+00010 \textcolor{keyword}{--}
+00011 \textcolor{keyword}{-- --------------------------------------------------------------------}
+00012 \textcolor{keyword}{-- Version    : $Revision: 1.1 $}
+00013 \textcolor{keyword}{-- Date       : $Date: 2010/09/22 18:44:20 $}
+00014 \textcolor{keyword}{-- --------------------------------------------------------------------}
+00015 
+\hypertarget{fixed__float__types__c_8vhdl_source_l00016}{}\hyperlink{namespacefixed__float__types}{00016} \textcolor{keywordflow}{package }\hyperlink{classfixed__float__types}{fixed\_float\_types} \textcolor{keywordflow}{is}
+00017 
+00018 \textcolor{keyword}{  -- Types used for generics of fixed\_generic\_pkg}
+00019   
+\hypertarget{fixed__float__types__c_8vhdl_source_l00020}{}\hyperlink{classfixed__float__types_a531b370a8acfecdccebf696cf0d2d971}{00020}   \textcolor{keywordflow}{type} \textcolor{vhdlchar}{\hyperlink{classfixed__float__types_a531b370a8acfecdccebf696cf0d2d971}{fixed\_round\_style\_type}} \textcolor{keywordflow}{is} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{fixed\_round}\textcolor{vhdlchar}{,} \textcolor{vhdlchar}{fixed\_truncate}\textcolor{vhdlchar}{)};
+00021   
+\hypertarget{fixed__float__types__c_8vhdl_source_l00022}{}\hyperlink{classfixed__float__types_a8a8b6b0022e693377949251b05ac846a}{00022}   \textcolor{keywordflow}{type} \textcolor{vhdlchar}{\hyperlink{classfixed__float__types_a8a8b6b0022e693377949251b05ac846a}{fixed\_overflow\_style\_type}} \textcolor{keywordflow}{is} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{fixed\_saturate}\textcolor{vhdlchar}{,} \textcolor{vhdlchar}{fixed\_wrap}\textcolor{vhdlchar}{)};
+00023 
+00024 \textcolor{keyword}{  -- Type used for generics of float\_generic\_pkg}
+00025 
+00026 \textcolor{keyword}{  -- These are the same as the C FE\_TONEAREST, FE\_UPWARD, FE\_DOWNWARD,}
+00027 \textcolor{keyword}{  -- and FE\_TOWARDZERO floating point rounding macros.}
+00028 
+\hypertarget{fixed__float__types__c_8vhdl_source_l00029}{}\hyperlink{classfixed__float__types_a3cab38cfb8c7d6b81f4f0b9953cd212f}{00029}   \textcolor{keywordflow}{type} \textcolor{vhdlchar}{\hyperlink{classfixed__float__types_a3cab38cfb8c7d6b81f4f0b9953cd212f}{round\_type}} \textcolor{keywordflow}{is} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{round\_nearest}\textcolor{vhdlchar}{,}\textcolor{keyword}{    -- Default, nearest LSB '0'}
+00030                       \textcolor{vhdlchar}{round\_inf}\textcolor{vhdlchar}{,}\textcolor{keyword}{        -- Round toward positive infinity}
+00031                       \textcolor{vhdlchar}{round\_neginf}\textcolor{vhdlchar}{,}\textcolor{keyword}{     -- Round toward negative infinity}
+00032                       \textcolor{vhdlchar}{round\_zero}\textcolor{vhdlchar}{)};\textcolor{keyword}{      -- Round toward zero (truncate)}
+00033 
+00034 \textcolor{keywordflow}{end} \textcolor{keywordflow}{package} \textcolor{vhdlchar}{fixed\_float\_types};
+\end{DoxyCode}

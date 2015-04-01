@@ -1,0 +1,68 @@
+\hypertarget{integrador_8vhd_source}{}\section{integrador.\+vhd}
+
+\begin{DoxyCode}
+\hypertarget{integrador_8vhd_source_l00001}{}\hyperlink{classintegrador_ae4f03c286607f3181e16b9aa12d0c6d4}{00001} \textcolor{vhdlkeyword}{library }\textcolor{keywordflow}{IEEE};
+\hypertarget{integrador_8vhd_source_l00002}{}\hyperlink{classintegrador_a241c3e72dd8024cc8ae831b1b2aed7db}{00002} \textcolor{vhdlkeyword}{use }\hyperlink{class__fixed__pkg_ae4f03c286607f3181e16b9aa12d0c6d4}{IEEE}.STD\_LOGIC\_UNSIGNED.\textcolor{keywordflow}{all};
+\hypertarget{integrador_8vhd_source_l00003}{}\hyperlink{classintegrador_aa4b2b25246a821511120e3149b003563}{00003} \textcolor{vhdlkeyword}{use }\hyperlink{class__fixed__pkg_ae4f03c286607f3181e16b9aa12d0c6d4}{IEEE}.STD\_LOGIC\_1164.\textcolor{keywordflow}{all};
+\hypertarget{integrador_8vhd_source_l00004}{}\hyperlink{classintegrador_aad86249c80e8c1e7ee1c4748aba748e3}{00004} \textcolor{vhdlkeyword}{use }ieee.\hyperlink{classfixed__pkg}{fixed\_pkg}.\textcolor{keywordflow}{all};\textcolor{keyword}{         --arquivo deve ser adicionado ao projeto  }
+00005 
+\hypertarget{integrador_8vhd_source_l00006}{}\hyperlink{classintegrador}{00006} \textcolor{keywordflow}{entity }\hyperlink{classintegrador}{integrador} \textcolor{keywordflow}{is}
+\hypertarget{integrador_8vhd_source_l00007}{}\hyperlink{classintegrador_a2629ecb3bb37e8104b2866b0fd0c8574}{00007} \textcolor{keywordflow}{generic}  \textcolor{vhdlchar}{(}\textcolor{keywordflow}{constant} \textcolor{vhdlchar}{\hyperlink{classintegrador_a2629ecb3bb37e8104b2866b0fd0c8574}{Nin}} \textcolor{vhdlchar}{:} \textcolor{comment}{integer} \textcolor{vhdlchar}{:=} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{13};\textcolor{keyword}{  --numero de bits da parte inteira excluindo sinal de entrada}
+00008              \textcolor{keywordflow}{constant} \textcolor{vhdlchar}{\hyperlink{classintegrador_a061c0d632c8bdf5dd32c80acf9a9c475}{Nout}} \textcolor{vhdlchar}{:} \textcolor{comment}{integer} \textcolor{vhdlchar}{:=} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{30}\textcolor{keyword}{  --numero de bits da parte inteira excluindo sinal de saida}
+\hypertarget{integrador_8vhd_source_l00009}{}\hyperlink{classintegrador_a061c0d632c8bdf5dd32c80acf9a9c475}{00009}          \textcolor{vhdlchar}{)};
+00010     \textcolor{keywordflow}{port}\textcolor{vhdlchar}{(}
+\hypertarget{integrador_8vhd_source_l00011}{}\hyperlink{classintegrador_a4a4609c199d30b3adebbeb3a01276ec5}{00011}             \textcolor{vhdlchar}{\hyperlink{classintegrador_a4a4609c199d30b3adebbeb3a01276ec5}{clk}} \textcolor{vhdlchar}{:} \textcolor{keywordflow}{in} \textcolor{comment}{std\_logic};\textcolor{keyword}{ -- clock}
+\hypertarget{integrador_8vhd_source_l00012}{}\hyperlink{classintegrador_adcf9c6f5161d039addbda5819bee64a3}{00012}             \textcolor{vhdlchar}{\hyperlink{classintegrador_adcf9c6f5161d039addbda5819bee64a3}{en}} \textcolor{vhdlchar}{:} \textcolor{keywordflow}{in} \textcolor{comment}{std\_logic};\textcolor{keyword}{ -- habilita modulo}
+\hypertarget{integrador_8vhd_source_l00013}{}\hyperlink{classintegrador_aad8dc6359d9e23dabcbf342fadf2fa06}{00013}             \textcolor{vhdlchar}{\hyperlink{classintegrador_aad8dc6359d9e23dabcbf342fadf2fa06}{reset}} \textcolor{vhdlchar}{:} \textcolor{keywordflow}{in} \textcolor{comment}{std\_logic};\textcolor{keyword}{ -- }
+\hypertarget{integrador_8vhd_source_l00014}{}\hyperlink{classintegrador_aae281cf725515894f893258c629a59c7}{00014}             \textcolor{vhdlchar}{\hyperlink{classintegrador_aae281cf725515894f893258c629a59c7}{sinc}} \textcolor{vhdlchar}{:} \textcolor{keywordflow}{out} \textcolor{comment}{std\_logic};
+\hypertarget{integrador_8vhd_source_l00015}{}\hyperlink{classintegrador_a436836a2e79668e0976eef3a553b5406}{00015}             \textcolor{vhdlchar}{\hyperlink{classintegrador_a436836a2e79668e0976eef3a553b5406}{MAX}} \textcolor{vhdlchar}{:}  \textcolor{keywordflow}{in} \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classintegrador_a061c0d632c8bdf5dd32c80acf9a9c475}{Nout}}\textcolor{vhdlchar}{-}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1} \textcolor{keywordflow}{downto} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{)};
+\hypertarget{integrador_8vhd_source_l00016}{}\hyperlink{classintegrador_a9e461894ea9b864637648799f51bf9be}{00016}             \textcolor{vhdlchar}{\hyperlink{classintegrador_a9e461894ea9b864637648799f51bf9be}{out\_data}} \textcolor{vhdlchar}{:} \textcolor{keywordflow}{out} \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classintegrador_a061c0d632c8bdf5dd32c80acf9a9c475}{Nout}}\textcolor{vhdlchar}{-}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1} \textcolor{keywordflow}{downto} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{)};\textcolor{keyword}{ -- data out 30 bits}
+00017             \textcolor{vhdlchar}{\hyperlink{classintegrador_aec192442094491f2207942b96b64835c}{int\_data}} \textcolor{vhdlchar}{:} \textcolor{keywordflow}{in} \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classintegrador_a2629ecb3bb37e8104b2866b0fd0c8574}{Nin}}\textcolor{vhdlchar}{-}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1} \textcolor{keywordflow}{downto} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{)}\textcolor{keyword}{ -- data in}
+\hypertarget{integrador_8vhd_source_l00018}{}\hyperlink{classintegrador_aec192442094491f2207942b96b64835c}{00018}             \textcolor{vhdlchar}{)};
+00019             
+00020 \textcolor{keywordflow}{end} \textcolor{keywordflow}{entity} \textcolor{vhdlchar}{integrador};
+00021 
+00022 
+\hypertarget{integrador_8vhd_source_l00023}{}\hyperlink{classintegrador_1_1integrador}{00023} \textcolor{keywordflow}{architecture} \hyperlink{classintegrador}{integrador} \textcolor{keywordflow}{of} \hyperlink{classintegrador}{integrador} is
+00024     
+\hypertarget{integrador_8vhd_source_l00025}{}\hyperlink{classintegrador_1_1integrador_a951e616187c21eeebaa382a516df536e}{00025}     \textcolor{keywordflow}{signal} \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a951e616187c21eeebaa382a516df536e}{out\_int}} \textcolor{vhdlchar}{:} \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classintegrador_a061c0d632c8bdf5dd32c80acf9a9c475}{Nout}}\textcolor{vhdlchar}{-}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1} \textcolor{keywordflow}{downto} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{)};
+\hypertarget{integrador_8vhd_source_l00026}{}\hyperlink{classintegrador_1_1integrador_a45126d1a75be347f440d181b7aa5e033}{00026}     \textcolor{keywordflow}{signal} \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a45126d1a75be347f440d181b7aa5e033}{sinc\_int}} \textcolor{vhdlchar}{:} \textcolor{comment}{std\_logic};
+00027 
+00028     
+00029 \textcolor{vhdlkeyword}{    begin } 
+00030 
+\hypertarget{integrador_8vhd_source_l00031}{}\hyperlink{classintegrador_1_1integrador_afcc525892643d4614179ad348921cd15}{00031}        \textcolor{keywordflow}{process}(\hyperlink{classintegrador_a4a4609c199d30b3adebbeb3a01276ec5}{clk})
+00032 \textcolor{vhdlkeyword}{            begin}
+00033                 \textcolor{keywordflow}{if} \textcolor{vhdlchar}{\hyperlink{classintegrador_adcf9c6f5161d039addbda5819bee64a3}{en}} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1}\textcolor{vhdlchar}{'} \textcolor{keywordflow}{then}
+00034                 
+00035                     \textcolor{keywordflow}{if} \textcolor{vhdlchar}{\hyperlink{classintegrador_aad8dc6359d9e23dabcbf342fadf2fa06}{reset}} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1}\textcolor{vhdlchar}{'} \textcolor{keywordflow}{then}
+00036                         \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a951e616187c21eeebaa382a516df536e}{out\_int}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{(}\textcolor{keywordflow}{others} \textcolor{vhdlchar}{=}\textcolor{vhdlchar}{>} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{)};
+00037                         \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a45126d1a75be347f440d181b7aa5e033}{sinc\_int}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{'};
+00038                     \textcolor{keywordflow}{elsif} \textcolor{vhdlchar}{rising\_edge}\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classintegrador_a4a4609c199d30b3adebbeb3a01276ec5}{clk}}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00039                         \textcolor{keywordflow}{if} \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a951e616187c21eeebaa382a516df536e}{out\_int}} \textcolor{vhdlchar}{<} \textcolor{vhdlchar}{\hyperlink{classintegrador_a436836a2e79668e0976eef3a553b5406}{MAX}} \textcolor{keywordflow}{then}
+00040                             \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a951e616187c21eeebaa382a516df536e}{out\_int}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a951e616187c21eeebaa382a516df536e}{out\_int}}\textcolor{vhdlchar}{+}\textcolor{vhdlchar}{\hyperlink{classintegrador_aec192442094491f2207942b96b64835c}{int\_data}};
+00041 \textcolor{keyword}{                            --sinc\_int <= '0';}
+00042                             \textcolor{keywordflow}{if} \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a951e616187c21eeebaa382a516df536e}{out\_int}}\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classintegrador_a061c0d632c8bdf5dd32c80acf9a9c475}{Nout}}\textcolor{vhdlchar}{-}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{2} \textcolor{keywordflow}{downto} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{)} \textcolor{vhdlchar}{<} \textcolor{vhdlchar}{\hyperlink{classintegrador_a436836a2e79668e0976eef3a553b5406}{MAX}}\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classintegrador_a061c0d632c8bdf5dd32c80acf9a9c475}{Nout}}\textcolor{vhdlchar}{-}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1} \textcolor{keywordflow}{downto} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{1}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00043                                 \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a45126d1a75be347f440d181b7aa5e033}{sinc\_int}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{'};
+00044                             \textcolor{keywordflow}{else}
+00045                                 \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a45126d1a75be347f440d181b7aa5e033}{sinc\_int}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1}\textcolor{vhdlchar}{'};
+00046                             \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00047                         \textcolor{keywordflow}{else}
+00048                             \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a951e616187c21eeebaa382a516df536e}{out\_int}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{(}\textcolor{keywordflow}{others} \textcolor{vhdlchar}{=}\textcolor{vhdlchar}{>} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{)};
+00049 \textcolor{keyword}{                            --sinc\_int <= '1';}
+00050                         \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00051                     \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};                         
+00052                     
+00053                     
+00054                 \textcolor{keywordflow}{else}
+00055                     \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a951e616187c21eeebaa382a516df536e}{out\_int}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{(}\textcolor{keywordflow}{others} \textcolor{vhdlchar}{=}\textcolor{vhdlchar}{>} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{)};
+00056 \textcolor{keyword}{                    --sinc\_int <= (others => '0');}
+00057                 \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00058         \textcolor{keywordflow}{end} \textcolor{keywordflow}{process};
+00059         
+00060         \textcolor{vhdlchar}{\hyperlink{classintegrador_a9e461894ea9b864637648799f51bf9be}{out\_data}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a951e616187c21eeebaa382a516df536e}{out\_int}}; 
+00061         \textcolor{vhdlchar}{\hyperlink{classintegrador_aae281cf725515894f893258c629a59c7}{sinc}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classintegrador_1_1integrador_a45126d1a75be347f440d181b7aa5e033}{sinc\_int}};
+00062 \textcolor{keywordflow}{end} \textcolor{keywordflow}{architecture} \textcolor{vhdlchar}{integrador};
+00063 
+00064 
+\end{DoxyCode}

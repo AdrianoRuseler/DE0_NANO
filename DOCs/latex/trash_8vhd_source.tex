@@ -1,0 +1,99 @@
+\hypertarget{trash_8vhd_source}{}\section{trash.\+vhd}
+
+\begin{DoxyCode}
+00001 
+00002 
+00003     
+00004             
+00005             
+00006  \textcolor{vhdlchar}{/}\textcolor{vhdlchar}{*}u2comp: \hyperlink{classcomparador}{comparador} \textcolor{keywordflow}{port} \textcolor{keywordflow}{map}(
+00007             \hyperlink{classcomparador_a4a4609c199d30b3adebbeb3a01276ec5}{clk} => clk\_pll,\textcolor{keyword}{ -- clock}
+00008             \hyperlink{classcomparador_adcf9c6f5161d039addbda5819bee64a3}{en} => '1',\textcolor{keyword}{ -- habilta modulo}
+00009             \hyperlink{classcomparador_a0c2a0581e706d5256b50516b6ca4dbed}{comp} => \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}to\_unsigned\textcolor{vhdlchar}{(}\textcolor{vhdllogic}{267}, \textcolor{vhdllogic}{16}\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{)},\textcolor{keyword}{ -- moduladora     }
+00010             \hyperlink{classcomparador_a0808bf3e7965a8ee90dec6604647f179}{c} => cPWM2,\textcolor{keyword}{ -- portadora}
+00011             \hyperlink{classcomparador_af9b8278b961604ab62a822537a109adb}{amost} => clk\_pll,\textcolor{keyword}{ -- amostra moduladora na borda de amost}
+00012            \hyperlink{classcomparador_a2522d63dc2aa0652b3cca6ac9b1da0bd}{comp\_out} => GPIO\_0\textcolor{vhdlchar}{(}\textcolor{vhdllogic}{2}\textcolor{vhdlchar}{)}
+00013             \textcolor{vhdlchar}{)};
+00014         
+00015     \textcolor{vhdlchar}{*}\textcolor{vhdlchar}{/}
+00016 
+00017 \textcolor{vhdlchar}{/}\textcolor{vhdlchar}{*}  
+00018                     
+00019 \textcolor{keyword}{    --  led indica frequencia da fundamental                }
+00020     uled: \hyperlink{classclk__div}{clk\_div} \textcolor{keywordflow}{port} \textcolor{keywordflow}{map} (\hyperlink{classclk__div_a57fad7f33f7766724bdea76e7b0330ef}{clk\_in} => sinc\_int,
+00021                                 \hyperlink{classclk__div_a512588aa484615b7e90600a1bc9507b4}{en} => '1',
+00022                                 \hyperlink{classclk__div_a425c2042b3ea21827b9b29c6712312d9}{div} => \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}to\_unsigned\textcolor{vhdlchar}{(}\textcolor{vhdllogic}{6}, \textcolor{vhdllogic}{16}\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{)},
+00023                         \hyperlink{classclk__div_a8147ca5cedee84ed9753ac6f1f0b2374}{clk\_out} => LED\textcolor{vhdlchar}{(}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{)}
+00024 \textcolor{keyword}{                                --clk\_out => GPIO\_0(2)}
+00025                         \textcolor{vhdlchar}{)};  
+00026     \textcolor{vhdlchar}{*}\textcolor{vhdlchar}{/}                          
+00027 
+00028 
+00029 
+00030                 
+00031 
+00032     ucomp: \hyperlink{classcomparador}{comparador} \textcolor{keywordflow}{port} \textcolor{keywordflow}{map}(
+00033             \hyperlink{classcomparador_a4a4609c199d30b3adebbeb3a01276ec5}{clk} => clk\_pll,\textcolor{keyword}{ -- clock}
+00034             \hyperlink{classcomparador_adcf9c6f5161d039addbda5819bee64a3}{en} => '1',\textcolor{keyword}{ -- habilta modulo}
+00035             \hyperlink{classcomparador_a0c2a0581e706d5256b50516b6ca4dbed}{comp} => \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}to\_unsigned\textcolor{vhdlchar}{(}\textcolor{vhdllogic}{267}, \textcolor{vhdllogic}{16}\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{)},\textcolor{keyword}{ -- moduladora     }
+00036             \hyperlink{classcomparador_a0808bf3e7965a8ee90dec6604647f179}{c} => cTRI1,\textcolor{keyword}{ -- portadora}
+00037             \hyperlink{classcomparador_af9b8278b961604ab62a822537a109adb}{amost} => clk\_pll,\textcolor{keyword}{ -- amostra moduladora na borda de amost}
+00038            \hyperlink{classcomparador_a2522d63dc2aa0652b3cca6ac9b1da0bd}{comp\_out} => sigPWM01
+00039             \textcolor{vhdlchar}{)};
+00040             
+00041             
+00042     
+00043 deadcomp : \hyperlink{classdeadtime}{deadtime} \textcolor{keywordflow}{port} \textcolor{keywordflow}{map}( 
+00044     \hyperlink{classdeadtime_add98662948c2105b77ab5e8fc7f07f86}{p\_Pwm\_In}  => sigPWM01,
+00045     \hyperlink{classdeadtime_ab5d0ea9e968d49d94da9db07a979d402}{CLK} => clk\_pll,\textcolor{keyword}{ -- clock}
+00046     \hyperlink{classdeadtime_a629edf1594d9c8b1a0844cd27222067a}{p\_Pwm1\_Out} => GPIO\_0\textcolor{vhdlchar}{(}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{)},
+00047     \hyperlink{classdeadtime_a9dab8115e08009b8436cc7f0c07b5e0c}{p\_Pwm2\_Out} => GPIO\_0\textcolor{vhdlchar}{(}\textcolor{vhdllogic}{1}\textcolor{vhdlchar}{)}
+00048      \textcolor{vhdlchar}{)};     
+00049 
+00050 
+00051 
+00052                                 
+00053 \textcolor{keyword}{    -- defasa theta para sistema trifasico                              }
+00054     u6: \hyperlink{classtheta__abc}{theta\_abc} \textcolor{keywordflow}{port} \textcolor{keywordflow}{map}(
+00055                                         \hyperlink{classtheta__abc_a4a4609c199d30b3adebbeb3a01276ec5}{clk} => clk\_int,
+00056                                         \hyperlink{classtheta__abc_adcf9c6f5161d039addbda5819bee64a3}{en} => '1',
+00057                                         \hyperlink{classtheta__abc_aad8dc6359d9e23dabcbf342fadf2fa06}{reset} => '0',
+00058                                         \hyperlink{classtheta__abc_ae915426336e82564b81552bb4a9106c8}{theta\_a} => \hyperlink{classtheta__abc_1_1theta__abc_ad76995fdeaec7ada621075ea6562c673}{th\_a},
+00059                                         \hyperlink{classtheta__abc_a0e4f34615c07a131cc3e798485768ace}{theta\_b} => \hyperlink{classtheta__abc_1_1theta__abc_ae23fb98ce5af67556ecf68e8ffb4a27c}{th\_b},
+00060                                         \hyperlink{classtheta__abc_a2a449e4b73715ae14ae4178ad27cf5c9}{theta\_c} => \hyperlink{classtheta__abc_1_1theta__abc_a99d308b4a97dff4ea9faacf3778ac0f1}{th\_c},
+00061                                         \hyperlink{classtheta__abc_aa0a6389197d6e4203cf6b365fbe2e2d1}{theta\_in} => theta\_pll
+00062                                     \textcolor{vhdlchar}{)};
+00063 
+00064 
+00065             
+00066     usin: \hyperlink{classtabela__sin}{tabela\_sin} \textcolor{keywordflow}{port} \textcolor{keywordflow}{map} (\hyperlink{classtabela__sin_a4a4609c199d30b3adebbeb3a01276ec5}{clk} => clk\_pll,
+00067                     \hyperlink{classtabela__sin_afad6cf0a3cf35dff4473dba942ec361a}{theta} => \hyperlink{classtheta__abc_1_1theta__abc_ad76995fdeaec7ada621075ea6562c673}{th\_a},
+00068                     \hyperlink{classtabela__sin_a2c2cf4dbd0533e281ac8b2f114f11e67}{va} => sin\_a
+00069                     \textcolor{vhdlchar}{)};  
+00070 
+00071 
+00072                         
+00073 \textcolor{keyword}{    --  clk\_int = 6.666\_ MHz                    }
+00074     u1: \hyperlink{classclk__div}{clk\_div} \textcolor{keywordflow}{port} \textcolor{keywordflow}{map} (\hyperlink{classclk__div_a57fad7f33f7766724bdea76e7b0330ef}{clk\_in} => clk\_pll,
+00075                                 \hyperlink{classclk__div_a512588aa484615b7e90600a1bc9507b4}{en} => '1',
+00076                                 \hyperlink{classclk__div_a425c2042b3ea21827b9b29c6712312d9}{div} => \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}to\_unsigned\textcolor{vhdlchar}{(}\textcolor{vhdllogic}{4}, \textcolor{vhdllogic}{16}\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{)},\textcolor{keyword}{ -- function TO\_UNSIGNED
+       (ARG, SIZE: NATURAL) return UNSIGNED;}
+00077                         \hyperlink{classclk__div_a8147ca5cedee84ed9753ac6f1f0b2374}{clk\_out} => clk\_int
+00078                         \textcolor{vhdlchar}{)};      
+00079                     
+00080             
+00081                             
+00082         
+00083 \textcolor{keyword}{     -- int\_data = 3428 => 60 Hz    }
+00084      u5: \hyperlink{classintegrador}{integrador} \textcolor{keywordflow}{port} \textcolor{keywordflow}{map}(
+00085                                         \hyperlink{classintegrador_a4a4609c199d30b3adebbeb3a01276ec5}{clk} => clk\_int,
+00086                                         \hyperlink{classintegrador_adcf9c6f5161d039addbda5819bee64a3}{en} => '1',
+00087                                         \hyperlink{classintegrador_aad8dc6359d9e23dabcbf342fadf2fa06}{reset} => '0',
+00088                                         \hyperlink{classintegrador_a436836a2e79668e0976eef3a553b5406}{MAX} => \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}to\_unsigned\textcolor{vhdlchar}{(}\textcolor{vhdllogic}{536870911}, \textcolor{vhdllogic}{30}\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{)},
+00089                                         \hyperlink{classintegrador_aae281cf725515894f893258c629a59c7}{sinc} => sinc\_int,
+00090                                         \hyperlink{classintegrador_a9e461894ea9b864637648799f51bf9be}{out\_data} => theta\_pll,
+00091                                         \hyperlink{classintegrador_aec192442094491f2207942b96b64835c}{int\_data} => \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}to\_unsigned\textcolor{vhdlchar}{(}\textcolor{vhdllogic}{4832}, \textcolor{vhdllogic}{13}\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{)}
+00092 \textcolor{keyword}{                                        --int\_data => omega\_pll}
+00093                                     \textcolor{vhdlchar}{)};
+00094 
+\end{DoxyCode}

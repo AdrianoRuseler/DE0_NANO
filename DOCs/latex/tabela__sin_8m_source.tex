@@ -1,0 +1,231 @@
+\hypertarget{tabela__sin_8m_source}{}\section{tabela\+\_\+sin.\+m}
+
+\begin{DoxyCode}
+00001                                                                                        
+\hypertarget{tabela__sin_8m_source_l00002}{}\hyperlink{tabela__sin_8m_a150e6d543afcb739888f1805186eaf34}{00002} \hyperlink{tabela__sin_8m_a150e6d543afcb739888f1805186eaf34}{mMIN} = to\_sfixed(0.08137,  1, -14)
+00003 
+00004 mMAX = to\_sfixed(0.8137,  1, -14)
+00005 
+00006 (mMAX-\hyperlink{tabela__sin_8m_a150e6d543afcb739888f1805186eaf34}{mMIN})/(4832-483)
+00007 
+00008 3/2^14
+00009 
+00010 istep=0.73233/(4832-483)
+00011 \hyperlink{tabela__sin_8m_a96930559dafc6536b32fb1c2fc65a068}{log2}(istep)
+00012 
+00013 TotalBits=16;
+\hypertarget{tabela__sin_8m_source_l00014}{}\hyperlink{tabela__sin_8m_a2a89187d8e8e8fba509ef9ab5f815d88}{00014} \hyperlink{tabela__sin_8m_a2a89187d8e8e8fba509ef9ab5f815d88}{out} = fixptbestprec(istep,16,1) 
+00015 
+00016 \hyperlink{tabela__sin_8m_a2a89187d8e8e8fba509ef9ab5f815d88}{out} = fixptbestexp(istep,TotalBits,1)
+00017 
+00018 
+00019 to\_sfixed(istep,  1, -27)
+00020 
+00021 
+00022 %% Ganho estatico
+00023 
+00024 
+00025 Vcc*n*m
+00026 
+00027 Vout=sqrt(2)*220
+00028 
+00029 
+00030 Vout/400
+00031 
+00032 
+00033 %% Integrador
+00034 
+00035 
+00036 fpll=53.333333e6;
+\hypertarget{tabela__sin_8m_source_l00037}{}\hyperlink{tabela__sin_8m_a3dcf35661bfc40ffb87f3a8129bcd4db}{00037} \hyperlink{tabela__sin_8m_a3dcf35661bfc40ffb87f3a8129bcd4db}{fint}=fpll/8;
+00038 
+00039 
+\hypertarget{tabela__sin_8m_source_l00040}{}\hyperlink{tabela__sin_8m_add73c22154ea2d5778d1c80257b17dba}{00040} \hyperlink{tabela__sin_8m_add73c22154ea2d5778d1c80257b17dba}{Nin} = 13;  % numero de bits da parte inteira excluindo sinal de entrada
+\hypertarget{tabela__sin_8m_source_l00041}{}\hyperlink{tabela__sin_8m_a88dcea275654fb4b9796f8d4d937e4c6}{00041} \hyperlink{tabela__sin_8m_a88dcea275654fb4b9796f8d4d937e4c6}{Nout} = 30;  % numero de bits da parte inteira excluindo sinal de saida
+00042 
+\hypertarget{tabela__sin_8m_source_l00043}{}\hyperlink{tabela__sin_8m_aca64ecb7d3e71038fc46cb491323dd31}{00043} \hyperlink{tabela__sin_8m_aca64ecb7d3e71038fc46cb491323dd31}{fin}=\hyperlink{tabela__sin_8m_a3dcf35661bfc40ffb87f3a8129bcd4db}{fint};
+00044 
+00045 
+\hypertarget{tabela__sin_8m_source_l00046}{}\hyperlink{tabela__sin_8m_ae474c9220a3d08b3c69e1922b9e8210b}{00046} \hyperlink{tabela__sin_8m_ae474c9220a3d08b3c69e1922b9e8210b}{INCmax}=2^\hyperlink{tabela__sin_8m_add73c22154ea2d5778d1c80257b17dba}{Nin}-1; % Maximun values for inc
+\hypertarget{tabela__sin_8m_source_l00047}{}\hyperlink{tabela__sin_8m_a7688967cfc97acdf0d8fe0ecdbeb8a68}{00047} \hyperlink{tabela__sin_8m_a7688967cfc97acdf0d8fe0ecdbeb8a68}{INCmin}=1; % Minimun values for inc
+\hypertarget{tabela__sin_8m_source_l00048}{}\hyperlink{tabela__sin_8m_ad1392712dba3db363181d4f7c55d23dd}{00048} \hyperlink{tabela__sin_8m_ad1392712dba3db363181d4f7c55d23dd}{MAXmax}=2^\hyperlink{tabela__sin_8m_a88dcea275654fb4b9796f8d4d937e4c6}{Nout}-1;
+00049 
+00050 
+00051 
+\hypertarget{tabela__sin_8m_source_l00052}{}\hyperlink{tabela__sin_8m_a4999fbec9adec95eaa8546e1760b1b0e}{00052} \hyperlink{tabela__sin_8m_a4999fbec9adec95eaa8546e1760b1b0e}{N16}= 16;
+00053 
+\hypertarget{tabela__sin_8m_source_l00054}{}\hyperlink{tabela__sin_8m_a4124bc0a9335c27f086f24ba207a4912}{00054} \hyperlink{tabela__sin_8m_a4124bc0a9335c27f086f24ba207a4912}{a} = fi(4832, 0,13, 0);
+00055 
+00056 \hyperlink{tabela__sin_8m_a96930559dafc6536b32fb1c2fc65a068}{log2}(735801)
+00057 
+00058 
+00059 \hyperlink{tabela__sin_8m_a45f5f88d061da0c18bcb6b6a854fe898}{MAX}=536870911;
+\hypertarget{tabela__sin_8m_source_l00060}{}\hyperlink{tabela__sin_8m_a49d851ee9dec71c92cd03a8aa127be0b}{00060} \hyperlink{tabela__sin_8m_a49d851ee9dec71c92cd03a8aa127be0b}{int\_data}=4832;
+\hypertarget{tabela__sin_8m_source_l00061}{}\hyperlink{tabela__sin_8m_af33de7d450ae55bb2e506fd064c897a7}{00061} \hyperlink{tabela__sin_8m_af33de7d450ae55bb2e506fd064c897a7}{INC60Hz}=4832;
+00062 
+\hypertarget{tabela__sin_8m_source_l00063}{}\hyperlink{tabela__sin_8m_af3646d7543d26f249126ca7855fadd84}{00063} \hyperlink{tabela__sin_8m_af3646d7543d26f249126ca7855fadd84}{fout}=(\hyperlink{tabela__sin_8m_a49d851ee9dec71c92cd03a8aa127be0b}{int\_data}*\hyperlink{tabela__sin_8m_aca64ecb7d3e71038fc46cb491323dd31}{fin})/MAX;
+00064 
+00065 \hyperlink{tabela__sin_8m_af3646d7543d26f249126ca7855fadd84}{fout} = 6;
+\hypertarget{tabela__sin_8m_source_l00066}{}\hyperlink{tabela__sin_8m_a2447165cdb1fcab2cc2281e245709af5}{00066} \hyperlink{tabela__sin_8m_a2447165cdb1fcab2cc2281e245709af5}{INCdata}=\hyperlink{tabela__sin_8m_af3646d7543d26f249126ca7855fadd84}{fout}*MAX/\hyperlink{tabela__sin_8m_aca64ecb7d3e71038fc46cb491323dd31}{fin};
+00067 
+\hypertarget{tabela__sin_8m_source_l00068}{}\hyperlink{tabela__sin_8m_a191ae6a10a6b332eda4e6b2466629b42}{00068} \hyperlink{tabela__sin_8m_a191ae6a10a6b332eda4e6b2466629b42}{duty60Hz}=0.858794; % Duty cycle
+\hypertarget{tabela__sin_8m_source_l00069}{}\hyperlink{tabela__sin_8m_a9368c3493d54b6f95e909e6b586be118}{00069} \hyperlink{tabela__sin_8m_a9368c3493d54b6f95e909e6b586be118}{slope}=\hyperlink{tabela__sin_8m_a191ae6a10a6b332eda4e6b2466629b42}{duty60Hz}/\hyperlink{tabela__sin_8m_af33de7d450ae55bb2e506fd064c897a7}{INC60Hz}
+00070 
+00071 foutMax=(\hyperlink{tabela__sin_8m_ae474c9220a3d08b3c69e1922b9e8210b}{INCmax}*fin)/MAX;
+\hypertarget{tabela__sin_8m_source_l00072}{}\hyperlink{tabela__sin_8m_a57b9e0e4f7c03d3c27e6df8ddfc21a69}{00072} \hyperlink{tabela__sin_8m_a57b9e0e4f7c03d3c27e6df8ddfc21a69}{foutMin}=(\hyperlink{tabela__sin_8m_a7688967cfc97acdf0d8fe0ecdbeb8a68}{INCmin}*fin)/MAX;
+00073 
+00074 % \hyperlink{tabela__sin_8m_a49d851ee9dec71c92cd03a8aa127be0b}{int\_data} => std\_logic\_vector(to\_unsigned(4832, 13))  -- daonde vem esse numero?
+00075 
+00076 theta\_pll = fi(0:\hyperlink{tabela__sin_8m_a49d851ee9dec71c92cd03a8aa127be0b}{int\_data}:MAX,0,Nout,0);
+00077 
+\hypertarget{tabela__sin_8m_source_l00078}{}\hyperlink{tabela__sin_8m_a824ea97f29827d6882c8bea60e357f52}{00078} \hyperlink{tabela__sin_8m_a824ea97f29827d6882c8bea60e357f52}{thasum}=fi(-32767,1,17,0);
+\hypertarget{tabela__sin_8m_source_l00079}{}\hyperlink{tabela__sin_8m_a37702d792de67c9e0ac5885379675498}{00079} \hyperlink{tabela__sin_8m_a37702d792de67c9e0ac5885379675498}{thbsum}=fi(-10922,1,17,0);
+\hypertarget{tabela__sin_8m_source_l00080}{}\hyperlink{tabela__sin_8m_a5728d6bf7f8b7d2db5e32f3d59b77bd6}{00080} \hyperlink{tabela__sin_8m_a5728d6bf7f8b7d2db5e32f3d59b77bd6}{thcsum}=fi(10922,1,17,0);
+00081  
+00082 
+\hypertarget{tabela__sin_8m_source_l00083}{}\hyperlink{tabela__sin_8m_a28aedf756134a77c7356f59cf5f784a0}{00083} \hyperlink{tabela__sin_8m_a28aedf756134a77c7356f59cf5f784a0}{th17bits}=fi(bitsrl(theta\_pll,13),1,17,0);
+00084 
+\hypertarget{tabela__sin_8m_source_l00085}{}\hyperlink{tabela__sin_8m_a9efb3629fb972b6998d55afb1db1d725}{00085} \hyperlink{tabela__sin_8m_a9efb3629fb972b6998d55afb1db1d725}{th\_ai}=\hyperlink{tabela__sin_8m_a28aedf756134a77c7356f59cf5f784a0}{th17bits}+\hyperlink{tabela__sin_8m_a824ea97f29827d6882c8bea60e357f52}{thasum};
+\hypertarget{tabela__sin_8m_source_l00086}{}\hyperlink{tabela__sin_8m_a0e9add3cb972a1bac76e4131cbe57589}{00086} \hyperlink{tabela__sin_8m_a0e9add3cb972a1bac76e4131cbe57589}{th\_bi}=\hyperlink{tabela__sin_8m_a28aedf756134a77c7356f59cf5f784a0}{th17bits}+\hyperlink{tabela__sin_8m_a37702d792de67c9e0ac5885379675498}{thbsum}; 
+\hypertarget{tabela__sin_8m_source_l00087}{}\hyperlink{tabela__sin_8m_a08dacae52e62ffab93f3cc082ab4992f}{00087} \hyperlink{tabela__sin_8m_a08dacae52e62ffab93f3cc082ab4992f}{th\_ci}=\hyperlink{tabela__sin_8m_a28aedf756134a77c7356f59cf5f784a0}{th17bits}+\hyperlink{tabela__sin_8m_a5728d6bf7f8b7d2db5e32f3d59b77bd6}{thcsum};
+00088 
+00089 
+00090 
+\hypertarget{tabela__sin_8m_source_l00091}{}\hyperlink{tabela__sin_8m_adb849c41da94fdd7e0af4eeea1f00ce0}{00091} \hyperlink{tabela__sin_8m_adb849c41da94fdd7e0af4eeea1f00ce0}{theta\_a} = fi(\hyperlink{tabela__sin_8m_a9efb3629fb972b6998d55afb1db1d725}{th\_ai},1,16,0);
+\hypertarget{tabela__sin_8m_source_l00092}{}\hyperlink{tabela__sin_8m_aa3dc7c1d0ffeae860c7e77b2a29e820b}{00092} \hyperlink{tabela__sin_8m_aa3dc7c1d0ffeae860c7e77b2a29e820b}{theta\_b} = fi(\hyperlink{tabela__sin_8m_a0e9add3cb972a1bac76e4131cbe57589}{th\_bi},1,16,0);
+\hypertarget{tabela__sin_8m_source_l00093}{}\hyperlink{tabela__sin_8m_ab17fdf38459466a669e9f1d37aaf451b}{00093} \hyperlink{tabela__sin_8m_ab17fdf38459466a669e9f1d37aaf451b}{theta\_c} = fi(\hyperlink{tabela__sin_8m_a08dacae52e62ffab93f3cc082ab4992f}{th\_ci},1,16,0);
+00094 
+00095 
+00096 %% Limites para operacao 
+00097 
+00098 
+00099 
+00100 
+00101 %% Tabela sin para FPGA
+\hypertarget{tabela__sin_8m_source_l00102}{}\hyperlink{tabela__sin_8m_adea5643fb97e0124281c1063e62cddcb}{00102} \hyperlink{tabela__sin_8m_adea5643fb97e0124281c1063e62cddcb}{fid} = fopen('\hyperlink{classtabela__sin}{tabela\_sin}.txt', 'w');
+00103 
+00104 
+\hypertarget{tabela__sin_8m_source_l00105}{}\hyperlink{tabela__sin_8m_ac3ebda0e41729d2a4775254c5408627c}{00105} \hyperlink{tabela__sin_8m_ac3ebda0e41729d2a4775254c5408627c}{Nbits}=11; % \hyperlink{tabela__sin_8m_a96930559dafc6536b32fb1c2fc65a068}{log2}(1335) = 10.3826
+00106 \hyperlink{tabela__sin_8m_a8e74c1aa592176ce4d9de482df12e3b9}{max\_phase} = 2^16-1;
+00107 
+\hypertarget{tabela__sin_8m_source_l00108}{}\hyperlink{tabela__sin_8m_a6545f4316eace1b9dbd251af87fb6f82}{00108} \hyperlink{tabela__sin_8m_a6545f4316eace1b9dbd251af87fb6f82}{duty}=0.858794; % Duty cycle
+\hypertarget{tabela__sin_8m_source_l00109}{}\hyperlink{tabela__sin_8m_a6335a34310e979c773f1c56987103927}{00109} \hyperlink{tabela__sin_8m_a6335a34310e979c773f1c56987103927}{cmax} = 1335;
+\hypertarget{tabela__sin_8m_source_l00110}{}\hyperlink{tabela__sin_8m_aee3eefaf75816178a42c80cb229c131a}{00110} \hyperlink{tabela__sin_8m_aee3eefaf75816178a42c80cb229c131a}{med} = \hyperlink{tabela__sin_8m_a6335a34310e979c773f1c56987103927}{cmax}/2;
+\hypertarget{tabela__sin_8m_source_l00111}{}\hyperlink{tabela__sin_8m_aa9e70201fd4fbc2a8f36753112a26338}{00111} \hyperlink{tabela__sin_8m_aa9e70201fd4fbc2a8f36753112a26338}{amp} = \hyperlink{tabela__sin_8m_aee3eefaf75816178a42c80cb229c131a}{med}*\hyperlink{tabela__sin_8m_a6545f4316eace1b9dbd251af87fb6f82}{duty};
+00112 
+00113 
+00114 
+00115 \hyperlink{tabela__sin_8m_ac363133ed20bc515e96bd50f385250c3}{fprintf}(\hyperlink{tabela__sin_8m_adea5643fb97e0124281c1063e62cddcb}{fid}, 'with \textcolor{keywordtype}{id} select\(\backslash\)n');
+00116 \hyperlink{tabela__sin_8m_ac363133ed20bc515e96bd50f385250c3}{fprintf}(fid, '  sin <= ');
+00117 
+\hypertarget{tabela__sin_8m_source_l00118}{}\hyperlink{tabela__sin_8m_ad90e666753da8bfd682fa818bd23e599}{00118} for \textcolor{keywordtype}{id}=1:1:2^\hyperlink{tabela__sin_8m_ac3ebda0e41729d2a4775254c5408627c}{Nbits}
+00119     idd = fi(\textcolor{keywordtype}{id}-1,0,\hyperlink{tabela__sin_8m_ac3ebda0e41729d2a4775254c5408627c}{Nbits},0);
+00120     \hyperlink{tabela__sin_8m_a240abff6fc3e26a3048e96c70d010279}{plotar}(\textcolor{keywordtype}{id})=round(\hyperlink{tabela__sin_8m_aa9e70201fd4fbc2a8f36753112a26338}{amp}*sin((\textcolor{keywordtype}{id}-1)/(cmax)*pi*2)+\hyperlink{tabela__sin_8m_aee3eefaf75816178a42c80cb229c131a}{med});
+00121     \hyperlink{tabela__sin_8m_ac363133ed20bc515e96bd50f385250c3}{fprintf}(fid, '           std\_logic\_vector(to\_unsigned(%u, n\_bits\_c)) when "%s", \(\backslash\)n', round(
+      \hyperlink{tabela__sin_8m_aa9e70201fd4fbc2a8f36753112a26338}{amp}*sin((\textcolor{keywordtype}{id}-1)/(cmax)*pi*2)+med), idd.bin);
+00122 end
+00123 
+00124 
+00125 \hyperlink{tabela__sin_8m_ac363133ed20bc515e96bd50f385250c3}{fprintf}(fid, '           std\_logic\_vector(to\_unsigned(0, n\_bits\_c)) when others;');
+00126 
+00127 \hyperlink{tabela__sin_8m_a5e769bbbabcaddc548203741c7100228}{fclose}(fid);
+00128 
+00129 %%
+00130 
+00131 
+00132 duty=0.8137; % Duty cycle
+00133 
+00134 duty=1;
+00135 cmax = 1335;
+00136 
+00137 \hyperlink{tabela__sin_8m_a96930559dafc6536b32fb1c2fc65a068}{log2}(cmax)
+00138 
+00139 
+00140 \hyperlink{tabela__sin_8m_aa344839a5220e26f37db4ee025be0e34}{fimax}=fi(1335,0,16,0);
+00141 
+00142 med = cmax/2;
+00143 % \hyperlink{tabela__sin_8m_aa9e70201fd4fbc2a8f36753112a26338}{amp} = med;
+00144 \hyperlink{tabela__sin_8m_aa9e70201fd4fbc2a8f36753112a26338}{amp} = med*duty;
+00145 
+00146 
+00147 Nbits=11; % \hyperlink{tabela__sin_8m_a96930559dafc6536b32fb1c2fc65a068}{log2}(1335) = 10.3826
+00148 
+00149 \textcolor{keywordtype}{id}=0:1:2^Nbits-1;
+\hypertarget{tabela__sin_8m_source_l00150}{}\hyperlink{tabela__sin_8m_aeca03c4db64d7ab2218830efde4d1dd9}{00150} \hyperlink{tabela__sin_8m_aeca03c4db64d7ab2218830efde4d1dd9}{idfi} = fi(\textcolor{keywordtype}{id},0,Nbits,0);
+00151 
+\hypertarget{tabela__sin_8m_source_l00152}{}\hyperlink{tabela__sin_8m_a7a7b7e39443ef5fd0550dea9959b22fd}{00152} \hyperlink{classwt}{wt}=\textcolor{keywordtype}{id}*2*pi/(2^Nbits);
+\hypertarget{tabela__sin_8m_source_l00153}{}\hyperlink{tabela__sin_8m_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{00153} \hyperlink{tabela__sin_8m_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}=sin(\hyperlink{classwt}{wt});
+00154 
+00155 
+00156 
+\hypertarget{tabela__sin_8m_source_l00157}{}\hyperlink{tabela__sin_8m_a3e25b11568cd851da20b0245b0b0051e}{00157} % \hyperlink{tabela__sin_8m_a3e25b11568cd851da20b0245b0b0051e}{senofi}=fi(\hyperlink{tabela__sin_8m_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y},0,16,0)
+00158 
+00159 seno=round(\hyperlink{tabela__sin_8m_aa9e70201fd4fbc2a8f36753112a26338}{amp}*y+med);
+00160 
+00161 figure
+00162 \hyperlink{tabela__sin_8m_aa1497ffb7c0acb1d6c64e25fe8f271cc}{plot}(seno)
+00163 hold all
+00164 \hyperlink{tabela__sin_8m_aa1497ffb7c0acb1d6c64e25fe8f271cc}{plot}(\hyperlink{tabela__sin_8m_aa9e70201fd4fbc2a8f36753112a26338}{amp}*y+med)
+00165 
+00166 
+00167 %% Escreve no arquivo .txt
+00168 fid = fopen('tabelaDuty0\_8137\_sin.txt', 'w');
+00169 
+00170 \hyperlink{tabela__sin_8m_ac363133ed20bc515e96bd50f385250c3}{fprintf}(fid, 'with \textcolor{keywordtype}{id} select\(\backslash\)n');
+00171 \hyperlink{tabela__sin_8m_ac363133ed20bc515e96bd50f385250c3}{fprintf}(fid, '  sin <= ');
+00172 
+00173 
+\hypertarget{tabela__sin_8m_source_l00174}{}\hyperlink{tabela__sin_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{00174} for \hyperlink{tabela__sin_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k}=1:2^Nbits
+00175     \textcolor{keywordtype}{id} = \hyperlink{tabela__sin_8m_aeca03c4db64d7ab2218830efde4d1dd9}{idfi}(\hyperlink{tabela__sin_8m_a1c73327b2882639bc9f5e416bb3cc7ac}{k});
+00176     \hyperlink{tabela__sin_8m_ac363133ed20bc515e96bd50f385250c3}{fprintf}(fid, '           std\_logic\_vector(to\_unsigned(%u, n\_bits\_c)) when "%s", \(\backslash\)n', seno(k), \textcolor{keywordtype}{id}
+      .bin);
+00177 end
+00178 
+00179 
+00180 \hyperlink{tabela__sin_8m_ac363133ed20bc515e96bd50f385250c3}{fprintf}(fid, '           std\_logic\_vector(to\_unsigned(0, n\_bits\_c)) when others;');
+00181 
+00182 \hyperlink{tabela__sin_8m_a5e769bbbabcaddc548203741c7100228}{fclose}(fid);
+00183 
+00184 %% tabela em ponto \hyperlink{tabela__sin_8m_a8071230ddfd55f7f55be6a85c1ad765a}{fixo}:
+00185 
+\hypertarget{tabela__sin_8m_source_l00186}{}\hyperlink{tabela__sin_8m_a8071230ddfd55f7f55be6a85c1ad765a}{00186} Nbits=11; % \hyperlink{tabela__sin_8m_a96930559dafc6536b32fb1c2fc65a068}{log2}(1335) = 10.3826
+00187 
+00188 \textcolor{keywordtype}{id}=0:1:2^Nbits-1; % gera todos os indices
+00189 \hyperlink{tabela__sin_8m_aeca03c4db64d7ab2218830efde4d1dd9}{idfi} = fi(\textcolor{keywordtype}{id},0,Nbits,0); % Gera objeto fi com todos os indices
+\hypertarget{tabela__sin_8m_source_l00190}{}\hyperlink{tabela__sin_8m_a8e74c1aa592176ce4d9de482df12e3b9}{00190} max\_phase = 2^16-1;
+00191 
+00192 wt=\textcolor{keywordtype}{id}*2*pi/(2^Nbits);
+00193 y=sin(wt);
+00194 
+\hypertarget{tabela__sin_8m_source_l00195}{}\hyperlink{tabela__sin_8m_aa344839a5220e26f37db4ee025be0e34}{00195} \hyperlink{tabela__sin_8m_aa344839a5220e26f37db4ee025be0e34}{fimax}=fi(1335,0,16,0);
+\hypertarget{tabela__sin_8m_source_l00196}{}\hyperlink{tabela__sin_8m_a33a8cdf3eb159661384614c75a76cdc3}{00196} \hyperlink{tabela__sin_8m_a33a8cdf3eb159661384614c75a76cdc3}{yQ15}=fi(y,1,16,15);
+00197 
+\hypertarget{tabela__sin_8m_source_l00198}{}\hyperlink{tabela__sin_8m_a50b69e8e55167990c85f65e0a656e294}{00198} \hyperlink{tabela__sin_8m_a50b69e8e55167990c85f65e0a656e294}{comp}=fi((\hyperlink{tabela__sin_8m_a33a8cdf3eb159661384614c75a76cdc3}{yQ15}*\hyperlink{tabela__sin_8m_aa344839a5220e26f37db4ee025be0e34}{fimax}/2+\hyperlink{tabela__sin_8m_aa344839a5220e26f37db4ee025be0e34}{fimax}/2),0,16,0);
+00199 
+\hypertarget{tabela__sin_8m_source_l00200}{}\hyperlink{tabela__sin_8m_a45f5f88d061da0c18bcb6b6a854fe898}{00200} % MAX => std\_logic\_vector(to\_unsigned( 1335, 16)), -- valor de contagem maximo
+00201 
+00202 % 1/2^15
+00203 % to\_sfixed(0.999300704788399, I, -F) when "000000010", 
+00204 
+00205 fid = fopen('tabelaSFIXEDsin.txt', 'w');
+00206 
+00207 \hyperlink{tabela__sin_8m_ac363133ed20bc515e96bd50f385250c3}{fprintf}(fid, 'with \textcolor{keywordtype}{id} select\(\backslash\)n');
+00208 \hyperlink{tabela__sin_8m_ac363133ed20bc515e96bd50f385250c3}{fprintf}(fid, '  sin <= ');
+00209 
+00210 
+00211 for k=1:2^Nbits
+00212     \textcolor{keywordtype}{id} = \hyperlink{tabela__sin_8m_aeca03c4db64d7ab2218830efde4d1dd9}{idfi}(k);
+00213     \hyperlink{tabela__sin_8m_ac363133ed20bc515e96bd50f385250c3}{fprintf}(fid, '           to\_sfixed(%1.6f,  I, -F) when "%s", \(\backslash\)n', y(k), \textcolor{keywordtype}{id}.bin);
+00214 end
+00215 
+00216 
+00217 \hyperlink{tabela__sin_8m_ac363133ed20bc515e96bd50f385250c3}{fprintf}(fid, '           to\_sfixed(0, I, -F) when others;');
+00218 
+00219 \hyperlink{tabela__sin_8m_a5e769bbbabcaddc548203741c7100228}{fclose}(fid);
+00220 
+00221 
+00222 
+00223 
+00224 
+00225 
+\end{DoxyCode}

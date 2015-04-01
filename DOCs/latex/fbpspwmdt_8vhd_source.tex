@@ -1,0 +1,113 @@
+\hypertarget{fbpspwmdt_8vhd_source}{}\section{fbpspwmdt.\+vhd}
+
+\begin{DoxyCode}
+00001 
+00002 \textcolor{keyword}{-- FBPSPWMDT Full Bridge Phase Shift PWM with Dead Time}
+00003 
+\hypertarget{fbpspwmdt_8vhd_source_l00004}{}\hyperlink{classfbpspwmdt_ae4f03c286607f3181e16b9aa12d0c6d4}{00004} \textcolor{vhdlkeyword}{library }\textcolor{keywordflow}{IEEE};
+\hypertarget{fbpspwmdt_8vhd_source_l00005}{}\hyperlink{classfbpspwmdt_a241c3e72dd8024cc8ae831b1b2aed7db}{00005} \textcolor{vhdlkeyword}{use }IEEE.STD\_LOGIC\_UNSIGNED.\textcolor{keywordflow}{all};
+\hypertarget{fbpspwmdt_8vhd_source_l00006}{}\hyperlink{classfbpspwmdt_aa4b2b25246a821511120e3149b003563}{00006} \textcolor{vhdlkeyword}{use }IEEE.STD\_LOGIC\_1164.\textcolor{keywordflow}{all};
+\hypertarget{fbpspwmdt_8vhd_source_l00007}{}\hyperlink{classfbpspwmdt_aad86249c80e8c1e7ee1c4748aba748e3}{00007} \textcolor{vhdlkeyword}{use }\hyperlink{classdeadtime_a0a6af6eef40212dbaf130d57ce711256}{ieee}.\hyperlink{classfixed__pkg}{fixed\_pkg}.\textcolor{keywordflow}{all};\textcolor{keyword}{         --arquivo deve ser adicionado ao projeto  }
+\hypertarget{fbpspwmdt_8vhd_source_l00008}{}\hyperlink{classfbpspwmdt_a2edc34402b573437d5f25fa90ba4013e}{00008} \textcolor{vhdlkeyword}{use }\hyperlink{classdeadtime_a0a6af6eef40212dbaf130d57ce711256}{ieee}.numeric\_std.\textcolor{keywordflow}{all};
+00009 
+00010 
+\hypertarget{fbpspwmdt_8vhd_source_l00011}{}\hyperlink{classfbpspwmdt}{00011} \textcolor{keywordflow}{entity }\hyperlink{classfbpspwmdt}{fbpspwmdt} \textcolor{keywordflow}{is}
+00012     \textcolor{keywordflow}{generic}  \textcolor{vhdlchar}{(}
+\hypertarget{fbpspwmdt_8vhd_source_l00013}{}\hyperlink{classfbpspwmdt_afee4aa1628956aa350183d8881689198}{00013}          \textcolor{keywordflow}{constant} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_afee4aa1628956aa350183d8881689198}{n\_bits\_c}}\textcolor{vhdlchar}{:} \textcolor{comment}{integer} \textcolor{vhdlchar}{:=} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{16};\textcolor{keyword}{ --numero de bits da portadora}
+00014          \textcolor{keywordflow}{constant} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a66678837c93def3337995d7ffcb44f3f}{c\_Dead\_t}} \textcolor{vhdlchar}{:} \textcolor{comment}{integer} \textcolor{vhdlchar}{:=}  \textcolor{vhdllogic}{}\textcolor{vhdllogic}{45}     
+\hypertarget{fbpspwmdt_8vhd_source_l00015}{}\hyperlink{classfbpspwmdt_a66678837c93def3337995d7ffcb44f3f}{00015}                 \textcolor{vhdlchar}{)};
+00016     \textcolor{keywordflow}{port}\textcolor{vhdlchar}{(} 
+\hypertarget{fbpspwmdt_8vhd_source_l00017}{}\hyperlink{classfbpspwmdt_a4a4609c199d30b3adebbeb3a01276ec5}{00017}          \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a4a4609c199d30b3adebbeb3a01276ec5}{clk}} \textcolor{vhdlchar}{:} \textcolor{keywordflow}{in} \textcolor{comment}{std\_logic};\textcolor{keyword}{ -- clock}
+\hypertarget{fbpspwmdt_8vhd_source_l00018}{}\hyperlink{classfbpspwmdt_adcf9c6f5161d039addbda5819bee64a3}{00018}          \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_adcf9c6f5161d039addbda5819bee64a3}{en}} \textcolor{vhdlchar}{:} \textcolor{keywordflow}{in} \textcolor{comment}{std\_logic};\textcolor{keyword}{ -- habilta modulo}
+\hypertarget{fbpspwmdt_8vhd_source_l00019}{}\hyperlink{classfbpspwmdt_a021a597db1ce780174de5711902bf8f5}{00019}          \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a021a597db1ce780174de5711902bf8f5}{comp}} \textcolor{vhdlchar}{:} \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_afee4aa1628956aa350183d8881689198}{n\_bits\_c}}\textcolor{vhdlchar}{-}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1} \textcolor{keywordflow}{downto} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{)};\textcolor{keyword}{-- Razão ciclica em Q0  }
+\hypertarget{fbpspwmdt_8vhd_source_l00020}{}\hyperlink{classfbpspwmdt_a0808bf3e7965a8ee90dec6604647f179}{00020}          \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a0808bf3e7965a8ee90dec6604647f179}{c}} \textcolor{vhdlchar}{:} \textcolor{keywordflow}{in} \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_afee4aa1628956aa350183d8881689198}{n\_bits\_c}}\textcolor{vhdlchar}{-}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1} \textcolor{keywordflow}{downto} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{)};\textcolor{keyword}{ -- portadora}
+\hypertarget{fbpspwmdt_8vhd_source_l00021}{}\hyperlink{classfbpspwmdt_af9b8278b961604ab62a822537a109adb}{00021}          \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_af9b8278b961604ab62a822537a109adb}{amost}} \textcolor{vhdlchar}{:}  \textcolor{keywordflow}{in} \textcolor{comment}{std\_logic};\textcolor{keyword}{ -- amostra moduladora na borda de amost }
+\hypertarget{fbpspwmdt_8vhd_source_l00022}{}\hyperlink{classfbpspwmdt_ad6bbafb165991aee14c6014831267789}{00022}          \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_ad6bbafb165991aee14c6014831267789}{port\_PWM01}} \textcolor{vhdlchar}{:} \textcolor{keywordflow}{out} \textcolor{comment}{std\_logic};
+00023          \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a0b2d13e9c0fd854957d88a65e0905e5b}{port\_PWM02}} \textcolor{vhdlchar}{:} \textcolor{keywordflow}{out} \textcolor{comment}{std\_logic}        
+\hypertarget{fbpspwmdt_8vhd_source_l00024}{}\hyperlink{classfbpspwmdt_a0b2d13e9c0fd854957d88a65e0905e5b}{00024}          \textcolor{vhdlchar}{)};  
+00025 \textcolor{keywordflow}{end} \textcolor{keywordflow}{entity} \textcolor{vhdlchar}{fbpspwmdt};
+00026 
+00027 
+00028 \textcolor{keyword}{-- slv7 <= to\_slv (uf7\_3);}
+00029 
+00030 
+\hypertarget{fbpspwmdt_8vhd_source_l00031}{}\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch}{00031} \textcolor{keywordflow}{architecture} fbpspwmdt\_arch \textcolor{keywordflow}{of} \hyperlink{classfbpspwmdt}{fbpspwmdt} is
+00032     
+00033 
+\hypertarget{fbpspwmdt_8vhd_source_l00034}{}\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_abf7d8be25624dd08fcc1517c8e39cb23}{00034}     \textcolor{keywordflow}{signal} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_abf7d8be25624dd08fcc1517c8e39cb23}{comp\_int}} \textcolor{vhdlchar}{:} \textcolor{comment}{std\_logic\_vector}\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_afee4aa1628956aa350183d8881689198}{n\_bits\_c}}\textcolor{vhdlchar}{-}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1} \textcolor{keywordflow}{downto} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{)};\textcolor{keyword}{ -- data out }
+\hypertarget{fbpspwmdt_8vhd_source_l00035}{}\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a90c7671dbb1af7d80f90cd96262cda3b}{00035}    \textcolor{keywordflow}{signal} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a90c7671dbb1af7d80f90cd96262cda3b}{sig\_Not\_Pwm\_In}}\textcolor{vhdlchar}{:} \textcolor{comment}{std\_logic};
+\hypertarget{fbpspwmdt_8vhd_source_l00036}{}\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a5b5410422331d47dda25071eab458071}{00036}    \textcolor{keywordflow}{signal} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a5b5410422331d47dda25071eab458071}{comp\_out}} \textcolor{vhdlchar}{:} \textcolor{comment}{std\_logic};
+\hypertarget{fbpspwmdt_8vhd_source_l00037}{}\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_af7e8a49d46795da5945dc6b1f0602c13}{00037}     \textcolor{keywordflow}{signal} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_af7e8a49d46795da5945dc6b1f0602c13}{p\_Pwm\_In}}\textcolor{vhdlchar}{:} \textcolor{comment}{std\_logic} ;        
+00038     
+00039     
+00040     
+00041 \textcolor{vhdlkeyword}{    begin }  
+\hypertarget{fbpspwmdt_8vhd_source_l00042}{}\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a6cc276b9a3076e40ac68b8ac3f1828a7}{00042}        \textcolor{keywordflow}{process}(\hyperlink{classfbpspwmdt_a4a4609c199d30b3adebbeb3a01276ec5}{clk})
+00043 \textcolor{vhdlkeyword}{            begin}
+00044                 \textcolor{keywordflow}{if} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_adcf9c6f5161d039addbda5819bee64a3}{en}} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{'} \textcolor{keywordflow}{then}
+00045                     \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a5b5410422331d47dda25071eab458071}{comp\_out}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{'};
+00046                 \textcolor{keywordflow}{elsif} \textcolor{vhdlchar}{falling\_edge}\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a4a4609c199d30b3adebbeb3a01276ec5}{clk}}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00047                     \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_abf7d8be25624dd08fcc1517c8e39cb23}{comp\_int}} \textcolor{vhdlchar}{>} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a0808bf3e7965a8ee90dec6604647f179}{c}}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00048                         \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a5b5410422331d47dda25071eab458071}{comp\_out}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{'};
+00049                 \textcolor{keywordflow}{else}
+00050                         \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a5b5410422331d47dda25071eab458071}{comp\_out}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1}\textcolor{vhdlchar}{'};
+00051                     \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00052                 \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00053         \textcolor{keywordflow}{end} \textcolor{keywordflow}{process};
+00054         
+\hypertarget{fbpspwmdt_8vhd_source_l00055}{}\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a7cf6ba78e659f286a9d61adf1efc91b0}{00055}         \textcolor{keywordflow}{process}(\hyperlink{classfbpspwmdt_af9b8278b961604ab62a822537a109adb}{amost}) 
+00056 \textcolor{vhdlkeyword}{        begin}
+00057             \textcolor{keywordflow}{if} \textcolor{vhdlchar}{rising\_edge}\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_af9b8278b961604ab62a822537a109adb}{amost}}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00058                 \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_abf7d8be25624dd08fcc1517c8e39cb23}{comp\_int}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a021a597db1ce780174de5711902bf8f5}{comp}};
+00059             \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00060         \textcolor{keywordflow}{end} \textcolor{keywordflow}{process};
+00061         
+00062         
+00063         \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_af7e8a49d46795da5945dc6b1f0602c13}{p\_Pwm\_In}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a5b5410422331d47dda25071eab458071}{comp\_out}};
+00064         \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a90c7671dbb1af7d80f90cd96262cda3b}{sig\_Not\_Pwm\_In}} \textcolor{vhdlchar}{<=} \textcolor{keywordflow}{not} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_af7e8a49d46795da5945dc6b1f0602c13}{p\_Pwm\_In}};
+00065         
+00066         
+\hypertarget{fbpspwmdt_8vhd_source_l00067}{}\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a0132bccb07ff42922281b99abe7fc1ed}{00067}         \textcolor{keywordflow}{process} (\hyperlink{classfbpspwmdt_a4a4609c199d30b3adebbeb3a01276ec5}{clk})
+00068         \textcolor{keywordflow}{variable} \textcolor{vhdlchar}{var\_Dead\_Count1}\textcolor{vhdlchar}{:} \textcolor{comment}{integer} \textcolor{keywordflow}{range} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0} \textcolor{keywordflow}{to} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{127} \textcolor{vhdlchar}{:=} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0};
+00069         \textcolor{keywordflow}{variable} \textcolor{vhdlchar}{var\_Dead\_Count2}\textcolor{vhdlchar}{:} \textcolor{comment}{integer} \textcolor{keywordflow}{range} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0} \textcolor{keywordflow}{to} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{127} \textcolor{vhdlchar}{:=} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0};
+00070      
+00071 \textcolor{vhdlkeyword}{    begin}
+00072         \textcolor{keywordflow}{if} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_adcf9c6f5161d039addbda5819bee64a3}{en}} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{'} \textcolor{keywordflow}{then}
+00073                     \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_ad6bbafb165991aee14c6014831267789}{port\_PWM01}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{'};
+00074                     \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a0b2d13e9c0fd854957d88a65e0905e5b}{port\_PWM02}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{0}\textcolor{vhdlchar}{'};
+00075                 \textcolor{keywordflow}{elsif} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a4a4609c199d30b3adebbeb3a01276ec5}{clk}} \textcolor{vhdlchar}{'}\textcolor{vhdlkeyword}{event} \textcolor{keywordflow}{and} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a4a4609c199d30b3adebbeb3a01276ec5}{clk}} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1}\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00076             \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_af7e8a49d46795da5945dc6b1f0602c13}{p\_Pwm\_In}} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1}\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00077                 \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{var\_Dead\_Count1} \textcolor{vhdlchar}{<} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a66678837c93def3337995d7ffcb44f3f}{c\_Dead\_t}}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00078                     \textcolor{vhdlchar}{var\_Dead\_Count1} \textcolor{vhdlchar}{:=} \textcolor{vhdlchar}{var\_Dead\_Count1} \textcolor{vhdlchar}{+} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{1};
+00079                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{null};
+00080                 \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00081             \textcolor{keywordflow}{else} 
+00082                 \textcolor{vhdlchar}{var\_Dead\_Count1} \textcolor{vhdlchar}{:=} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0};
+00083                 \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_ad6bbafb165991aee14c6014831267789}{port\_PWM01}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_af7e8a49d46795da5945dc6b1f0602c13}{p\_Pwm\_In}};
+00084             \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00085             
+00086             \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{var\_Dead\_Count1} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a66678837c93def3337995d7ffcb44f3f}{c\_Dead\_t}}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00087                 \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_ad6bbafb165991aee14c6014831267789}{port\_PWM01}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_af7e8a49d46795da5945dc6b1f0602c13}{p\_Pwm\_In}};
+00088             \textcolor{keywordflow}{else} \textcolor{keywordflow}{null};
+00089             \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00090 \textcolor{keyword}{-----------------------------------}
+00091             \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a90c7671dbb1af7d80f90cd96262cda3b}{sig\_Not\_Pwm\_In}} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1}\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00092                 \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{var\_Dead\_Count2} \textcolor{vhdlchar}{<} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a66678837c93def3337995d7ffcb44f3f}{c\_Dead\_t}}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00093                     \textcolor{vhdlchar}{var\_Dead\_Count2} \textcolor{vhdlchar}{:=} \textcolor{vhdlchar}{var\_Dead\_Count2} \textcolor{vhdlchar}{+} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{1};
+00094                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{null};
+00095                 \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00096             \textcolor{keywordflow}{else} 
+00097                 \textcolor{vhdlchar}{var\_Dead\_Count2} \textcolor{vhdlchar}{:=} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0};
+00098                 \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a0b2d13e9c0fd854957d88a65e0905e5b}{port\_PWM02}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a90c7671dbb1af7d80f90cd96262cda3b}{sig\_Not\_Pwm\_In}};
+00099             \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00100             
+00101             \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{var\_Dead\_Count2} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a66678837c93def3337995d7ffcb44f3f}{c\_Dead\_t}}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00102                 \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_a0b2d13e9c0fd854957d88a65e0905e5b}{port\_PWM02}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classfbpspwmdt_1_1fbpspwmdt__arch_a90c7671dbb1af7d80f90cd96262cda3b}{sig\_Not\_Pwm\_In}};
+00103             \textcolor{keywordflow}{else} \textcolor{keywordflow}{null};
+00104             \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00105         \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00106     \textcolor{keywordflow}{end} \textcolor{keywordflow}{process};        
+00107         
+00108 
+00109 \textcolor{keywordflow}{end} \textcolor{keywordflow}{architecture} \textcolor{vhdlchar}{fbpspwmdt\_arch};
+\end{DoxyCode}

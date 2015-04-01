@@ -1,0 +1,68 @@
+\hypertarget{deadtime_8vhd_source}{}\section{deadtime.\+vhd}
+
+\begin{DoxyCode}
+00001 
+00002 \textcolor{keyword}{-- Código obtido de https://elviseno.wordpress.com/2011/02/18/vhdl-code-generate-bridge-pwm-with-dead-band/}
+\hypertarget{deadtime_8vhd_source_l00003}{}\hyperlink{classdeadtime_a0a6af6eef40212dbaf130d57ce711256}{00003} \textcolor{vhdlkeyword}{library }\textcolor{keywordflow}{ieee};
+\hypertarget{deadtime_8vhd_source_l00004}{}\hyperlink{classdeadtime_acd03516902501cd1c7296a98e22c6fcb}{00004} \textcolor{vhdlkeyword}{use }\hyperlink{class_d_e0___n_a_n_o___v_f_a0a6af6eef40212dbaf130d57ce711256}{ieee}.std\_logic\_1164.\textcolor{keywordflow}{all};
+\hypertarget{deadtime_8vhd_source_l00005}{}\hyperlink{classdeadtime_a0f5ecc6613f63d07f7963a97b1b26095}{00005} \textcolor{vhdlkeyword}{use }\hyperlink{class_d_e0___n_a_n_o___v_f_a0a6af6eef40212dbaf130d57ce711256}{ieee}.std\_logic\_arith.\textcolor{keywordflow}{all};
+\hypertarget{deadtime_8vhd_source_l00006}{}\hyperlink{classdeadtime_a598da929e807d58939b47499e8bc9fa8}{00006} \textcolor{vhdlkeyword}{USE }\hyperlink{class_d_e0___n_a_n_o___v_f_a0a6af6eef40212dbaf130d57ce711256}{ieee}.std\_logic\_unsigned.\textcolor{keywordflow}{all};
+00007 
+00008 
+00009 
+\hypertarget{deadtime_8vhd_source_l00010}{}\hyperlink{classdeadtime}{00010} \textcolor{keywordflow}{entity }\hyperlink{classdeadtime}{deadtime} \textcolor{keywordflow}{is}
+00011 
+00012 \textcolor{keywordflow}{port}\textcolor{vhdlchar}{(} 
+\hypertarget{deadtime_8vhd_source_l00013}{}\hyperlink{classdeadtime_add98662948c2105b77ab5e8fc7f07f86}{00013}     \textcolor{vhdlchar}{\hyperlink{classdeadtime_add98662948c2105b77ab5e8fc7f07f86}{p\_Pwm\_In}}\textcolor{vhdlchar}{:} \textcolor{keywordflow}{in} \textcolor{comment}{std\_logic} ;
+\hypertarget{deadtime_8vhd_source_l00014}{}\hyperlink{classdeadtime_ab5d0ea9e968d49d94da9db07a979d402}{00014}     \textcolor{vhdlchar}{\hyperlink{classdeadtime_ab5d0ea9e968d49d94da9db07a979d402}{CLK}}\textcolor{vhdlchar}{:} \textcolor{keywordflow}{in} \textcolor{comment}{std\_logic} ;
+\hypertarget{deadtime_8vhd_source_l00015}{}\hyperlink{classdeadtime_a629edf1594d9c8b1a0844cd27222067a}{00015}     \textcolor{vhdlchar}{\hyperlink{classdeadtime_a629edf1594d9c8b1a0844cd27222067a}{p\_Pwm1\_Out}}\textcolor{vhdlchar}{:} \textcolor{keywordflow}{out} \textcolor{comment}{std\_logic} ;
+\hypertarget{deadtime_8vhd_source_l00016}{}\hyperlink{classdeadtime_a9dab8115e08009b8436cc7f0c07b5e0c}{00016}     \textcolor{vhdlchar}{\hyperlink{classdeadtime_a9dab8115e08009b8436cc7f0c07b5e0c}{p\_Pwm2\_Out}}\textcolor{vhdlchar}{:} \textcolor{keywordflow}{out} \textcolor{comment}{std\_logic}\textcolor{vhdlchar}{)};
+00017 \textcolor{keywordflow}{end};
+00018 
+\hypertarget{deadtime_8vhd_source_l00019}{}\hyperlink{classdeadtime_1_1deadtime__archetecture}{00019} \textcolor{keywordflow}{architecture} deadtime\_archetecture \textcolor{keywordflow}{of} \hyperlink{classdeadtime}{deadtime} is
+\hypertarget{deadtime_8vhd_source_l00020}{}\hyperlink{classdeadtime_1_1deadtime__archetecture_a90c7671dbb1af7d80f90cd96262cda3b}{00020} \textcolor{keywordflow}{signal} \textcolor{vhdlchar}{\hyperlink{classdeadtime_1_1deadtime__archetecture_a90c7671dbb1af7d80f90cd96262cda3b}{sig\_Not\_Pwm\_In}}\textcolor{vhdlchar}{:} \textcolor{comment}{std\_logic};
+00021 \textcolor{vhdlkeyword}{begin}
+00022     \textcolor{vhdlchar}{\hyperlink{classdeadtime_1_1deadtime__archetecture_a90c7671dbb1af7d80f90cd96262cda3b}{sig\_Not\_Pwm\_In}} \textcolor{vhdlchar}{<=} \textcolor{keywordflow}{not} \textcolor{vhdlchar}{\hyperlink{classdeadtime_add98662948c2105b77ab5e8fc7f07f86}{p\_Pwm\_In}};
+00023     
+\hypertarget{deadtime_8vhd_source_l00024}{}\hyperlink{classdeadtime_1_1deadtime__archetecture_a19bf994b19eb6e55c6c247a7e25d7534}{00024}     \textcolor{keywordflow}{process} (\hyperlink{classdeadtime_ab5d0ea9e968d49d94da9db07a979d402}{CLK})
+00025         \textcolor{keywordflow}{variable} \textcolor{vhdlchar}{var\_Dead\_Count1}\textcolor{vhdlchar}{:} \textcolor{comment}{integer} \textcolor{keywordflow}{range} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0} \textcolor{keywordflow}{to} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{127} \textcolor{vhdlchar}{:=} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0};
+00026         \textcolor{keywordflow}{variable} \textcolor{vhdlchar}{var\_Dead\_Count2}\textcolor{vhdlchar}{:} \textcolor{comment}{integer} \textcolor{keywordflow}{range} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0} \textcolor{keywordflow}{to} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{127} \textcolor{vhdlchar}{:=} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0};
+00027         \textcolor{keywordflow}{constant} c\_Dead\_t\textcolor{vhdlchar}{:} \textcolor{comment}{integer} \textcolor{vhdlchar}{:=}  \textcolor{vhdllogic}{}\textcolor{vhdllogic}{15};
+00028 \textcolor{vhdlkeyword}{    begin}
+00029         \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classdeadtime_ab5d0ea9e968d49d94da9db07a979d402}{CLK}} \textcolor{vhdlchar}{'}\textcolor{vhdlkeyword}{event} \textcolor{keywordflow}{and} \textcolor{vhdlchar}{\hyperlink{classdeadtime_ab5d0ea9e968d49d94da9db07a979d402}{CLK}} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1}\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00030             \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classdeadtime_add98662948c2105b77ab5e8fc7f07f86}{p\_Pwm\_In}} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1}\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00031                 \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{var\_Dead\_Count1} \textcolor{vhdlchar}{<} \textcolor{vhdlchar}{c\_Dead\_t}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00032                     \textcolor{vhdlchar}{var\_Dead\_Count1} \textcolor{vhdlchar}{:=} \textcolor{vhdlchar}{var\_Dead\_Count1} \textcolor{vhdlchar}{+} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{1};
+00033                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{null};
+00034                 \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00035             \textcolor{keywordflow}{else} 
+00036                 \textcolor{vhdlchar}{var\_Dead\_Count1} \textcolor{vhdlchar}{:=} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0};
+00037                 \textcolor{vhdlchar}{\hyperlink{classdeadtime_a629edf1594d9c8b1a0844cd27222067a}{p\_Pwm1\_Out}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classdeadtime_add98662948c2105b77ab5e8fc7f07f86}{p\_Pwm\_In}};
+00038             \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00039             
+00040             \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{var\_Dead\_Count1} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{c\_Dead\_t}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00041                 \textcolor{vhdlchar}{\hyperlink{classdeadtime_a629edf1594d9c8b1a0844cd27222067a}{p\_Pwm1\_Out}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classdeadtime_add98662948c2105b77ab5e8fc7f07f86}{p\_Pwm\_In}};
+00042             \textcolor{keywordflow}{else} \textcolor{keywordflow}{null};
+00043             \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00044 \textcolor{keyword}{-----------------------------------}
+00045             \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{\hyperlink{classdeadtime_1_1deadtime__archetecture_a90c7671dbb1af7d80f90cd96262cda3b}{sig\_Not\_Pwm\_In}} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{'}\textcolor{vhdllogic}{}\textcolor{vhdllogic}{1}\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00046                 \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{var\_Dead\_Count2} \textcolor{vhdlchar}{<} \textcolor{vhdlchar}{c\_Dead\_t}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00047                     \textcolor{vhdlchar}{var\_Dead\_Count2} \textcolor{vhdlchar}{:=} \textcolor{vhdlchar}{var\_Dead\_Count2} \textcolor{vhdlchar}{+} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{1};
+00048                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{null};
+00049                 \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00050             \textcolor{keywordflow}{else} 
+00051                 \textcolor{vhdlchar}{var\_Dead\_Count2} \textcolor{vhdlchar}{:=} \textcolor{vhdllogic}{}\textcolor{vhdllogic}{0};
+00052                 \textcolor{vhdlchar}{\hyperlink{classdeadtime_a9dab8115e08009b8436cc7f0c07b5e0c}{p\_Pwm2\_Out}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classdeadtime_1_1deadtime__archetecture_a90c7671dbb1af7d80f90cd96262cda3b}{sig\_Not\_Pwm\_In}};
+00053             \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00054             
+00055             \textcolor{keywordflow}{if} \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{var\_Dead\_Count2} \textcolor{vhdlchar}{=} \textcolor{vhdlchar}{c\_Dead\_t}\textcolor{vhdlchar}{)} \textcolor{keywordflow}{then}
+00056                 \textcolor{vhdlchar}{\hyperlink{classdeadtime_a9dab8115e08009b8436cc7f0c07b5e0c}{p\_Pwm2\_Out}} \textcolor{vhdlchar}{<=} \textcolor{vhdlchar}{\hyperlink{classdeadtime_1_1deadtime__archetecture_a90c7671dbb1af7d80f90cd96262cda3b}{sig\_Not\_Pwm\_In}};
+00057             \textcolor{keywordflow}{else} \textcolor{keywordflow}{null};
+00058             \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00059         \textcolor{keywordflow}{end} \textcolor{keywordflow}{if};
+00060     \textcolor{keywordflow}{end} \textcolor{keywordflow}{process};
+00061      
+00062      
+00063      
+00064 \textcolor{keywordflow}{end} \textcolor{vhdlchar}{deadtime\_archetecture};
+\end{DoxyCode}
