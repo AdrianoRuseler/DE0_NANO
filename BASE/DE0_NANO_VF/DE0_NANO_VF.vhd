@@ -11,7 +11,6 @@ USE ieee.fixed_pkg.all;
 USE work.my_types_pkg.all;
 
 
-
 ENTITY DE0_NANO_VF IS -- Base entity
   GENERIC(
             constant N : integer := 3; -- Number of inverters in the same phase
