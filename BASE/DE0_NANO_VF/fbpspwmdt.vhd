@@ -11,7 +11,7 @@ use ieee.numeric_std.all;
 entity fbpspwmdt is
 	generic  (
 		 constant n_bits_c: integer := 16; --numero de bits da portadora
-		 constant c_Dead_t : integer :=  45		
+		 constant c_Dead_t : integer :=  45	-- Tempo morto dos pulsos PWM.	
 				);
 	port( 
 		 clk : in std_logic; -- clock
@@ -19,8 +19,8 @@ entity fbpspwmdt is
 		 comp : std_logic_vector(n_bits_c-1 downto 0);-- Razão ciclica em Q0  
 		 c : in std_logic_vector(n_bits_c-1 downto 0); -- portadora
 		 amost :  in std_logic; -- amostra moduladora na borda de amost 
-		 port_PWM01 : out std_logic;
-		 port_PWM02 : out std_logic		 
+		 port_PWM01 : out std_logic; -- PWM principal
+		 port_PWM02 : out std_logic  -- PWM complementar 
 		 );	 
 end entity fbpspwmdt;
 

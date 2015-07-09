@@ -437,8 +437,8 @@ PWM1_FA01 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => ma, -- moduladora     
 		 c => cTRI1, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM1L_FA(0) , -- PWM1_LOW
-		 port_PWM02 => PWM1H_FA(0)	 --PWM1_HIGH
+		 port_PWM01  => PWM1H_FA(0) , -- PWM1_LOW
+		 port_PWM02 => PWM1L_FA(0)	 --PWM1_HIGH
 		 );	 
 		
 PWM2_FA01 : fbpspwmdt -- One leg of the Full Bridge
@@ -448,8 +448,8 @@ PWM2_FA01 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => ma, -- moduladora     
 		 c => cTRI2, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM2H_FA(0), -- PWM2_HIGH
-		 port_PWM02 => PWM2L_FA(0)	 -- PWM2_LOW
+		 port_PWM01  => PWM2L_FA(0), -- PWM2_HIGH
+		 port_PWM02 => PWM2H_FA(0)	 -- PWM2_LOW
 		 );			
 
 
@@ -460,8 +460,8 @@ PWM1_FA02 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => ma, -- moduladora     
 		 c => cTRI3, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM1L_FA(1) , -- PWM1_LOW
-		 port_PWM02 => PWM1H_FA(1)	 --PWM1_HIGH
+		 port_PWM01  => PWM1H_FA(1), -- PWM1_LOW
+		 port_PWM02 => PWM1L_FA(1)	 --PWM1_HIGH
 		 );	 
 		
 PWM2_FA02 : fbpspwmdt -- One leg of the Full Bridge
@@ -471,8 +471,8 @@ PWM2_FA02 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => ma, -- moduladora     
 		 c => cTRI4, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM2H_FA(1), -- PWM2_HIGH
-		 port_PWM02 => PWM2L_FA(1)	 -- PWM2_LOW
+		 port_PWM01  => PWM2L_FA(1), -- PWM2_HIGH
+		 port_PWM02 => PWM2H_FA(1)	 -- PWM2_LOW
 		 );					 
 		 
 		 
@@ -484,8 +484,8 @@ PWM1_FA03 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => ma, -- moduladora     
 		 c => cTRI5, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM1L_FA(2) , -- PWM1_LOW
-		 port_PWM02 => PWM1H_FA(2)	 --PWM1_HIGH
+		 port_PWM01  => PWM1H_FA(2) , -- PWM1_LOW
+		 port_PWM02 => PWM1L_FA(2)	 --PWM1_HIGH
 		 );	 
 		
 PWM2_FA03 : fbpspwmdt -- One leg of the Full Bridge
@@ -495,8 +495,8 @@ PWM2_FA03 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => ma, -- moduladora     
 		 c => cTRI6, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM2H_FA(2), -- PWM2_HIGH
-		 port_PWM02 => PWM2L_FA(2)	 -- PWM2_LOW
+		 port_PWM01  => PWM2L_FA(2), -- PWM2_HIGH
+		 port_PWM02 => PWM2H_FA(2)	 -- PWM2_LOW
 		 );							 
 		 
 ----------  PHASE B -------------------	
@@ -512,8 +512,8 @@ PWM1_FB01 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => mb, -- moduladora     
 		 c => cTRI1, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM1L_FB(0) , -- PWM1_LOW
-		 port_PWM02 => PWM1H_FB(0)	 --PWM1_HIGH
+		 port_PWM01  => PWM1H_FB(0) , -- PWM1_LOW
+		 port_PWM02 => PWM1L_FB(0)	 --PWM1_HIGH
 		 );	 
 		
 PWM2_FB01 : fbpspwmdt -- One leg of the Full Bridge
@@ -523,8 +523,8 @@ PWM2_FB01 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => mb, -- moduladora     
 		 c => cTRI2, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM2H_FB(0), -- PWM2_HIGH
-		 port_PWM02 => PWM2L_FB(0)	 -- PWM2_LOW
+		 port_PWM01  => PWM2L_FB(0), -- PWM2_HIGH
+		 port_PWM02 => PWM2H_FB(0)	 -- PWM2_LOW
 		 );			
 
 
@@ -535,8 +535,8 @@ PWM1_FB02 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => mb, -- moduladora     
 		 c => cTRI3, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM1L_FB(1) , -- PWM1_LOW
-		 port_PWM02 => PWM1H_FB(1)	 --PWM1_HIGH
+		 port_PWM01  => PWM1H_FB(1) , -- PWM1_LOW
+		 port_PWM02 => PWM1L_FB(1)	 --PWM1_HIGH
 		 );	 
 		
 PWM2_FB02 : fbpspwmdt -- One leg of the Full Bridge
@@ -546,8 +546,8 @@ PWM2_FB02 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => mb, -- moduladora     
 		 c => cTRI4, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM2H_FB(1), -- PWM2_HIGH
-		 port_PWM02 => PWM2L_FB(1)	 -- PWM2_LOW
+		 port_PWM01  => PWM2L_FB(1), -- PWM2_HIGH
+		 port_PWM02 => PWM2H_FB(1)	 -- PWM2_LOW
 		 );					 
 		 
 		 
@@ -559,8 +559,8 @@ PWM1_FB03 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => mb, -- moduladora     
 		 c => cTRI5, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM1L_FB(2) , -- PWM1_LOW
-		 port_PWM02 => PWM1H_FB(2)	 --PWM1_HIGH
+		 port_PWM01  => PWM1H_FB(2) , -- PWM1_LOW
+		 port_PWM02 => PWM1L_FB(2)	 --PWM1_HIGH
 		 );	 
 		
 PWM2_FB03 : fbpspwmdt -- One leg of the Full Bridge
@@ -570,8 +570,8 @@ PWM2_FB03 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => mb, -- moduladora     
 		 c => cTRI6, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM2H_FB(2), -- PWM2_HIGH
-		 port_PWM02 => PWM2L_FB(2)	 -- PWM2_LOW
+		 port_PWM01  => PWM2L_FB(2), -- PWM2_HIGH
+		 port_PWM02 => PWM2H_FB(2)	 -- PWM2_LOW
 		 );							 
 		 
 		 
@@ -589,8 +589,8 @@ PWM1_FC01 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => mc, -- moduladora     
 		 c => cTRI1, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM1L_FC(0) , -- PWM1_LOW
-		 port_PWM02 => PWM1H_FC(0)	 --PWM1_HIGH
+		 port_PWM01  => PWM1H_FC(0) , -- PWM1_LOW
+		 port_PWM02 => PWM1L_FC(0)	 --PWM1_HIGH
 		 );	 
 		
 PWM2_FC01 : fbpspwmdt -- One leg of the Full Bridge
@@ -600,8 +600,8 @@ PWM2_FC01 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => mc, -- moduladora     
 		 c => cTRI2, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM2H_FC(0), -- PWM2_HIGH
-		 port_PWM02 => PWM2L_FC(0)	 -- PWM2_LOW
+		 port_PWM01  => PWM2L_FC(0), -- PWM2_HIGH
+		 port_PWM02 => PWM2H_FC(0)	 -- PWM2_LOW
 		 );			
 
 
@@ -612,8 +612,8 @@ PWM1_FC02 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => mc, -- moduladora     
 		 c => cTRI3, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM1L_FC(1) , -- PWM1_LOW
-		 port_PWM02 => PWM1H_FC(1)	 --PWM1_HIGH
+		 port_PWM01  => PWM1H_FC(1) , -- PWM1_LOW
+		 port_PWM02 => PWM1L_FC(1)	 --PWM1_HIGH
 		 );	 
 		
 PWM2_FC02 : fbpspwmdt -- One leg of the Full Bridge
@@ -623,8 +623,8 @@ PWM2_FC02 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => mc, -- moduladora     
 		 c => cTRI4, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM2H_FC(1), -- PWM2_HIGH
-		 port_PWM02 => PWM2L_FC(1)	 -- PWM2_LOW
+		 port_PWM01  => PWM2L_FC(1), -- PWM2_HIGH
+		 port_PWM02 => PWM2H_FC(1)	 -- PWM2_LOW
 		 );					 
 		 
 		 
@@ -636,8 +636,8 @@ PWM1_FC03 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => mc, -- moduladora     
 		 c => cTRI5, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM1L_FC(2) , -- PWM1_LOW
-		 port_PWM02 => PWM1H_FC(2)	 --PWM1_HIGH
+		 port_PWM01  => PWM1H_FC(2) , -- PWM1_LOW
+		 port_PWM02 => PWM1L_FC(2)	 --PWM1_HIGH
 		 );	 
 		
 PWM2_FC03 : fbpspwmdt -- One leg of the Full Bridge
@@ -647,8 +647,8 @@ PWM2_FC03 : fbpspwmdt -- One leg of the Full Bridge
 		 comp  => mc, -- moduladora     
 		 c => cTRI6, -- portadora
 		 amost => clk_pll, -- amostra moduladora na borda de amost
-		 port_PWM01  => PWM2H_FC(2), -- PWM2_HIGH
-		 port_PWM02 => PWM2L_FC(2)	 -- PWM2_LOW
+		 port_PWM01  => PWM2L_FC(2), -- PWM2_HIGH
+		 port_PWM02 => PWM2H_FC(2)	 -- PWM2_LOW
 		 );							 
 
  
