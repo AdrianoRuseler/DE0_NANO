@@ -1,5 +1,5 @@
 Flow report for DE0_NANO_VF
-Tue Jul 07 15:43:17 2015
+Sat Apr 09 17:21:29 2016
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -41,17 +41,17 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Jul 07 15:43:17 2015      ;
+; Flow Status                        ; Successful - Sat Apr 09 17:21:29 2016      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; DE0_NANO_VF                                ;
 ; Top-level Entity Name              ; DE0_NANO_VF                                ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE22F17C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 8,408 / 22,320 ( 38 % )                    ;
-;     Total combinational functions  ; 8,382 / 22,320 ( 38 % )                    ;
-;     Dedicated logic registers      ; 716 / 22,320 ( 3 % )                       ;
-; Total registers                    ; 716                                        ;
+; Total logic elements               ; 7,760 / 22,320 ( 35 % )                    ;
+;     Total combinational functions  ; 7,742 / 22,320 ( 35 % )                    ;
+;     Dedicated logic registers      ; 512 / 22,320 ( 2 % )                       ;
+; Total registers                    ; 512                                        ;
 ; Total pins                         ; 73 / 154 ( 47 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                        ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/07/2015 15:37:32 ;
+; Start date & time ; 04/09/2016 17:14:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE0_NANO_VF         ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 31264774864470.143629425210668        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 31264774864470.146023288326160        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -97,12 +97,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:02:03     ; 1.0                     ; 762 MB              ; 00:02:10                           ;
-; Fitter                    ; 00:02:42     ; 1.0                     ; 1097 MB             ; 00:02:40                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 626 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:14     ; 1.0                     ; 768 MB              ; 00:00:13                           ;
-; EDA Netlist Writer        ; 00:00:23     ; 1.0                     ; 699 MB              ; 00:00:19                           ;
-; Total                     ; 00:05:26     ; --                      ; --                  ; 00:05:26                           ;
+; Analysis & Synthesis      ; 00:02:30     ; 1.0                     ; 764 MB              ; 00:02:36                           ;
+; Fitter                    ; 00:03:13     ; 1.0                     ; 1028 MB             ; 00:02:59                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 621 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:13     ; 1.0                     ; 764 MB              ; 00:00:11                           ;
+; EDA Netlist Writer        ; 00:00:29     ; 1.0                     ; 692 MB              ; 00:00:20                           ;
+; Total                     ; 00:06:28     ; --                      ; --                  ; 00:06:09                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

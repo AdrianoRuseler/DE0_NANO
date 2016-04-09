@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22) Path("C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/") File("output_file_PWMs.jic") MfrSpec(OpMask(1) SEC_Device(EPCQ64) Child_OpMask(1 7));
+		Device PartName(EP4CE22) Path("C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/") File("VF0Phase2.jic") MfrSpec(OpMask(1) SEC_Device(EPCS64) Child_OpMask(1 3));
 
 ChainEnd;
 

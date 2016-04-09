@@ -1,5 +1,5 @@
 EDA Netlist Writer report for DE0_NANO_VF
-Tue Jul 07 15:43:17 2015
+Sat Apr 09 17:21:29 2016
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Jul 07 15:43:17 2015 ;
+; EDA Netlist Writer Status ; Successful - Sat Apr 09 17:21:29 2016 ;
 ; Revision Name             ; DE0_NANO_VF                           ;
 ; Top-level Entity Name     ; DE0_NANO_VF                           ;
 ; Family                    ; Cyclone IV E                          ;
@@ -89,7 +89,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Tue Jul 07 15:42:54 2015
+    Info: Processing started: Sat Apr 09 17:21:00 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off DE0_NANO_VF -c DE0_NANO_VF
 Info (204019): Generated file DE0_NANO_VF_6_1200mv_85c_slow.vho in folder "C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file DE0_NANO_VF_6_1200mv_0c_slow.vho in folder "C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/simulation/modelsim/" for EDA simulation tool
@@ -100,9 +100,9 @@ Info (204019): Generated file DE0_NANO_VF_6_1200mv_0c_vhd_slow.sdo in folder "C:
 Info (204019): Generated file DE0_NANO_VF_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file DE0_NANO_VF_vhd.sdo in folder "C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 699 megabytes
-    Info: Processing ended: Tue Jul 07 15:43:18 2015
-    Info: Elapsed time: 00:00:24
+    Info: Peak virtual memory: 692 megabytes
+    Info: Processing ended: Sat Apr 09 17:21:29 2016
+    Info: Elapsed time: 00:00:29
     Info: Total CPU time (on all processors): 00:00:20
 
 
