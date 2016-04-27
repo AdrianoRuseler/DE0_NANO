@@ -1,0 +1,14 @@
+
+
+
+KEY(0) -> en_PWM <= '1';
+--    en_BOOST<=SW(0);
+    en_PWMB<=SW(1);
+    en_PWMC<=SW(2);	 
+    en_VF <= SW(3);  -- Atualiza modo V/F
+	  LED(0)<=en_BOOST;
+	  LED(1)<=en_PWMB;
+	  LED(2)<=en_PWMC;	  
+      LED(3) <= en_VF;  -- Sinaliza nodo V/F
+LED(6) <= not err_FABC;
+LED(7) <= en_PWM;

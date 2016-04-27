@@ -419,15 +419,11 @@ LED(7) <= en_PWM;
 			if err_FABC = '0' then
 				en_PWM <= '0';
 			elsif KEY(0) = '0' and err_FABC = '1' then
-				en_PWM <= '1';				
-				
+				en_PWM <= '1';							
 			end if;
-		end if;
+		end if;		
 	end process;
 
-
-
-	
 					
 ----------  PHASE A  -------------------	
 	
@@ -508,7 +504,7 @@ PWM2_FA03 : fbpspwmdt -- One leg of the Full Bridge
 ----------  PHASE B -------------------	
 -- Fazer lógica para modo boost
 
- --   en_PWMA<=SW(0);
+--    en_BOOST<=SW(0);
     en_PWMB<=SW(1);
     en_PWMC<=SW(2);	 
 
