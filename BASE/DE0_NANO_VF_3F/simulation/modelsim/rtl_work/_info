@@ -7,27 +7,27 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/simulation/modelsim
+Z0 dC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/simulation/modelsim
 Eclk_div
-Z1 w1422026146
+Z1 w1422022546
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z5 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R0
-Z6 8C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/clk_div.vhd
-Z7 FC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/clk_div.vhd
+Z6 8C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/clk_div.vhd
+Z7 FC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/clk_div.vhd
 l0
 L5
 V0j6@=<=M8122QVcX`iRUZ1
 !s100 f?B7F:QUGE>zCCK^@AZAe0
-Z8 OV;C;10.3c;59
+Z8 OV;C;10.3d;59
 31
-Z9 !s110 1422373602
+Z9 !s110 1462127874
 !i10b 1
-Z10 !s108 1422373602.561000
-Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/clk_div.vhd|
-Z12 !s107 C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/clk_div.vhd|
+Z10 !s108 1462127874.235000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/clk_div.vhd|
+Z12 !s107 C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/clk_div.vhd|
 !i113 1
 Z13 o-93 -work work
 Z14 tExplicit 1
@@ -52,21 +52,21 @@ R12
 R13
 R14
 Pfixed_float_types
-R1
+w1304115498
 R0
-8C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_float_types_c.vhdl
-FC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_float_types_c.vhdl
+8C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/fixed_float_types_c.vhdl
+FC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/fixed_float_types_c.vhdl
 l0
 L16
 V[o:?dcc:Zg[aJia<lU5j<2
 !s100 cW]eNFhGGd5lB:5@0FCJB2
 R8
 31
-Z15 !s110 1422373601
+R9
 !i10b 1
-!s108 1422373601.406000
-!s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_float_types_c.vhdl|
-!s107 C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/fixed_float_types_c.vhdl|
+!s108 1462127874.034000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/fixed_float_types_c.vhdl|
+!s107 C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/fixed_float_types_c.vhdl|
 !i113 1
 R13
 R14
@@ -77,40 +77,40 @@ R4
 R5
 R1
 R0
-8C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/my_types_pkg.vhd
-FC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/my_types_pkg.vhd
+8C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/my_types_pkg.vhd
+FC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/my_types_pkg.vhd
 l0
 L7
 VZKB`bUP>6eYc8;6Y2n70c2
 !s100 Z3GWkbKg7mJI>:_mmUUzV0
 R8
 31
-R15
+!s110 1462127873
 !i10b 1
-!s108 1422373601.285000
-!s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/my_types_pkg.vhd|
-!s107 C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/my_types_pkg.vhd|
+!s108 1462127873.791000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/my_types_pkg.vhd|
+!s107 C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/my_types_pkg.vhd|
 !i113 1
 R13
 R14
 Epll
-Z16 w1422125696
+Z15 w1422122096
 R3
 R4
 R0
-Z17 8C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/pll.vhd
-Z18 FC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/pll.vhd
+Z16 8C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/pll.vhd
+Z17 FC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/pll.vhd
 l0
 L43
 VTkd22=bCPN7g<VA690ke23
 !s100 I>2>QkW:F3U3H]^dHaTUX2
 R8
 31
-Z19 !s110 1422373600
+Z18 !s110 1462127872
 !i10b 1
-Z20 !s108 1422373600.317000
-Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/pll.vhd|
-Z22 !s107 C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/pll.vhd|
+Z19 !s108 1462127872.808000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/pll.vhd|
+Z21 !s107 C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/pll.vhd|
 !i113 1
 R13
 R14
@@ -124,77 +124,32 @@ VCW^9XO`28nB;`PmDfDcBI2
 !s100 gG5N71Fklf[<=[CkC03n03
 R8
 31
-R19
+R18
 !i10b 1
+R19
 R20
 R21
-R22
 !i113 1
 R13
 R14
 vpll_altpll
-R19
+R18
 !i10b 1
 !s100 7?GP;;nkJc:Q=H2]HWK:E2
-I]E@7clK?gg=hANBZBKoXd2
+IDO62SC04@7zZC;R9j2Xia0
 V`JN@9S9cnhjKRR_L]QIcM3
 R0
-R1
-8C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/db/pll_altpll.v
-FC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/db/pll_altpll.v
+w1436294283
+8C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/db/pll_altpll.v
+FC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/db/pll_altpll.v
 L0 31
-OV;L;10.3c;59
+OV;L;10.3d;59
 r1
 !s85 0
 31
-!s108 1422373600.212000
-!s107 C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/db/pll_altpll.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/db|C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/db/pll_altpll.v|
+!s108 1462127872.350000
+!s107 C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/db|C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/db/pll_altpll.v|
 !i113 1
 o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/db
-Etabela_sin
-Z23 w1422370746
-Z24 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-R2
-R5
-R3
-R4
-R0
-Z25 8C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/tabela_sin.vhd
-Z26 FC:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/tabela_sin.vhd
-l0
-L7
-V]4MZj=J8^JdVShcJ;ZA6V0
-!s100 ]H@MYj`Uh8JJ`HC<bF@SW2
-R8
-31
-R15
-!i10b 1
-Z27 !s108 1422373601.527000
-Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/tabela_sin.vhd|
-Z29 !s107 C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_PWM/tabela_sin.vhd|
-!i113 1
-R13
-R14
-Atabela_sin
-R24
-R2
-R5
-R3
-R4
-DEx4 work 10 tabela_sin 0 22 ]4MZj=J8^JdVShcJ;ZA6V0
-l22
-L18
-V4Thh9W@fdGFFF4IL>UehZ0
-!s100 =E7KlA^JT`LU3zVoe30>Q0
-R8
-31
-R15
-!i10b 1
-R27
-R28
-R29
-!i113 1
-R13
-R14
+!s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Documents/GitHub/DE0_NANO/BASE/DE0_NANO_VF_3F/db

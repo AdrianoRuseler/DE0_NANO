@@ -5,8 +5,8 @@ Info: NativeLink has detected a mixed Verilog and VHDL design -- vhdl simulation
 
 Sim Mode              :  RTL
 Family                :  cycloneive
-Quartus root          :  c:/altera/14.1/quartus/bin64/
-Quartus sim root      :  c:/altera/14.1/quartus/eda/sim_lib
+Quartus root          :  c:/altera/15.0/quartus/bin64/
+Quartus sim root      :  c:/altera/15.0/quartus/eda/sim_lib
 Simulation Tool       :  modelsim-altera
 Simulation Language   :  vhdl
 Version               :  93
@@ -18,6 +18,5 @@ Sim dir               :  simulation\modelsim
 =======================================================
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
-Sourced NativeLink script c:/altera/14.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File DE0_NANO_PWM_run_msim_rtl_vhdl.do already exists - backing up current file as DE0_NANO_PWM_run_msim_rtl_vhdl.do.bak
+Sourced NativeLink script c:/altera/15.0/quartus/common/tcl/internal/nativelink/modelsim.tcl
 Info: Spawning ModelSim-Altera Simulation software 

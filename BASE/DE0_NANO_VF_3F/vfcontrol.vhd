@@ -15,9 +15,10 @@ entity vfcontrol is
 		 constant incMIN : std_logic_vector(12 downto 0) := std_logic_vector(to_unsigned(483, 13));  -- Min INC for 6Hz
 		 constant I : integer := 1;  --número de bits da parte inteira excluindo sinal
 		 constant F : integer := 14; --número de bits da parte fracinária  
-		 constant mMAX : sfixed(1 downto -27) := to_sfixed(0.657,  1, -27); -- Max modulation index 
+		 constant mMAX : sfixed(1 downto -27) := to_sfixed(0.9,  1, -27); -- Max modulation index 
+	--	 constant mMAX : sfixed(1 downto -27) := to_sfixed(0.657,  1, -27); -- Max modulation index 
 	 --   constant mMAX : sfixed(1 downto -27) := to_sfixed(0.4069,  1, -27); -- Max modulation index 
-		 constant mMIN : sfixed(1 downto -27) := to_sfixed(0.0657,  1, -27)  -- Min modulation index 
+		 constant mMIN : sfixed(1 downto -27) := to_sfixed(0.09,  1, -27)  -- Min modulation index 
 				);
 				
 		port( 
